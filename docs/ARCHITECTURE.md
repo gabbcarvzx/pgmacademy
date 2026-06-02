@@ -190,6 +190,69 @@ Entidade financeira adicional:
 
 - `payment_events`: trilha idempotente dos eventos recebidos do Asaas
 
+## Simulados e Aprendizagem
+
+Fluxo implementado na Etapa 8A:
+
+1. A rota `/simulados` fica dentro da area autenticada
+2. O servidor consulta `profiles.access_status` para separar gratuito e premium
+3. O historico le `simulation_attempts` com RLS por `tenant_id` e `user_id`
+4. O catalogo de aprendizagem nasce com conteudo global (`tenant_id` nulo) e suporte futuro a conteudo por tenant
+5. Seeds estruturais criam categorias de Ingles, Espanhol e Entrevista Psicossocial
+6. Nenhuma questao real, prova oficial, material real ou IA nova foi criada nesta etapa
+
+Tabelas adicionadas:
+
+- question_banks
+- question_categories
+- questions
+- question_options
+- simulation_templates
+- simulation_attempts
+- simulation_answers
+- study_materials
+- flashcards
+- learning_paths
+- learning_path_items
+- psychosocial_questions
+
+Decisoes de seguranca:
+
+- Usuarios autenticados podem ler apenas conteudo ativo permitido pelo status premium
+- Usuarios gratuitos nao leem conteudo marcado como `is_premium = true`
+- Tentativas e respostas sao legiveis apenas pelo proprio aluno do tenant
+- Mutacoes de tentativas, respostas e notas nao sao concedidas ao client autenticado
+- Correcao objetiva deve ser executada por backend/server action/API route com service role em etapa futura
+- Admins podem gerenciar conteudo por RLS usando `profiles.role = admin`
+
+Correcao objetiva:
+
+- A funcao pura `calculateObjectiveScore` calcula nota, percentual, acertos e erros por categoria
+- A funcao `summarizeAttemptHistory` prepara estatisticas basicas para historico do aluno
+- Teste dedicado em `tests/simulation-scoring.test.ts`
+
+Atualizacao da Etapa 8B:
+
+1. A migration 003 foi validada no Supabase real apos aplicacao manual
+2. As categorias estruturais retornaram 20 registros para usuarios autenticados
+3. Usuarios comuns nao conseguem inserir `simulation_attempts` diretamente pelo client
+4. Usuarios comuns nao conseguem criar `question_banks` por RLS
+5. Fixtures de questoes/templates existem apenas em teste automatizado, sem poluir o banco real
+
+Rotas backend adicionadas:
+
+- `GET /api/simulations/templates`: lista templates, acesso premium e saude do schema
+- `GET /api/simulations/attempts`: lista historico e estatisticas basicas
+- `POST /api/simulations/attempts`: inicia tentativa via backend quando houver template e questoes
+- `POST /api/simulations/attempts/[attemptId]/submit`: prepara correcao objetiva server-side
+
+Decisoes da Etapa 8B:
+
+- Mutacoes de tentativa usam service role apenas no backend
+- Free continua bloqueado para template premium ou simulado completo
+- Banco real permanece sem questoes reais nesta etapa
+- A UI `/simulados` consome o mesmo servico server-side usado pelas rotas
+
 ## Segurança
 
 - Nunca expor chave Asaas, Supabase service role ou OpenAI no cliente

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:eligibility": "tsx tests/eligibility-rules.test.ts"
+    "test:eligibility": "tsx tests/eligibility-rules.test.ts",
+    "test:simulations": "tsx tests/simulation-scoring.test.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.3",
