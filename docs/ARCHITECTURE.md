@@ -253,6 +253,24 @@ Decisoes da Etapa 8B:
 - Banco real permanece sem questoes reais nesta etapa
 - A UI `/simulados` consome o mesmo servico server-side usado pelas rotas
 
+Atualizacao da Etapa 8D:
+
+1. A rota `/admin` foi criada dentro da area autenticada
+2. O link Admin aparece apenas para usuarios com `profiles.role = admin`
+3. Usuarios nao admin veem uma tela bloqueada, sem formularios administrativos
+4. Criacao de `question_banks` e `simulation_templates` usa Server Actions e service role
+5. Conteudo criado pelo admin nesta etapa usa `tenant_id = null`, mantendo catalogo global
+6. A migration 004 permite `psychosocial` em `question_banks.language`
+7. O setup operacional do admin esta em `docs/ADMIN_SETUP.md`
+
+Limites da Etapa 8D:
+
+- Nao cria questoes reais
+- Nao cria materiais reais
+- Nao cria IA nova
+- Nao altera billing
+- Nao promove usuario automaticamente se o perfil ainda nao existir
+
 ## Segurança
 
 - Nunca expor chave Asaas, Supabase service role ou OpenAI no cliente

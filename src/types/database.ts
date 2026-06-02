@@ -156,7 +156,12 @@ export type Database = {
           tenant_id: string | null;
           title: string;
           description: string | null;
-          language: "english" | "spanish" | "portuguese" | "mixed";
+          language:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
           is_premium: boolean;
           is_active: boolean;
           created_at: string;
@@ -167,7 +172,12 @@ export type Database = {
           tenant_id?: string | null;
           title: string;
           description?: string | null;
-          language?: "english" | "spanish" | "portuguese" | "mixed";
+          language?:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
           created_at?: string;
@@ -177,7 +187,12 @@ export type Database = {
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
-          language?: "english" | "spanish" | "portuguese" | "mixed";
+          language?:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
           updated_at?: string;

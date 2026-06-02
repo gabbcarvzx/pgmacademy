@@ -7,6 +7,7 @@ import {
   ListChecks,
   LogOut,
   MessageCircle,
+  ShieldCheck,
 } from "lucide-react";
 
 import { signOutAction } from "@/app/(app)/actions";
@@ -23,6 +24,7 @@ type AppSidebarProps = {
   userName: string | null;
   userEmail: string;
   accessStatus: "free" | "paid" | "blocked" | "refunded";
+  userRole: "student" | "mentor" | "admin";
 };
 
 const accessStatusLabel = {
@@ -36,7 +38,16 @@ export function AppSidebar({
   userName,
   userEmail,
   accessStatus,
+  userRole,
 }: AppSidebarProps) {
+  const navigation =
+    userRole === "admin"
+      ? [
+          ...appNavigation,
+          { label: "Admin", href: "/admin", Icon: ShieldCheck },
+        ]
+      : appNavigation;
+
   return (
     <aside className="border-b border-border-soft bg-surface lg:min-h-screen lg:border-b-0 lg:border-r">
       <div className="flex h-16 items-center gap-3 px-4 sm:px-6 lg:px-5">
@@ -54,7 +65,7 @@ export function AppSidebar({
       </div>
 
       <nav className="flex gap-2 overflow-x-auto px-4 pb-4 sm:px-6 lg:grid lg:px-5">
-        {appNavigation.map((item) => (
+        {navigation.map((item) => (
           <Link
             key={item.href}
             href={item.href}
