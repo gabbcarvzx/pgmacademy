@@ -114,6 +114,42 @@ export type Database = {
         };
         Relationships: [];
       };
+      payment_events: {
+        Row: {
+          id: string;
+          tenant_id: string | null;
+          subscription_id: string | null;
+          provider: "asaas";
+          event_id: string;
+          event_type: string;
+          provider_payment_id: string | null;
+          processing_status: "received" | "processed" | "ignored" | "failed";
+          payload: Json;
+          error_message: string | null;
+          processed_at: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          tenant_id?: string | null;
+          subscription_id?: string | null;
+          provider?: "asaas";
+          event_id: string;
+          event_type: string;
+          provider_payment_id?: string | null;
+          processing_status?: "received" | "processed" | "ignored" | "failed";
+          payload?: Json;
+          error_message?: string | null;
+          processed_at?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          processing_status?: "received" | "processed" | "ignored" | "failed";
+          error_message?: string | null;
+          processed_at?: string | null;
+        };
+        Relationships: [];
+      };
       eligibility_assessments: {
         Row: {
           id: string;

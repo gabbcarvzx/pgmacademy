@@ -12,7 +12,7 @@ import { signOutAction } from "@/app/(app)/actions";
 const appNavigation = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutDashboard },
   { label: "Diagnostico", href: "/diagnostico", Icon: Gauge },
-  { label: "Premium", href: "/#premium", Icon: CreditCard },
+  { label: "Premium", href: "/dashboard#premium", Icon: CreditCard },
 ];
 
 type AppSidebarProps = {

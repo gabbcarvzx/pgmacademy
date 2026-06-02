@@ -5,10 +5,12 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpenCheck,
+  CheckCircle2,
   CircleDollarSign,
   LockKeyhole,
 } from "lucide-react";
 
+import { PaymentButton } from "@/components/billing/payment-button";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -25,6 +27,14 @@ const statusLabel = {
 const accessLabel = {
   free: "Gratuito",
   paid: "Premium",
+  blocked: "Bloqueado",
+  refunded: "Reembolsado",
+} as const;
+
+const subscriptionLabel = {
+  pending: "Pendente",
+  paid: "Pago",
+  overdue: "Vencido",
   blocked: "Bloqueado",
   refunded: "Reembolsado",
 } as const;
@@ -76,6 +86,11 @@ export default async function DashboardPage() {
   const subscription = subscriptionResponse.data as { status: string } | null;
 
   const accessStatus = profile?.access_status ?? "free";
+  const paymentStatus = subscription?.status;
+  const paymentValue =
+    paymentStatus && paymentStatus in subscriptionLabel
+      ? subscriptionLabel[paymentStatus as keyof typeof subscriptionLabel]
+      : "Asaas";
   const diagnosisValue = latestAssessment
     ? statusLabel[latestAssessment.status]
     : "Pendente";
@@ -134,7 +149,7 @@ export default async function DashboardPage() {
           },
           {
             title: "Pagamento",
-            value: subscription?.status ?? "Asaas",
+            value: paymentValue,
             description: "Modelo inicial de pagamento unico.",
             Icon: CircleDollarSign,
           },
@@ -153,6 +168,71 @@ export default async function DashboardPage() {
             </p>
           </article>
         ))}
+      </section>
+
+      <section
+        id="premium"
+        className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6"
+      >
+        <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              Acesso premium
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white">
+              Plano unico para preparar sua aprovacao
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
+              Pagamento unico de R$ 29,90 processado pelo Asaas. O acesso
+              premium sera liberado automaticamente apos confirmacao do
+              pagamento pelo webhook.
+            </p>
+
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {["PIX", "Cartao", "Boleto"].map((method) => (
+                <div
+                  key={method}
+                  className="rounded-md border border-border-soft bg-background px-4 py-3"
+                >
+                  <CheckCircle2
+                    className="size-4 text-pgm-yellow"
+                    aria-hidden="true"
+                  />
+                  <p className="mt-2 text-sm font-semibold text-white">
+                    {method}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-md border border-border-soft bg-background p-4">
+            <p className="text-sm font-medium text-muted">Pagamento unico</p>
+            <p className="mt-2 text-4xl font-semibold text-white">R$ 29,90</p>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              Status atual: {accessLabel[accessStatus]}
+            </p>
+
+            <div className="mt-5">
+              {accessStatus === "paid" ? (
+                <div className="rounded-md border border-pgm-green/40 bg-pgm-green/10 p-4">
+                  <CheckCircle2
+                    className="size-5 text-pgm-green"
+                    aria-hidden="true"
+                  />
+                  <p className="mt-3 text-sm font-semibold text-white">
+                    Premium ativo
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    Seu acesso ja foi liberado.
+                  </p>
+                </div>
+              ) : (
+                <PaymentButton disabled={accessStatus === "blocked"} />
+              )}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">

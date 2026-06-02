@@ -17,6 +17,7 @@ Arquivo:
 3. Cole o conteudo de `supabase/migrations/001_initial_schema.sql`.
 4. Execute o SQL.
 5. Confirme se as tabelas `tenants`, `profiles`, `subscriptions`, `eligibility_assessments` e `audit_logs` foram criadas.
+6. Para a Etapa 5, aplique tambem `supabase/migrations/002_payment_events.sql`.
 
 ## Opcao 2: Supabase CLI
 
@@ -48,4 +49,5 @@ No painel do Supabase:
 - Nunca exponha `SUPABASE_SERVICE_ROLE_KEY` no client.
 - Nao coloque valores reais em `.env.example`.
 - A migration usa RLS e limita permissao de coluna para proteger `access_status`.
+- A migration `002_payment_events.sql` registra eventos financeiros idempotentes e bloqueia escrita por usuarios comuns.
 - O diagnostico publico nao salva dados sem usuario autenticado.

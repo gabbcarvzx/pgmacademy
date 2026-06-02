@@ -113,15 +113,29 @@ dos sistemas e instituicoes responsaveis pelo processo seletivo.
 
 ## Billing Asaas
 
-Fluxo planejado:
+Fluxo implementado na Etapa 5:
 
 1. Usuario cria conta
 2. Sistema cria tenant pessoal
-3. Usuario inicia pagamento unico
-4. Backend cria cobranca no Asaas
-5. Webhook confirma pagamento
-6. Sistema registra evento idempotente
-7. Acesso premium muda para `paid`
+3. Usuario informa CPF/CNPJ do pagador
+4. Usuario inicia pagamento unico
+5. Backend cria cliente/cobranca no Asaas
+6. Webhook confirma pagamento
+7. Sistema registra evento idempotente
+8. Acesso premium muda para `paid`
+
+Rotas:
+
+- `POST /api/billing/asaas/checkout`: rota autenticada que cria ou reutiliza cobranca Asaas
+- `POST /api/webhooks/asaas`: rota publica protegida por token do webhook
+
+Dado sensivel do pagador:
+
+- CPF/CNPJ e enviado ao Asaas, mas nao persistido no banco local da plataforma
+
+Entidade financeira adicional:
+
+- `payment_events`: trilha idempotente dos eventos recebidos do Asaas
 
 ## Segurança
 
