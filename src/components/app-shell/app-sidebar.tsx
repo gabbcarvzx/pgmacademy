@@ -5,6 +5,7 @@ import {
   GraduationCap,
   LayoutDashboard,
   LogOut,
+  MessageCircle,
 } from "lucide-react";
 
 import { signOutAction } from "@/app/(app)/actions";
@@ -12,6 +13,7 @@ import { signOutAction } from "@/app/(app)/actions";
 const appNavigation = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutDashboard },
   { label: "Diagnostico", href: "/diagnostico", Icon: Gauge },
+  { label: "Mentor PGM", href: "/mentor", Icon: MessageCircle },
   { label: "Premium", href: "/dashboard#premium", Icon: CreditCard },
 ];
 

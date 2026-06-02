@@ -133,6 +133,26 @@ Dado sensivel do pagador:
 
 - CPF/CNPJ e enviado ao Asaas, mas nao persistido no banco local da plataforma
 
+## Mentor IA
+
+Fluxo implementado na Etapa 6:
+
+1. Usuario autenticado acessa `/mentor`
+2. Servidor consulta `profiles.access_status`
+3. Apenas usuarios `paid` visualizam e usam o chat
+4. Frontend envia mensagens para `POST /api/mentor`
+5. Backend valida sessao, premium e limite simples de uso
+6. Backend chama a OpenAI Responses API com o prompt do Mentor PGM
+7. Resposta retorna ao cliente sem expor chave OpenAI
+
+Decisoes de seguranca e produto:
+
+- `OPENAI_API_KEY` fica apenas no backend
+- historico nao e persistido nesta etapa
+- base inicial fica versionada em `src/lib/mentor/knowledge-base.ts`
+- prompt reforca independencia em relacao ao Governo de Pernambuco
+- respostas oficiais sensiveis devem ser direcionadas para confirmacao nos canais oficiais
+
 Entidade financeira adicional:
 
 - `payment_events`: trilha idempotente dos eventos recebidos do Asaas
