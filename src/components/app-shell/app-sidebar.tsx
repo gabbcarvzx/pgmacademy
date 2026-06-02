@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  CreditCard,
+  BookOpenCheck,
   Gauge,
   GraduationCap,
   LayoutDashboard,
@@ -14,7 +14,7 @@ const appNavigation = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutDashboard },
   { label: "Diagnostico", href: "/diagnostico", Icon: Gauge },
   { label: "Mentor PGM", href: "/mentor", Icon: MessageCircle },
-  { label: "Premium", href: "/dashboard#premium", Icon: CreditCard },
+  { label: "Area Premium", href: "/premium", Icon: BookOpenCheck },
 ];
 
 type AppSidebarProps = {

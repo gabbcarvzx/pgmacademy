@@ -153,6 +153,39 @@ Decisoes de seguranca e produto:
 - prompt reforca independencia em relacao ao Governo de Pernambuco
 - respostas oficiais sensiveis devem ser direcionadas para confirmacao nos canais oficiais
 
+## Area Premium
+
+Fluxo implementado na Etapa 7A:
+
+1. Usuario autenticado acessa `/premium`
+2. Servidor consulta `profiles.access_status`
+3. Apenas usuarios `paid` visualizam a estrutura dos modulos premium
+4. Usuarios sem acesso pago recebem bloqueio com CTA para `/dashboard#premium`
+5. Modulos ficam versionados em `src/lib/premium/content.ts`
+6. Fotos autorizadas do Canada sao usadas como apoio visual
+
+Decisoes editoriais:
+
+- A Etapa 7A cria somente a infraestrutura e estrutura dos modulos
+- Textos finais nao foram inventados
+- Conteudo final deve ser produzido na Etapa 7B apos extracao, comparacao e aprovacao editorial dos editais
+- A arquitetura fica pronta para migrar os modulos para painel administrativo ou CMS
+
+Atualizacao da Etapa 7B:
+
+1. Os editais PGM 2024 e 2026 foram analisados para gerar conteudo premium inicial
+2. Cada modulo separa `Base oficial extraida`, `Orientacao reaproveitavel` e `Confirmar nos canais oficiais`
+3. Regras oficiais sensiveis continuam dependentes do edital vigente e dos comunicados oficiais
+4. A area `/premium` permanece liberada apenas para usuarios com `profiles.access_status = paid`
+5. O conteudo fica versionado em `src/lib/premium/content.ts` ate migracao futura para painel administrativo ou CMS
+
+Decisoes editoriais da Etapa 7B:
+
+- Nao tratar orientacoes praticas como regra oficial
+- Nao prometer aprovacao, destino, embarque, visto, host family ou cobertura financeira
+- Manter linguagem de preparacao independente, sem vinculo oficial com o Governo de Pernambuco
+- Confirmar sempre cronograma, documentos, custos, destino e regras operacionais no edital vigente
+
 Entidade financeira adicional:
 
 - `payment_events`: trilha idempotente dos eventos recebidos do Asaas
