@@ -21,7 +21,7 @@ import {
 import { requireAdminPage } from "@/lib/admin/guard";
 
 export const metadata: Metadata = {
-  title: "Admin - Questoes",
+  title: "Admin - Questões",
 };
 
 type PageProps = {
@@ -59,8 +59,8 @@ export default async function AdminQuestionsPage({ searchParams }: PageProps) {
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
-        title="Questoes"
-        description="Gerencie questoes objetivas e subjetivas. Objetivas exigem 5 alternativas e exatamente uma correta."
+        title="Questões"
+        description="Gerencie questões objetivas e subjetivas. Objetivas exigem 5 alternativas e exatamente uma correta."
         action={
           <div className="flex flex-wrap gap-2">
             <Link
@@ -137,7 +137,7 @@ export default async function AdminQuestionsPage({ searchParams }: PageProps) {
 
       <section className="mt-6 grid gap-3">
         {questions.length === 0 ? (
-          <EmptyState>Nenhuma questao encontrada.</EmptyState>
+          <EmptyState>Nenhuma questão encontrada.</EmptyState>
         ) : (
           questions.map((question) => (
             <article
@@ -177,7 +177,7 @@ export default async function AdminQuestionsPage({ searchParams }: PageProps) {
                     <input type="hidden" name="returnTo" value="/admin/questions" />
                     <input type="hidden" name="entity" value="question" />
                     <input type="hidden" name="id" value={question.id} />
-                    <ConfirmSubmitButton message="Desativar esta questao?">
+                    <ConfirmSubmitButton message="Desativar está questão?">
                       Desativar
                     </ConfirmSubmitButton>
                   </form>

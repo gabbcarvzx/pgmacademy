@@ -14,12 +14,12 @@ const initialMessages: ChatMessage[] = [
     id: "welcome",
     role: "assistant",
     content:
-      "Oi, eu sou o Mentor PGM. Posso te ajudar com requisitos, preparacao para provas, entrevista psicossocial e planejamento para o intercambio. A PGM Academy e independente e nao substitui os canais oficiais.",
+      "Oi, eu sou o Mentor PGM. Posso te ajudar com requisitos, preparação para provas, entrevista psicossocial e planejamento para o intercâmbio. A PGM Academy é independente e não substitui os canais oficiais.",
   },
 ];
 
 const quickPrompts = [
-  "Estou elegivel para o edital?",
+  "Estou elegível para o edital?",
   "Como devo estudar para a prova objetiva?",
   "Me ajude a treinar entrevista psicossocial.",
   "O que preciso confirmar nos canais oficiais?",
@@ -77,7 +77,7 @@ export function MentorChat() {
       };
 
       if (!response.ok || !payload.answer) {
-        throw new Error(payload.error ?? "Nao foi possivel responder agora.");
+        throw new Error(payload.error ?? "Não foi possível responder agora.");
       }
 
       const answer = payload.answer;
@@ -94,7 +94,7 @@ export function MentorChat() {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Nao foi possivel responder agora.",
+          : "Não foi possível responder agora.",
       );
     } finally {
       setIsSending(false);
@@ -109,15 +109,15 @@ export function MentorChat() {
   return (
     <div className="grid min-h-[calc(100vh-3rem)] grid-rows-[auto_1fr_auto] gap-4">
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+        <p className="text-sm font-semibold uppercase text-pgm-yellow">
           Mentor PGM
         </p>
         <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-          Tire duvidas com um mentor especializado
+          Tire dúvidas com um mentor especializado
         </h1>
         <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-          Use o chat para organizar sua preparacao, revisar requisitos,
-          praticar respostas e entender os proximos passos com base no edital
+          Use o chat para organizar sua preparação, revisar requisitos,
+          praticar respostas e entender os próximos passos com base no edital
           autorizado.
         </p>
       </section>
@@ -163,7 +163,7 @@ export function MentorChat() {
           {isSending ? (
             <div className="flex items-center gap-2 text-sm text-muted">
               <Loader2 className="size-4 animate-spin" aria-hidden="true" />
-              Mentor PGM esta pensando...
+              Mentor PGM está pensando...
             </div>
           ) : null}
         </div>
@@ -193,7 +193,7 @@ export function MentorChat() {
             onChange={(event) => setDraft(event.target.value)}
             rows={3}
             maxLength={1200}
-            placeholder="Escreva sua duvida..."
+            placeholder="Escreva sua dúvida..."
             className="min-h-24 w-full resize-none rounded-md border border-border-soft bg-background px-3 py-3 text-sm text-white outline-none transition placeholder:text-muted/60 focus:border-pgm-yellow"
           />
           <button

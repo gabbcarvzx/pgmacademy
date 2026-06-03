@@ -12,7 +12,7 @@ export async function signInWithPasswordAction(formData: FormData) {
   const password = normalizeText(formData.get("password"));
 
   if (!email || !password) {
-    redirect("/login?error=Informe%20email%20e%20senha.");
+    redirect(withMessage("/login", "error", "Informe email e senha."));
   }
 
   const supabase = await getServerSupabaseClient();
@@ -22,7 +22,13 @@ export async function signInWithPasswordAction(formData: FormData) {
   });
 
   if (error) {
-    redirect("/login?error=Credenciais%20invalidas%20ou%20usuario%20nao%20confirmado.");
+    redirect(
+      withMessage(
+        "/login",
+        "error",
+        "Credenciais inválidas ou usuário não confirmado.",
+      ),
+    );
   }
 
   revalidatePath("/", "layout");
@@ -35,11 +41,17 @@ export async function signUpWithPasswordAction(formData: FormData) {
   const password = normalizeText(formData.get("password"));
 
   if (!fullName || !email || !password) {
-    redirect("/cadastro?error=Preencha%20nome%2C%20email%20e%20senha.");
+    redirect(withMessage("/cadastro", "error", "Preencha nome, email e senha."));
   }
 
   if (password.length < minimumPasswordLength) {
-    redirect("/cadastro?error=A%20senha%20precisa%20ter%20pelo%20menos%208%20caracteres.");
+    redirect(
+      withMessage(
+        "/cadastro",
+        "error",
+        "A senha precisa ter pelo menos 8 caracteres.",
+      ),
+    );
   }
 
   const supabase = await getServerSupabaseClient();
@@ -54,7 +66,13 @@ export async function signUpWithPasswordAction(formData: FormData) {
   });
 
   if (error) {
-    redirect("/cadastro?error=Nao%20foi%20possivel%20criar%20a%20conta%20agora.");
+    redirect(
+      withMessage(
+        "/cadastro",
+        "error",
+        "Não foi possível criar a conta agora.",
+      ),
+    );
   }
 
   revalidatePath("/", "layout");
@@ -63,7 +81,13 @@ export async function signUpWithPasswordAction(formData: FormData) {
     redirect("/dashboard");
   }
 
-  redirect("/login?message=Cadastro%20criado.%20Verifique%20seu%20email%20ou%20entre%20com%20sua%20senha.");
+  redirect(
+    withMessage(
+      "/login",
+      "message",
+      "Cadastro criado. Verifique seu email ou entre com sua senha.",
+    ),
+  );
 }
 
 function normalizeEmail(value: FormDataEntryValue | null): string {
@@ -74,4 +98,8 @@ function normalizeEmail(value: FormDataEntryValue | null): string {
 
 function normalizeText(value: FormDataEntryValue | null): string {
   return String(value ?? "").trim();
+}
+
+function withMessage(path: string, key: "error" | "message", message: string) {
+  return `${path}?${key}=${encodeURIComponent(message)}`;
 }

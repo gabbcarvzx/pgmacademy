@@ -76,7 +76,7 @@ export default async function AdminCorrectionsPage({ searchParams }: PageProps) 
           </p>
         </article>
         <article className="rounded-md border border-border-soft bg-background p-4">
-          <AdminBadge>Total visivel</AdminBadge>
+          <AdminBadge>Total visível</AdminBadge>
           <p className="mt-3 text-3xl font-semibold text-white">
             {data.stats.total}
           </p>
@@ -101,7 +101,7 @@ export default async function AdminCorrectionsPage({ searchParams }: PageProps) 
 
       <section className="mt-6 grid gap-4">
         {data.items.length === 0 ? (
-          <EmptyState>Nenhuma resposta encontrada para esta aba.</EmptyState>
+          <EmptyState>Nenhuma resposta encontrada para está aba.</EmptyState>
         ) : (
           data.items.map((item) => (
             <article
@@ -110,7 +110,7 @@ export default async function AdminCorrectionsPage({ searchParams }: PageProps) 
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                  <p className="text-xs font-semibold uppercase text-pgm-yellow">
                     {item.kind === "subjective" ? "Subjetiva" : "Psicossocial"} /{" "}
                     {item.categoryName}
                   </p>
@@ -127,7 +127,7 @@ export default async function AdminCorrectionsPage({ searchParams }: PageProps) 
 
               <div className="mt-4 grid gap-4 xl:grid-cols-2">
                 <div className="rounded-md border border-border-soft bg-background p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                  <p className="text-xs font-semibold uppercase text-muted">
                     Resposta do aluno
                   </p>
                   <p className="mt-3 whitespace-pre-wrap text-sm leading-6 text-white">
@@ -140,18 +140,18 @@ export default async function AdminCorrectionsPage({ searchParams }: PageProps) 
                 <div className="grid gap-4">
                   <div className="rounded-md border border-border-soft bg-background p-4">
                     <p className="text-sm font-semibold text-white">
-                      Rubrica ou orientacao
+                      Rubrica ou orientação
                     </p>
                     <p className="mt-2 whitespace-pre-wrap text-sm leading-6 text-muted">
-                      {item.guidance ?? "Sem orientacao cadastrada."}
+                      {item.guidance ?? "Sem orientação cadastrada."}
                     </p>
                   </div>
                   <div className="rounded-md border border-border-soft bg-background p-4">
                     <p className="text-sm font-semibold text-white">
-                      Erros comuns / criterios
+                      Erros comuns / critérios
                     </p>
                     <p className="mt-2 whitespace-pre-wrap text-sm leading-6 text-muted">
-                      {item.commonMistakes ?? "Sem criterios adicionais."}
+                      {item.commonMistakes ?? "Sem critérios adicionais."}
                     </p>
                   </div>
                 </div>

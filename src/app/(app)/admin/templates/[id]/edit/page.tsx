@@ -35,7 +35,7 @@ export default async function EditTemplatePage({
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Editar template de simulado"
-        description="Atualize tipo, idioma, quantidade, premium e status. Nao exponha gabaritos por esta area."
+        description="Atualize tipo, idioma, quantidade, premium e status. Não exponha gabaritos por está área."
         backHref="/admin/templates"
       />
       <AdminNav />

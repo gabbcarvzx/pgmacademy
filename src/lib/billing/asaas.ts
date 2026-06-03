@@ -86,7 +86,7 @@ function normalizeCpfCnpj(value: string) {
   const digits = value.replace(/\D/g, "");
 
   if (digits.length !== 11 && digits.length !== 14) {
-    throw new Error("Informe um CPF ou CNPJ valido para o pagamento.");
+    throw new Error("Informe um CPF ou CNPJ válido para o pagamento.");
   }
 
   return digits;
@@ -146,7 +146,7 @@ export async function createPremiumCheckout(
     .single();
 
   if (profileError || !profile) {
-    throw new Error("Perfil do usuario nao encontrado para iniciar pagamento.");
+    throw new Error("Perfil do usuário não encontrado para iniciar pagamento.");
   }
 
   if (profile.access_status === "paid") {
@@ -167,7 +167,7 @@ export async function createPremiumCheckout(
     .limit(5);
 
   if (subscriptionError) {
-    throw new Error("Nao foi possivel consultar assinaturas existentes.");
+    throw new Error("Não foi possível consultar assinaturas existentes.");
   }
 
   const existingPaidSubscription = existingSubscriptions?.find(
@@ -244,7 +244,7 @@ export async function createPremiumCheckout(
     .single();
 
   if (createSubscriptionError || !subscription) {
-    throw new Error("Nao foi possivel registrar a assinatura pendente.");
+    throw new Error("Não foi possível registrar a assinatura pendente.");
   }
 
   const payment = await createAsaasPayment({
@@ -257,7 +257,7 @@ export async function createPremiumCheckout(
   });
 
   if (!payment.invoiceUrl) {
-    throw new Error("O Asaas nao retornou uma URL de pagamento.");
+    throw new Error("O Asaas não retornou uma URL de pagamento.");
   }
 
   const updatedMetadata = mergeMetadata(subscription.metadata, {
@@ -350,7 +350,7 @@ export async function processAsaasWebhook(
   }
 
   if (!eventRecord) {
-    throw new Error("Nao foi possivel registrar o evento financeiro.");
+    throw new Error("Não foi possível registrar o evento financeiro.");
   }
 
   if (!subscription || !payment) {

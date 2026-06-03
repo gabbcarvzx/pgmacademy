@@ -42,7 +42,7 @@ export default async function AdminPsychosocialPage({
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Perguntas psicossociais"
-        description="Gerencie perguntas de entrevista, orientacoes de resposta e erros comuns sem automatizar correcao."
+        description="Gerencie perguntas de entrevista, orientações de resposta e erros comuns sem automatizar correção."
         action={
           <Link
             href="/admin/psychosocial/new"
@@ -98,19 +98,19 @@ export default async function AdminPsychosocialPage({
                     {question.is_premium ? "Premium" : "Gratuita"}
                   </AdminBadge>
                 </div>
-                <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                <p className="mt-3 text-sm font-semibold uppercase text-pgm-yellow">
                   {question.category}
                 </p>
                 <h2 className="mt-2 text-lg font-semibold text-white">
                   {question.question}
                 </h2>
                 <p className="mt-2 line-clamp-2 text-sm leading-6 text-muted">
-                  {question.ideal_answer_guidelines ?? "Sem orientacao cadastrada."}
+                  {question.ideal_answer_guidelines ?? "Sem orientação cadastrada."}
                 </p>
               </div>
               <div className="text-sm leading-6 text-muted">
                 <p className="truncate">
-                  Source: {question.source_reference ?? "sem referencia"}
+                  Fonte: {question.source_reference ?? "sem referência"}
                 </p>
                 <p className="mt-1">Atualizada em {question.updated_at}</p>
               </div>
@@ -130,7 +130,7 @@ export default async function AdminPsychosocialPage({
                     />
                     <input type="hidden" name="entity" value="psychosocial" />
                     <input type="hidden" name="id" value={question.id} />
-                    <ConfirmSubmitButton message="Desativar esta pergunta psicossocial?">
+                    <ConfirmSubmitButton message="Desativar está pergunta psicossocial?">
                       Desativar
                     </ConfirmSubmitButton>
                   </form>

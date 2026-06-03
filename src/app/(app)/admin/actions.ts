@@ -97,7 +97,7 @@ function redirectWithError(error: unknown, target: string): never {
   const message =
     error instanceof AdminLearningError || error instanceof Error
       ? error.message
-      : "Nao foi possivel salvar.";
+      : "Não foi possível salvar.";
   const separator = target.includes("?") ? "&" : "?";
 
   redirect(`${target}${separator}error=${encodeURIComponent(message)}`);
@@ -140,7 +140,7 @@ function subjectiveExplanation(formData: FormData) {
 
   if (competencies || rubric) {
     return [
-      competencies ? `Competencias avaliadas: ${competencies}` : null,
+      competencies ? `Competências avaliadas: ${competencies}` : null,
       rubric ? `Rubrica resumida: ${rubric}` : null,
       explanation,
     ]
@@ -168,7 +168,7 @@ export async function createQuestionBankAction(formData: FormData) {
   }
 
   revalidateAdminContent();
-  redirectWithSuccess(target, "Banco de questoes criado.");
+  redirectWithSuccess(target, "Banco de questões criado.");
 }
 
 export async function createSimulationTemplateAction(formData: FormData) {
@@ -280,7 +280,7 @@ export async function saveQuestionAction(formData: FormData) {
   }
 
   revalidateAdminContent();
-  redirectWithSuccess("/admin/questions", id ? "Questao atualizada." : "Questao criada.");
+  redirectWithSuccess("/admin/questions", id ? "Questão atualizada." : "Questão criada.");
 }
 
 export async function saveTemplateAction(formData: FormData) {
@@ -412,7 +412,7 @@ export async function deactivateContentAction(formData: FormData) {
 
   try {
     if (!adminEntities.includes(rawEntity as AdminEntity)) {
-      throw new AdminLearningError("Tipo de conteudo invalido.");
+      throw new AdminLearningError("Tipo de conteúdo inválido.");
     }
 
     const entity = rawEntity as AdminEntity;
@@ -422,5 +422,5 @@ export async function deactivateContentAction(formData: FormData) {
   }
 
   revalidateAdminContent();
-  redirectWithSuccess(target, "Conteudo desativado.");
+  redirectWithSuccess(target, "Conteúdo desativado.");
 }

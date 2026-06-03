@@ -195,8 +195,8 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
   expectCount(errors, "templates derivados", content.templates, 5);
   expectCount(errors, "materiais", content.materials, 12);
   expectCount(errors, "flashcards", content.flashcards, 60);
-  expectCount(errors, "questoes objetivas", content.objectiveQuestions, 100);
-  expectCount(errors, "questoes subjetivas", content.subjectiveQuestions, 20);
+  expectCount(errors, "questões objetivas", content.objectiveQuestions, 100);
+  expectCount(errors, "questões subjetivas", content.subjectiveQuestions, 20);
   expectCount(errors, "perguntas psicossociais", content.psychosocialQuestions, 30);
   expectCount(errors, "trilhas", content.learningPaths, 6);
 
@@ -207,26 +207,26 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
   expectUnique(errors, "materiais", content.materials.map((item) => item.editorialId));
   expectUnique(errors, "slugs de materiais", content.materials.map((item) => item.slug));
   expectUnique(errors, "flashcards", content.flashcards.map((item) => item.editorialId));
-  expectUnique(errors, "questoes", allQuestions.map((item) => item.editorialId));
+  expectUnique(errors, "questões", allQuestions.map((item) => item.editorialId));
   expectUnique(errors, "perguntas psicossociais", content.psychosocialQuestions.map((item) => item.editorialId));
   expectUnique(errors, "trilhas", content.learningPaths.map((item) => item.editorialId));
   expectUnique(errors, "slugs de trilhas", content.learningPaths.map((item) => item.slug));
 
   for (const item of content.categories) {
     if (item.parentSlug && !categorySlugs.has(item.parentSlug)) {
-      errors.push(`Categoria ${item.editorialId} referencia parent_slug inexistente: ${item.parentSlug}`);
+      errors.push(`Categoria ${item.editorialId} referência parent_slug inexistente: ${item.parentSlug}`);
     }
   }
 
   for (const item of [...content.materials, ...content.flashcards, ...allQuestions]) {
     if (!categorySlugs.has(item.categorySlug)) {
-      errors.push(`${item.editorialId} referencia category_slug inexistente: ${item.categorySlug}`);
+      errors.push(`${item.editorialId} referência category_slug inexistente: ${item.categorySlug}`);
     }
   }
 
   for (const item of allQuestions) {
     if (!bankIds.has(item.bankId)) {
-      errors.push(`${item.editorialId} referencia banco inexistente: ${item.bankId}`);
+      errors.push(`${item.editorialId} referência banco inexistente: ${item.bankId}`);
     }
 
     if (item.type === "objective") {
@@ -237,30 +237,30 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
     }
 
     if (item.sourceReference !== SOURCE_REFERENCE) {
-      errors.push(`${item.editorialId} esta sem source_reference padrao`);
+      errors.push(`${item.editorialId} está sem source_reference padrao`);
     }
   }
 
   for (const path of content.learningPaths) {
     for (const item of path.items) {
       if (item.itemType === "study_material" && !materialIds.has(item.editorialId)) {
-        errors.push(`${path.editorialId} referencia material inexistente: ${item.editorialId}`);
+        errors.push(`${path.editorialId} referência material inexistente: ${item.editorialId}`);
       }
       if (item.itemType === "flashcard" && !flashcardIds.has(item.editorialId)) {
-        errors.push(`${path.editorialId} referencia flashcard inexistente: ${item.editorialId}`);
+        errors.push(`${path.editorialId} referência flashcard inexistente: ${item.editorialId}`);
       }
       if (item.itemType === "question" && !questionIds.has(item.editorialId)) {
-        errors.push(`${path.editorialId} referencia questao inexistente: ${item.editorialId}`);
+        errors.push(`${path.editorialId} referência questão inexistente: ${item.editorialId}`);
       }
       if (item.itemType === "psychosocial_question" && !psychosocialIds.has(item.editorialId)) {
-        errors.push(`${path.editorialId} referencia psicossocial inexistente: ${item.editorialId}`);
+        errors.push(`${path.editorialId} referência psicossocial inexistente: ${item.editorialId}`);
       }
     }
   }
 
   for (const item of [...content.banks, ...content.templates, ...content.materials, ...content.flashcards, ...content.learningPaths]) {
     if (item.sourceReference !== SOURCE_REFERENCE) {
-      errors.push(`${item.editorialId} esta sem source_reference padrao`);
+      errors.push(`${item.editorialId} está sem source_reference padrao`);
     }
   }
 
@@ -277,7 +277,7 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
 
   for (const item of content.categories) {
     if (item.sourceReference !== SOURCE_REFERENCE) {
-      errors.push(`${item.editorialId} esta sem source_reference padrao`);
+      errors.push(`${item.editorialId} está sem source_reference padrao`);
     }
   }
 
@@ -297,8 +297,8 @@ export function formatContentSummary(content: ApprovedContent): string {
     `Templates derivados: ${content.templates.length}`,
     `Materiais: ${content.materials.length}`,
     `Flashcards: ${content.flashcards.length}`,
-    `Questoes objetivas: ${content.objectiveQuestions.length}`,
-    `Questoes subjetivas: ${content.subjectiveQuestions.length}`,
+    `Questões objetivas: ${content.objectiveQuestions.length}`,
+    `Questões subjetivas: ${content.subjectiveQuestions.length}`,
     `Perguntas psicossociais: ${content.psychosocialQuestions.length}`,
     `Trilhas: ${content.learningPaths.length}`,
     `Source reference: ${SOURCE_REFERENCE}`,
@@ -349,7 +349,7 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-EN",
-      title: "Simulado Rapido - Ingles",
+      title: "Simulado Rápido - Inglês",
       description: "Leitura, vocabulario, gramatica funcional e comunicacao em ingles.",
       type: "quick",
       language: "english",
@@ -359,7 +359,7 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-ES",
-      title: "Simulado Rapido - Espanhol",
+      title: "Simulado Rápido - Espanhol",
       description: "Compreensao leitora, vocabulario e gramatica basica em espanhol.",
       type: "quick",
       language: "spanish",
@@ -369,7 +369,7 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-PT",
-      title: "Simulado Rapido - Preparacao Segura",
+      title: "Simulado Rápido - Preparação Segura",
       description: "Edital vigente, orientacoes seguras, responsabilidade e organizacao.",
       type: "quick",
       language: "portuguese",
@@ -379,7 +379,7 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-PSY",
-      title: "Simulado Rapido - Psicossocial",
+      title: "Simulado Rápido - Psicossocial",
       description: "Postura, maturidade, adaptacao cultural e responsabilidade.",
       type: "quick",
       language: "psychosocial",
@@ -396,7 +396,7 @@ function parseMaterials(markdown: string): MaterialSeed[] {
     const contentMd = section.body.match(/```md\r?\n([\s\S]*?)\r?\n```/)?.[1]?.trim();
 
     if (!contentMd) {
-      throw new Error(`${section.id} esta sem bloco markdown de conteudo`);
+      throw new Error(`${section.id} está sem bloco markdown de conteúdo`);
     }
 
     return {
@@ -543,7 +543,7 @@ function toPathItemType(rawType: string): PathItemType {
   if (rawType === "objective_questions" || rawType === "subjective_questions") return "question";
   if (rawType === "psychosocial_questions") return "psychosocial_question";
   if (rawType === "simulation_template") return "simulation_template";
-  throw new Error(`Tipo de item de trilha nao suportado: ${rawType}`);
+  throw new Error(`Tipo de item de trilha não suportado: ${rawType}`);
 }
 
 function expandEditorialIds(rawValue: string): string[] {
@@ -634,7 +634,7 @@ function languageForObjective(editorialId: string): Language {
 function sequenceFromEditorialId(editorialId: string): number {
   const sequence = Number(editorialId.match(/(\d{3})$/)?.[1]);
   if (!Number.isInteger(sequence)) {
-    throw new Error(`ID editorial invalido: ${editorialId}`);
+    throw new Error(`ID editorial inválido: ${editorialId}`);
   }
   return sequence;
 }
@@ -655,7 +655,7 @@ function expectUnique(errors: string[], label: string, values: string[]): void {
 function required(metadata: Record<string, string>, key: string, context: string): string {
   const value = metadata[key];
   if (!value) {
-    throw new Error(`${context} esta sem metadado obrigatorio: ${key}`);
+    throw new Error(`${context} está sem metadado obrigatório: ${key}`);
   }
   return value;
 }
@@ -670,13 +670,13 @@ function toNullable(value: string | undefined): string | null {
 function toBoolean(value: string, context: string): boolean {
   if (value === "true") return true;
   if (value === "false") return false;
-  throw new Error(`${context} tem boolean invalido: ${value}`);
+  throw new Error(`${context} tem boolean inválido: ${value}`);
 }
 
 function toNumber(value: string, context: string): number {
   const numberValue = Number(value);
   if (!Number.isInteger(numberValue)) {
-    throw new Error(`${context} tem numero invalido: ${value}`);
+    throw new Error(`${context} tem número inválido: ${value}`);
   }
   return numberValue;
 }

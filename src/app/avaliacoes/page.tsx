@@ -14,7 +14,7 @@ import { SiteHeader } from "@/components/marketing/site-header";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Avaliacoes",
+  title: "Avaliações",
   description:
     "Estrutura de prova social da PGM Academy para futuros depoimentos autorizados.",
 };
@@ -29,14 +29,14 @@ const futureProofSlots = [
       "Espaco reservado para relato autorizado de aluno que usou a plataforma.",
   },
   {
-    title: "Familia responsavel",
+    title: "Família responsável",
     description:
-      "Espaco reservado para percepcao de familia sobre rotina e organizacao.",
+      "Espaco reservado para percepcao de família sobre rotina e organização.",
   },
   {
-    title: "Equipe pedagogica",
+    title: "Equipe pedagógica",
     description:
-      "Espaco reservado para avaliacao institucional interna, quando houver autorizacao.",
+      "Espaco reservado para avaliação institucional interna, quando houver autorização.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function ReviewsPage() {
       <section className="relative min-h-[70vh] overflow-hidden">
         <Image
           src={heroImage}
-          alt="Trilha no Canada representando a jornada de preparacao."
+          alt="Trilha no Canadá representando a jornada de preparação."
           fill
           priority
           sizes="100vw"
@@ -66,13 +66,13 @@ export default function ReviewsPage() {
               />
               Prova social em construcao
             </div>
-            <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold tracking-normal text-white sm:text-6xl">
-              Historias reais precisam de alunos reais e autorizacao real.
+            <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold text-white sm:text-6xl">
+              Histórias reais precisam de alunos reais e autorização real.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/82">
-              Esta pagina prepara a estrutura de avaliacoes da PGM Academy sem
+              Esta pagina prepara a estrutura de avaliações da PGM Academy sem
               inventar depoimentos. Quando houver relatos autorizados, eles
-              poderao entrar aqui com revisao e consentimento.
+              poderao entrar aqui com revisão e consentimento.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -86,7 +86,7 @@ export default function ReviewsPage() {
                 href="/cadastro"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/25 bg-background/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-white/50 hover:bg-white/10"
               >
-                Comecar gratuitamente
+                Começar gratuitamente
                 <GraduationCap className="size-4" aria-hidden="true" />
               </Link>
             </div>
@@ -96,15 +96,15 @@ export default function ReviewsPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Estrutura preparada
           </p>
           <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
             Depoimentos so entram quando forem verificaveis.
           </h2>
           <p className="mt-5 max-w-3xl text-base leading-7 text-muted">
-            Para preservar confianca comercial, nenhum resultado, historia ou
-            frase de aluno sera publicado sem autorizacao e revisao editorial.
+            Para preservar confiança comercial, nenhum resultado, historia ou
+            frase de aluno será publicado sem autorização e revisão editorial.
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -134,11 +134,11 @@ export default function ReviewsPage() {
           <article className="rounded-md border border-border-soft bg-background p-5 sm:p-6">
             <BadgeCheck className="size-6 text-pgm-yellow" aria-hidden="true" />
             <h2 className="mt-5 text-2xl font-semibold text-white">
-              Politica de prova social
+              Política de prova social
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted">
               Depoimentos futuros devem indicar consentimento, evitar promessas
-              de aprovacao garantida e separar resultado pessoal de regra
+              de aprovação garantida e separar resultado pessoal de regra
               oficial do programa.
             </p>
           </article>

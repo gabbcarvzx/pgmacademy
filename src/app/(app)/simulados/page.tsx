@@ -31,12 +31,12 @@ const accessLabel = {
 
 const statusLabel = {
   started: "Em andamento",
-  completed: "Concluido",
+  completed: "Concluído",
   abandoned: "Abandonado",
 } as const;
 
 const typeLabel = {
-  quick: "Rapido",
+  quick: "Rápido",
   full: "Completo",
 } as const;
 
@@ -53,7 +53,7 @@ function estimatedMinutes(totalQuestions: number) {
 function lockLabel(reason: string | null) {
   if (reason === "premium_required") return "Premium bloqueado";
   if (reason === "insufficient_questions") return "Banco insuficiente";
-  if (reason === "no_questions") return "Sem questoes";
+  if (reason === "no_questions") return "Sem questões";
   return null;
 }
 
@@ -73,21 +73,21 @@ export default async function SimuladosPage() {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Simulados reais
           </p>
           <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-            Treine com as questoes objetivas autorais ja aprovadas
+            Treine com as questões objetivas autorais já aprovadas
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
             Escolha um template, inicie uma tentativa e acompanhe seu resultado
-            por categoria. O gabarito fica protegido ate a finalizacao.
+            por categoria. O gabarito fica protegido até a finalização.
           </p>
         </div>
         {overview.hasPaidAccess ? (
           <InstitutionalNotice />
         ) : (
-          <PremiumUpgradeCard description="Simulados premium exigem acesso pago. Voce pode visualizar os modelos, mas somente usuarios premium podem iniciar." />
+          <PremiumUpgradeCard description="Simulados premium exigem acesso pago. Você pode visualizar os modelos, mas somente usuários premium podem iniciar." />
         )}
       </section>
 
@@ -102,19 +102,19 @@ export default async function SimuladosPage() {
           {
             title: "Templates",
             value: String(overview.schema.templatesCount),
-            description: "Modelos ativos disponiveis para estudo.",
+            description: "Modelos ativos disponíveis para estudo.",
             Icon: ListChecks,
           },
           {
-            title: "Questoes",
+            title: "Questões",
             value: String(overview.schema.activeObjectiveQuestionsCount),
-            description: "Objetivas visiveis para seu plano atual.",
+            description: "Objetivas visíveis para seu plano atual.",
             Icon: Trophy,
           },
           {
-            title: "Historico",
+            title: "Histórico",
             value: String(overview.historySummary.totalAttempts),
-            description: `${overview.historySummary.completedAttempts} tentativas concluidas.`,
+            description: `${overview.historySummary.completedAttempts} tentativas concluídas.`,
             Icon: History,
           },
         ].map((item) => (
@@ -137,11 +137,11 @@ export default async function SimuladosPage() {
       <section className="mt-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Templates
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
-              Simulados disponiveis
+              Simulados disponíveis
             </h2>
           </div>
           <span className="inline-flex rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
@@ -195,12 +195,12 @@ export default async function SimuladosPage() {
 
                 <p className="mt-4 text-sm leading-6 text-muted">
                   {template.description ??
-                    "Simulado objetivo com correcao automatica."}
+                    "Simulado objetivo com correção automática."}
                 </p>
 
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
-                    {template.total_questions} questoes
+                    {template.total_questions} questões
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     <Clock3 className="size-4" aria-hidden="true" />
@@ -232,7 +232,7 @@ export default async function SimuladosPage() {
                     href={`/simulados/${template.id}`}
                     className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
                   >
-                    Abrir instrucoes
+                    Abrir instruções
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
                 )}
@@ -245,8 +245,8 @@ export default async function SimuladosPage() {
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Historico
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Histórico
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
               Tentativas anteriores
@@ -264,8 +264,8 @@ export default async function SimuladosPage() {
                 Nenhuma tentativa registrada
               </p>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Inicie um template disponivel para acompanhar desempenho,
-                acertos e evolucao por categoria.
+                Inicie um template disponível para acompanhar desempenho,
+                acertos e evolução por categoria.
               </p>
             </div>
           ) : (
@@ -280,11 +280,11 @@ export default async function SimuladosPage() {
                   </p>
                   <p className="mt-1 text-xs text-muted">
                     {dateFormatter.format(new Date(attempt.started_at))} ·{" "}
-                    {statusLabel[attempt.status]} · {attempt.answerCount} questoes
+                    {statusLabel[attempt.status]} · {attempt.answerCount} questões
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                  <p className="text-xs font-semibold uppercase text-muted">
                     Pontuacao
                   </p>
                   <p className="mt-1 text-sm font-semibold text-white">

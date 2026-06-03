@@ -1,43 +1,43 @@
 export const siteConfig = {
   name: "PGM Academy",
   price: "R$ 29,90",
-  paymentModel: "Pagamento unico",
+  paymentModel: "Pagamento único",
   disclaimer:
-    "Plataforma independente de preparacao. Consulte sempre o edital vigente e os canais oficiais do Programa Ganhe o Mundo.",
+    "Plataforma independente de preparação. Consulte sempre o edital vigente e os canais oficiais do Programa Ganhe o Mundo.",
   institutionalNotice:
-    "A PGM Academy e uma plataforma independente de preparacao. Nao possui vinculo oficial com o Governo de Pernambuco nem com o Programa Ganhe o Mundo. Consulte sempre os editais e canais oficiais.",
+    "A PGM Academy é uma plataforma independente de preparação. Não possui vínculo oficial com o Governo de Pernambuco nem com o Programa Ganhe o Mundo. Consulte sempre os editais e canais oficiais.",
   editalUrl:
     "https://portal.educacao.pe.gov.br/wp-content/uploads/2026/05/0d68cd50-48a7-492c-88f7-0c7b9af530c0.pdf",
 };
 
 export const navigationItems = [
-  { label: "Inicio", href: "/" },
+  { label: "Início", href: "/" },
   { label: "Plataforma", href: "/#plataforma" },
   { label: "Planos", href: "/planos" },
-  { label: "Avaliacoes", href: "/avaliacoes" },
+  { label: "Avaliações", href: "/avaliacoes" },
   { label: "FAQ", href: "/planos#faq" },
 ];
 
 export const eligibilitySignals = [
   {
-    label: "Frequencia",
+    label: "Frequência",
     value: "85%+",
-    detail: "Sinal critico para elegibilidade no edital.",
+    detail: "Sinal crítico para elegibilidade no edital.",
   },
   {
-    label: "Medias",
+    label: "Médias",
     value: "7,0+",
-    detail: "Portugues, Matematica e Humanas entram no diagnostico.",
+    detail: "Português, Matemática e Humanas entram no diagnóstico.",
   },
   {
     label: "Status",
-    value: "3 niveis",
-    detail: "Elegivel, parcialmente elegivel ou nao elegivel.",
+    value: "3 níveis",
+    detail: "Elegível, parcialmente elegível ou não elegível.",
   },
 ];
 
 export const approvalSteps = [
-  "Verificacao dos requisitos",
+  "Verificação dos requisitos",
   "Prova objetiva",
   "Prova subjetiva",
   "Entrevista psicossocial",
@@ -45,9 +45,9 @@ export const approvalSteps = [
 
 export const platformModules = [
   {
-    title: "Diagnostico de elegibilidade",
+    title: "Diagnóstico de elegibilidade",
     description:
-      "Ajuda o aluno a entender requisitos, prontidao inicial e proximos passos de preparacao.",
+      "Ajuda o aluno a entender requisitos, prontidão inicial e próximos passos de preparação.",
   },
   {
     title: "Central de estudos",
@@ -57,7 +57,7 @@ export const platformModules = [
   {
     title: "Simulados realistas",
     description:
-      "Usa questoes objetivas autorais importadas e correcao automatica protegida.",
+      "Usa questões objetivas autorais importadas e correção automática protegida.",
   },
   {
     title: "Subjetivas com feedback",
@@ -67,12 +67,12 @@ export const platformModules = [
   {
     title: "Entrevista psicossocial",
     description:
-      "Prepara postura, maturidade, responsabilidade e adaptacao cultural com perguntas autorais.",
+      "Prepara postura, maturidade, responsabilidade e adaptação cultural com perguntas autorais.",
   },
   {
-    title: "Analytics de evolucao",
+    title: "Analytics de evolução",
     description:
-      "Transforma desempenho e progresso em metas, diagnosticos e recomendacoes baseadas em regras.",
+      "Transforma desempenho e progresso em metas, diagnósticos e recomendações baseadas em regras.",
   },
 ];
 
@@ -80,7 +80,7 @@ export const architecturePillars = [
   "Dados isolados por aluno",
   "Acesso premium controlado",
   "Pagamento seguro via Asaas",
-  "Historico e auditoria planejados",
-  "RLS e autorizacao no servidor",
+  "Histórico e auditoria planejados",
+  "RLS e autorização no servidor",
   "Infraestrutura pronta para escala",
 ];

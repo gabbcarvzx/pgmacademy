@@ -22,7 +22,7 @@ type PageProps = {
 };
 
 const typeLabel = {
-  quick: "Rapido",
+  quick: "Rápido",
   full: "Completo",
 } as const;
 
@@ -37,13 +37,13 @@ export async function generateMetadata({
 
 function lockMessage(reason: string | null) {
   if (reason === "premium_required") {
-    return "Este simulado esta disponivel apenas para usuarios premium.";
+    return "Este simulado está disponível apenas para usuários premium.";
   }
   if (reason === "insufficient_questions") {
-    return "O banco ainda nao possui questoes suficientes para este template.";
+    return "O banco ainda não possui questões suficientes para este template.";
   }
   if (reason === "no_questions") {
-    return "O banco ainda nao possui questoes para este template.";
+    return "O banco ainda não possui questões para este template.";
   }
   return null;
 }
@@ -82,7 +82,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
         <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
                 {typeLabel[data.template.type]} ·{" "}
                 {languageLabel[data.template.language]}
               </p>
@@ -91,7 +91,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
               </h1>
               <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
                 {data.template.description ??
-                  "Simulado objetivo com correcao automatica e resultado por categoria."}
+                  "Simulado objetivo com correção automática e resultado por categoria."}
               </p>
             </div>
             {canStart ? (
@@ -109,7 +109,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
-              {data.template.total_questions} questoes
+              {data.template.total_questions} questões
             </span>
             <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
               <Clock3 className="size-4" aria-hidden="true" />
@@ -121,13 +121,13 @@ export default async function SimulationStartPage({ params }: PageProps) {
           </div>
 
           <div className="mt-6 rounded-md border border-border-soft bg-background p-5">
-            <p className="text-sm font-semibold text-white">Instrucoes</p>
+            <p className="text-sm font-semibold text-white">Instruções</p>
             <ul className="mt-4 grid gap-3">
               {[
                 "Leia cada enunciado com calma antes de marcar uma alternativa.",
                 "Sua resposta e salva automaticamente durante a tentativa.",
-                "Voce pode revisar as questoes antes de finalizar.",
-                "O gabarito e as explicacoes aparecem somente depois da finalizacao.",
+                "Você pode revisar as questões antes de finalizar.",
+                "O gabarito e as explicacoes aparecem somente depois da finalização.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-6 text-muted">
                   <CheckCircle2
@@ -147,7 +147,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
               ) : (
                 <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5">
                   <p className="text-sm font-semibold text-white">
-                    Template indisponivel
+                    Template indisponível
                   </p>
                   <p className="mt-2 text-sm leading-6 text-muted">{message}</p>
                 </div>
@@ -179,11 +179,11 @@ export default async function SimulationStartPage({ params }: PageProps) {
           <InstitutionalNotice />
           <div className="rounded-md border border-border-soft bg-surface p-5">
             <p className="text-sm font-semibold text-white">
-              Seguranca da tentativa
+              Segurança da tentativa
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              A selecao de questoes, a correcao e a nota final sao calculadas
-              no servidor. O cliente nao recebe o gabarito durante a resolucao.
+              A seleção de questões, a correção e a nota final são calculadas
+              no servidor. O cliente não recebe o gabarito durante a resolução.
             </p>
           </div>
         </aside>

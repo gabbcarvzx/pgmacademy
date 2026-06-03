@@ -12,7 +12,7 @@ import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Flashcards",
-  description: "Flashcards de revisao da PGM Academy.",
+  description: "Flashcards de revisão da PGM Academy.",
 };
 
 type PageProps = {
@@ -40,16 +40,16 @@ export default async function FlashcardsPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Flashcards
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-            Revisao rapida por categoria
+            Revisão rápida por categoria
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-            Use frente e verso para revisar vocabulario, regras de escrita e
-            preparacao psicossocial. A arquitetura ja esta pronta para repeticao
-            espacada futura.
+            Use frente e verso para revisar vocabulário, regras de escrita e
+            preparação psicossocial. A arquitetura já está pronta para repetição
+            espaçada futura.
           </p>
         </div>
         {data.hasPaidAccess ? <InstitutionalNotice /> : <PremiumUpgradeCard />}
@@ -103,7 +103,7 @@ export default async function FlashcardsPage({ searchParams }: PageProps) {
 
         <div>
           {data.selectedDeck && !data.selectedDeck.canAccess ? (
-            <PremiumUpgradeCard description="Flashcards do lote aprovado sao premium. Faca upgrade para revisar frente e verso." />
+            <PremiumUpgradeCard description="Flashcards do lote aprovado são premium. Faça upgrade para revisar frente e verso." />
           ) : (
             <FlashcardDeck
               cards={data.cards}

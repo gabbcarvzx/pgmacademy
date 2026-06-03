@@ -57,7 +57,7 @@ export default async function InterviewQuestionPage({
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               {data.question.categoryName}
             </p>
             <h1 className="mt-4 text-3xl font-semibold text-white">
@@ -69,10 +69,10 @@ export default async function InterviewQuestionPage({
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <div className="rounded-md border border-border-soft bg-background p-4">
             <p className="text-sm font-semibold text-white">
-              Orientacao de resposta
+              Orientação de resposta
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              {data.question.idealAnswerGuidelines ?? "Sem orientacao cadastrada."}
+              {data.question.idealAnswerGuidelines ?? "Sem orientação cadastrada."}
             </p>
           </div>
           <div className="rounded-md border border-border-soft bg-background p-4">
@@ -92,7 +92,7 @@ export default async function InterviewQuestionPage({
           </div>
         ) : data.question.canSubmit && hasPending ? (
           <p className="mt-4 rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 p-4 text-sm leading-6 text-pgm-yellow">
-            Voce ja possui uma resposta pendente para esta pergunta. Aguarde o
+            Você já possui uma resposta pendente para está pergunta. Aguarde o
             feedback manual antes de reenviar.
           </p>
         ) : (
@@ -112,7 +112,7 @@ export default async function InterviewQuestionPage({
       </section>
 
       <section className="mt-6 grid gap-4">
-        <h2 className="text-xl font-semibold text-white">Historico</h2>
+        <h2 className="text-xl font-semibold text-white">Histórico</h2>
         {data.question.attempts.length === 0 ? (
           <p className="rounded-md border border-border-soft bg-surface p-5 text-sm text-muted">
             Nenhum treino enviado ainda.

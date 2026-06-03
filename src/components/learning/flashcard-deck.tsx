@@ -26,7 +26,7 @@ export function FlashcardDeck({
     return (
       <div className="rounded-md border border-border-soft bg-surface p-5">
         <p className="text-sm font-semibold text-white">
-          Nenhum flashcard disponivel
+          Nenhum flashcard disponível
         </p>
         <p className="mt-2 text-sm leading-6 text-muted">
           Escolha outra categoria ou libere o acesso premium.

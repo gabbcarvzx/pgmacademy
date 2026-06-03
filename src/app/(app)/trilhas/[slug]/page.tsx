@@ -58,7 +58,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
         <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
                 {languageLabel[path.language]}
               </p>
               <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
@@ -90,7 +90,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
 
           {!path.canAccess ? (
             <div className="mt-6">
-              <PremiumUpgradeCard description="As trilhas do lote autoral aprovado sao premium. Faca upgrade para acessar a sequencia completa." />
+              <PremiumUpgradeCard description="As trilhas do lote autoral aprovado são premium. Faça upgrade para acessar a sequência completa." />
             </div>
           ) : null}
         </article>
@@ -100,10 +100,10 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
           <div className="rounded-md border border-border-soft bg-surface p-5">
             <Layers3 className="size-5 text-pgm-yellow" aria-hidden="true" />
             <p className="mt-4 text-sm font-semibold text-white">
-              Sequencia pedagogica
+              Sequência pedagógica
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              Siga os blocos em ordem para combinar leitura, revisao e pratica.
+              Siga os blocos em ordem para combinar leitura, revisão e prática.
             </p>
           </div>
         </aside>
@@ -162,7 +162,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
                         disabled={completed}
                         className="inline-flex h-10 w-full items-center justify-center rounded-md bg-pgm-yellow px-3 text-sm font-semibold text-background transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        {completed ? "Concluido" : "Concluir"}
+                        {completed ? "Concluído" : "Concluir"}
                       </button>
                     </form>
                   ) : null}

@@ -17,7 +17,7 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   return {
-    title: `Admin - Editar questao ${id}`,
+    title: `Admin - Editar questão ${id}`,
   };
 }
 
@@ -39,8 +39,8 @@ export default async function EditQuestionPage({
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
-        title="Editar questao"
-        description="Atualize enunciado, alternativas, explicacao e status. O tipo da questao e preservado."
+        title="Editar questão"
+        description="Atualize enunciado, alternativas, explicação e status. O tipo da questão e preservado."
         backHref="/admin/questions"
       />
       <AdminNav />

@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
   if (!receivedToken || !timingSafeCompare(receivedToken, expectedToken)) {
     return NextResponse.json(
-      { error: "Token de webhook invalido." },
+      { error: "Token de webhook inválido." },
       { status: 401 },
     );
   }
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     payload = JSON.parse(rawBody) as AsaasWebhookPayload;
   } catch {
     return NextResponse.json(
-      { error: "Payload JSON invalido." },
+      { error: "Payload JSON inválido." },
       { status: 400 },
     );
   }
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     });
   } catch {
     return NextResponse.json(
-      { error: "Nao foi possivel processar o webhook." },
+      { error: "Não foi possível processar o webhook." },
       { status: 500 },
     );
   }

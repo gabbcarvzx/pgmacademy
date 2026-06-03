@@ -28,7 +28,7 @@ export async function startSimulationAttemptAction(formData: FormData) {
   const templateId = String(formData.get("templateId") ?? "");
 
   if (!templateId) {
-    throw new Error("Modelo de simulado invalido.");
+    throw new Error("Modelo de simulado inválido.");
   }
 
   const attempt = await startSimulationAttempt(userId, templateId);
@@ -54,7 +54,7 @@ export async function finishSimulationAttemptAction(formData: FormData) {
   const attemptId = String(formData.get("attemptId") ?? "");
 
   if (!attemptId) {
-    throw new Error("Tentativa invalida.");
+    throw new Error("Tentativa inválida.");
   }
 
   await finishSimulationAttempt(userId, attemptId);

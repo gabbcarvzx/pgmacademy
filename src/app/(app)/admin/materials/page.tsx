@@ -71,7 +71,7 @@ export default async function AdminMaterialsPage({ searchParams }: PageProps) {
       <form className="mt-6 grid gap-3 rounded-md border border-border-soft bg-surface p-4 lg:grid-cols-[1fr_180px_220px_160px_auto]">
         <input
           name="q"
-          placeholder="Buscar por titulo"
+          placeholder="Buscar por título"
           defaultValue={params?.q ?? ""}
           className={inputClassName}
         />
@@ -134,7 +134,7 @@ export default async function AdminMaterialsPage({ searchParams }: PageProps) {
               <div className="text-sm text-muted">
                 <p>Slug: {material.slug}</p>
                 <p className="mt-1 truncate">
-                  Source: {material.source_reference ?? "sem referencia"}
+                  Fonte: {material.source_reference ?? "sem referência"}
                 </p>
               </div>
               <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-1">

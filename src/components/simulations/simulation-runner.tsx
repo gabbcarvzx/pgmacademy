@@ -65,7 +65,7 @@ export function SimulationRunner({
           selectedOptionId,
         });
       } catch {
-        setSaveError("Nao foi possivel salvar esta resposta. Tente novamente.");
+        setSaveError("Não foi possível salvar está resposta. Tente novamente.");
       }
     });
   }
@@ -74,10 +74,10 @@ export function SimulationRunner({
     return (
       <section className="rounded-md border border-border-soft bg-surface p-5">
         <p className="text-sm font-semibold text-white">
-          Nenhuma questao vinculada
+          Nenhuma questão vinculada
         </p>
         <p className="mt-2 text-sm leading-6 text-muted">
-          Esta tentativa nao possui questoes suficientes para resolucao.
+          Esta tentativa não possui questões suficientes para resolução.
         </p>
       </section>
     );
@@ -88,8 +88,8 @@ export function SimulationRunner({
       <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Questao {currentIndex + 1} de {questions.length}
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Questão {currentIndex + 1} de {questions.length}
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
@@ -186,7 +186,7 @@ export function SimulationRunner({
             disabled={currentIndex === questions.length - 1}
             className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45"
           >
-            Proxima
+            Próxima
             <ArrowRight className="size-4" aria-hidden="true" />
           </button>
         </div>
@@ -194,10 +194,10 @@ export function SimulationRunner({
 
       <aside className="grid gap-4 self-start">
         <article className="rounded-md border border-border-soft bg-surface p-5">
-          <p className="text-sm font-semibold text-white">Revisao</p>
+          <p className="text-sm font-semibold text-white">Revisão</p>
           <p className="mt-2 text-sm leading-6 text-muted">
-            {answeredCount} de {questions.length} respondidas. Voce pode voltar
-            para qualquer questao antes de finalizar.
+            {answeredCount} de {questions.length} respondidas. Você pode voltar
+            para qualquer questão antes de finalizar.
           </p>
 
           <div className="mt-4 grid grid-cols-5 gap-2 sm:grid-cols-6 xl:grid-cols-5">
@@ -217,7 +217,7 @@ export function SimulationRunner({
                         ? "border-pgm-yellow/50 bg-pgm-yellow/10 text-pgm-yellow"
                         : "border-border-soft bg-background text-muted hover:border-white/35"
                   }`}
-                  title={`Ir para questao ${index + 1}`}
+                  title={`Ir para questão ${index + 1}`}
                 >
                   {index + 1}
                 </button>
@@ -230,9 +230,9 @@ export function SimulationRunner({
           <p className="text-sm font-semibold text-white">Antes de finalizar</p>
           <ul className="mt-4 grid gap-3">
             {[
-              "Confira questoes sem resposta.",
+              "Confira questões sem resposta.",
               "Revise alternativas marcadas.",
-              "Depois de finalizar, o gabarito sera liberado.",
+              "Depois de finalizar, o gabarito será liberado.",
             ].map((item, index) => (
               <li key={item} className="flex gap-3 text-sm leading-6 text-muted">
                 {index < 2 ? (

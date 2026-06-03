@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08090d;
-  --foreground: #f8fbff;
-  --muted: #a8b3c1;
-  --surface: #12151c;
-  --surface-elevated: #171d27;
-  --border-soft: rgba(246, 251, 255, 0.12);
-  --pgm-blue: #0866d8;
-  --pgm-green: #08a65a;
-  --pgm-yellow: #ffd23c;
-  --pgm-red: #e7383d;
+  --background: #080a0f;
+  --foreground: #f7f9fc;
+  --muted: #a9b4c3;
+  --surface: #10141b;
+  --surface-elevated: #171d26;
+  --border-soft: rgba(247, 249, 252, 0.14);
+  --pgm-blue: #2f80ed;
+  --pgm-green: #14b86a;
+  --pgm-yellow: #f6c945;
+  --pgm-red: #f05252;
 }
 
 @theme inline {
@@ -28,8 +28,14 @@
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
 }
 
-body {
+html {
   background: var(--background);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(47, 128, 237, 0.08) 0%, transparent 34%),
+    linear-gradient(180deg, #080a0f 0%, #0b1118 52%, #080a0f 100%);
   color: var(--foreground);
   font-family: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
 }
@@ -46,6 +52,40 @@ body {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--pgm-yellow);
+  outline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0d13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3442;
+  border: 2px solid #0a0d13;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4656;
 }
 
 @layer utilities {

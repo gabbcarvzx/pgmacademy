@@ -36,7 +36,7 @@ export function PaymentButton({
       };
 
       if (!response.ok || !payload.checkoutUrl) {
-        throw new Error(payload.error ?? "Nao foi possivel iniciar o pagamento.");
+        throw new Error(payload.error ?? "Não foi possível iniciar o pagamento.");
       }
 
       window.location.assign(payload.checkoutUrl);
@@ -44,7 +44,7 @@ export function PaymentButton({
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Nao foi possivel iniciar o pagamento.",
+          : "Não foi possível iniciar o pagamento.",
       );
       setIsLoading(false);
     }

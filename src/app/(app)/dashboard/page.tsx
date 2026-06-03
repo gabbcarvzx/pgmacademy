@@ -24,13 +24,13 @@ import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "Area inicial do estudante na PGM Academy.",
+  description: "Área inicial do estudante na PGM Academy.",
 };
 
 const statusLabel = {
-  eligible: "Elegivel",
+  eligible: "Elegível",
   partial: "Parcial",
-  ineligible: "Nao elegivel",
+  ineligible: "Não elegível",
 } as const;
 
 const accessLabel = {
@@ -108,23 +108,23 @@ export default async function DashboardPage() {
     ? statusLabel[latestAssessment.status]
     : "Pendente";
   const diagnosisDescription = latestAssessment
-    ? `Ultimo diagnostico salvo em ${dateFormatter.format(new Date(latestAssessment.created_at))}.`
-    : "Resultado ainda nao salvo no painel.";
+    ? `último diagnóstico salvo em ${dateFormatter.format(new Date(latestAssessment.created_at))}.`
+    : "Resultado ainda não salvo no painel.";
 
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Area do aluno
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Área do aluno
             </p>
             <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              Painel de preparacao
+              Painel de preparação
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
-              Comece pelo diagnostico e avance pela trilha de aprovacao com
-              clareza sobre requisitos, provas e preparacao premium.
+              Comece pelo diagnóstico e avance pela trilha de aprovação com
+              clareza sobre requisitos, provas e preparação premium.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export default async function DashboardPage() {
             href="/diagnostico"
             className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
           >
-            Fazer diagnostico
+            Fazer diagnóstico
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
@@ -141,7 +141,7 @@ export default async function DashboardPage() {
       <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {[
           {
-            title: "Diagnostico",
+            title: "Diagnóstico",
             value: diagnosisValue,
             description: diagnosisDescription,
             Icon: BadgeCheck,
@@ -157,13 +157,13 @@ export default async function DashboardPage() {
           {
             title: "Premium",
             value: accessLabel[accessStatus],
-            description: "Acesso sera controlado por status financeiro.",
+            description: "Acesso será controlado por status financeiro.",
             Icon: LockKeyhole,
           },
           {
             title: "Pagamento",
             value: paymentValue,
-            description: "Modelo inicial de pagamento unico.",
+            description: "Modelo inicial de pagamento único.",
             Icon: CircleDollarSign,
           },
         ].map((item) => (
@@ -189,20 +189,20 @@ export default async function DashboardPage() {
       >
         <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Acesso premium
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
-              Plano unico para preparar sua aprovacao
+              Plano único para preparar sua aprovação
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-              Pagamento unico de R$ 29,90 processado pelo Asaas. O acesso
-              premium sera liberado automaticamente apos confirmacao do
+              Pagamento único de R$ 29,90 processado pelo Asaas. O acesso
+              premium será liberado automaticamente após confirmação do
               pagamento pelo webhook.
             </p>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
-              {["PIX", "Cartao", "Boleto"].map((method) => (
+              {["PIX", "Cartão", "Boleto"].map((method) => (
                 <div
                   key={method}
                   className="rounded-md border border-border-soft bg-background px-4 py-3"
@@ -220,7 +220,7 @@ export default async function DashboardPage() {
           </div>
 
           <div className="rounded-md border border-border-soft bg-background p-4">
-            <p className="text-sm font-medium text-muted">Pagamento unico</p>
+            <p className="text-sm font-medium text-muted">Pagamento único</p>
             <p className="mt-2 text-4xl font-semibold text-white">R$ 29,90</p>
             <p className="mt-3 text-sm leading-6 text-muted">
               Status atual: {accessLabel[accessStatus]}
@@ -237,7 +237,7 @@ export default async function DashboardPage() {
                     Premium ativo
                   </p>
                   <p className="mt-2 text-sm leading-6 text-muted">
-                    Seu acesso ja foi liberado.
+                    Seu acesso já foi liberado.
                   </p>
                 </div>
               ) : (
@@ -251,8 +251,8 @@ export default async function DashboardPage() {
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Correcao manual
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Correção manual
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
               Subjetivas e entrevista
@@ -313,15 +313,15 @@ export default async function DashboardPage() {
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Meu progresso
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
-              Evolucao de aprendizagem
+              Evolução de aprendizagem
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
               Primeira camada de progresso para materiais, trilhas e
-              flashcards. A gamificacao fica preparada para uma etapa futura.
+              flashcards. A gamificação fica preparada para uma etapa futura.
             </p>
           </div>
 
@@ -337,7 +337,7 @@ export default async function DashboardPage() {
         <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {[
             {
-              title: "Materiais concluidos",
+              title: "Materiais concluídos",
               value: learningStats.completedMaterials,
               Icon: BookOpenCheck,
             },
@@ -347,7 +347,7 @@ export default async function DashboardPage() {
               Icon: Route,
             },
             {
-              title: "Trilhas concluidas",
+              title: "Trilhas concluídas",
               value: learningStats.completedPaths,
               Icon: Layers3,
             },
@@ -385,18 +385,18 @@ export default async function DashboardPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-white">
-              Trilha de aprovacao
+              Trilha de aprovação
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
               As etapas do processo seletivo ficam organizadas para orientar a
-              preparacao do aluno.
+              preparação do aluno.
             </p>
           </div>
         </div>
 
         <div className="mt-5 grid gap-3">
           {[
-            "Verificacao dos requisitos",
+            "Verificação dos requisitos",
             "Prova objetiva",
             "Prova subjetiva",
             "Entrevista psicossocial",

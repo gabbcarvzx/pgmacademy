@@ -31,7 +31,7 @@ import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Analytics",
-  description: "Desempenho e recomendacoes da PGM Academy.",
+  description: "Desempenho e recomendações da PGM Academy.",
 };
 
 const accessLabel = {
@@ -151,8 +151,8 @@ function TimelineChart({
         })}
       </div>
       <p className="mt-4 text-xs leading-5 text-muted">
-        Barras indicam atividades concluidas. Percentual abaixo da data indica
-        media dos simulados finalizados naquele periodo.
+        Barras indicam atividades concluídas. Percentual abaixo da data indica
+        média dos simulados finalizados naquele período.
       </p>
     </article>
   );
@@ -164,9 +164,9 @@ function LockedPremiumSection({ title }: { title: string }) {
       <LockKeyhole className="size-5 text-pgm-yellow" aria-hidden="true" />
       <h2 className="mt-4 text-xl font-semibold text-white">{title}</h2>
       <p className="mt-2 text-sm leading-6 text-muted">
-        Esta leitura detalhada faz parte do analytics premium. Usuarios
-        gratuitos continuam vendo o resumo geral e podem liberar diagnostico,
-        historico avancado e recomendacoes completas com upgrade.
+        Esta leitura detalhada faz parte do analytics premium. Usuários
+        gratuitos continuam vendo o resumo geral e podem liberar diagnóstico,
+        histórico avançado e recomendações completas com upgrade.
       </p>
       <Link
         href="/planos"
@@ -208,22 +208,22 @@ export default async function AnalyticsPage() {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Analytics de aprendizagem
           </p>
           <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
             Inteligencia de estudo baseada nos seus dados reais
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-            Diagnostico, metas, streak, conquistas e recomendacoes sao gerados
-            por regras simples. Nenhuma IA, embedding, chatbot ou servico pago
-            e utilizado nesta etapa.
+            Diagnóstico, metas, streak, conquistas e recomendações são gerados
+            por regras simples. Nenhuma IA, embedding, chatbot ou serviço pago
+            é utilizado nesta etapa.
           </p>
         </div>
         {hasFullAnalytics ? (
           <InstitutionalNotice />
         ) : (
-          <PremiumUpgradeCard description="A visao premium libera desempenho por categoria, evolucao detalhada, diagnostico automatico e recomendacoes completas." />
+          <PremiumUpgradeCard description="A visão premium libera desempenho por categoria, evolução detalhada, diagnóstico automático e recomendações completas." />
         )}
       </section>
 
@@ -235,30 +235,30 @@ export default async function AnalyticsPage() {
           Icon={Gauge}
         />
         <MetricCard
-          title="Media geral"
+          title="Média geral"
           value={metricValue(data.summary.averageScore, "%")}
-          description="Media das tentativas finalizadas."
+          description="Média das tentativas finalizadas."
           Icon={BarChart3}
         />
         <MetricCard
           title="Acertos gerais"
           value={metricValue(data.summary.overallAccuracy, "%")}
-          description={`${formatNumber(data.summary.answeredQuestions)} questoes respondidas.`}
+          description={`${formatNumber(data.summary.answeredQuestions)} questões respondidas.`}
           Icon={Trophy}
         />
         <MetricCard
-          title="Tempo medio"
+          title="Tempo médio"
           value={metricValue(data.summary.averageSimulationMinutes, " min")}
-          description="Tempo medio por simulado concluido."
+          description="Tempo médio por simulado concluído."
           Icon={CalendarDays}
         />
       </section>
 
       <section className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
-          title="Materiais concluidos"
+          title="Materiais concluídos"
           value={metricValue(data.summary.completedMaterials)}
-          description="Conteudos marcados como concluidos."
+          description="Conteúdos marcados como concluídos."
           Icon={BookOpenCheck}
         />
         <MetricCard
@@ -270,11 +270,11 @@ export default async function AnalyticsPage() {
         <MetricCard
           title="Trilhas iniciadas"
           value={metricValue(data.summary.startedPaths)}
-          description="Trilhas com pelo menos um item concluido."
+          description="Trilhas com pelo menos um item concluído."
           Icon={Route}
         />
         <MetricCard
-          title="Trilhas concluidas"
+          title="Trilhas concluídas"
           value={metricValue(data.summary.completedPaths)}
           description="Sequencias pedagogicas finalizadas."
           Icon={CheckCircle2}
@@ -285,13 +285,13 @@ export default async function AnalyticsPage() {
         <MetricCard
           title="Subjetivas enviadas"
           value={metricValue(data.summary.subjectiveSubmitted)}
-          description={`${formatNumber(data.summary.subjectiveReviewed)} corrigidas / media ${data.summary.subjectiveAverage}%.`}
+          description={`${formatNumber(data.summary.subjectiveReviewed)} corrigidas / média ${data.summary.subjectiveAverage}%.`}
           Icon={PenLine}
         />
         <MetricCard
           title="Treinos psicossociais"
           value={metricValue(data.summary.psychosocialSubmitted)}
-          description={`${formatNumber(data.summary.psychosocialReviewed)} corrigidos / media ${data.summary.psychosocialAverage}%.`}
+          description={`${formatNumber(data.summary.psychosocialReviewed)} corrigidos / média ${data.summary.psychosocialAverage}%.`}
           Icon={MessageCircle}
         />
         <MetricCard
@@ -301,7 +301,7 @@ export default async function AnalyticsPage() {
           Icon={MessageSquareCheck}
         />
         <MetricCard
-          title="Media manual"
+          title="Média manual"
           value={metricValue(
             data.summary.subjectiveReviewed + data.summary.psychosocialReviewed === 0
               ? 0
@@ -315,7 +315,7 @@ export default async function AnalyticsPage() {
                 ),
             "%",
           )}
-          description="Media ponderada das correcoes manuais."
+          description="Média ponderada das correções manuais."
           Icon={Medal}
         />
       </section>
@@ -370,9 +370,9 @@ export default async function AnalyticsPage() {
       {hasFullAnalytics ? (
         <>
           <section className="mt-6 grid gap-4 xl:grid-cols-2">
-            <TimelineChart title="Ultimos 7 dias" points={data.evolution.last7Days} />
+            <TimelineChart title="Últimos 7 dias" points={data.evolution.last7Days} />
             <TimelineChart
-              title="Ultimos 30 dias"
+              title="Últimos 30 dias"
               points={data.evolution.last30Days}
               compact
             />
@@ -380,7 +380,7 @@ export default async function AnalyticsPage() {
 
           <section className="mt-6">
             <TimelineChart
-              title="Historico geral"
+              title="Histórico geral"
               points={data.evolution.overall.length > 0 ? data.evolution.overall : data.evolution.last7Days}
               compact
             />
@@ -428,13 +428,13 @@ export default async function AnalyticsPage() {
               <div className="flex items-center gap-3">
                 <Gauge className="size-5 text-pgm-yellow" aria-hidden="true" />
                 <h2 className="text-xl font-semibold text-white">
-                  Diagnostico automatico
+                  Diagnóstico automático
                 </h2>
               </div>
               <div className="mt-5 grid gap-3">
                 {visibleDiagnostics.length === 0 ? (
                   <p className="rounded-md border border-border-soft bg-background p-4 text-sm leading-6 text-muted">
-                    Finalize simulados para gerar diagnosticos por regras.
+                    Finalize simulados para gerar diagnósticos por regras.
                   </p>
                 ) : (
                   visibleDiagnostics.map((insight) => (
@@ -459,13 +459,13 @@ export default async function AnalyticsPage() {
             <div className="flex items-center gap-3">
               <BookOpenCheck className="size-5 text-pgm-yellow" aria-hidden="true" />
               <h2 className="text-xl font-semibold text-white">
-                Recomendacoes de estudo
+                Recomendações de estudo
               </h2>
             </div>
             <div className="mt-5 grid gap-4 xl:grid-cols-2">
               {visibleRecommendations.length === 0 ? (
                 <p className="rounded-md border border-border-soft bg-background p-4 text-sm leading-6 text-muted">
-                  Recomendacoes aparecem quando houver categorias com margem de
+                  Recomendações aparecem quando houver categorias com margem de
                   melhoria.
                 </p>
               ) : (
@@ -552,8 +552,8 @@ export default async function AnalyticsPage() {
         </>
       ) : (
         <div className="mt-6 grid gap-4 xl:grid-cols-2">
-          <LockedPremiumSection title="Evolucao temporal detalhada" />
-          <LockedPremiumSection title="Diagnostico e recomendacoes completas" />
+          <LockedPremiumSection title="Evolução temporal detalhada" />
+          <LockedPremiumSection title="Diagnóstico e recomendações completas" />
         </div>
       )}
     </main>

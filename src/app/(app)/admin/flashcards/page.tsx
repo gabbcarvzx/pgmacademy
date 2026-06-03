@@ -54,7 +54,7 @@ export default async function AdminFlashcardsPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Flashcards"
-        description="Gerencie cards de revisao rapida por categoria, idioma e dificuldade."
+        description="Gerencie cards de revisão rápida por categoria, idioma e dificuldade."
         action={
           <Link
             href="/admin/flashcards/new"

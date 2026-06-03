@@ -21,8 +21,8 @@ export default async function InterviewHistoryPage({ searchParams }: PageProps) 
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-          Historico
+        <p className="text-sm font-semibold uppercase text-pgm-yellow">
+          Histórico
         </p>
         <h1 className="mt-4 text-3xl font-semibold text-white">
           Meus treinos psicossociais
@@ -44,7 +44,7 @@ export default async function InterviewHistoryPage({ searchParams }: PageProps) 
       <section className="mt-6 grid gap-4">
         {attempts.length === 0 ? (
           <p className="rounded-md border border-border-soft bg-surface p-5 text-sm text-muted">
-            Voce ainda nao enviou treinos psicossociais.
+            Você ainda não enviou treinos psicossociais.
           </p>
         ) : (
           attempts.map((attempt) => <AttemptCard key={attempt.id} attempt={attempt} />)

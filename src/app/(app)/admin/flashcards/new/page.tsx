@@ -22,7 +22,7 @@ export default async function NewFlashcardPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Novo flashcard"
-        description="Crie um card de revisao rapida para os alunos."
+        description="Crie um card de revisão rápida para os alunos."
         backHref="/admin/flashcards"
       />
       <AdminNav />

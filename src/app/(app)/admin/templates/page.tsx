@@ -48,7 +48,7 @@ export default async function AdminTemplatesPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Templates de simulado"
-        description="Gerencie modelos de simulado usados em /simulados. A edicao nao altera tentativas ja finalizadas."
+        description="Gerencie modelos de simulado usados em /simulados. A edição não altera tentativas já finalizadas."
         action={
           <Link
             href="/admin/templates/new"
@@ -65,7 +65,7 @@ export default async function AdminTemplatesPage({ searchParams }: PageProps) {
       <form className="mt-6 grid gap-3 rounded-md border border-border-soft bg-surface p-4 xl:grid-cols-[1fr_160px_160px_160px_auto]">
         <input
           name="q"
-          placeholder="Buscar por titulo ou descricao"
+          placeholder="Buscar por título ou descrição"
           defaultValue={params?.q ?? ""}
           className={inputClassName}
         />
@@ -133,14 +133,14 @@ export default async function AdminTemplatesPage({ searchParams }: PageProps) {
                   {template.title}
                 </h2>
                 <p className="mt-1 text-sm leading-6 text-muted">
-                  {template.description ?? "Sem descricao."}
+                  {template.description ?? "Sem descrição."}
                 </p>
               </div>
               <div className="text-sm leading-6 text-muted">
                 <p>{template.language}</p>
-                <p>{template.total_questions} questoes</p>
+                <p>{template.total_questions} questões</p>
                 <p className="truncate">
-                  Source: {template.source_reference ?? "sem referencia"}
+                  Fonte: {template.source_reference ?? "sem referência"}
                 </p>
               </div>
               <div className="grid gap-2">

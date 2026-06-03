@@ -9,7 +9,7 @@ import { getSubjectiveQuestionList } from "@/lib/manual-review/service";
 
 export const metadata: Metadata = {
   title: "Subjetivas",
-  description: "Questoes subjetivas com correcao manual pela PGM Academy.",
+  description: "Questões subjetivas com correção manual pela PGM Academy.",
 };
 
 type PageProps = {
@@ -40,15 +40,15 @@ export default async function SubjectiveQuestionsPage({
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Correcao manual
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Correção manual
             </p>
             <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              Questoes subjetivas
+              Questões subjetivas
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
-              Escreva respostas em texto, envie para revisao humana e acompanhe
-              nota, feedback e status. Sem IA e sem correcao automatica.
+              Escreva respostas em texto, envie para revisão humana e acompanhe
+              nota, feedback e status. Sem IA e sem correção automática.
             </p>
           </div>
           {data.hasPaidAccess ? (
@@ -66,7 +66,7 @@ export default async function SubjectiveQuestionsPage({
                 Envio premium
               </p>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Usuarios free visualizam a area, mas envio e correcao manual
+                Usuários gratuitos visualizam a área, mas envio e correção manual
                 exigem acesso premium.
               </p>
               <div className="mt-4">
@@ -91,7 +91,7 @@ export default async function SubjectiveQuestionsPage({
       <form className="mt-6 grid gap-3 rounded-md border border-border-soft bg-surface p-4 lg:grid-cols-[1fr_160px_220px_160px_auto]">
         <input
           name="q"
-          placeholder="Buscar questao ou categoria"
+          placeholder="Buscar questão ou categoria"
           defaultValue={params?.q ?? ""}
           className="h-11 rounded-md border border-border-soft bg-background px-3 text-sm text-white outline-none transition placeholder:text-muted/60 focus:border-pgm-yellow"
         />
@@ -142,7 +142,7 @@ export default async function SubjectiveQuestionsPage({
       <section className="mt-6 grid gap-4 lg:grid-cols-2">
         {data.questions.length === 0 ? (
           <div className="rounded-md border border-border-soft bg-surface p-5 text-sm text-muted">
-            Nenhuma questao subjetiva encontrada.
+            Nenhuma questão subjetiva encontrada.
           </div>
         ) : (
           data.questions.map((question) => (
@@ -178,7 +178,7 @@ export default async function SubjectiveQuestionsPage({
                 className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
               >
                 <PenLine className="size-4" aria-hidden="true" />
-                Abrir questao
+                Abrir questão
               </Link>
             </article>
           ))

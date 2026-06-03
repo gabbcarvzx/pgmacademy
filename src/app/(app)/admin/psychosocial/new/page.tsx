@@ -24,7 +24,7 @@ export default async function NewPsychosocialPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Nova pergunta psicossocial"
-        description="Cadastre uma pergunta de entrevista com orientacao e erros comuns."
+        description="Cadastre uma pergunta de entrevista com orientação e erros comuns."
         backHref="/admin/psychosocial"
       />
       <AdminNav />

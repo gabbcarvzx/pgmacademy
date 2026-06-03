@@ -57,7 +57,7 @@ export function PsychosocialForm({
       <div className="grid gap-4 xl:grid-cols-2">
         <div className="grid gap-2">
           <FieldLabel htmlFor="ideal_answer_guidelines">
-            Orientacao de resposta ideal
+            Orientação de resposta ideal
           </FieldLabel>
           <textarea
             id="ideal_answer_guidelines"

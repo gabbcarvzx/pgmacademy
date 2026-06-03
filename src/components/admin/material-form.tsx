@@ -150,7 +150,7 @@ export function MaterialForm({
 
       <div className="grid gap-4 xl:grid-cols-2">
         <div className="grid gap-2">
-          <FieldLabel htmlFor="content_md">Conteudo Markdown</FieldLabel>
+          <FieldLabel htmlFor="content_md">Conteúdo Markdown</FieldLabel>
           <textarea
             id="content_md"
             name="content_md"
@@ -167,7 +167,7 @@ export function MaterialForm({
               <MarkdownContent content={content} />
             ) : (
               <p className="text-sm leading-6 text-muted">
-                O preview aparece conforme voce escreve.
+                O preview aparece conforme você escreve.
               </p>
             )}
           </div>

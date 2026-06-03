@@ -24,7 +24,7 @@ export default async function NewTemplatePage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Novo template de simulado"
-        description="Cadastre um modelo que sera listado na area de simulados quando estiver ativo."
+        description="Cadastre um modelo que será listado na área de simulados quando estiver ativo."
         backHref="/admin/templates"
       />
       <AdminNav />

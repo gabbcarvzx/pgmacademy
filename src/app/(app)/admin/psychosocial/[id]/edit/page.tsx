@@ -35,7 +35,7 @@ export default async function EditPsychosocialPage({
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Editar pergunta psicossocial"
-        description="Atualize pergunta, categoria, orientacao, erros comuns e status."
+        description="Atualize pergunta, categoria, orientação, erros comuns e status."
         backHref="/admin/psychosocial"
       />
       <AdminNav />

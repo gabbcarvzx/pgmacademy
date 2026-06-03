@@ -73,7 +73,7 @@ export function CorrectionForm({
         type="submit"
         className="inline-flex h-10 items-center justify-center rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
       >
-        Salvar correcao
+        Salvar correção
       </button>
     </form>
   );

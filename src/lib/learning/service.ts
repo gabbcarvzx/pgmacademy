@@ -1,5 +1,9 @@
 import "server-only";
 
+import {
+  canAccessPremiumContent,
+  hasPremiumAccess,
+} from "@/lib/access/premium";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -31,9 +35,8 @@ type StudyMaterialRow = Pick<
   | "estimated_time"
   | "is_premium"
   | "is_active"
-> & {
-  content_md?: string;
-};
+> &
+  Partial<Pick<Database["public"]["Tables"]["study_materials"]["Row"], "content_md">>;
 type FlashcardRow = Pick<
   Database["public"]["Tables"]["flashcards"]["Row"],
   | "id"
@@ -206,16 +209,12 @@ const difficultyOrder: LearningDifficulty[] = [
   "mixed",
 ];
 
-function hasPaidAccess(profile: Pick<ProfileRow, "access_status">) {
-  return profile.access_status === "paid";
-}
-
 function isTenantVisible(tenantId: string | null, profile: ProfileRow) {
   return tenantId === null || tenantId === profile.tenant_id;
 }
 
 function canAccessPremiumItem(isPremium: boolean, profile: ProfileRow) {
-  return !isPremium || hasPaidAccess(profile) || profile.role === "admin";
+  return canAccessPremiumContent(isPremium, profile);
 }
 
 function assertResult<T>(
@@ -238,7 +237,7 @@ async function getProfile(userId: string): Promise<ProfileRow> {
     .eq("id", userId)
     .single();
 
-  return assertResult(data as ProfileRow | null, error, "Perfil do aluno nao encontrado.");
+  return assertResult(data as ProfileRow | null, error, "Perfil do aluno não encontrado.");
 }
 
 async function getCategories(): Promise<CategoryRow[]> {
@@ -249,7 +248,7 @@ async function getCategories(): Promise<CategoryRow[]> {
     .order("name", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar categorias.");
+    throw new Error("Não foi possível consultar categorias.");
   }
 
   return (data ?? []) as CategoryRow[];
@@ -265,7 +264,7 @@ async function getProgressRows(userId: string, profile: ProfileRow): Promise<Pro
     .eq("completed", true);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar progresso do aluno.");
+    throw new Error("Não foi possível consultar progresso do aluno.");
   }
 
   return (data ?? []) as ProgressRow[];
@@ -329,7 +328,7 @@ export async function getStudyMaterialsPage(
     .order("title", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar materiais.");
+    throw new Error("Não foi possível consultar materiais.");
   }
 
   const completedKeys = new Set(
@@ -374,7 +373,7 @@ export async function getStudyMaterialsPage(
 
   return {
     accessStatus: profile.access_status,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     materials,
     filters: {
       ...normalizedFilters,
@@ -411,14 +410,14 @@ export async function getStudyMaterialDetail(
   const { data, error } = await admin
     .from("study_materials")
     .select(
-      "id, tenant_id, category_id, title, slug, difficulty, language, estimated_time, is_premium, is_active",
+      "id, tenant_id, category_id, title, slug, content_md, difficulty, language, estimated_time, is_premium, is_active",
     )
     .eq("slug", slug)
     .eq("is_active", true)
     .maybeSingle();
 
   if (error) {
-    throw new Error("Nao foi possivel consultar material.");
+    throw new Error("Não foi possível consultar material.");
   }
   if (!data) {
     return null;
@@ -526,7 +525,7 @@ export async function getLearningPathsPage(userId: string): Promise<{
   ]);
 
   if (pathsResponse.error) {
-    throw new Error("Nao foi possivel consultar trilhas.");
+    throw new Error("Não foi possível consultar trilhas.");
   }
 
   const paths = ((pathsResponse.data ?? []) as LearningPathRow[]).filter((path) =>
@@ -536,7 +535,7 @@ export async function getLearningPathsPage(userId: string): Promise<{
 
   return {
     accessStatus: profile.access_status,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     paths: paths.map((path) => buildPathCard(path, pathItems, progressRows, profile)),
   };
 }
@@ -555,7 +554,7 @@ export async function getLearningPathDetail(
     .maybeSingle();
 
   if (error) {
-    throw new Error("Nao foi possivel consultar trilha.");
+    throw new Error("Não foi possível consultar trilha.");
   }
   if (!data) {
     return null;
@@ -591,7 +590,7 @@ async function getPathItems(pathIds: string[]): Promise<LearningPathItemRow[]> {
     .order("sort_order", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar itens de trilha.");
+    throw new Error("Não foi possível consultar itens de trilha.");
   }
 
   return (data ?? []) as LearningPathItemRow[];
@@ -759,7 +758,7 @@ export async function getFlashcardsPage(
     .order("created_at", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar flashcards.");
+    throw new Error("Não foi possível consultar flashcards.");
   }
 
   const flashcards = ((data ?? []) as FlashcardRow[]).filter((card) =>
@@ -801,7 +800,7 @@ export async function getFlashcardsPage(
 
   return {
     accessStatus: profile.access_status,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     decks,
     selectedCategorySlug,
     selectedDeck,
@@ -879,10 +878,10 @@ async function assertCanCompleteItem(
       .single();
 
     if (error || !path || !path.is_active || !isTenantVisible(path.tenant_id, profile)) {
-      throw new Error("Trilha nao encontrada para progresso.");
+      throw new Error("Trilha não encontrada para progresso.");
     }
     if (!canAccessPremiumItem(path.is_premium, profile)) {
-      throw new Error("Acesso premium necessario para concluir esta trilha.");
+      throw new Error("Acesso premium necessário para concluir está trilha.");
     }
   }
 
@@ -893,10 +892,10 @@ async function assertCanCompleteItem(
       .eq("id", item.itemId)
       .single();
     if (error || !data || !data.is_active || !isTenantVisible(data.tenant_id, profile)) {
-      throw new Error("Material nao encontrado para progresso.");
+      throw new Error("Material não encontrado para progresso.");
     }
     if (!canAccessPremiumItem(data.is_premium, profile)) {
-      throw new Error("Acesso premium necessario para concluir este material.");
+      throw new Error("Acesso premium necessário para concluir este material.");
     }
   }
 
@@ -907,10 +906,10 @@ async function assertCanCompleteItem(
       .eq("id", item.itemId)
       .single();
     if (error || !data || !data.is_active || !isTenantVisible(data.tenant_id, profile)) {
-      throw new Error("Flashcard nao encontrado para progresso.");
+      throw new Error("Flashcard não encontrado para progresso.");
     }
     if (!canAccessPremiumItem(data.is_premium, profile)) {
-      throw new Error("Acesso premium necessario para revisar este flashcard.");
+      throw new Error("Acesso premium necessário para revisar este flashcard.");
     }
   }
 }
@@ -936,7 +935,7 @@ async function upsertProgress(
   const { data: existing, error: existingError } = await query.maybeSingle();
 
   if (existingError) {
-    throw new Error("Nao foi possivel consultar progresso existente.");
+    throw new Error("Não foi possível consultar progresso existente.");
   }
 
   if (existing?.id) {
@@ -944,7 +943,7 @@ async function upsertProgress(
       .from("user_learning_progress")
       .update({ completed: true, completed_at: now })
       .eq("id", existing.id);
-    if (error) throw new Error("Nao foi possivel atualizar progresso.");
+    if (error) throw new Error("Não foi possível atualizar progresso.");
     return;
   }
 
@@ -959,7 +958,7 @@ async function upsertProgress(
   });
 
   if (error) {
-    throw new Error("Nao foi possivel salvar progresso.");
+    throw new Error("Não foi possível salvar progresso.");
   }
 }
 
@@ -967,7 +966,7 @@ function itemTypeLabel(itemType: LearningItemType) {
   const labels = {
     study_material: "Material",
     flashcard: "Flashcard",
-    question: "Questao",
+    question: "Questão",
     psychosocial_question: "Pergunta psicossocial",
     simulation_template: "Simulado",
   } satisfies Record<LearningItemType, string>;
@@ -979,7 +978,7 @@ function itemTypePluralLabel(itemType: LearningItemType) {
   const labels = {
     study_material: "Materiais",
     flashcard: "Flashcards",
-    question: "Questoes",
+    question: "Questões",
     psychosocial_question: "Entrevista psicossocial",
     simulation_template: "Simulados",
   } satisfies Record<LearningItemType, string>;
@@ -994,8 +993,8 @@ function groupDescription(
   canAccess: boolean,
 ) {
   if (!canAccess) {
-    return "Conteudo da sequencia premium bloqueado para a conta atual.";
+    return "Conteúdo da sequência premium bloqueado para a conta atual.";
   }
 
-  return `${completedItems}/${totalItems} ${itemTypePluralLabel(itemType).toLowerCase()} concluidos nesta etapa.`;
+  return `${completedItems}/${totalItems} ${itemTypePluralLabel(itemType).toLowerCase()} concluídos nesta etapa.`;
 }

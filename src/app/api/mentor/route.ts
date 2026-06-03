@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+import { hasPremiumAccess } from "@/lib/access/premium";
 import { buildMentorSystemPrompt } from "@/lib/mentor/system-prompt";
 import { getOpenAIConfig } from "@/lib/openai/config";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
@@ -98,27 +99,27 @@ export async function POST(request: Request) {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("access_status")
+    .select("access_status, role")
     .eq("id", user.id)
     .single();
 
-  if (profile?.access_status !== "paid") {
+  if (!hasPremiumAccess(profile)) {
     return NextResponse.json(
-      { error: "O Mentor PGM esta disponivel apenas para usuarios premium." },
+      { error: "O Mentor PGM está disponível apenas para usuários premium." },
       { status: 403 },
     );
   }
 
   if (!applyRateLimit(user.id)) {
     return NextResponse.json(
-      { error: "Limite temporario atingido. Tente novamente em instantes." },
+      { error: "Limite temporário atingido. Tente novamente em instantes." },
       { status: 429 },
     );
   }
@@ -153,7 +154,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model,
         instructions: buildMentorSystemPrompt(),
-        input: `Conversa atual:\n\n${buildConversationTranscript(messages)}\n\nResponda a ultima mensagem do aluno.`,
+        input: `Conversa atual:\n\n${buildConversationTranscript(messages)}\n\nResponda à última mensagem do aluno.`,
         max_output_tokens: 700,
         temperature: 0.4,
       }),
@@ -168,7 +169,7 @@ export async function POST(request: Request) {
         `mentor openai failed status=${response.status} message=${payload.error?.message ?? "unknown"}`,
       );
       return NextResponse.json(
-        { error: "Nao foi possivel responder agora." },
+        { error: "Não foi possível responder agora." },
         { status: 502 },
       );
     }
@@ -177,7 +178,7 @@ export async function POST(request: Request) {
 
     if (!answer) {
       return NextResponse.json(
-        { error: "O Mentor PGM nao retornou uma resposta valida." },
+        { error: "O Mentor PGM não retornou uma resposta válida." },
         { status: 502 },
       );
     }
@@ -188,7 +189,7 @@ export async function POST(request: Request) {
       `mentor route failed message=${error instanceof Error ? error.message : "unknown"}`,
     );
     return NextResponse.json(
-      { error: "Nao foi possivel responder agora." },
+      { error: "Não foi possível responder agora." },
       { status: 500 },
     );
   }

@@ -62,7 +62,7 @@ export async function POST(request: Request, context: RouteContext) {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
@@ -81,7 +81,7 @@ export async function POST(request: Request, context: RouteContext) {
     const message =
       error instanceof Error
         ? error.message
-        : "Nao foi possivel corrigir a tentativa.";
+        : "Não foi possível corrigir a tentativa.";
 
     console.error(`simulation submit failed status=${status} message=${message}`);
 

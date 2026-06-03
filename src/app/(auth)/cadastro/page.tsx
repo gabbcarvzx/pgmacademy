@@ -37,18 +37,18 @@ export default async function CadastroPage({ searchParams }: CadastroPageProps) 
           className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-white"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
-          Voltar para inicio
+          Voltar para início
         </Link>
 
         <section className="mt-10 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             PGM Academy
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white">
             Criar conta
           </h1>
           <p className="mt-3 text-sm leading-6 text-muted">
-            Cadastre-se com email e senha para salvar diagnosticos e acompanhar
+            Cadastre-se com email e senha para salvar diagnósticos e acompanhar
             sua trilha.
           </p>
 
@@ -95,7 +95,7 @@ export default async function CadastroPage({ searchParams }: CadastroPageProps) 
                 minLength={8}
                 required
                 className={inputClassName}
-                placeholder="Minimo de 8 caracteres"
+                placeholder="Mínimo de 8 caracteres"
               />
             </label>
 
@@ -109,7 +109,7 @@ export default async function CadastroPage({ searchParams }: CadastroPageProps) 
           </form>
 
           <p className="mt-5 text-sm leading-6 text-muted">
-            Ja tem conta?{" "}
+            Já tem conta?{" "}
             <Link href="/login" className="font-semibold text-white">
               Entrar
             </Link>

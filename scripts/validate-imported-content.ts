@@ -65,7 +65,7 @@ type SupabaseClient = ReturnType<typeof createClient<Database>>;
 
 void main().catch((error: unknown) => {
   const message = error instanceof Error ? error.message : String(error);
-  console.error(`Falha na validacao do conteudo importado: ${message}`);
+  console.error(`Falha na validação do conteúdo importado: ${message}`);
   process.exit(1);
 });
 
@@ -83,7 +83,7 @@ async function main(): Promise<void> {
   const content = loadApprovedContent();
   const localErrors = validateApprovedContent(content);
   if (localErrors.length > 0) {
-    throw new Error(`Conteudo local invalido: ${localErrors.join("; ")}`);
+    throw new Error(`Conteúdo local inválido: ${localErrors.join("; ")}`);
   }
 
   const admin = createClient<Database>(url, serviceRoleKey, {
@@ -102,7 +102,7 @@ async function main(): Promise<void> {
     url,
   });
 
-  console.log("Conteudo importado validado com sucesso.");
+  console.log("Conteúdo importado validado com sucesso.");
   console.log(formatSnapshot(snapshot.counts));
 }
 
@@ -171,14 +171,14 @@ async function validateServiceRoleSnapshot(
   expectEqual("templates importados", snapshot.templates, content.templates.length);
   expectEqual("materiais importados", snapshot.materials, content.materials.length);
   expectEqual("flashcards importados", snapshot.flashcards, content.flashcards.length);
-  expectEqual("questoes importadas", snapshot.questions, content.objectiveQuestions.length + content.subjectiveQuestions.length);
-  expectEqual("questoes objetivas", snapshot.objectiveQuestions, content.objectiveQuestions.length);
-  expectEqual("questoes subjetivas", snapshot.subjectiveQuestions, content.subjectiveQuestions.length);
+  expectEqual("questões importadas", snapshot.questions, content.objectiveQuestions.length + content.subjectiveQuestions.length);
+  expectEqual("questões objetivas", snapshot.objectiveQuestions, content.objectiveQuestions.length);
+  expectEqual("questões subjetivas", snapshot.subjectiveQuestions, content.subjectiveQuestions.length);
   expectEqual("alternativas importadas", snapshot.questionOptions, content.objectiveQuestions.length * 5);
   expectEqual("perguntas psicossociais", snapshot.psychosocialQuestions, content.psychosocialQuestions.length);
   expectEqual("trilhas importadas", snapshot.learningPaths, content.learningPaths.length);
   expectEqual("itens de trilha", snapshot.learningPathItems, expectedPathItemCount);
-  expectEqual("editorial_id distintos em questoes", snapshot.distinctQuestionEditorialIds, snapshot.questions);
+  expectEqual("editorial_id distintos em questões", snapshot.distinctQuestionEditorialIds, snapshot.questions);
   expectEqual("chaves distintas de alternativas", snapshot.distinctOptionKeys, snapshot.questionOptions);
 
   for (const material of materials) {
@@ -195,7 +195,7 @@ async function validateServiceRoleSnapshot(
 
   for (const question of questions) {
     if (!question.bank_id || !question.category_id) {
-      throw new Error(`Questao ${question.editorial_id} sem banco ou categoria`);
+      throw new Error(`Questão ${question.editorial_id} sem banco ou categoria`);
     }
   }
 
@@ -203,7 +203,7 @@ async function validateServiceRoleSnapshot(
     const options = questionOptions.filter((option) => option.question_id === question.id);
     const correctOptions = options.filter((option) => option.is_correct);
     if (options.length !== 5 || correctOptions.length !== 1) {
-      throw new Error(`Questao ${question.editorial_id} precisa ter 5 alternativas e 1 correta`);
+      throw new Error(`Questão ${question.editorial_id} precisa ter 5 alternativas e 1 correta`);
     }
   }
 
@@ -228,7 +228,7 @@ async function validateRlsAccess(input: {
     const freeCounts = await visibleCountsFor(input, freeUser.client);
     const paidCounts = await visibleCountsFor(input, paidUser.client);
 
-    expectCounts("usuario gratuito", freeCounts, {
+    expectCounts("usuário gratuito", freeCounts, {
       categories: 20,
       banks: 0,
       templates: 0,
@@ -241,7 +241,7 @@ async function validateRlsAccess(input: {
       learningPathItems: 0,
     });
 
-    expectCounts("usuario premium", paidCounts, {
+    expectCounts("usuário premium", paidCounts, {
       categories: 20,
       banks: 5,
       templates: 5,
@@ -280,7 +280,7 @@ async function validateProgressPersistence(
   const premiumFlashcard = flashcards.find((item) => item.is_premium);
 
   if (!freeMaterial || !premiumFlashcard) {
-    throw new Error("Nao foi possivel localizar itens para validar progresso.");
+    throw new Error("Não foi possível localizar itens para validar progresso.");
   }
 
   const directInsert = await freeUser.client.from("user_learning_progress").insert({
@@ -366,14 +366,14 @@ async function createTemporaryUser(
   });
 
   if (createdUser.error || !createdUser.data.user) {
-    throw new Error(`Criar usuario temporario ${label}: ${createdUser.error?.message ?? "sem usuario"}`);
+    throw new Error(`Criar usuário temporário ${label}: ${createdUser.error?.message ?? "sem usuário"}`);
   }
 
   const profile = await waitForProfile(input.admin, createdUser.data.user.id);
 
   if (isPaid) {
     await assertNoError(
-      `marcar usuario temporario premium`,
+      `marcar usuário temporário premium`,
       await input.admin.from("profiles").update({ access_status: "paid" }).eq("id", createdUser.data.user.id),
     );
   }
@@ -386,7 +386,7 @@ async function createTemporaryUser(
   });
   const session = await client.auth.signInWithPassword({ email, password });
   if (session.error) {
-    throw new Error(`Login usuario temporario ${label}: ${session.error.message}`);
+    throw new Error(`Login usuário temporário ${label}: ${session.error.message}`);
   }
 
   return {
@@ -400,7 +400,7 @@ async function createTemporaryUser(
 async function waitForProfile(admin: SupabaseClient, userId: string): Promise<{ tenant_id: string }> {
   for (let attempt = 0; attempt < 10; attempt += 1) {
     const result = await admin.from("profiles").select("tenant_id").eq("id", userId).maybeSingle();
-    await assertNoError("buscar profile temporario", result);
+    await assertNoError("buscar profile temporário", result);
 
     if (result.data?.tenant_id) {
       return result.data;
@@ -409,7 +409,7 @@ async function waitForProfile(admin: SupabaseClient, userId: string): Promise<{ 
     await new Promise((resolve) => setTimeout(resolve, 250));
   }
 
-  throw new Error(`Profile temporario nao foi criado para ${userId}`);
+  throw new Error(`Profile temporário não foi criado para ${userId}`);
 }
 
 async function cleanupTemporaryUser(
@@ -425,11 +425,11 @@ async function cleanupTemporaryUser(
 
   const deleteUser = await admin.auth.admin.deleteUser(user.id);
   if (deleteUser.error) {
-    throw new Error(`Remover usuario temporario ${user.email}: ${deleteUser.error.message}`);
+    throw new Error(`Remover usuário temporário ${user.email}: ${deleteUser.error.message}`);
   }
 
   await assertNoError(
-    `remover tenant temporario ${user.tenantId}`,
+    `remover tenant temporário ${user.tenantId}`,
     await admin.from("tenants").delete().eq("id", user.tenantId),
   );
 }
@@ -542,7 +542,7 @@ function formatSnapshot(snapshot: ContentSnapshot): string {
     `Templates: ${snapshot.templates}`,
     `Materiais: ${snapshot.materials}`,
     `Flashcards: ${snapshot.flashcards}`,
-    `Questoes: ${snapshot.questions}`,
+    `Questões: ${snapshot.questions}`,
     `Objetivas: ${snapshot.objectiveQuestions}`,
     `Subjetivas: ${snapshot.subjectiveQuestions}`,
     `Alternativas: ${snapshot.questionOptions}`,

@@ -14,7 +14,7 @@ export function AttemptCard({ attempt }: { attempt: ManualAttemptCard }) {
     <article className="rounded-md border border-border-soft bg-surface p-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+          <p className="text-xs font-semibold uppercase text-pgm-yellow">
             {attempt.kind === "subjective" ? "Subjetiva" : "Psicossocial"} /{" "}
             {attempt.categoryName}
           </p>
@@ -26,7 +26,7 @@ export function AttemptCard({ attempt }: { attempt: ManualAttemptCard }) {
       </div>
 
       <div className="mt-4 rounded-md border border-border-soft bg-background p-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+        <p className="text-xs font-semibold uppercase text-muted">
           Resposta enviada
         </p>
         <p className="mt-3 whitespace-pre-wrap text-sm leading-6 text-white">
@@ -50,7 +50,7 @@ export function AttemptCard({ attempt }: { attempt: ManualAttemptCard }) {
           </p>
         </div>
         <div className="rounded-md border border-border-soft bg-background p-3">
-          <p className="text-xs text-muted">Correcao</p>
+          <p className="text-xs text-muted">Correção</p>
           <p className="mt-1 text-sm font-semibold text-white">
             {attempt.reviewedAt
               ? dateFormatter.format(new Date(attempt.reviewedAt))

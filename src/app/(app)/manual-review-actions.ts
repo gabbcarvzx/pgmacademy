@@ -28,7 +28,7 @@ function formString(formData: FormData, key: string) {
 }
 
 function redirectWithError(target: string, error: unknown): never {
-  const message = error instanceof Error ? error.message : "Nao foi possivel enviar.";
+  const message = error instanceof Error ? error.message : "Não foi possível enviar.";
   const separator = target.includes("?") ? "&" : "?";
   redirect(`${target}${separator}error=${encodeURIComponent(message)}`);
 }
@@ -56,7 +56,7 @@ export async function submitSubjectiveAnswerAction(formData: FormData) {
   revalidatePath("/subjetivas/minhas-respostas");
   redirectWithSuccess(
     "/subjetivas/minhas-respostas",
-    "Resposta enviada para correcao manual.",
+    "Resposta enviada para correção manual.",
   );
 }
 
@@ -78,6 +78,6 @@ export async function submitPsychosocialAnswerAction(formData: FormData) {
   revalidatePath("/entrevista/minhas-respostas");
   redirectWithSuccess(
     "/entrevista/minhas-respostas",
-    "Resposta psicossocial enviada para correcao manual.",
+    "Resposta psicossocial enviada para correção manual.",
   );
 }

@@ -52,7 +52,7 @@ async function main(): Promise<void> {
   const errors = validateApprovedContent(content);
 
   if (errors.length > 0) {
-    console.error("Importacao bloqueada. Corrija a validacao primeiro:");
+    console.error("Importacao bloqueada. Corrija a validação primeiro:");
     for (const error of errors) {
       console.error(`- ${error}`);
     }
@@ -121,7 +121,7 @@ async function importCategories(
     const parentId = item.parentSlug ? categoryIds.get(item.parentSlug) : null;
 
     if (item.parentSlug && !parentId) {
-      throw new Error(`Categoria ${item.editorialId} referencia parent_slug sem ID importado: ${item.parentSlug}`);
+      throw new Error(`Categoria ${item.editorialId} referência parent_slug sem ID importado: ${item.parentSlug}`);
     }
 
     const id = await upsertByEditorial(client, "question_categories", item.editorialId, {
@@ -198,7 +198,7 @@ async function importMaterials(
   for (const item of materials) {
     const categoryId = categoryIds.get(item.categorySlug);
     if (!categoryId) {
-      throw new Error(`Material ${item.editorialId} referencia categoria nao importada: ${item.categorySlug}`);
+      throw new Error(`Material ${item.editorialId} referência categoria não importada: ${item.categorySlug}`);
     }
 
     const id = await upsertByEditorial(client, "study_materials", item.editorialId, {
@@ -232,7 +232,7 @@ async function importFlashcards(
   for (const item of flashcards) {
     const categoryId = categoryIds.get(item.categorySlug);
     if (!categoryId) {
-      throw new Error(`Flashcard ${item.editorialId} referencia categoria nao importada: ${item.categorySlug}`);
+      throw new Error(`Flashcard ${item.editorialId} referência categoria não importada: ${item.categorySlug}`);
     }
 
     const id = await upsertByEditorial(client, "flashcards", item.editorialId, {
@@ -267,10 +267,10 @@ async function importQuestions(
     const categoryId = categoryIds.get(item.categorySlug);
 
     if (!bankId) {
-      throw new Error(`Questao ${item.editorialId} referencia banco nao importado: ${item.bankId}`);
+      throw new Error(`Questão ${item.editorialId} referência banco não importado: ${item.bankId}`);
     }
     if (!categoryId) {
-      throw new Error(`Questao ${item.editorialId} referencia categoria nao importada: ${item.categorySlug}`);
+      throw new Error(`Questão ${item.editorialId} referência categoria não importada: ${item.categorySlug}`);
     }
 
     const id = await upsertByEditorial(client, "questions", item.editorialId, {
@@ -293,7 +293,7 @@ async function importQuestions(
     }
   }
 
-  console.log(`Questoes importadas/atualizadas: ${questions.length}`);
+  console.log(`Questões importadas/atualizadas: ${questions.length}`);
   return questionIds;
 }
 
@@ -390,7 +390,7 @@ function resolvePathItemId(
 function requireMapId(ids: Map<string, string>, editorialId: string, itemType: PathItemType): string {
   const id = ids.get(editorialId);
   if (!id) {
-    throw new Error(`Item de trilha nao importado (${itemType}): ${editorialId}`);
+    throw new Error(`Item de trilha não importado (${itemType}): ${editorialId}`);
   }
   return id;
 }
@@ -448,7 +448,7 @@ async function upsertByEditorial(
   await assertNoError(`inserir ${tableName}.${editorialId}`, result);
 
   if (!result.data?.id) {
-    throw new Error(`Insercao de ${tableName}.${editorialId} nao retornou id`);
+    throw new Error(`Insercao de ${tableName}.${editorialId} não retornou id`);
   }
 
   return result.data.id;

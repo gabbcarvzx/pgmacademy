@@ -9,6 +9,10 @@ import {
   type DiagnosticInsight,
   type GoalProgress,
 } from "@/lib/analytics/rules";
+import {
+  canAccessPremiumContent,
+  hasPremiumAccess,
+} from "@/lib/access/premium";
 import { getManualReviewStats } from "@/lib/manual-review/service";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
@@ -154,16 +158,12 @@ const saoPauloTimeZone = "America/Sao_Paulo";
 const uncategorizedId = "uncategorized";
 const uncategorizedName = "Sem categoria";
 
-function hasPaidAccess(profile: Pick<ProfileRow, "access_status" | "role">) {
-  return profile.access_status === "paid" || profile.role === "admin";
-}
-
 function isTenantVisible(tenantId: string | null, profile: ProfileRow) {
   return tenantId === null || tenantId === profile.tenant_id;
 }
 
 function canAccessPremiumItem(isPremium: boolean, profile: ProfileRow) {
-  return !isPremium || hasPaidAccess(profile);
+  return canAccessPremiumContent(isPremium, profile);
 }
 
 function round(value: number) {
@@ -223,7 +223,7 @@ async function getProfile(userId: string): Promise<ProfileRow> {
     .single();
 
   if (error || !data) {
-    throw new Error("Perfil do aluno nao encontrado.");
+    throw new Error("Perfil do aluno não encontrado.");
   }
 
   return data as ProfileRow;
@@ -241,7 +241,7 @@ async function getAttempts(userId: string, profile: ProfileRow) {
     .order("started_at", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar tentativas.");
+    throw new Error("Não foi possível consultar tentativas.");
   }
 
   return (data ?? []) as AttemptRow[];
@@ -259,7 +259,7 @@ async function getAnswers(attemptIds: string[]) {
     .in("attempt_id", attemptIds);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar respostas.");
+    throw new Error("Não foi possível consultar respostas.");
   }
 
   return (data ?? []) as AnswerRow[];
@@ -277,7 +277,7 @@ async function getQuestions(questionIds: string[]) {
     .in("id", [...new Set(questionIds)]);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar questoes.");
+    throw new Error("Não foi possível consultar questões.");
   }
 
   return (data ?? []) as QuestionRow[];
@@ -291,7 +291,7 @@ async function getCategories(profile: ProfileRow) {
     .order("name", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar categorias.");
+    throw new Error("Não foi possível consultar categorias.");
   }
 
   return ((data ?? []) as CategoryRow[]).filter((category) =>
@@ -310,7 +310,7 @@ async function getProgressRows(userId: string, profile: ProfileRow) {
     .order("completed_at", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar progresso.");
+    throw new Error("Não foi possível consultar progresso.");
   }
 
   return (data ?? []) as ProgressRow[];
@@ -324,7 +324,7 @@ async function getPaths(profile: ProfileRow) {
     .eq("is_active", true);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar trilhas.");
+    throw new Error("Não foi possível consultar trilhas.");
   }
 
   return ((data ?? []) as PathRow[]).filter((path) =>
@@ -344,7 +344,7 @@ async function getPathItems(pathIds: string[]) {
     .in("path_id", pathIds);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar itens de trilha.");
+    throw new Error("Não foi possível consultar itens de trilha.");
   }
 
   return (data ?? []) as PathItemRow[];
@@ -370,13 +370,13 @@ async function getRecommendationContent(profile: ProfileRow) {
     ]);
 
   if (materialsResponse.error) {
-    throw new Error("Nao foi possivel consultar materiais para recomendacao.");
+    throw new Error("Não foi possível consultar materiais para recomendação.");
   }
   if (flashcardsResponse.error) {
-    throw new Error("Nao foi possivel consultar flashcards para recomendacao.");
+    throw new Error("Não foi possível consultar flashcards para recomendação.");
   }
   if (psychosocialResponse.error) {
-    throw new Error("Nao foi possivel consultar perguntas psicossociais.");
+    throw new Error("Não foi possível consultar perguntas psicossociais.");
   }
 
   return {
@@ -525,7 +525,7 @@ function buildRecommendations(
     return {
       id: `recommendation:${category.categoryId}`,
       categoryName: category.categoryName,
-      reason: `Voce teve ${category.percentage}% em ${category.categoryName}. Priorize revisao guiada antes do proximo simulado.`,
+      reason: `Você teve ${category.percentage}% em ${category.categoryName}. Priorize revisão guiada antes do próximo simulado.`,
       materials: categoryMaterials.map((material) => ({
         id: material.id,
         title: material.title,
@@ -759,7 +759,7 @@ export async function getAnalyticsDashboard(
 
   return {
     accessStatus: profile.access_status,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     summary,
     categoryPerformance,
     diagnostics: buildDiagnosticInsights(categoryPerformance),

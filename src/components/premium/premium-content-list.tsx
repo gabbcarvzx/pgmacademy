@@ -78,7 +78,7 @@ export function PremiumContentList({ modules }: PremiumContentListProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/10 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pgm-yellow">
+              <p className="text-xs font-semibold uppercase text-pgm-yellow">
                 Modulo {index + 1}
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-white">
@@ -99,7 +99,7 @@ export function PremiumContentList({ modules }: PremiumContentListProps) {
               </span>
               <span className="inline-flex items-center gap-2 rounded-md border border-pgm-green/35 px-2 py-1 text-xs font-semibold text-pgm-green">
                 <ShieldCheck className="size-3.5" aria-hidden="true" />
-                Conteudo inicial
+                Conteúdo inicial
               </span>
             </div>
 
@@ -116,7 +116,7 @@ export function PremiumContentList({ modules }: PremiumContentListProps) {
               icon="official"
             />
             <ModuleSection
-              title="Orientacao reaproveitavel"
+              title="Orientação reaproveitável"
               items={module.reusableGuidance}
               icon="guidance"
             />

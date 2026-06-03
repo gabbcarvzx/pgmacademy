@@ -8,7 +8,7 @@ export function StatusBadge({ status }: { status: ManualReviewStatus | null }) {
         ? "Corrigida"
         : status === "returned"
           ? "Feedback recebido"
-          : "Nao enviada";
+          : "Não enviada";
   const className =
     status === "pending"
       ? "border-pgm-yellow/40 bg-pgm-yellow/10 text-pgm-yellow"

@@ -21,7 +21,7 @@ export default async function InterviewPage() {
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Treino de entrevista
             </p>
             <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
@@ -29,7 +29,7 @@ export default async function InterviewPage() {
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
               Pratique respostas com maturidade, exemplos concretos e
-              responsabilidade. A avaliacao e feita manualmente pelo admin.
+              responsabilidade. A avaliação é feita manualmente pelo admin.
             </p>
           </div>
           {data.hasPaidAccess ? (
@@ -47,7 +47,7 @@ export default async function InterviewPage() {
                 Feedback premium
               </p>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Usuarios free visualizam a area, mas envio para feedback manual
+                Usuários gratuitos visualizam a área, mas envio para feedback manual
                 exige acesso premium.
               </p>
               <div className="mt-4">

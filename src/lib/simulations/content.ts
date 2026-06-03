@@ -25,30 +25,30 @@ export type LearningFoundationItem = {
 
 export const simulationModes: SimulationMode[] = [
   {
-    title: "Simulado Rapido",
+    title: "Simulado Rápido",
     description:
-      "Entrada limitada para treinos curtos quando o banco de questoes for alimentado.",
+      "Entrada limitada para treinos curtos quando o banco de questões for alimentado.",
     access: "free",
     Icon: Timer,
   },
   {
     title: "Simulado Completo",
     description:
-      "Experiencia premium para prova objetiva com historico e correcao completa.",
+      "Experiência premium para prova objetiva com histórico e correção completa.",
     access: "premium",
     Icon: ClipboardList,
   },
   {
-    title: "Historico",
+    title: "Histórico",
     description:
-      "Registro de tentativas, pontuacao, percentual e status por aluno.",
+      "Registro de tentativas, pontuação, percentual e status por aluno.",
     access: "free",
     Icon: History,
   },
   {
     title: "Estatisticas",
     description:
-      "Base para taxa de acerto, evolucao e categorias fortes ou fracas.",
+      "Base para taxa de acerto, evolução e categorias fortes ou fracas.",
     access: "premium",
     Icon: BarChart3,
   },
@@ -56,18 +56,18 @@ export const simulationModes: SimulationMode[] = [
 
 export const learningFoundationItems: LearningFoundationItem[] = [
   {
-    title: "Banco de Questoes",
+    title: "Banco de Questões",
     description: "Estrutura para objetivas, subjetivas e psicossociais.",
     Icon: LibraryBig,
   },
   {
     title: "Materiais de Estudo",
-    description: "Base preparada para conteudos em Markdown por categoria.",
+    description: "Base preparada para conteúdos em Markdown por categoria.",
     Icon: Layers3,
   },
   {
     title: "Flashcards",
-    description: "Modelo pronto para revisao rapida por dificuldade e idioma.",
+    description: "Modelo pronto para revisão rápida por dificuldade e idioma.",
     Icon: Brain,
   },
   {
@@ -79,7 +79,7 @@ export const learningFoundationItems: LearningFoundationItem[] = [
 
 export const seededCategoryGroups = [
   {
-    title: "Ingles",
+    title: "Inglês",
     categories: [
       "Reading Comprehension",
       "Vocabulary",
@@ -95,7 +95,7 @@ export const seededCategoryGroups = [
     title: "Espanhol",
     categories: [
       "Comprension Lectora",
-      "Vocabulario",
+      "Vocabulário",
       "Gramatica",
       "Verbos",
       "Interpretacion",

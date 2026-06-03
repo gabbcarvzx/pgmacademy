@@ -17,7 +17,7 @@ type PageProps = {
 };
 
 const typeLabel = {
-  quick: "Rapido",
+  quick: "Rápido",
   full: "Completo",
 } as const;
 
@@ -72,7 +72,7 @@ export default async function SimulationAttemptPage({ params }: PageProps) {
 
       <section className="mt-6 grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Tentativa em andamento
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
@@ -80,7 +80,7 @@ export default async function SimulationAttemptPage({ params }: PageProps) {
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
             Responda com calma, revise antes de finalizar e acompanhe seu
-            progresso. O gabarito sera liberado somente no resultado.
+            progresso. O gabarito será liberado somente no resultado.
           </p>
         </div>
         <InstitutionalNotice />
@@ -89,14 +89,14 @@ export default async function SimulationAttemptPage({ params }: PageProps) {
       <section className="mt-6 grid gap-4 sm:grid-cols-3">
         <article className="rounded-md border border-border-soft bg-surface p-5">
           <ListChecks className="size-5 text-pgm-yellow" aria-hidden="true" />
-          <p className="mt-4 text-sm font-medium text-muted">Questoes</p>
+          <p className="mt-4 text-sm font-medium text-muted">Questões</p>
           <p className="mt-2 text-2xl font-semibold text-white">
             {data.questions.length}
           </p>
         </article>
         <article className="rounded-md border border-border-soft bg-surface p-5">
           <Clock3 className="size-5 text-pgm-yellow" aria-hidden="true" />
-          <p className="mt-4 text-sm font-medium text-muted">Inicio</p>
+          <p className="mt-4 text-sm font-medium text-muted">Início</p>
           <p className="mt-2 text-lg font-semibold text-white">
             {dateFormatter.format(new Date(data.startedAt))}
           </p>

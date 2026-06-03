@@ -19,8 +19,8 @@ const optionLabels = ["A", "B", "C", "D", "E"] as const;
 function parseSubjectiveExplanation(explanation: string | null) {
   const lines = (explanation ?? "").split(/\r?\n/);
   const competencies = lines
-    .find((line) => line.startsWith("Competencias avaliadas:"))
-    ?.replace("Competencias avaliadas:", "")
+    .find((line) => line.startsWith("Competências avaliadas:"))
+    ?.replace("Competências avaliadas:", "")
     .trim();
   const rubric = lines
     .find((line) => line.startsWith("Rubrica resumida:"))
@@ -29,7 +29,7 @@ function parseSubjectiveExplanation(explanation: string | null) {
   const remaining = lines
     .filter(
       (line) =>
-        !line.startsWith("Competencias avaliadas:") &&
+        !line.startsWith("Competências avaliadas:") &&
         !line.startsWith("Rubrica resumida:"),
     )
     .join("\n")
@@ -198,7 +198,7 @@ export function QuestionForm({
       ) : (
         <div className="grid gap-4 xl:grid-cols-2">
           <div className="grid gap-2">
-            <FieldLabel htmlFor="competencies">Competencias avaliadas</FieldLabel>
+            <FieldLabel htmlFor="competencies">Competências avaliadas</FieldLabel>
             <textarea
               id="competencies"
               name="competencies"
@@ -220,7 +220,7 @@ export function QuestionForm({
 
       <div className="grid gap-2">
         <FieldLabel htmlFor="explanation">
-          {type === "objective" ? "Explicacao" : "Observacoes adicionais"}
+          {type === "objective" ? "Explicação" : "Observações adicionais"}
         </FieldLabel>
         <textarea
           id="explanation"
@@ -249,7 +249,7 @@ export function QuestionForm({
         type="submit"
         className="inline-flex h-11 items-center justify-center rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
       >
-        Salvar questao
+        Salvar questão
       </button>
     </form>
   );

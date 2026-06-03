@@ -40,7 +40,7 @@ function formString(formData: FormData, key: string) {
 
 function redirectWithError(target: string, error: unknown): never {
   const message =
-    error instanceof Error ? error.message : "Nao foi possivel salvar correcao.";
+    error instanceof Error ? error.message : "Não foi possível salvar correção.";
   const separator = target.includes("?") ? "&" : "?";
   redirect(`${target}${separator}error=${encodeURIComponent(message)}`);
 }
@@ -75,5 +75,5 @@ export async function reviewManualAttemptAction(formData: FormData) {
   revalidatePath("/analytics");
   revalidatePath("/subjetivas/minhas-respostas");
   revalidatePath("/entrevista/minhas-respostas");
-  redirectWithSuccess(target, "Correcao manual salva.");
+  redirectWithSuccess(target, "Correção manual salva.");
 }

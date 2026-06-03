@@ -38,18 +38,18 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-white"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
-          Voltar para inicio
+          Voltar para início
         </Link>
 
         <section className="mt-10 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             PGM Academy
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white">
             Entrar na conta
           </h1>
           <p className="mt-3 text-sm leading-6 text-muted">
-            Use email e senha para acessar o dashboard e salvar seu diagnostico.
+            Use email e senha para acessar o dashboard e salvar seu diagnóstico.
           </p>
 
           {params.error ? (
@@ -101,7 +101,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           </form>
 
           <p className="mt-5 text-sm leading-6 text-muted">
-            Ainda nao tem conta?{" "}
+            Ainda não tem conta?{" "}
             <Link href="/cadastro" className="font-semibold text-white">
               Criar cadastro
             </Link>

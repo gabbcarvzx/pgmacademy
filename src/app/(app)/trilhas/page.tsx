@@ -30,15 +30,15 @@ export default async function TrilhasPage() {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Trilhas de aprendizagem
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-            Sequencias para estudar com direcao
+            Sequencias para estudar com direção
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-            As trilhas combinam materiais, flashcards, questoes e preparacao
-            psicossocial em uma ordem pedagogica simples de seguir.
+            As trilhas combinam materiais, flashcards, questões e preparação
+            psicossocial em uma ordem pedagógica simples de seguir.
           </p>
         </div>
         {data.hasPaidAccess ? <InstitutionalNotice /> : <PremiumUpgradeCard />}
@@ -52,7 +52,7 @@ export default async function TrilhasPage() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                <p className="text-xs font-semibold uppercase text-pgm-yellow">
                   {languageLabel[path.language]}
                 </p>
                 <h2 className="mt-3 text-xl font-semibold text-white">
@@ -75,7 +75,7 @@ export default async function TrilhasPage() {
                 {path.itemCount} itens
               </span>
               <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
-                {path.completedItemCount} concluidos
+                {path.completedItemCount} concluídos
               </span>
               <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-pgm-yellow">
                 {path.isPremium ? "Premium" : "Gratuita"}

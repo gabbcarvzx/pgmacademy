@@ -14,7 +14,7 @@ import type {
 const pathItemLabels: Record<PathItemType, string> = {
   study_material: "Material",
   flashcard: "Flashcard",
-  question: "Questao",
+  question: "Questão",
   psychosocial_question: "Psicossocial",
   simulation_template: "Simulado",
 };
@@ -36,7 +36,7 @@ function buildOptionGroups(options: AdminSelectOptions) {
       })),
     },
     {
-      label: "Questoes",
+      label: "Questões",
       items: options.questions.map((item) => ({
         value: `question:${item.id}`,
         label: `${item.type} / ${item.title}`,
@@ -120,7 +120,7 @@ export function PathItemsForm({
                 />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                <p className="text-xs font-semibold uppercase text-muted">
                   Tipo
                 </p>
                 <div className="mt-2">
@@ -130,7 +130,7 @@ export function PathItemsForm({
                 </div>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                <p className="text-xs font-semibold uppercase text-muted">
                   Item
                 </p>
                 <p className="mt-2 text-sm font-semibold text-white">
@@ -152,7 +152,7 @@ export function PathItemsForm({
           <div className="grid gap-2">
             <FieldLabel htmlFor="new_item">Item</FieldLabel>
             <select id="new_item" name="new_item" className={inputClassName}>
-              <option value="">Nao adicionar agora</option>
+              <option value="">Não adicionar agora</option>
               {optionGroups.map((group) => (
                 <optgroup key={group.label} label={group.label}>
                   {group.items.map((item) => (
@@ -182,7 +182,7 @@ export function PathItemsForm({
         type="submit"
         className="inline-flex h-11 items-center justify-center rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
       >
-        Atualizar sequencia
+        Atualizar sequência
       </button>
     </form>
   );

@@ -33,7 +33,7 @@ export async function saveEligibilityAssessmentAction(
     return {
       ok: false,
       reason: "not_authenticated",
-      message: "Entre na conta para salvar este diagnostico no dashboard.",
+      message: "Entre na conta para salvar este diagnóstico no dashboard.",
     };
   }
 
@@ -48,7 +48,7 @@ export async function saveEligibilityAssessmentAction(
       ok: false,
       reason: "profile_missing",
       message:
-        "Seu perfil ainda nao foi criado. Confirme se a migration do Supabase foi aplicada.",
+        "Seu perfil ainda não foi criado. Confirme se a migration do Supabase foi aplicada.",
     };
   }
 
@@ -80,7 +80,7 @@ export async function saveEligibilityAssessmentAction(
     return {
       ok: false,
       reason: "database_error",
-      message: "Nao foi possivel salvar o diagnostico agora.",
+      message: "Não foi possível salvar o diagnóstico agora.",
     };
   }
 
@@ -89,6 +89,6 @@ export async function saveEligibilityAssessmentAction(
   return {
     ok: true,
     assessmentId: data.id,
-    message: "Diagnostico salvo no dashboard.",
+    message: "Diagnóstico salvo no dashboard.",
   };
 }

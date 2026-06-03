@@ -72,7 +72,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
 
       <section className="mt-6 grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Resultado
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
@@ -81,7 +81,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
             Finalizado em{" "}
             {dateFormatter.format(new Date(result.completedAt))}. Revise seus
-            erros, acertos e categorias para ajustar o proximo ciclo de estudo.
+            erros, acertos e categorias para ajustar o próximo ciclo de estudo.
           </p>
         </div>
         <InstitutionalNotice />
@@ -98,7 +98,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           {
             title: "Acertos",
             value: String(result.correctAnswers),
-            description: `${result.totalQuestions} questoes no total`,
+            description: `${result.totalQuestions} questões no total`,
             Icon: CheckCircle2,
           },
           {
@@ -133,15 +133,15 @@ export default async function SimulationResultPage({ params }: PageProps) {
       <section className="mt-6 rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Proximo passo
             </p>
             <h2 className="mt-3 text-2xl font-semibold text-white">
               Quer acesso a todos os simulados e materiais?
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-              Use este resultado para reforcar categorias fracas, acompanhar
-              analytics e continuar evoluindo com a experiencia premium.
+              Use este resultado para reforçar categorias fracas, acompanhar
+              analytics e continuar evoluindo com a experiência premium.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -206,7 +206,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
         <div className="flex items-center gap-3">
           <ListChecks className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="text-xl font-semibold text-white">
-            Correcao por questao
+            Correção por questão
           </h2>
         </div>
 
@@ -226,8 +226,8 @@ export default async function SimulationResultPage({ params }: PageProps) {
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
-                      Questao {index + 1} · {question.categoryName}
+                    <p className="text-sm font-semibold uppercase text-pgm-yellow">
+                      Questão {index + 1} · {question.categoryName}
                     </p>
                     <p className="mt-4 whitespace-pre-line text-base leading-7 text-white">
                       {question.statement}
@@ -268,31 +268,31 @@ export default async function SimulationResultPage({ params }: PageProps) {
 
                 <div className="mt-5 grid gap-3 rounded-md border border-border-soft bg-background p-4 sm:grid-cols-2">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    <p className="text-xs font-semibold uppercase text-muted">
                       Sua resposta
                     </p>
                     <p className="mt-2 text-sm font-semibold text-white">
                       {selectedOption
                         ? `${selectedOption.label}: ${selectedOption.text}`
-                        : "Nao respondida"}
+                        : "Não respondida"}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    <p className="text-xs font-semibold uppercase text-muted">
                       Correta
                     </p>
                     <p className="mt-2 text-sm font-semibold text-white">
                       {correctOption
                         ? `${correctOption.label}: ${correctOption.text}`
-                        : "Gabarito indisponivel"}
+                        : "Gabarito indisponível"}
                     </p>
                   </div>
                 </div>
 
                 {question.explanation ? (
                   <div className="mt-4 rounded-md border border-border-soft bg-background p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                      Explicacao
+                    <p className="text-xs font-semibold uppercase text-muted">
+                      Explicação
                     </p>
                     <p className="mt-2 text-sm leading-6 text-muted">
                       {question.explanation}

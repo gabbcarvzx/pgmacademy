@@ -77,7 +77,7 @@ export function EligibilityResultPanel({ result }: EligibilityResultPanelProps) 
         </div>
 
         <div className="rounded-md border border-border-soft bg-background px-5 py-4 text-center">
-          <p className="text-xs uppercase tracking-[0.18em] text-muted">
+          <p className="text-xs uppercase text-muted">
             Aderência
           </p>
           <p className="mt-2 font-mono text-3xl font-semibold text-white">
@@ -124,7 +124,7 @@ export function EligibilityResultPanel({ result }: EligibilityResultPanelProps) 
 
       <p className="mt-5 text-xs leading-5 text-muted">
         Este diagnóstico é uma orientação independente. A verificação oficial
-        considera dados e validações feitas pelos sistemas e instituições
+        considera dados e válidações feitas pelos sistemas e instituições
         responsáveis pelo processo seletivo.
       </p>
     </section>

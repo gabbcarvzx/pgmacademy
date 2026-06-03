@@ -27,7 +27,7 @@ export async function GET() {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
@@ -44,7 +44,7 @@ export async function GET() {
     const message =
       error instanceof Error
         ? error.message
-        : "Nao foi possivel consultar tentativas.";
+        : "Não foi possível consultar tentativas.";
 
     console.error(`simulation attempts get failed status=${status} message=${message}`);
 
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
@@ -81,7 +81,7 @@ export async function POST(request: Request) {
     const message =
       error instanceof Error
         ? error.message
-        : "Nao foi possivel iniciar tentativa.";
+        : "Não foi possível iniciar tentativa.";
 
     console.error(`simulation attempts post failed status=${status} message=${message}`);
 

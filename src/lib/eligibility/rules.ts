@@ -141,7 +141,7 @@ export function evaluateEligibility(input: EligibilityInput): EligibilityResult 
       requirement: "Não estar em regime de progressão parcial no ano letivo de 2026.",
       current: input.hasPartialProgression ? "Possui progressão parcial" : "Não possui",
       passedExplanation:
-        "O estudante informa não estar em regime de progressão parcial.",
+        "O estudante informa não estár em regime de progressão parcial.",
       failedExplanation:
         "O edital impede participação de estudante em progressão parcial no ano letivo de 2026.",
     }),
@@ -219,7 +219,7 @@ function evaluateBirthDate(birthDate: string): RequirementEvaluation {
     category: "identity",
     status: valid ? "passed" : "failed",
     requirement: "Data de nascimento entre 01/05/2009 e 01/10/2012.",
-    current: value ? dateFormatter.format(value) : "Data invalida",
+    current: value ? dateFormatter.format(value) : "Data inválida",
     explanation: valid
       ? "A data informada está dentro da faixa de nascimento prevista no edital."
       : "A data informada está fora da faixa de nascimento prevista no edital.",

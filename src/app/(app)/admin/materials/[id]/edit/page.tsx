@@ -40,7 +40,7 @@ export default async function EditMaterialPage({
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Editar material"
-        description="Atualize conteudo, categoria, status e controle premium do material."
+        description="Atualize conteúdo, categoria, status e controle premium do material."
         backHref="/admin/materials"
       />
       <AdminNav />

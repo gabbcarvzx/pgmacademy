@@ -42,7 +42,7 @@ export default async function EditPathPage({
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Editar trilha"
-        description="Atualize dados da trilha e organize os itens em uma sequencia pedagogica clara."
+        description="Atualize dados da trilha e organize os itens em uma sequência pedagógica clara."
         backHref="/admin/paths"
       />
       <AdminNav />
@@ -61,8 +61,8 @@ export default async function EditPathPage({
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <h2 className="text-lg font-semibold text-white">Itens da trilha</h2>
         <p className="mt-2 text-sm leading-6 text-muted">
-          Reordene, remova ou adicione itens. Esta tela nao altera tentativas,
-          respostas ou progresso historico de alunos.
+          Reordene, remova ou adicione itens. Esta tela não altera tentativas,
+          respostas ou progresso histórico de alunos.
         </p>
         <div className="mt-5">
           <PathItemsForm

@@ -7,6 +7,10 @@ import {
   type SimulationTemplateCatalogItem,
 } from "@/lib/simulations/catalog";
 import {
+  canAccessPremiumContent,
+  hasPremiumAccess,
+} from "@/lib/access/premium";
+import {
   calculateObjectiveScore,
   summarizeAttemptHistory,
   type CategoryPerformance,
@@ -190,16 +194,12 @@ class SimulationServiceError extends Error {
 
 export { SimulationServiceError };
 
-function hasPaidAccess(profile: Pick<ProfileRow, "access_status">) {
-  return profile.access_status === "paid";
-}
-
 function isTenantVisible(tenantId: string | null, profile: ProfileRow) {
   return tenantId === null || tenantId === profile.tenant_id;
 }
 
 function canAccessPremium(isPremium: boolean, profile: ProfileRow) {
-  return !isPremium || hasPaidAccess(profile) || profile.role === "admin";
+  return canAccessPremiumContent(isPremium, profile);
 }
 
 function assertDatabaseResult<T>(
@@ -229,7 +229,7 @@ async function getProfile(userId: string) {
   return assertDatabaseResult(
     data,
     error,
-    "Perfil do aluno nao encontrado.",
+    "Perfil do aluno não encontrado.",
   ) as ProfileRow;
 }
 
@@ -242,7 +242,7 @@ async function getVisibleBanks(profile: ProfileRow) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar bancos de questoes.",
+      "Não foi possível consultar bancos de questões.",
       500,
     );
   }
@@ -274,7 +274,7 @@ async function getVisibleObjectiveQuestions(profile: ProfileRow) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar questoes objetivas.",
+      "Não foi possível consultar questões objetivas.",
       500,
     );
   }
@@ -296,7 +296,7 @@ async function getActiveTemplates(profile: ProfileRow) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar modelos de simulado.",
+      "Não foi possível consultar modelos de simulado.",
       500,
     );
   }
@@ -319,7 +319,7 @@ async function getCategoriesById(categoryIds: string[]) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar categorias.",
+      "Não foi possível consultar categorias.",
       500,
     );
   }
@@ -404,7 +404,7 @@ async function getRecentAttempts(userId: string, profile: ProfileRow) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar historico de simulados.",
+      "Não foi possível consultar histórico de simulados.",
       500,
     );
   }
@@ -425,7 +425,7 @@ async function getAnswerCountsByAttempt(attemptIds: string[]) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar respostas do historico.",
+      "Não foi possível consultar respostas do histórico.",
       500,
     );
   }
@@ -445,7 +445,7 @@ async function getCategoriesCount() {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar categorias.",
+      "Não foi possível consultar categorias.",
       500,
     );
   }
@@ -467,7 +467,7 @@ export async function getSimulationOverview(
     attempts.map((attempt) => attempt.id),
   );
   const templateById = new Map(templates.map((template) => [template.id, template]));
-  const hasPaid = hasPaidAccess(profile);
+  const hasPaid = hasPremiumAccess(profile);
 
   return {
     accessStatus: profile.access_status,
@@ -519,7 +519,7 @@ export async function getSimulationStartView(
 
   return {
     accessStatus: profile.access_status,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     template,
     activeAttemptId: activeAttempt?.id ?? null,
     estimatedMinutes: template ? estimatedMinutes(template.total_questions) : 0,
@@ -539,7 +539,7 @@ async function ensureAttemptQuestions(
 
   if (existingError) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar questoes da tentativa.",
+      "Não foi possível consultar questões da tentativa.",
       500,
     );
   }
@@ -554,8 +554,8 @@ async function ensureAttemptQuestions(
   if (selectedQuestions.length < template.total_questions) {
     throw new SimulationServiceError(
       selectedQuestions.length === 0
-        ? "Banco de questoes ainda nao alimentado para este simulado."
-        : "Banco de questoes insuficiente para este simulado.",
+        ? "Banco de questões ainda não alimentado para este simulado."
+        : "Banco de questões insuficiente para este simulado.",
       409,
     );
   }
@@ -573,7 +573,7 @@ async function ensureAttemptQuestions(
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel vincular questoes a tentativa.",
+      "Não foi possível vincular questões a tentativa.",
       500,
     );
   }
@@ -589,12 +589,12 @@ export async function startSimulationAttempt(
   const template = overview.templates.find((item) => item.id === templateId);
 
   if (!template) {
-    throw new SimulationServiceError("Modelo de simulado nao encontrado.", 404);
+    throw new SimulationServiceError("Modelo de simulado não encontrado.", 404);
   }
 
   if (template.lockedReason === "premium_required") {
     throw new SimulationServiceError(
-      "Este simulado esta disponivel apenas para usuarios premium.",
+      "Este simulado está disponível apenas para usuários premium.",
       403,
     );
   }
@@ -605,8 +605,8 @@ export async function startSimulationAttempt(
   ) {
     throw new SimulationServiceError(
       template.lockedReason === "insufficient_questions"
-        ? "Banco de questoes insuficiente para este simulado."
-        : "Banco de questoes ainda nao alimentado para este simulado.",
+        ? "Banco de questões insuficiente para este simulado."
+        : "Banco de questões ainda não alimentado para este simulado.",
       409,
     );
   }
@@ -626,7 +626,7 @@ export async function startSimulationAttempt(
 
   if (activeAttemptError) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar tentativa ativa.",
+      "Não foi possível consultar tentativa ativa.",
       500,
     );
   }
@@ -653,7 +653,7 @@ export async function startSimulationAttempt(
 
   if (error || !data) {
     throw new SimulationServiceError(
-      "Nao foi possivel iniciar a tentativa.",
+      "Não foi possível iniciar a tentativa.",
       500,
     );
   }
@@ -681,7 +681,7 @@ async function getAttemptForUser(userId: string, attemptId: string) {
     .single();
 
   if (error || !data) {
-    throw new SimulationServiceError("Tentativa nao encontrada.", 404);
+    throw new SimulationServiceError("Tentativa não encontrada.", 404);
   }
 
   return {
@@ -706,7 +706,7 @@ async function getTemplateById(templateId: string | null) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar modelo da tentativa.",
+      "Não foi possível consultar modelo da tentativa.",
       500,
     );
   }
@@ -724,7 +724,7 @@ async function getAttemptAnswers(attemptId: string) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar respostas da tentativa.",
+      "Não foi possível consultar respostas da tentativa.",
       500,
     );
   }
@@ -747,7 +747,7 @@ async function getQuestionsById(questionIds: string[]) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar questoes da tentativa.",
+      "Não foi possível consultar questões da tentativa.",
       500,
     );
   }
@@ -770,7 +770,7 @@ async function getRunnerQuestionsById(questionIds: string[]) {
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar questoes da tentativa.",
+      "Não foi possível consultar questões da tentativa.",
       500,
     );
   }
@@ -804,7 +804,7 @@ async function getOptionsByQuestionId(questionIds: string[], includeCorrect: boo
 
   if (error) {
     throw new SimulationServiceError(
-      "Nao foi possivel consultar alternativas.",
+      "Não foi possível consultar alternativas.",
       500,
     );
   }
@@ -836,12 +836,12 @@ export async function getSimulationRunner(
   const { attempt } = await getAttemptForUser(userId, attemptId);
 
   if (attempt.status === "completed") {
-    throw new SimulationServiceError("Tentativa ja finalizada.", 409);
+    throw new SimulationServiceError("Tentativa já finalizada.", 409);
   }
 
   const template = await getTemplateById(attempt.template_id);
   if (!template) {
-    throw new SimulationServiceError("Modelo de simulado nao encontrado.", 404);
+    throw new SimulationServiceError("Modelo de simulado não encontrado.", 404);
   }
 
   const answers = await getAttemptAnswers(attempt.id);
@@ -869,7 +869,7 @@ export async function getSimulationRunner(
     questions: answers.map((answer) => {
       const question = questionById.get(answer.question_id);
       if (!question) {
-        throw new SimulationServiceError("Questao da tentativa nao encontrada.", 500);
+        throw new SimulationServiceError("Questão da tentativa não encontrada.", 500);
       }
 
       return {
@@ -903,14 +903,14 @@ export async function saveSimulationAnswer(
   const { attempt } = await getAttemptForUser(userId, input.attemptId);
 
   if (attempt.status !== "started") {
-    throw new SimulationServiceError("Tentativa ja finalizada.", 409);
+    throw new SimulationServiceError("Tentativa já finalizada.", 409);
   }
 
   const answers = await getAttemptAnswers(attempt.id);
   const answer = answers.find((item) => item.question_id === input.questionId);
 
   if (!answer) {
-    throw new SimulationServiceError("Questao nao pertence a tentativa.", 403);
+    throw new SimulationServiceError("Questão não pertence a tentativa.", 403);
   }
 
   if (input.selectedOptionId) {
@@ -920,7 +920,7 @@ export async function saveSimulationAnswer(
       ?.some((option) => option.id === input.selectedOptionId);
 
     if (!optionBelongsToQuestion) {
-      throw new SimulationServiceError("Alternativa invalida para a questao.", 400);
+      throw new SimulationServiceError("Alternativa inválida para a questão.", 400);
     }
   }
 
@@ -935,7 +935,7 @@ export async function saveSimulationAnswer(
     .eq("attempt_id", attempt.id);
 
   if (error) {
-    throw new SimulationServiceError("Nao foi possivel salvar resposta.", 500);
+    throw new SimulationServiceError("Não foi possível salvar resposta.", 500);
   }
 }
 
@@ -979,7 +979,7 @@ export async function submitSimulationAttempt(
     for (const selectedOption of selectedOptions) {
       if (!answerByQuestionId.has(selectedOption.questionId)) {
         throw new SimulationServiceError(
-          "Questao nao pertence a tentativa.",
+          "Questão não pertence a tentativa.",
           403,
         );
       }
@@ -1001,7 +1001,7 @@ export async function submitSimulationAttempt(
 
       if (!optionBelongsToQuestion) {
         throw new SimulationServiceError(
-          "Alternativa invalida para a questao.",
+          "Alternativa inválida para a questão.",
           400,
         );
       }
@@ -1021,7 +1021,7 @@ export async function submitSimulationAttempt(
 
     if (error) {
       throw new SimulationServiceError(
-        "Nao foi possivel salvar respostas da tentativa.",
+        "Não foi possível salvar respostas da tentativa.",
         500,
       );
     }
@@ -1042,7 +1042,7 @@ export async function submitSimulationAttempt(
   const scoreInput: ObjectiveAnswerInput[] = answers.map((answer) => {
     const question = questionById.get(answer.question_id);
     if (!question) {
-      throw new SimulationServiceError("Questao da tentativa nao encontrada.", 500);
+      throw new SimulationServiceError("Questão da tentativa não encontrada.", 500);
     }
 
     const correctOption = optionsByQuestion
@@ -1083,7 +1083,7 @@ export async function submitSimulationAttempt(
 
     if (upsertAnswersError) {
       throw new SimulationServiceError(
-        "Nao foi possivel salvar correcao da tentativa.",
+        "Não foi possível salvar correção da tentativa.",
         500,
       );
     }
@@ -1103,7 +1103,7 @@ export async function submitSimulationAttempt(
 
   if (updateAttemptError) {
     throw new SimulationServiceError(
-      "Nao foi possivel finalizar a tentativa.",
+      "Não foi possível finalizar a tentativa.",
       500,
     );
   }
@@ -1131,7 +1131,7 @@ export async function getSimulationResult(
   const { attempt } = await getAttemptForUser(userId, attemptId);
 
   if (attempt.status !== "completed") {
-    throw new SimulationServiceError("Tentativa ainda nao finalizada.", 409);
+    throw new SimulationServiceError("Tentativa ainda não finalizada.", 409);
   }
 
   const template = await getTemplateById(attempt.template_id);

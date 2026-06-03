@@ -1,5 +1,9 @@
 import "server-only";
 
+import {
+  canAccessPremiumContent,
+  hasPremiumAccess,
+} from "@/lib/access/premium";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -141,16 +145,12 @@ const statusLabels: Record<ManualReviewStatus, string> = {
 
 export { statusLabels as manualReviewStatusLabels };
 
-function hasPaidAccess(profile: Pick<ProfileRow, "access_status" | "role">) {
-  return profile.access_status === "paid" || profile.role === "admin";
-}
-
 function isTenantVisible(tenantId: string | null, profile: ProfileRow) {
   return tenantId === null || tenantId === profile.tenant_id;
 }
 
 function canAccessPremium(isPremium: boolean, profile: ProfileRow) {
-  return !isPremium || hasPaidAccess(profile);
+  return canAccessPremiumContent(isPremium, profile);
 }
 
 function normalizeAnswer(value: string) {
@@ -160,7 +160,7 @@ function normalizeAnswer(value: string) {
     throw new Error("Escreva uma resposta com pelo menos 20 caracteres.");
   }
   if (answer.length > 12000) {
-    throw new Error("A resposta deve ter no maximo 12000 caracteres.");
+    throw new Error("A resposta deve ter no máximo 12000 caracteres.");
   }
 
   return answer;
@@ -168,10 +168,10 @@ function normalizeAnswer(value: string) {
 
 function normalizeScore(score: number, maxScore: number) {
   if (!Number.isFinite(maxScore) || maxScore <= 0 || maxScore > 100) {
-    throw new Error("Nota maxima invalida.");
+    throw new Error("Nota máxima inválida.");
   }
   if (!Number.isFinite(score) || score < 0 || score > maxScore) {
-    throw new Error("Nota deve ficar entre 0 e a nota maxima.");
+    throw new Error("Nota deve ficar entre 0 e a nota máxima.");
   }
 
   return Number(score.toFixed(2));
@@ -189,8 +189,8 @@ function round(value: number) {
 function parseSubjectiveExplanation(explanation: string | null) {
   const lines = (explanation ?? "").split(/\r?\n/);
   const competencies = lines
-    .find((line) => line.startsWith("Competencias avaliadas:"))
-    ?.replace("Competencias avaliadas:", "")
+    .find((line) => line.startsWith("Competências avaliadas:"))
+    ?.replace("Competências avaliadas:", "")
     .trim();
   const rubric = lines
     .find((line) => line.startsWith("Rubrica resumida:"))
@@ -199,7 +199,7 @@ function parseSubjectiveExplanation(explanation: string | null) {
   const remaining = lines
     .filter(
       (line) =>
-        !line.startsWith("Competencias avaliadas:") &&
+        !line.startsWith("Competências avaliadas:") &&
         !line.startsWith("Rubrica resumida:"),
     )
     .join("\n")
@@ -220,7 +220,7 @@ async function getProfile(userId: string): Promise<ProfileRow> {
     .single();
 
   if (error || !data) {
-    throw new Error("Perfil do aluno nao encontrado.");
+    throw new Error("Perfil do aluno não encontrado.");
   }
 
   return data as ProfileRow;
@@ -234,7 +234,7 @@ async function getCategories(profile: ProfileRow) {
     .order("name", { ascending: true });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar categorias.");
+    throw new Error("Não foi possível consultar categorias.");
   }
 
   return ((data ?? []) as CategoryRow[]).filter((category) =>
@@ -251,7 +251,7 @@ async function getQuestionBanks(bankIds: string[]) {
     .in("id", [...new Set(bankIds)]);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar bancos de questoes.");
+    throw new Error("Não foi possível consultar bancos de questões.");
   }
 
   return (data ?? []) as QuestionBankRow[];
@@ -269,7 +269,7 @@ async function getSubjectiveAttempts(userId: string, profile: ProfileRow) {
     .order("created_at", { ascending: false });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar respostas subjetivas.");
+    throw new Error("Não foi possível consultar respostas subjetivas.");
   }
 
   return (data ?? []) as SubjectiveAttemptRow[];
@@ -287,7 +287,7 @@ async function getPsychosocialAttempts(userId: string, profile: ProfileRow) {
     .order("created_at", { ascending: false });
 
   if (error) {
-    throw new Error("Nao foi possivel consultar respostas psicossociais.");
+    throw new Error("Não foi possível consultar respostas psicossociais.");
   }
 
   return (data ?? []) as PsychosocialAttemptRow[];
@@ -348,7 +348,7 @@ function subjectiveToCard(
     language: question.language,
     difficulty: question.difficulty,
     isPremium: bank.is_premium,
-    canSubmit: hasPaidAccess(profile) && canAccessPremium(bank.is_premium, profile),
+    canSubmit: hasPremiumAccess(profile) && canAccessPremium(bank.is_premium, profile),
     latestStatus: attempt?.status ?? null,
     latestScore: attempt?.score ?? null,
   };
@@ -364,7 +364,7 @@ function psychosocialToCard(
     title: question.question,
     categoryName: question.category,
     isPremium: question.is_premium,
-    canSubmit: hasPaidAccess(profile) && canAccessPremium(question.is_premium, profile),
+    canSubmit: hasPremiumAccess(profile) && canAccessPremium(question.is_premium, profile),
     latestStatus: attempt?.status ?? null,
     latestScore: attempt?.score ?? null,
   };
@@ -390,7 +390,7 @@ export async function getSubjectiveQuestionList(
   ]);
 
   if (questionsResponse.error) {
-    throw new Error("Nao foi possivel consultar questoes subjetivas.");
+    throw new Error("Não foi possível consultar questões subjetivas.");
   }
 
   const questions = ((questionsResponse.data ?? []) as QuestionRow[]).filter(
@@ -421,7 +421,7 @@ export async function getSubjectiveQuestionList(
 
   return {
     accessStatus: profile.access_status as AccessStatus,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     questions: cards,
     filterOptions: {
       categories: [...new Map(cards.map((card) => [card.categorySlug ?? "", card])).values()]
@@ -451,7 +451,7 @@ export async function getSubjectiveQuestionDetail(userId: string, questionId: st
   ]);
 
   if (questionResponse.error) {
-    throw new Error("Nao foi possivel consultar questao subjetiva.");
+    throw new Error("Não foi possível consultar questão subjetiva.");
   }
   if (!questionResponse.data) return null;
 
@@ -468,7 +468,7 @@ export async function getSubjectiveQuestionDetail(userId: string, questionId: st
 
   return {
     accessStatus: profile.access_status as AccessStatus,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     question: {
       ...subjectiveToCard(
         question,
@@ -497,16 +497,16 @@ export async function submitSubjectiveAnswer(
   const profile = await getProfile(userId);
   const answer = normalizeAnswer(answerText);
 
-  if (!hasPaidAccess(profile)) {
-    throw new Error("Envio de subjetivas e correcao manual sao recursos premium.");
+  if (!hasPremiumAccess(profile)) {
+    throw new Error("Envio de subjetivas e correção manual são recursos premium.");
   }
 
   const detail = await getSubjectiveQuestionDetail(userId, questionId);
   if (!detail?.question.canSubmit) {
-    throw new Error("Questao indisponivel para envio.");
+    throw new Error("Questão indisponível para envio.");
   }
   if (detail.question.attempts.some((attempt) => attempt.status === "pending")) {
-    throw new Error("Voce ja possui uma resposta pendente para esta questao.");
+    throw new Error("Você já possui uma resposta pendente para está questão.");
   }
 
   const { error } = await admin.from("subjective_attempts").insert({
@@ -519,7 +519,7 @@ export async function submitSubjectiveAnswer(
   });
 
   if (error) {
-    throw new Error("Nao foi possivel enviar resposta subjetiva.");
+    throw new Error("Não foi possível enviar resposta subjetiva.");
   }
 }
 
@@ -539,7 +539,7 @@ export async function getPsychosocialQuestionList(userId: string) {
   ]);
 
   if (questionsResponse.error) {
-    throw new Error("Nao foi possivel consultar perguntas psicossociais.");
+    throw new Error("Não foi possível consultar perguntas psicossociais.");
   }
 
   const questions = ((questionsResponse.data ?? []) as PsychosocialQuestionRow[])
@@ -554,7 +554,7 @@ export async function getPsychosocialQuestionList(userId: string) {
 
   return {
     accessStatus: profile.access_status as AccessStatus,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     questions,
     groups: [...new Set(questions.map((question) => question.categoryName))].map(
       (category) => ({
@@ -584,7 +584,7 @@ export async function getPsychosocialQuestionDetail(
   ]);
 
   if (questionResponse.error) {
-    throw new Error("Nao foi possivel consultar pergunta psicossocial.");
+    throw new Error("Não foi possível consultar pergunta psicossocial.");
   }
   if (!questionResponse.data) return null;
 
@@ -593,7 +593,7 @@ export async function getPsychosocialQuestionDetail(
 
   return {
     accessStatus: profile.access_status as AccessStatus,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     question: {
       ...psychosocialToCard(
         question,
@@ -618,16 +618,16 @@ export async function submitPsychosocialAnswer(
   const profile = await getProfile(userId);
   const answer = normalizeAnswer(answerText);
 
-  if (!hasPaidAccess(profile)) {
-    throw new Error("Envio de entrevista psicossocial e correcao manual sao recursos premium.");
+  if (!hasPremiumAccess(profile)) {
+    throw new Error("Envio de entrevista psicossocial e correção manual são recursos premium.");
   }
 
   const detail = await getPsychosocialQuestionDetail(userId, questionId);
   if (!detail?.question.canSubmit) {
-    throw new Error("Pergunta indisponivel para envio.");
+    throw new Error("Pergunta indisponível para envio.");
   }
   if (detail.question.attempts.some((attempt) => attempt.status === "pending")) {
-    throw new Error("Voce ja possui uma resposta pendente para esta pergunta.");
+    throw new Error("Você já possui uma resposta pendente para está pergunta.");
   }
 
   const { error } = await admin.from("psychosocial_attempts").insert({
@@ -640,7 +640,7 @@ export async function submitPsychosocialAnswer(
   });
 
   if (error) {
-    throw new Error("Nao foi possivel enviar resposta psicossocial.");
+    throw new Error("Não foi possível enviar resposta psicossocial.");
   }
 }
 
@@ -722,7 +722,7 @@ export async function getStudentManualAttempts(userId: string) {
   ]);
 
   if (questionsResponse.error || psychosocialResponse.error) {
-    throw new Error("Nao foi possivel consultar historico de respostas.");
+    throw new Error("Não foi possível consultar histórico de respostas.");
   }
 
   const categoryById = new Map(categories.map((category) => [category.id, category]));
@@ -753,7 +753,7 @@ export async function getStudentManualAttempts(userId: string) {
 
   return {
     accessStatus: profile.access_status as AccessStatus,
-    hasPaidAccess: hasPaidAccess(profile),
+    hasPaidAccess: hasPremiumAccess(profile),
     attempts: [...subjectiveCards, ...psychosocialCards].sort((a, b) =>
       b.createdAt.localeCompare(a.createdAt),
     ),
@@ -817,7 +817,7 @@ async function getProfilesById(userIds: string[]) {
     .in("id", [...new Set(userIds)]);
 
   if (error) {
-    throw new Error("Nao foi possivel consultar alunos.");
+    throw new Error("Não foi possível consultar alunos.");
   }
 
   return new Map(((data ?? []) as ProfileRow[]).map((profile) => [profile.id, profile]));
@@ -853,7 +853,7 @@ export async function getAdminManualReviewQueue(tab: string) {
   ]);
 
   if (subjectiveResponse.error || psychosocialResponse.error) {
-    throw new Error("Nao foi possivel consultar fila de correcoes.");
+    throw new Error("Não foi possível consultar fila de correcoes.");
   }
 
   let subjectiveAttempts = (subjectiveResponse.data ?? []) as SubjectiveAttemptRow[];
@@ -917,7 +917,7 @@ export async function getAdminManualReviewQueue(tab: string) {
     ]);
 
   if (questionsResponse.error || psychosocialQuestionsResponse.error) {
-    throw new Error("Nao foi possivel montar fila de correcoes.");
+    throw new Error("Não foi possível montar fila de correcoes.");
   }
 
   const categoryById = new Map(categories.map((category) => [category.id, category]));
@@ -984,7 +984,7 @@ export async function reviewManualAttempt(input: {
   status: ManualReviewStatus;
 }) {
   if (!isReviewedStatus(input.status)) {
-    throw new Error("Status de correcao invalido.");
+    throw new Error("Status de correção inválido.");
   }
   const feedback = input.feedback.trim();
   if (feedback.length < 5) {
@@ -1009,6 +1009,6 @@ export async function reviewManualAttempt(input: {
           .eq("id", input.attemptId);
 
   if (response.error) {
-    throw new Error("Nao foi possivel salvar correcao manual.");
+    throw new Error("Não foi possível salvar correção manual.");
   }
 }

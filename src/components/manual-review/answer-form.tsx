@@ -37,20 +37,20 @@ export function AnswerForm({
           value={answer}
           onChange={(event) => setAnswer(event.target.value)}
           className="min-h-72 w-full resize-y rounded-md border border-border-soft bg-background px-4 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-muted/60 focus:border-pgm-yellow"
-          placeholder="Escreva uma resposta clara, com exemplo concreto e fechamento responsavel."
+          placeholder="Escreva uma resposta clara, com exemplo concreto e fechamento responsável."
         />
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">
           {answer.length}/12000 caracteres. Revise antes de enviar; a resposta
-          nao podera ser editada depois.
+          não poder? ser editada depois.
         </p>
         <button
           type="submit"
           className="inline-flex h-11 items-center justify-center rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
         >
-          Enviar para correcao
+          Enviar para correção
         </button>
       </div>
     </form>

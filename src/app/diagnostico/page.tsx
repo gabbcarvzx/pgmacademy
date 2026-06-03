@@ -41,10 +41,10 @@ export default async function DiagnosticoPage() {
         </div>
 
         <section className="py-10 sm:py-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             PGM Academy
           </p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-normal text-white sm:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold text-white sm:text-5xl">
             Diagnóstico de Elegibilidade
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-muted sm:text-lg">

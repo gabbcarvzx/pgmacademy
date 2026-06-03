@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     const message =
       error instanceof AsaasApiError
         ? error.message
-        : "Nao foi possivel iniciar o pagamento.";
+        : "Não foi possível iniciar o pagamento.";
 
     return NextResponse.json({ error: message }, { status: 502 });
   }

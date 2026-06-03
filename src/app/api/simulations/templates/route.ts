@@ -16,7 +16,7 @@ export async function GET() {
 
   if (!user) {
     return NextResponse.json(
-      { error: "Usuario nao autenticado." },
+      { error: "Usuário não autenticado." },
       { status: 401 },
     );
   }
@@ -35,7 +35,7 @@ export async function GET() {
     const message =
       error instanceof Error
         ? error.message
-        : "Nao foi possivel listar simulados.";
+        : "Não foi possível listar simulados.";
 
     console.error(`simulation templates failed status=${status} message=${message}`);
 

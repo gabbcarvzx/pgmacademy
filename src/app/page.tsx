@@ -24,7 +24,7 @@ const heroImage =
 
 const benefitCards = [
   {
-    title: "Estude com direcao",
+    title: "Estude com direção",
     description:
       "Materiais, trilhas e flashcards ajudam o aluno a sair do improviso e estudar com foco.",
     Icon: BookOpenCheck,
@@ -32,29 +32,29 @@ const benefitCards = [
   {
     title: "Treine como prova real",
     description:
-      "Simulados autorais protegem o gabarito ate a finalizacao e mostram desempenho por categoria.",
+      "Simulados autorais protegem o gabarito até a finalização e mostram desempenho por categoria.",
     Icon: ListChecks,
   },
   {
     title: "Evolua com clareza",
     description:
-      "Analytics, metas e recomendacoes baseadas em regras mostram onde reforcar antes da selecao.",
+      "Analytics, metas e recomendações baseadas em regras mostram onde reforçar antes da seleção.",
     Icon: BarChart3,
   },
   {
     title: "Prepare sua postura",
     description:
-      "Subjetivas e entrevista psicossocial ajudam a treinar comunicacao, maturidade e responsabilidade.",
+      "Subjetivas e entrevista psicossocial ajudam a treinar comunicação, maturidade e responsabilidade.",
     Icon: MessageSquareText,
   },
 ];
 
 const dreamSteps = [
-  "Voce decide participar do Ganhe o Mundo.",
-  "Voce estuda com a PGM Academy.",
-  "Voce domina os conteudos essenciais.",
-  "Voce chega mais preparado para a selecao.",
-  "Voce se aproxima da experiencia internacional.",
+  "Você decide participar do Ganhe o Mundo.",
+  "Você estuda com a PGM Academy.",
+  "Você domina os conteúdos essenciais.",
+  "Você chega mais preparado para a seleção.",
+  "Você se aproxima da experiência internacional.",
 ];
 
 export default function Home() {
@@ -65,7 +65,7 @@ export default function Home() {
       <section className="relative min-h-[82vh] overflow-hidden">
         <Image
           src={heroImage}
-          alt="Vista de cidade no Canada representando o sonho de estudar fora."
+          alt="Vista de cidade no Canadá representando o sonho de estudar fora."
           fill
           priority
           sizes="100vw"
@@ -78,15 +78,15 @@ export default function Home() {
           <div className="max-w-4xl py-12">
             <div className="inline-flex items-center gap-2 rounded-md border border-white/18 bg-background/45 px-3 py-2 text-sm font-medium text-white backdrop-blur">
               <ShieldCheck className="size-4 text-pgm-yellow" aria-hidden="true" />
-              Plataforma independente de preparacao
+              Plataforma independente de preparação
             </div>
 
-            <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold tracking-normal text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold text-white sm:text-6xl lg:text-7xl">
               Prepare-se para conquistar sua vaga no Programa Ganhe o Mundo.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/82 sm:text-xl">
-              Materiais, simulados, trilhas de aprendizagem e preparacao
-              completa para chegar com mais confianca em cada etapa do processo
+              Materiais, simulados, trilhas de aprendizagem e preparação
+              completa para chegar com mais confiança em cada etapa do processo
               seletivo.
             </p>
 
@@ -95,7 +95,7 @@ export default function Home() {
                 href="/cadastro"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
               >
-                Comecar gratuitamente
+                Começar gratuitamente
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link
@@ -108,8 +108,8 @@ export default function Home() {
             </div>
 
             <p className="mt-6 max-w-2xl text-sm leading-6 text-white/70">
-              Cada etapa do processo seletivo exige preparacao. Quanto antes
-              voce comecar, mais preparado estara quando o edital abrir.
+              Cada etapa do processo seletivo exige preparação. Quanto antes
+              você começar, mais preparado estará quando o edital abrir.
             </p>
           </div>
         </div>
@@ -119,8 +119,8 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Produto educacional"
-            title="A PGM Academy organiza o caminho entre sonho e preparacao."
-            description="O aluno nao precisa estudar no escuro. A plataforma mostra conteudo, treino, feedback e progresso com controle premium seguro."
+            title="A PGM Academy organiza o caminho entre sonho e preparação."
+            description="O aluno não precisa estudar no escuro. A plataforma mostra conteúdo, treino, feedback e progresso com controle premium seguro."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -147,7 +147,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Modulos"
             title="Uma plataforma completa para o aluno competir melhor."
-            description="O foco e preparacao vendavel e recorrente: conteudo autoral, progresso, simulados, feedback manual e analytics sem expor dados entre usuarios."
+            description="O foco é preparação vendável e recorrente: conteúdo autoral, progresso, simulados, feedback manual e analytics sem expor dados entre usuários."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -167,8 +167,8 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <SectionHeading
             eyebrow="Jornada do sonho"
-            title="Do primeiro interesse ao preparo para uma experiencia internacional."
-            description="A comunicacao e emocional, mas a plataforma continua responsavel: prepara o aluno, nao promete vaga, destino ou embarque."
+            title="Do primeiro interesse ao preparo para uma experiência internacional."
+            description="A comunicação e emocional, mas a plataforma continua responsável: prepara o aluno, não promete vaga, destino ou embarque."
           />
 
           <div className="grid gap-3">
@@ -184,8 +184,8 @@ export default function Home() {
                   <p className="text-sm font-semibold text-white">{step}</p>
                   <p className="mt-1 text-sm leading-6 text-muted">
                     {index === dreamSteps.length - 1
-                      ? "Sempre com confirmacao no edital vigente e canais oficiais."
-                      : "Uma etapa por vez, com foco e consistencia."}
+                      ? "Sempre com confirmação no edital vigente e canais oficiais."
+                      : "Uma etapa por vez, com foco e consistência."}
                   </p>
                 </div>
               </div>
@@ -197,16 +197,16 @@ export default function Home() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_380px] lg:px-8">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Plano premium
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-              Poucos se preparam da forma correta. Voce pode comecar agora.
+              Poucos se preparam da forma correta. Você pode começar agora.
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-muted">
               O premium desbloqueia simulados completos, trilhas completas,
               flashcards, subjetivas, entrevista psicossocial, feedback manual e
-              analytics avancado.
+              analytics avançado.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -220,7 +220,7 @@ export default function Home() {
                 href="/avaliacoes"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-border-soft px-5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/8"
               >
-                Ver estrutura de avaliacoes
+                Ver estrutura de avaliações
                 <Globe2 className="size-4" aria-hidden="true" />
               </Link>
             </div>
@@ -251,11 +251,11 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <p className="text-sm font-semibold text-white">
-              Pronto para transformar vontade em rotina de preparacao?
+              Pronto para transformar vontade em rotina de preparação?
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
               Crie sua conta, conheca o gratuito e desbloqueie o premium quando
-              quiser acessar a experiencia completa.
+              quiser acessar a experiência completa.
             </p>
           </div>
           <Link

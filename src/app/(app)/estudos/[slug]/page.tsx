@@ -52,7 +52,7 @@ export default async function StudyMaterialPage({ params }: PageProps) {
         <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
                 {material.categoryName}
               </p>
               <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
@@ -78,10 +78,22 @@ export default async function StudyMaterialPage({ params }: PageProps) {
           </div>
 
           <div className="mt-6">
-            {material.contentMd ? (
-              <MarkdownContent content={material.contentMd} />
+            {material.canAccess ? (
+              material.contentMd ? (
+                <MarkdownContent content={material.contentMd} />
+              ) : (
+                <div className="rounded-md border border-border-soft bg-background p-5">
+                  <p className="text-sm font-semibold text-white">
+                    Conteúdo em preparação
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    Seu acesso está liberado, mas este material ainda não possui
+                    conteúdo publicado.
+                  </p>
+                </div>
+              )
             ) : (
-              <PremiumUpgradeCard description="Faca upgrade para ler o conteudo completo deste material." />
+              <PremiumUpgradeCard description="Faça upgrade para ler o conteúdo completo deste material." />
             )}
           </div>
 
@@ -94,7 +106,7 @@ export default async function StudyMaterialPage({ params }: PageProps) {
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
               >
                 <CheckCircle2 className="size-4" aria-hidden="true" />
-                {material.isCompleted ? "Concluido" : "Marcar como concluido"}
+                {material.isCompleted ? "Concluído" : "Marcar como concluído"}
               </button>
             </form>
           ) : null}
@@ -111,7 +123,7 @@ export default async function StudyMaterialPage({ params }: PageProps) {
             <div className="mt-4 grid gap-3">
               {material.relatedPaths.length === 0 ? (
                 <p className="text-sm leading-6 text-muted">
-                  Este material ainda nao esta vinculado a uma trilha visivel.
+                  Este material ainda não está vinculado a uma trilha visível.
                 </p>
               ) : (
                 material.relatedPaths.map((path) => (

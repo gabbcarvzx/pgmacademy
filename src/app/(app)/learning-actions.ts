@@ -28,7 +28,7 @@ export async function completeStudyMaterialAction(formData: FormData) {
   const slug = String(formData.get("slug") ?? "");
 
   if (!materialId) {
-    throw new Error("Material invalido.");
+    throw new Error("Material inválido.");
   }
 
   await markLearningItemsCompleted(userId, [
@@ -57,7 +57,7 @@ export async function completePathGroupAction(formData: FormData) {
     .filter(Boolean);
 
   if (!pathId || !pathSlug || itemIds.length === 0) {
-    throw new Error("Grupo de trilha invalido.");
+    throw new Error("Grupo de trilha inválido.");
   }
 
   await markLearningItemsCompleted(

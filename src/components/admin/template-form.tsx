@@ -37,7 +37,7 @@ export function TemplateForm({
           />
         </div>
         <div className="grid gap-2">
-          <FieldLabel htmlFor="total_questions">Total de questoes</FieldLabel>
+          <FieldLabel htmlFor="total_questions">Total de questões</FieldLabel>
           <input
             id="total_questions"
             name="total_questions"
@@ -108,7 +108,7 @@ export function TemplateForm({
           Ativo
         </label>
         <div className="rounded-md border border-border-soft bg-background px-3 py-2 text-xs leading-5 text-muted">
-          Editar template nao altera tentativas ja realizadas.
+          Editar template não altera tentativas já realizadas.
         </div>
       </div>
 

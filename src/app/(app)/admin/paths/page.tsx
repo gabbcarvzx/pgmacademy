@@ -45,7 +45,7 @@ export default async function AdminPathsPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
         title="Trilhas de aprendizagem"
-        description="Crie trilhas, controle premium/free e organize a sequencia pedagogica de materiais, flashcards, questoes e psicossocial."
+        description="Crie trilhas, controle premium/free e organize a sequência pedagógica de materiais, flashcards, questões e psicossocial."
         action={
           <Link
             href="/admin/paths/new"
@@ -62,7 +62,7 @@ export default async function AdminPathsPage({ searchParams }: PageProps) {
       <form className="mt-6 grid gap-3 rounded-md border border-border-soft bg-surface p-4 lg:grid-cols-[1fr_180px_180px_auto]">
         <input
           name="q"
-          placeholder="Buscar por titulo ou descricao"
+          placeholder="Buscar por título ou descrição"
           defaultValue={params?.q ?? ""}
           className={inputClassName}
         />
@@ -117,14 +117,14 @@ export default async function AdminPathsPage({ searchParams }: PageProps) {
                   {path.title}
                 </h2>
                 <p className="mt-1 text-sm leading-6 text-muted">
-                  {path.description ?? "Sem descricao."}
+                  {path.description ?? "Sem descrição."}
                 </p>
               </div>
               <div className="text-sm leading-6 text-muted">
                 <p>Idioma: {path.language}</p>
                 <p>Slug: {path.slug ?? "sem slug"}</p>
                 <p className="truncate">
-                  Source: {path.source_reference ?? "sem referencia"}
+                  Fonte: {path.source_reference ?? "sem referência"}
                 </p>
               </div>
               <div className="grid gap-2">
@@ -139,7 +139,7 @@ export default async function AdminPathsPage({ searchParams }: PageProps) {
                     <input type="hidden" name="returnTo" value="/admin/paths" />
                     <input type="hidden" name="entity" value="path" />
                     <input type="hidden" name="id" value={path.id} />
-                    <ConfirmSubmitButton message="Desativar esta trilha?">
+                    <ConfirmSubmitButton message="Desativar está trilha?">
                       Desativar
                     </ConfirmSubmitButton>
                   </form>

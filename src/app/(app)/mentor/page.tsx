@@ -3,11 +3,12 @@ import Link from "next/link";
 import { LockKeyhole } from "lucide-react";
 
 import { MentorChat } from "@/components/mentor/mentor-chat";
+import { hasPremiumAccess } from "@/lib/access/premium";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Mentor PGM",
-  description: "Recurso premium da PGM Academy para preparacao do aluno.",
+  description: "Recurso premium da PGM Academy para preparação do aluno.",
 };
 
 export default async function MentorPage() {
@@ -18,24 +19,24 @@ export default async function MentorPage() {
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("access_status")
+    .select("access_status, role")
     .eq("id", user?.id ?? "")
     .single();
 
-  if (profile?.access_status !== "paid") {
+  if (!hasPremiumAccess(profile)) {
     return (
       <main className="px-4 py-6 sm:px-6 lg:px-8">
         <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
           <LockKeyhole className="size-6 text-pgm-yellow" aria-hidden="true" />
-          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="mt-5 text-sm font-semibold uppercase text-pgm-yellow">
             Recurso premium
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white">
             Recurso premium bloqueado
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
-            O premium libera a experiencia completa de preparacao da PGM
-            Academy. Consulte os planos para desbloquear os recursos avancados.
+            O premium libera a experiência completa de preparação da PGM
+            Academy. Consulte os planos para desbloquear os recursos avançados.
           </p>
           <Link
             href="/planos"

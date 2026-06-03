@@ -107,12 +107,12 @@ export function buildDiagnosticInsights(
           type: category.percentage >= 60 ? "progress" : "attention",
           title:
             category.percentage >= 60
-              ? `${category.categoryName} esta em evolucao`
+              ? `${category.categoryName} está em evolução`
               : `Reforce ${category.categoryName}`,
           description:
             category.percentage >= 60
-              ? `Voce ja avancou ${category.percentage}% nessa frente.`
-              : `Voce ainda tem pouco progresso em ${category.categoryName}.`,
+              ? `Você já avançou ${category.percentage}% nessa frente.`
+              : `Você ainda tem pouco progresso em ${category.categoryName}.`,
           categoryName: category.categoryName,
           percentage: category.percentage,
         } satisfies DiagnosticInsight;
@@ -122,8 +122,8 @@ export function buildDiagnosticInsights(
         return {
           id: `${category.categoryId}:weakness`,
           type: "weakness",
-          title: `Voce precisa reforcar ${category.categoryName}.`,
-          description: `${category.correctAnswers} acertos e ${category.incorrectAnswers} erros indicam prioridade de revisao.`,
+          title: `Você precisa reforçar ${category.categoryName}.`,
+          description: `${category.correctAnswers} acertos e ${category.incorrectAnswers} erros indicam prioridade de revisão.`,
           categoryName: category.categoryName,
           percentage: category.percentage,
         } satisfies DiagnosticInsight;
@@ -134,7 +134,7 @@ export function buildDiagnosticInsights(
           id: `${category.categoryId}:strength`,
           type: "strength",
           title: `${category.categoryName} e um dos seus pontos fortes.`,
-          description: `Seu desempenho de ${category.percentage}% mostra boa consistencia nessa categoria.`,
+          description: `Seu desempenho de ${category.percentage}% mostra boa consistência nessa categoria.`,
           categoryName: category.categoryName,
           percentage: category.percentage,
         } satisfies DiagnosticInsight;
@@ -143,8 +143,8 @@ export function buildDiagnosticInsights(
       return {
         id: `${category.categoryId}:attention`,
         type: "attention",
-        title: `${category.categoryName} esta em zona de atencao.`,
-        description: `Com ${category.percentage}%, essa categoria pode subir com revisao dirigida.`,
+        title: `${category.categoryName} está em zona de atenção.`,
+        description: `Com ${category.percentage}%, essa categoria pode subir com revisão dirigida.`,
         categoryName: category.categoryName,
         percentage: category.percentage,
       } satisfies DiagnosticInsight;
@@ -167,14 +167,14 @@ export function buildWeeklyGoals(activity: WeeklyActivityInput): GoalProgress[] 
     buildProgressGoal(
       "flashcards-weekly",
       "Revisar 20 flashcards",
-      "Meta semanal para fixar vocabulario e conceitos.",
+      "Meta semanal para fixar vocabulário e conceitos.",
       20,
       activity.flashcardsReviewed,
     ),
     buildProgressGoal(
       "path-weekly",
       "Concluir 1 trilha",
-      "Meta semanal para fechar uma sequencia pedagogica.",
+      "Meta semanal para fechar uma sequência pedagógica.",
       1,
       activity.pathsCompleted,
     ),
@@ -209,7 +209,7 @@ export function buildAchievements(
     buildAchievement(
       "ten-flashcards",
       "10 Flashcards Revisados",
-      "Revise 10 flashcards para acelerar memorizacao.",
+      "Revise 10 flashcards para acelerar memorização.",
       10,
       input.reviewedFlashcards,
     ),
@@ -222,15 +222,15 @@ export function buildAchievements(
     ),
     buildAchievement(
       "fifty-questions",
-      "50 Questoes Respondidas",
-      "Responda 50 questoes em simulados.",
+      "50 Questões Respondidas",
+      "Responda 50 questões em simulados.",
       50,
       input.answeredQuestions,
     ),
     buildAchievement(
       "hundred-questions",
-      "100 Questoes Respondidas",
-      "Responda 100 questoes em simulados.",
+      "100 Questões Respondidas",
+      "Responda 100 questões em simulados.",
       100,
       input.answeredQuestions,
     ),
@@ -246,7 +246,7 @@ export function buildAchievements(
     buildAchievement(
       "seven-day-streak",
       "7 Dias Consecutivos",
-      "Mantenha uma sequencia de 7 dias de estudo.",
+      "Mantenha uma sequência de 7 dias de estudo.",
       7,
       input.recordStreak,
     ),

@@ -9,7 +9,7 @@ import {
 import { requireAdminPage } from "@/lib/admin/guard";
 
 export const metadata: Metadata = {
-  title: "Admin - Nova questao",
+  title: "Admin - Nova questão",
 };
 
 type PageProps = {
@@ -25,8 +25,8 @@ export default async function NewQuestionPage({ searchParams }: PageProps) {
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
-        title={type === "objective" ? "Nova questao objetiva" : "Nova questao subjetiva"}
-        description="Crie questoes autorais para bancos de conteudo. Gabarito objetivo continua protegido nas telas publicas ate a finalizacao do simulado."
+        title={type === "objective" ? "Nova questão objetiva" : "Nova questão subjetiva"}
+        description="Crie questões autorais para bancos de conteúdo. Gabarito objetivo continua protegido nas telas públicas até a finalização do simulado."
         backHref="/admin/questions"
       />
       <AdminNav />

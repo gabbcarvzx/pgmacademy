@@ -291,7 +291,7 @@ function normalizeTitle(value: string) {
   const title = value.trim();
 
   if (title.length < 3) {
-    throw new AdminLearningError("Informe um titulo com pelo menos 3 caracteres.");
+    throw new AdminLearningError("Informe um título com pelo menos 3 caracteres.");
   }
 
   return title.slice(0, 160);
@@ -306,7 +306,7 @@ function normalizeSlug(value: string) {
     .replace(/^-|-$/g, "");
 
   if (slug.length < 3) {
-    throw new AdminLearningError("Informe um slug valido com pelo menos 3 caracteres.");
+    throw new AdminLearningError("Informe um slug válido com pelo menos 3 caracteres.");
   }
 
   return slug.slice(0, 160);
@@ -344,25 +344,25 @@ function normalizeNonNegativeInteger(value: number, message: string) {
 
 function assertLanguage(value: LearningLanguage) {
   if (!learningLanguages.includes(value)) {
-    throw new AdminLearningError("Idioma invalido.");
+    throw new AdminLearningError("Idioma inválido.");
   }
 }
 
 function assertDifficulty(value: LearningDifficulty) {
   if (!learningDifficulties.includes(value)) {
-    throw new AdminLearningError("Dificuldade invalida.");
+    throw new AdminLearningError("Dificuldade inválida.");
   }
 }
 
 function assertQuestionType(value: QuestionType) {
   if (!questionTypes.includes(value)) {
-    throw new AdminLearningError("Tipo de questao invalido.");
+    throw new AdminLearningError("Tipo de questão inválido.");
   }
 }
 
 function assertPathItemType(value: PathItemType) {
   if (!pathItemTypes.includes(value)) {
-    throw new AdminLearningError("Tipo de item de trilha invalido.");
+    throw new AdminLearningError("Tipo de item de trilha inválido.");
   }
 }
 
@@ -379,18 +379,18 @@ function searchIncludes(value: string | null, search: string) {
 
 function assertObjectiveOptions(options: QuestionOptionInput[]) {
   if (options.length !== 5) {
-    throw new AdminLearningError("Questao objetiva precisa ter 5 alternativas.");
+    throw new AdminLearningError("Questão objetiva precisa ter 5 alternativas.");
   }
 
   const labels = new Set(options.map((option) => option.label));
   const correctCount = options.filter((option) => option.isCorrect).length;
 
   if (optionLabels.some((label) => !labels.has(label))) {
-    throw new AdminLearningError("Alternativas A-E sao obrigatorias.");
+    throw new AdminLearningError("Alternativas A-E são obrigatorias.");
   }
 
   if (correctCount !== 1) {
-    throw new AdminLearningError("Questao objetiva precisa ter exatamente 1 alternativa correta.");
+    throw new AdminLearningError("Questão objetiva precisa ter exatamente 1 alternativa correta.");
   }
 
   for (const option of options) {
@@ -404,7 +404,7 @@ function assertObjectiveOptions(options: QuestionOptionInput[]) {
 
 export function parseLearningLanguage(value: string): LearningLanguage {
   if (!learningLanguages.includes(value as LearningLanguage)) {
-    throw new AdminLearningError("Idioma invalido.");
+    throw new AdminLearningError("Idioma inválido.");
   }
 
   return value as LearningLanguage;
@@ -412,7 +412,7 @@ export function parseLearningLanguage(value: string): LearningLanguage {
 
 export function parseLearningDifficulty(value: string): LearningDifficulty {
   if (!learningDifficulties.includes(value as LearningDifficulty)) {
-    throw new AdminLearningError("Dificuldade invalida.");
+    throw new AdminLearningError("Dificuldade inválida.");
   }
 
   return value as LearningDifficulty;
@@ -420,7 +420,7 @@ export function parseLearningDifficulty(value: string): LearningDifficulty {
 
 export function parseQuestionType(value: string): QuestionType {
   if (!questionTypes.includes(value as QuestionType)) {
-    throw new AdminLearningError("Tipo de questao invalido.");
+    throw new AdminLearningError("Tipo de questão inválido.");
   }
 
   return value as QuestionType;
@@ -428,7 +428,7 @@ export function parseQuestionType(value: string): QuestionType {
 
 export function parsePathItemType(value: string): PathItemType {
   if (!pathItemTypes.includes(value as PathItemType)) {
-    throw new AdminLearningError("Tipo de item de trilha invalido.");
+    throw new AdminLearningError("Tipo de item de trilha inválido.");
   }
 
   return value as PathItemType;
@@ -436,7 +436,7 @@ export function parsePathItemType(value: string): PathItemType {
 
 export function parseSimulationTemplateType(value: string) {
   if (!templateTypes.includes(value as SimulationTemplateType)) {
-    throw new AdminLearningError("Tipo de simulado invalido.");
+    throw new AdminLearningError("Tipo de simulado inválido.");
   }
 
   return value as SimulationTemplateType;
@@ -447,7 +447,7 @@ export function parseTotalQuestions(value: string) {
 
   return normalizeNonNegativeInteger(
     totalQuestions,
-    "Total de questoes deve ser maior ou igual a zero.",
+    "Total de questões deve ser maior ou igual a zero.",
   );
 }
 
@@ -486,7 +486,7 @@ async function countTable(
   const { count, error } = await query;
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar estatisticas.");
+    throw new AdminLearningError("Não foi possível consultar estatisticas.");
   }
 
   return count ?? 0;
@@ -559,13 +559,13 @@ export async function getAdminLearningDashboard(): Promise<AdminLearningDashboar
   ]);
 
   if (banksResponse.error) {
-    throw new AdminLearningError("Nao foi possivel consultar bancos de questoes.");
+    throw new AdminLearningError("Não foi possível consultar bancos de questões.");
   }
   if (categoriesResponse.error) {
-    throw new AdminLearningError("Nao foi possivel consultar categorias.");
+    throw new AdminLearningError("Não foi possível consultar categorias.");
   }
   if (templatesResponse.error) {
-    throw new AdminLearningError("Nao foi possivel consultar templates.");
+    throw new AdminLearningError("Não foi possível consultar templates.");
   }
 
   const totalContent =
@@ -670,7 +670,7 @@ export async function getAdminSelectOptions(): Promise<AdminSelectOptions> {
     templatesSelectResponse,
   ]) {
     if (response.error) {
-      throw new AdminLearningError("Nao foi possivel consultar opcoes do admin.");
+      throw new AdminLearningError("Não foi possível consultar opções do admin.");
     }
   }
 
@@ -717,7 +717,7 @@ export async function listAdminMaterials(filters: AdminListFilters) {
     .limit(150);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar materiais.");
+    throw new AdminLearningError("Não foi possível consultar materiais.");
   }
 
   return ((data ?? []) as AdminMaterialRow[]).filter((item) =>
@@ -736,7 +736,7 @@ export async function getAdminMaterial(id: string) {
     .maybeSingle();
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar material.");
+    throw new AdminLearningError("Não foi possível consultar material.");
   }
 
   return data as AdminMaterialRow | null;
@@ -751,12 +751,12 @@ export async function saveMaterial(input: MaterialInput, id?: string) {
     category_id: input.categoryId,
     title: normalizeTitle(input.title),
     slug: normalizeSlug(input.slug),
-    content_md: normalizeRequiredText(input.contentMd, "Conteudo Markdown e obrigatorio.", 30000),
+    content_md: normalizeRequiredText(input.contentMd, "Conteúdo Markdown é obrigatório.", 30000),
     difficulty: input.difficulty,
     language: input.language,
     estimated_time: normalizeNonNegativeInteger(
       input.estimatedTime,
-      "Tempo estimado invalido.",
+      "Tempo estimado inválido.",
     ),
     is_premium: input.isPremium,
     is_active: input.isActive,
@@ -768,7 +768,7 @@ export async function saveMaterial(input: MaterialInput, id?: string) {
     : await admin.from("study_materials").insert(payload);
 
   if (response.error) {
-    throw new AdminLearningError("Nao foi possivel salvar material.");
+    throw new AdminLearningError("Não foi possível salvar material.");
   }
 }
 
@@ -783,7 +783,7 @@ export async function listAdminFlashcards(filters: AdminListFilters) {
     .limit(150);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar flashcards.");
+    throw new AdminLearningError("Não foi possível consultar flashcards.");
   }
 
   return ((data ?? []) as AdminFlashcardRow[]).filter((item) =>
@@ -802,7 +802,7 @@ export async function getAdminFlashcard(id: string) {
     .maybeSingle();
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar flashcard.");
+    throw new AdminLearningError("Não foi possível consultar flashcard.");
   }
 
   return data as AdminFlashcardRow | null;
@@ -815,8 +815,8 @@ export async function saveFlashcard(input: FlashcardInput, id?: string) {
   const payload = {
     tenant_id: null,
     category_id: input.categoryId,
-    front_content: normalizeRequiredText(input.frontContent, "Frente do flashcard e obrigatoria.", 5000),
-    back_content: normalizeRequiredText(input.backContent, "Verso do flashcard e obrigatorio.", 5000),
+    front_content: normalizeRequiredText(input.frontContent, "Frente do flashcard é obrigatória.", 5000),
+    back_content: normalizeRequiredText(input.backContent, "Verso do flashcard é obrigatório.", 5000),
     language: input.language,
     difficulty: input.difficulty,
     is_premium: input.isPremium,
@@ -829,7 +829,7 @@ export async function saveFlashcard(input: FlashcardInput, id?: string) {
     : await admin.from("flashcards").insert(payload);
 
   if (response.error) {
-    throw new AdminLearningError("Nao foi possivel salvar flashcard.");
+    throw new AdminLearningError("Não foi possível salvar flashcard.");
   }
 }
 
@@ -844,7 +844,7 @@ export async function listAdminQuestions(filters: AdminListFilters) {
     .limit(180);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar questoes.");
+    throw new AdminLearningError("Não foi possível consultar questões.");
   }
 
   return ((data ?? []) as AdminQuestionRow[]).filter(
@@ -873,7 +873,7 @@ export async function getAdminQuestion(id: string) {
   ]);
 
   if (questionResponse.error || optionsResponse.error) {
-    throw new AdminLearningError("Nao foi possivel consultar questao.");
+    throw new AdminLearningError("Não foi possível consultar questão.");
   }
 
   return questionResponse.data
@@ -897,7 +897,7 @@ export async function saveQuestion(input: QuestionInput, id?: string) {
     type: input.type,
     difficulty: input.difficulty,
     language: input.language,
-    statement: normalizeRequiredText(input.statement, "Enunciado e obrigatorio.", 20000),
+    statement: normalizeRequiredText(input.statement, "Enunciado é obrigatório.", 20000),
     explanation: normalizeDescription(input.explanation, 12000),
     source_reference: normalizeDescription(input.sourceReference, 300),
     is_active: input.isActive,
@@ -907,7 +907,7 @@ export async function saveQuestion(input: QuestionInput, id?: string) {
     : await admin.from("questions").insert(payload).select("id").single();
 
   if (questionResponse.error || !questionResponse.data) {
-    throw new AdminLearningError("Nao foi possivel salvar questao.");
+    throw new AdminLearningError("Não foi possível salvar questão.");
   }
 
   const questionId = questionResponse.data.id;
@@ -933,7 +933,7 @@ async function upsertObjectiveOptions(
       .maybeSingle();
 
     if (existingError) {
-      throw new AdminLearningError("Nao foi possivel consultar alternativas.");
+      throw new AdminLearningError("Não foi possível consultar alternativas.");
     }
 
     const payload = {
@@ -952,7 +952,7 @@ async function upsertObjectiveOptions(
       : await admin.from("question_options").insert(payload);
 
     if (response.error) {
-      throw new AdminLearningError("Nao foi possivel salvar alternativas.");
+      throw new AdminLearningError("Não foi possível salvar alternativas.");
     }
   }
 }
@@ -968,7 +968,7 @@ export async function listAdminPsychosocial(filters: AdminListFilters) {
     .limit(150);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar perguntas psicossociais.");
+    throw new AdminLearningError("Não foi possível consultar perguntas psicossociais.");
   }
 
   return ((data ?? []) as AdminPsychosocialRow[]).filter((item) => {
@@ -993,7 +993,7 @@ export async function getAdminPsychosocial(id: string) {
     .maybeSingle();
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar pergunta psicossocial.");
+    throw new AdminLearningError("Não foi possível consultar pergunta psicossocial.");
   }
 
   return data as AdminPsychosocialRow | null;
@@ -1002,8 +1002,8 @@ export async function getAdminPsychosocial(id: string) {
 export async function savePsychosocial(input: PsychosocialInput, id?: string) {
   const payload = {
     tenant_id: null,
-    category: normalizeRequiredText(input.category, "Categoria psicossocial e obrigatoria.", 120),
-    question: normalizeRequiredText(input.question, "Pergunta psicossocial e obrigatoria.", 5000),
+    category: normalizeRequiredText(input.category, "Categoria psicossocial é obrigatória.", 120),
+    question: normalizeRequiredText(input.question, "Pergunta psicossocial é obrigatória.", 5000),
     ideal_answer_guidelines: normalizeDescription(input.idealAnswerGuidelines, 5000),
     common_mistakes: normalizeDescription(input.commonMistakes, 5000),
     is_premium: input.isPremium,
@@ -1016,7 +1016,7 @@ export async function savePsychosocial(input: PsychosocialInput, id?: string) {
     : await admin.from("psychosocial_questions").insert(payload);
 
   if (response.error) {
-    throw new AdminLearningError("Nao foi possivel salvar pergunta psicossocial.");
+    throw new AdminLearningError("Não foi possível salvar pergunta psicossocial.");
   }
 }
 
@@ -1031,7 +1031,7 @@ export async function listAdminPaths(filters: AdminListFilters) {
     .limit(150);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar trilhas.");
+    throw new AdminLearningError("Não foi possível consultar trilhas.");
   }
 
   return ((data ?? []) as AdminPathRow[]).filter((item) =>
@@ -1057,7 +1057,7 @@ export async function getAdminPath(id: string) {
   ]);
 
   if (pathResponse.error || itemsResponse.error) {
-    throw new AdminLearningError("Nao foi possivel consultar trilha.");
+    throw new AdminLearningError("Não foi possível consultar trilha.");
   }
 
   return pathResponse.data
@@ -1087,7 +1087,7 @@ export async function savePath(input: PathInput, id?: string) {
     : await admin.from("learning_paths").insert(payload);
 
   if (response.error) {
-    throw new AdminLearningError("Nao foi possivel salvar trilha.");
+    throw new AdminLearningError("Não foi possível salvar trilha.");
   }
 }
 
@@ -1103,7 +1103,7 @@ export async function updatePathItems(pathId: string, input: PathItemsInput) {
         .eq("path_id", pathId);
 
       if (error) {
-        throw new AdminLearningError("Nao foi possivel remover item da trilha.");
+        throw new AdminLearningError("Não foi possível remover item da trilha.");
       }
       continue;
     }
@@ -1111,13 +1111,13 @@ export async function updatePathItems(pathId: string, input: PathItemsInput) {
     const { error } = await admin
       .from("learning_path_items")
       .update({
-        sort_order: normalizeNonNegativeInteger(item.sortOrder, "Ordem invalida."),
+        sort_order: normalizeNonNegativeInteger(item.sortOrder, "Ordem inválida."),
       })
       .eq("id", item.id)
       .eq("path_id", pathId);
 
     if (error) {
-      throw new AdminLearningError("Nao foi possivel reordenar item da trilha.");
+      throw new AdminLearningError("Não foi possível reordenar item da trilha.");
     }
   }
 
@@ -1130,11 +1130,11 @@ export async function updatePathItems(pathId: string, input: PathItemsInput) {
       path_id: pathId,
       item_type: input.newItem.itemType,
       item_id: input.newItem.itemId,
-      sort_order: normalizeNonNegativeInteger(input.newItem.sortOrder, "Ordem invalida."),
+      sort_order: normalizeNonNegativeInteger(input.newItem.sortOrder, "Ordem inválida."),
     });
 
     if (error) {
-      throw new AdminLearningError("Nao foi possivel adicionar item a trilha.");
+      throw new AdminLearningError("Não foi possível adicionar item a trilha.");
     }
   }
 }
@@ -1158,7 +1158,7 @@ async function assertPathItemExists(itemType: PathItemType, itemId: string) {
     .maybeSingle();
 
   if (error || !data) {
-    throw new AdminLearningError("Item de trilha nao encontrado.");
+    throw new AdminLearningError("Item de trilha não encontrado.");
   }
 }
 
@@ -1173,7 +1173,7 @@ export async function listAdminTemplates(filters: AdminListFilters) {
     .limit(150);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar templates.");
+    throw new AdminLearningError("Não foi possível consultar templates.");
   }
 
   return ((data ?? []) as AdminTemplateRow[]).filter((item) => {
@@ -1200,7 +1200,7 @@ export async function getAdminTemplate(id: string) {
     .maybeSingle();
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel consultar template.");
+    throw new AdminLearningError("Não foi possível consultar template.");
   }
 
   return data as AdminTemplateRow | null;
@@ -1211,7 +1211,7 @@ export async function saveSimulationTemplate(
   id?: string,
 ) {
   if (!templateTypes.includes(input.type)) {
-    throw new AdminLearningError("Tipo de simulado invalido.");
+    throw new AdminLearningError("Tipo de simulado inválido.");
   }
   assertLanguage(input.language);
 
@@ -1223,7 +1223,7 @@ export async function saveSimulationTemplate(
     language: input.language,
     total_questions: normalizeNonNegativeInteger(
       input.totalQuestions,
-      "Total de questoes invalido.",
+      "Total de questões inválido.",
     ),
     is_premium: input.isPremium,
     is_active: input.isActive,
@@ -1235,7 +1235,7 @@ export async function saveSimulationTemplate(
     : await admin.from("simulation_templates").insert(payload);
 
   if (response.error) {
-    throw new AdminLearningError("Nao foi possivel salvar template de simulado.");
+    throw new AdminLearningError("Não foi possível salvar template de simulado.");
   }
 }
 
@@ -1265,7 +1265,7 @@ export async function deactivateContent(
   const { error } = await admin.from(table).update({ is_active: false }).eq("id", id);
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel desativar conteudo.");
+    throw new AdminLearningError("Não foi possível desativar conteúdo.");
   }
 }
 
@@ -1292,7 +1292,7 @@ export async function createQuestionBank(input: CreateQuestionBankInput) {
   });
 
   if (error) {
-    throw new AdminLearningError("Nao foi possivel criar banco de questoes.");
+    throw new AdminLearningError("Não foi possível criar banco de questões.");
   }
 }
 

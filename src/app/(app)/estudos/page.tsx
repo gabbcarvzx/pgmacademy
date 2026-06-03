@@ -57,14 +57,14 @@ export default async function EstudosPage({ searchParams }: PageProps) {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Central de estudos
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
             Materiais autorais para preparar sua jornada
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-            Leia materiais por idioma, categoria e dificuldade. Conteudos
+            Leia materiais por idioma, categoria e dificuldade. Conteúdos
             premium aparecem bloqueados para contas gratuitas sem expor o corpo
             do material.
           </p>
@@ -83,7 +83,7 @@ export default async function EstudosPage({ searchParams }: PageProps) {
             <input
               name="q"
               defaultValue={data.filters.search}
-              placeholder="Buscar por titulo"
+              placeholder="Buscar por título"
               className="h-11 w-full rounded-md border border-border-soft bg-background pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-muted focus:border-pgm-yellow"
             />
           </label>
@@ -140,10 +140,10 @@ export default async function EstudosPage({ searchParams }: PageProps) {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-xl font-semibold text-white">
-              Materiais disponiveis
+              Materiais disponíveis
             </h2>
             <p className="mt-2 text-sm text-muted">
-              Ordenados por relevancia e titulo.
+              Ordenados por relevância e título.
             </p>
           </div>
           <span className="font-mono text-sm text-muted">
@@ -159,7 +159,7 @@ export default async function EstudosPage({ searchParams }: PageProps) {
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                  <p className="text-xs font-semibold uppercase text-pgm-yellow">
                     {material.categoryName}
                   </p>
                   <h3 className="mt-3 text-lg font-semibold leading-7 text-white">
@@ -229,7 +229,7 @@ export default async function EstudosPage({ searchParams }: PageProps) {
             )}
             className="inline-flex h-10 items-center justify-center rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
           >
-            Proxima
+            Próxima
           </Link>
         </div>
       </section>

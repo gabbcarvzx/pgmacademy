@@ -35,7 +35,7 @@ import { getAdminProfile } from "@/lib/admin/guard";
 
 export const metadata: Metadata = {
   title: "Admin",
-  description: "Painel administrativo de conteudo da PGM Academy.",
+  description: "Painel administrativo de conteúdo da PGM Academy.",
 };
 
 type AdminPageProps = {
@@ -50,18 +50,18 @@ function AdminBlocked() {
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <LockKeyhole className="size-6 text-pgm-yellow" aria-hidden="true" />
-        <p className="mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+        <p className="mt-5 text-sm font-semibold uppercase text-pgm-yellow">
           Admin
         </p>
         <h1 className="mt-4 text-3xl font-semibold text-white">
           Acesso administrativo bloqueado
         </h1>
         <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
-          Esta area e exclusiva para usuarios com{" "}
+          Esta área é exclusiva para usuários com{" "}
           <code className="rounded bg-background px-1.5 py-0.5 text-pgm-yellow">
             profiles.role = admin
           </code>
-          . Nenhum formulario administrativo foi carregado para esta sessao.
+          . Nenhum formulário administrativo foi carregado para está sessão.
         </p>
       </section>
     </main>
@@ -81,8 +81,8 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
       <AdminHeader
-        title="Painel administrativo de conteudo"
-        description="Gerencie materiais, flashcards, questoes, trilhas, simulados e perguntas psicossociais sem scripts manuais. Todas as alteracoes passam por permissoes server-side."
+        title="Painel administrativo de conteúdo"
+        description="Gerencie materiais, flashcards, questões, trilhas, simulados e perguntas psicossociais sem scripts manuais. Todas as alterações passam por permissões server-side."
         action={
           <div className="rounded-md border border-border-soft bg-surface p-4">
             <ShieldCheck className="size-5 text-pgm-yellow" aria-hidden="true" />
@@ -113,7 +113,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             Icon: Brain,
           },
           {
-            title: "Questoes",
+            title: "Questões",
             value: dashboard.stats.questions,
             href: "/admin/questions",
             Icon: FileQuestion,
@@ -190,10 +190,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             <PlusCircle className="mt-1 size-5 text-pgm-yellow" aria-hidden="true" />
             <div>
               <h2 className="text-xl font-semibold text-white">
-                Novo banco de questoes
+                Novo banco de questões
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Banco controla o pacote premium/free das questoes vinculadas.
+                Banco controla o pacote premium/free das questões vinculadas.
               </p>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                 Novo template de simulado
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Template aparece em `/simulados` quando ativo e com questoes suficientes.
+                Template aparece em `/simulados` quando ativo e com questões suficientes.
               </p>
             </div>
           </div>
@@ -372,7 +372,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                 </p>
                 <p className="mt-1 text-xs text-muted">
                   {template.type} / {template.language} /{" "}
-                  {template.total_questions} questoes /{" "}
+                  {template.total_questions} questões /{" "}
                   {template.is_premium ? "premium" : "free"}
                 </p>
               </div>

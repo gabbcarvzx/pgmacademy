@@ -57,14 +57,14 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
 
   const academicReference = useMemo(() => {
     if (form.schoolYear === "first") {
-      return "Use os dados do 1o trimestre ou 1o bimestre, conforme a organizacao da escola.";
+      return "Use os dados do 1º trimestre ou 1º bimestre, conforme a organização da escola.";
     }
 
     if (form.schoolYear === "second") {
-      return "Use os dados finais do 1o ano do Ensino Medio.";
+      return "Use os dados finais do 1º ano do Ensino Médio.";
     }
 
-    return "Selecione a serie para ver a referencia correta das notas.";
+    return "Selecione a série para ver a referência correta das notas.";
   }, [form.schoolYear]);
 
   function updateField<Key extends keyof FormState>(
@@ -79,7 +79,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
     const normalized = normalizeForm(form);
 
     if (!normalized) {
-      setError("Preencha todos os campos com valores validos para gerar o diagnostico.");
+      setError("Preencha todos os campos com valores validos para gerar o diagnóstico.");
       setResult(null);
       setSaveMessage(null);
       return;
@@ -91,7 +91,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
     setSaveMessage(null);
 
     if (!isAuthenticated) {
-      setSaveMessage("Crie uma conta ou entre para salvar este diagnostico no dashboard.");
+      setSaveMessage("Crie uma conta ou entre para salvar este diagnóstico no dashboard.");
       return;
     }
 
@@ -116,8 +116,8 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Diagnostico publico
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Diagnóstico público
             </p>
             <h2 className="mt-3 text-2xl font-semibold text-white">
               Dados do estudante
@@ -127,7 +127,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
             type="button"
             onClick={handleReset}
             className="inline-flex size-10 items-center justify-center rounded-md border border-border-soft text-muted transition hover:border-white/35 hover:text-white"
-            aria-label="Limpar formulario"
+            aria-label="Limpar formulário"
           >
             <RotateCcw className="size-4" aria-hidden="true" />
           </button>
@@ -146,7 +146,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
             />
           </Field>
 
-          <Field label="Serie atual" htmlFor="schoolYear">
+          <Field label="Série atual" htmlFor="schoolYear">
             <select
               id="schoolYear"
               value={form.schoolYear}
@@ -156,9 +156,9 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
               className={inputClassName}
             >
               <option value="">Selecione</option>
-              <option value="first">1o ano do Ensino Medio</option>
-              <option value="second">2o ano do Ensino Medio</option>
-              <option value="other">Outra serie</option>
+              <option value="first">1º ano do Ensino Médio</option>
+              <option value="second">2º ano do Ensino Médio</option>
+              <option value="other">Outra série</option>
             </select>
           </Field>
 
@@ -178,24 +178,24 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
               onChange={(value) => updateField("hasActiveSiepeEnrollment", value)}
             />
             <ChoiceField
-              label="Escola em categoria excluida"
+              label="Escola em categoria excluída"
               value={form.isExcludedSchool}
               onChange={(value) => updateField("isExcludedSchool", value)}
             />
             <ChoiceField
-              label="Progressao parcial em 2026"
+              label="Progressão parcial em 2026"
               value={form.hasPartialProgression}
               onChange={(value) => updateField("hasPartialProgression", value)}
             />
             <ChoiceField
-              label="Ja foi convocado pelo PGM"
+              label="Já foi convocado pelo PGM"
               value={form.wasPreviouslySelected}
               onChange={(value) => updateField("wasPreviouslySelected", value)}
             />
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Frequencia (%)" htmlFor="attendancePercent">
+            <Field label="Frequência (%)" htmlFor="attendancePercent">
               <input
                 id="attendancePercent"
                 type="number"
@@ -212,7 +212,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
               />
             </Field>
 
-            <Field label="Media em Portugues" htmlFor="portugueseAverage">
+            <Field label="Média em Português" htmlFor="portugueseAverage">
               <input
                 id="portugueseAverage"
                 type="number"
@@ -229,7 +229,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
               />
             </Field>
 
-            <Field label="Media em Matematica" htmlFor="mathAverage">
+            <Field label="Média em Matemática" htmlFor="mathAverage">
               <input
                 id="mathAverage"
                 type="number"
@@ -244,7 +244,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
               />
             </Field>
 
-            <Field label="Media em Humanas" htmlFor="humanitiesAverage">
+            <Field label="Média em Humanas" htmlFor="humanitiesAverage">
               <input
                 id="humanitiesAverage"
                 type="number"
@@ -301,7 +301,7 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
         </button>
 
         <p className="mt-4 text-xs leading-5 text-muted">
-          Regras baseadas no {pgm2026Rules.edital}. A validacao oficial usa
+          Regras baseadas no {pgm2026Rules.edital}. A validação oficial usa
           dados institucionais, incluindo SIEPE.
         </p>
       </form>
@@ -310,22 +310,22 @@ export function EligibilityForm({ isAuthenticated }: EligibilityFormProps) {
         <EligibilityResultPanel result={result} />
       ) : (
         <aside className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-green">
+          <p className="text-sm font-semibold uppercase text-pgm-green">
             Resultado
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-white">
-            Preencha o formulario para visualizar a analise.
+            Preencha o formulário para visualizar a análise.
           </h2>
           <div className="mt-6 grid gap-3">
             {[
-              ["Elegivel", "Todos os criterios avaliados estao alinhados."],
+              ["Elegível", "Todos os critérios avaliados estão alinhados."],
               [
-                "Parcialmente elegivel",
-                "Ha ponto academico abaixo do minimo do edital.",
+                "Parcialmente elegível",
+                "Há ponto acadêmico abaixo do mínimo do edital.",
               ],
               [
-                "Nao elegivel",
-                "Ha requisito estrutural impeditivo no diagnostico.",
+                "Não elegível",
+                "Há requisito estrutural impeditivo no diagnóstico.",
               ],
             ].map(([title, description]) => (
               <div
@@ -377,7 +377,7 @@ function ChoiceField({
       <div className="grid grid-cols-2 gap-2">
         {[
           ["yes", "Sim"],
-          ["no", "Nao"],
+          ["no", "Não"],
         ].map(([optionValue, optionLabel]) => (
           <button
             key={optionValue}

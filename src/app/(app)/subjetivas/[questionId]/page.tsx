@@ -57,7 +57,7 @@ export default async function SubjectiveQuestionPage({
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
               {data.question.categoryName}
             </p>
             <h1 className="mt-4 text-3xl font-semibold text-white">
@@ -67,7 +67,7 @@ export default async function SubjectiveQuestionPage({
           <StatusBadge status={data.question.latestStatus} />
         </div>
         <div className="mt-5 rounded-md border border-border-soft bg-background p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+          <p className="text-xs font-semibold uppercase text-muted">
             Enunciado
           </p>
           <p className="mt-3 whitespace-pre-wrap text-base leading-7 text-white">
@@ -76,9 +76,9 @@ export default async function SubjectiveQuestionPage({
         </div>
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <div className="rounded-md border border-border-soft bg-background p-4">
-            <p className="text-sm font-semibold text-white">Competencias</p>
+            <p className="text-sm font-semibold text-white">Competências</p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              {data.question.answerGuidance ?? "Sem orientacao cadastrada."}
+              {data.question.answerGuidance ?? "Sem orientação cadastrada."}
             </p>
           </div>
           <div className="rounded-md border border-border-soft bg-background p-4">
@@ -98,8 +98,8 @@ export default async function SubjectiveQuestionPage({
           </div>
         ) : data.question.canSubmit && hasPending ? (
           <p className="mt-4 rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 p-4 text-sm leading-6 text-pgm-yellow">
-            Voce ja possui uma resposta pendente para esta questao. Aguarde a
-            correcao manual antes de reenviar.
+            Você já possui uma resposta pendente para está questão. Aguarde a
+            correção manual antes de reenviar.
           </p>
         ) : (
           <div className="mt-4 rounded-md border border-pgm-yellow/35 bg-background p-4">
@@ -108,7 +108,7 @@ export default async function SubjectiveQuestionPage({
               Envio premium
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              A correcao manual de subjetivas exige acesso premium.
+              A correção manual de subjetivas exige acesso premium.
             </p>
             <div className="mt-4 max-w-sm">
               <PaymentButton />
@@ -118,7 +118,7 @@ export default async function SubjectiveQuestionPage({
       </section>
 
       <section className="mt-6 grid gap-4">
-        <h2 className="text-xl font-semibold text-white">Historico</h2>
+        <h2 className="text-xl font-semibold text-white">Histórico</h2>
         {data.question.attempts.length === 0 ? (
           <p className="rounded-md border border-border-soft bg-surface p-5 text-sm text-muted">
             Nenhuma resposta enviada ainda.

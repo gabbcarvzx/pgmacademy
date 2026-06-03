@@ -23,7 +23,7 @@ export const adminNavItems = [
   { href: "/admin", label: "Dashboard", Icon: LayoutDashboard },
   { href: "/admin/materials", label: "Materiais", Icon: BookOpenCheck },
   { href: "/admin/flashcards", label: "Flashcards", Icon: Brain },
-  { href: "/admin/questions", label: "Questoes", Icon: FileQuestion },
+  { href: "/admin/questions", label: "Questões", Icon: FileQuestion },
   { href: "/admin/psychosocial", label: "Psicossocial", Icon: HelpCircle },
   { href: "/admin/paths", label: "Trilhas", Icon: Route },
   { href: "/admin/templates", label: "Templates", Icon: ListChecks },
@@ -56,7 +56,7 @@ export function AdminHeader({
       ) : null}
       <div className="grid gap-4 xl:grid-cols-[1fr_auto] xl:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
             {eyebrow}
           </p>
           <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">

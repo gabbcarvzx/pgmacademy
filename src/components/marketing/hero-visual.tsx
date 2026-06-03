@@ -10,11 +10,11 @@ export function HeroVisual() {
 
       <div className="relative flex h-full flex-col justify-between gap-6">
         <div className="flex items-center justify-between">
-          <div className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/8 px-3 py-2 text-xs font-medium uppercase tracking-[0.18em] text-white/80">
+          <div className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/8 px-3 py-2 text-xs font-medium uppercase text-white/80">
             <Radar className="size-4 text-pgm-green" aria-hidden="true" />
             PGM 2026
           </div>
-          <div className="flex items-center gap-2 rounded-md bg-pgm-red px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+          <div className="flex items-center gap-2 rounded-md bg-pgm-red px-3 py-2 text-xs font-semibold uppercase text-white">
             <LockKeyhole className="size-4" aria-hidden="true" />
             Premium
           </div>
@@ -26,7 +26,7 @@ export function HeroVisual() {
               key={signal.label}
               className="rounded-md border border-white/10 bg-background/65 p-4 backdrop-blur"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
+              <p className="text-xs font-medium uppercase text-muted">
                 {signal.label}
               </p>
               <p className="mt-3 text-3xl font-semibold text-white">
