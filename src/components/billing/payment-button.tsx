@@ -5,9 +5,15 @@ import { CreditCard, Loader2 } from "lucide-react";
 
 type PaymentButtonProps = {
   disabled?: boolean;
+  label?: string;
+  loadingLabel?: string;
 };
 
-export function PaymentButton({ disabled = false }: PaymentButtonProps) {
+export function PaymentButton({
+  disabled = false,
+  label = "Comprar acesso premium",
+  loadingLabel = "Abrindo pagamento",
+}: PaymentButtonProps) {
   const [cpfCnpj, setCpfCnpj] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -77,7 +83,7 @@ export function PaymentButton({ disabled = false }: PaymentButtonProps) {
         ) : (
           <CreditCard className="size-4" aria-hidden="true" />
         )}
-        {isLoading ? "Abrindo pagamento" : "Comprar acesso premium"}
+        {isLoading ? loadingLabel : label}
       </button>
 
       {errorMessage ? (

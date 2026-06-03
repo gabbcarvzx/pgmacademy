@@ -160,7 +160,7 @@ Fluxo implementado na Etapa 7A:
 1. Usuario autenticado acessa `/premium`
 2. Servidor consulta `profiles.access_status`
 3. Apenas usuarios `paid` visualizam a estrutura dos modulos premium
-4. Usuarios sem acesso pago recebem bloqueio com CTA para `/dashboard#premium`
+4. Usuarios sem acesso pago recebem bloqueio com CTA para `/planos`
 5. Modulos ficam versionados em `src/lib/premium/content.ts`
 6. Fotos autorizadas do Canada sao usadas como apoio visual
 
@@ -270,6 +270,37 @@ Limites da Etapa 8D:
 - Nao cria IA nova
 - Nao altera billing
 - Nao promove usuario automaticamente se o perfil ainda nao existir
+
+Atualizacao da Etapa 8G:
+
+1. O lote aprovado em `docs/CONTENT_SCALE_REVIEW.md` virou fonte editorial para importacao controlada
+2. A migration 005 adiciona `editorial_id` e `source_reference` para idempotencia e rastreabilidade
+3. O script `npm run content:validate` valida contagens e relacionamentos antes de qualquer escrita
+4. O script `npm run content:import` roda em dry-run por padrao
+5. A escrita real exige `npm run content:import -- --execute`
+6. O conteudo global continua com `tenant_id = null`
+7. Conteudos premium permanecem bloqueados por RLS para usuarios gratuitos
+8. Alternativas usam a chave `(question_id, option_label)` e trilhas recriam seus itens de forma deterministica
+9. O script `npm run content:validate-imported` audita contagens, relacionamentos e RLS free/premium no Supabase real
+
+Limites da Etapa 8G:
+
+- A migration 005 precisa ser aplicada no Supabase antes da importacao real
+- A importacao real usa `SUPABASE_SERVICE_ROLE_KEY` e deve rodar apenas em ambiente controlado
+- A Etapa 8G prepara dados para simulados, mas nao altera a experiencia de resolucao de prova
+- O conteudo segue independente, autoral e sem vinculo oficial com o Governo de Pernambuco
+
+Atualizacao da Etapa 8H-A:
+
+1. A rota `/estudos` lista materiais importados com busca, filtros, badges e bloqueio premium
+2. A rota `/estudos/[slug]` mostra conteudo completo apenas para usuarios autorizados
+3. A rota `/trilhas` lista trilhas importadas com contagem de itens e progresso
+4. A rota `/trilhas/[slug]` mostra a sequencia pedagogica ordenada e permite marcar blocos como concluidos
+5. A rota `/flashcards` permite revisar frente/verso por categoria
+6. A tabela `user_learning_progress` registra progresso por usuario, tenant, item e trilha
+7. O cliente autenticado tem apenas leitura direta de progresso; mutacoes passam por Server Actions com service role
+8. O dashboard ganhou a secao `Meu progresso`
+9. Conteudo premium e exibido como bloqueado para usuarios gratuitos, sem entregar corpo de material ou flashcards
 
 ## Segurança
 

@@ -7,8 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "content:validate": "tsx scripts/validate-approved-content.ts",
+    "content:import": "tsx scripts/import-approved-content.ts",
+    "content:validate-imported": "tsx scripts/validate-imported-content.ts",
     "test:eligibility": "tsx tests/eligibility-rules.test.ts",
-    "test:simulations": "tsx tests/simulation-scoring.test.ts"
+    "test:simulations": "tsx tests/simulation-scoring.test.ts",
+    "test:analytics": "tsx tests/analytics-rules.test.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.3",

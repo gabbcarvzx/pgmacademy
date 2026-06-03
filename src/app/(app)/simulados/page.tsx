@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import {
   ArrowRight,
-  CheckCircle2,
-  DatabaseZap,
+  Clock3,
+  History,
+  ListChecks,
   LockKeyhole,
   ShieldCheck,
+  Trophy,
 } from "lucide-react";
 
-import {
-  learningFoundationItems,
-  seededCategoryGroups,
-  simulationModes,
-} from "@/lib/simulations/content";
+import { InstitutionalNotice } from "@/components/learning/institutional-notice";
+import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
+import { languageLabel } from "@/lib/learning/labels";
 import { getSimulationOverview } from "@/lib/simulations/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Simulados",
-  description: "Fundacao dos simulados inteligentes da PGM Academy.",
+  description: "Simulados objetivos da PGM Academy.",
 };
 
 const accessLabel = {
@@ -34,20 +35,27 @@ const statusLabel = {
   abandoned: "Abandonado",
 } as const;
 
+const typeLabel = {
+  quick: "Rapido",
+  full: "Completo",
+} as const;
+
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 });
 
-type SimulationAttemptRow = {
-  id: string;
-  started_at: string;
-  completed_at: string | null;
-  score: number | null;
-  percentage: number | null;
-  status: keyof typeof statusLabel;
-};
+function estimatedMinutes(totalQuestions: number) {
+  return Math.max(Math.ceil(totalQuestions * 1.5), 10);
+}
+
+function lockLabel(reason: string | null) {
+  if (reason === "premium_required") return "Premium bloqueado";
+  if (reason === "insufficient_questions") return "Banco insuficiente";
+  if (reason === "no_questions") return "Sem questoes";
+  return null;
+}
 
 export default async function SimuladosPage() {
   const supabase = await getServerSupabaseClient();
@@ -55,370 +63,250 @@ export default async function SimuladosPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const overview = user ? await getSimulationOverview(user.id) : null;
-  const accessStatus = overview?.accessStatus ?? "free";
-  const isPremium = overview?.hasPaidAccess ?? false;
-  const attempts = (overview?.attempts ?? []) as SimulationAttemptRow[];
-  const historySummary = overview?.historySummary ?? {
-    totalAttempts: 0,
-    completedAttempts: 0,
-    averagePercentage: 0,
-    bestPercentage: 0,
-    lastPercentage: null,
-  };
-  const categoriesCount = overview?.schema.categoriesCount ?? 0;
-  const templatesCount = overview?.schema.templatesCount ?? 0;
-  const activeObjectiveQuestionsCount =
-    overview?.schema.activeObjectiveQuestionsCount ?? 0;
-  const templates = overview?.templates ?? [];
-  const isLearningSchemaReady = categoriesCount > 0;
+  if (!user) {
+    redirect("/login");
+  }
+
+  const overview = await getSimulationOverview(user.id);
 
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
-      <section>
-        <div className="grid gap-6 xl:grid-cols-[1fr_360px] xl:items-end">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Simulados inteligentes
-            </p>
-            <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-              Fundacao de aprendizagem para prova, escrita e entrevista
-            </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-              Estrutura pronta para receber banco de questoes, materiais,
-              flashcards, trilhas e preparacao psicossocial. Nenhuma questao
-              real foi criada nesta etapa. O fluxo backend ja lista modelos,
-              inicia tentativa e prepara correcao objetiva server-side quando
-              houver banco de questoes.
-            </p>
-          </div>
-
-          <div className="rounded-md border border-border-soft bg-background p-4">
-            <ShieldCheck className="size-5 text-pgm-yellow" aria-hidden="true" />
-            <p className="mt-4 text-sm font-medium text-muted">
-              Status de acesso
-            </p>
-            <p className="mt-2 text-3xl font-semibold text-white">
-              {accessLabel[accessStatus]}
-            </p>
-            <p className="mt-3 text-xs leading-5 text-muted">
-              Simulado rapido fica preparado para acesso limitado. Simulado
-              completo e estatisticas avancadas exigem premium.
-            </p>
-          </div>
+      <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+            Simulados reais
+          </p>
+          <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
+            Treine com as questoes objetivas autorais ja aprovadas
+          </h1>
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
+            Escolha um template, inicie uma tentativa e acompanhe seu resultado
+            por categoria. O gabarito fica protegido ate a finalizacao.
+          </p>
         </div>
+        {overview.hasPaidAccess ? (
+          <InstitutionalNotice />
+        ) : (
+          <PremiumUpgradeCard description="Simulados premium exigem acesso pago. Voce pode visualizar os modelos, mas somente usuarios premium podem iniciar." />
+        )}
       </section>
 
-      <section className="mt-6 grid gap-4 lg:grid-cols-4">
-        {simulationModes.map((mode) => {
-          const locked = mode.access === "premium" && !isPremium;
-
-          return (
-            <article
-              key={mode.title}
-              className="rounded-md border border-border-soft bg-surface p-5"
-            >
-              <mode.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-              <div className="mt-5 flex items-start justify-between gap-4">
-                <div>
-                  <h2 className="text-lg font-semibold text-white">
-                    {mode.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-muted">
-                    {mode.description}
-                  </p>
-                </div>
-                {locked ? (
-                  <LockKeyhole
-                    className="size-4 shrink-0 text-pgm-yellow"
-                    aria-hidden="true"
-                  />
-                ) : null}
-              </div>
-
-              <button
-                type="button"
-                disabled
-                className="mt-5 inline-flex h-10 w-full cursor-not-allowed items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-muted/70"
-              >
-                Aguardando banco de questoes
-              </button>
-            </article>
-          );
-        })}
-      </section>
-
-      <section className="mt-6 grid gap-4 xl:grid-cols-[1fr_360px]">
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-                Historico
-              </p>
-              <h2 className="mt-4 text-2xl font-semibold text-white">
-                Tentativas do aluno
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-muted">
-                A leitura ja esta preparada para `simulation_attempts` com RLS
-                por tenant e usuario.
-              </p>
-            </div>
-
-            <span className="inline-flex rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted">
-              {historySummary.totalAttempts} tentativas
-            </span>
-          </div>
-
-          <div className="mt-5 grid gap-3">
-            {attempts.length === 0 ? (
-              <div className="rounded-md border border-border-soft bg-background p-4">
-                <p className="text-sm font-semibold text-white">
-                  Nenhuma tentativa registrada
-                </p>
-                <p className="mt-2 text-sm leading-6 text-muted">
-                  O historico sera preenchido quando a proxima etapa criar o
-                  fluxo de execucao dos simulados.
-                </p>
-              </div>
-            ) : (
-              attempts.map((attempt) => (
-                <div
-                  key={attempt.id}
-                  className="grid gap-3 rounded-md border border-border-soft bg-background p-4 sm:grid-cols-[1fr_auto]"
-                >
-                  <div>
-                    <p className="text-sm font-semibold text-white">
-                      {statusLabel[attempt.status]}
-                    </p>
-                    <p className="mt-1 text-xs text-muted">
-                      Iniciado em{" "}
-                      {dateFormatter.format(new Date(attempt.started_at))}
-                    </p>
-                  </div>
-                  <div className="text-left sm:text-right">
-                    <p className="text-sm font-semibold text-white">
-                      {attempt.percentage === null
-                        ? "--"
-                        : `${attempt.percentage}%`}
-                    </p>
-                    <p className="mt-1 text-xs text-muted">
-                      Nota {attempt.score ?? "--"}
-                    </p>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        </article>
-
-        <aside className="grid gap-4">
-          <article className="rounded-md border border-border-soft bg-surface p-5">
-            <DatabaseZap
-              className="size-5 text-pgm-yellow"
-              aria-hidden="true"
-            />
-            <p className="mt-4 text-sm font-medium text-muted">
-              Schema de aprendizagem
-            </p>
-            <p className="mt-2 text-3xl font-semibold text-white">
-              {isLearningSchemaReady ? "Pronto" : "Migration pendente"}
+      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {[
+          {
+            title: "Acesso",
+            value: accessLabel[overview.accessStatus],
+            description: "Controle central por profiles.access_status.",
+            Icon: ShieldCheck,
+          },
+          {
+            title: "Templates",
+            value: String(overview.schema.templatesCount),
+            description: "Modelos ativos disponiveis para estudo.",
+            Icon: ListChecks,
+          },
+          {
+            title: "Questoes",
+            value: String(overview.schema.activeObjectiveQuestionsCount),
+            description: "Objetivas visiveis para seu plano atual.",
+            Icon: Trophy,
+          },
+          {
+            title: "Historico",
+            value: String(overview.historySummary.totalAttempts),
+            description: `${overview.historySummary.completedAttempts} tentativas concluidas.`,
+            Icon: History,
+          },
+        ].map((item) => (
+          <article
+            key={item.title}
+            className="rounded-md border border-border-soft bg-surface p-5"
+          >
+            <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
+            <p className="mt-5 text-sm font-medium text-muted">{item.title}</p>
+            <p className="mt-2 text-2xl font-semibold text-white">
+              {item.value}
             </p>
             <p className="mt-3 text-sm leading-6 text-muted">
-              {categoriesCount} categorias estruturais detectadas.
+              {item.description}
             </p>
           </article>
-
-          <article className="rounded-md border border-border-soft bg-surface p-5">
-            <p className="text-sm font-semibold text-white">Estatisticas</p>
-            <div className="mt-4 grid gap-3">
-              {[
-                ["Completos", historySummary.completedAttempts.toString()],
-                ["Media", `${historySummary.averagePercentage}%`],
-                ["Melhor", `${historySummary.bestPercentage}%`],
-                [
-                  "Ultimo",
-                  historySummary.lastPercentage === null
-                    ? "--"
-                    : `${historySummary.lastPercentage}%`,
-                ],
-              ].map(([label, value]) => (
-                <div
-                  key={label}
-                  className="flex items-center justify-between rounded-md border border-border-soft bg-background px-3 py-2"
-                >
-                  <span className="text-sm text-muted">{label}</span>
-                  <span className="font-mono text-sm font-semibold text-white">
-                    {value}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {!isPremium ? (
-              <Link
-                href="/dashboard#premium"
-                className="mt-5 inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
-              >
-                Liberar estatisticas
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
-            ) : null}
-          </article>
-        </aside>
+        ))}
       </section>
 
       <section className="mt-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-              Modelos reais
+              Templates
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
-              Templates disponiveis
+              Simulados disponiveis
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-              Esta lista vem de `simulation_templates`. Como ainda nao criamos
-              questoes nem templates reais, o estado esperado pode ser vazio.
-            </p>
           </div>
-
           <span className="inline-flex rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
-            {templatesCount} templates
+            {overview.templates.length} modelos
           </span>
         </div>
 
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
-          {templates.length === 0 ? (
-            <article className="rounded-md border border-border-soft bg-surface p-5">
-              <p className="text-sm font-semibold text-white">
-                Nenhum template cadastrado
-              </p>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                A rota `GET /api/simulations/templates` ja esta pronta, mas o
-                painel administrativo ainda nao alimentou modelos de simulado.
-              </p>
-            </article>
-          ) : (
-            templates.map((template) => (
+        <div className="mt-5 grid gap-4 xl:grid-cols-2">
+          {overview.templates.map((template) => {
+            const lockedMessage = lockLabel(template.lockedReason);
+            const isLocked = Boolean(template.lockedReason);
+
+            return (
               <article
                 key={template.id}
-                className="rounded-md border border-border-soft bg-surface p-5"
+                className={`rounded-md border p-5 sm:p-6 ${
+                  isLocked
+                    ? "border-pgm-yellow/25 bg-pgm-yellow/5"
+                    : "border-border-soft bg-surface"
+                }`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-sm font-semibold text-white">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
+                        {typeLabel[template.type]}
+                      </span>
+                      <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
+                        {languageLabel[template.language]}
+                      </span>
+                      <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-1 text-xs font-semibold text-pgm-yellow">
+                        {template.is_premium ? "Premium" : "Gratuito"}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 text-xl font-semibold text-white">
                       {template.title}
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      {template.description ??
-                        "Template preparado para simulado objetivo."}
-                    </p>
+                    </h3>
                   </div>
-                  {template.lockedReason === "premium_required" ? (
+                  {isLocked ? (
                     <LockKeyhole
-                      className="size-4 shrink-0 text-pgm-yellow"
+                      className="size-5 shrink-0 text-pgm-yellow"
                       aria-hidden="true"
                     />
-                  ) : null}
+                  ) : (
+                    <ListChecks
+                      className="size-5 shrink-0 text-pgm-yellow"
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
 
-                <div className="mt-4 grid gap-2 sm:grid-cols-3">
-                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-xs font-semibold text-muted">
-                    {template.type === "full" ? "Completo" : "Rapido"}
+                <p className="mt-4 text-sm leading-6 text-muted">
+                  {template.description ??
+                    "Simulado objetivo com correcao automatica."}
+                </p>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                    {template.total_questions} questoes
                   </span>
-                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-xs font-semibold text-muted">
-                    {template.language}
+                  <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                    <Clock3 className="size-4" aria-hidden="true" />
+                    {estimatedMinutes(template.total_questions)} min
                   </span>
-                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-xs font-semibold text-muted">
-                    {template.availableQuestionCount} questoes
+                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                    {template.availableQuestionCount} no banco
                   </span>
                 </div>
 
-                <button
-                  type="button"
-                  disabled
-                  className="mt-5 inline-flex h-10 w-full cursor-not-allowed items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-muted/70"
-                >
-                  {template.lockedReason === "premium_required"
-                    ? "Premium necessario"
-                    : template.lockedReason === "no_questions"
-                      ? "Sem questoes cadastradas"
-                      : "Fluxo pronto para proxima etapa"}
-                </button>
+                {template.lockedReason === "premium_required" ? (
+                  <Link
+                    href="/planos"
+                    className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
+                  >
+                    Quero continuar evoluindo
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                ) : isLocked ? (
+                  <button
+                    type="button"
+                    disabled
+                    className="mt-5 inline-flex h-11 w-full cursor-not-allowed items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-muted/70"
+                  >
+                    {lockedMessage}
+                  </button>
+                ) : (
+                  <Link
+                    href={`/simulados/${template.id}`}
+                    className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+                  >
+                    Abrir instrucoes
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                )}
               </article>
-            ))
-          )}
+            );
+          })}
         </div>
       </section>
 
-      <section className="mt-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-          Fundacao pronta
-        </p>
-        <h2 className="mt-4 text-2xl font-semibold text-white">
-          Ecossistema de aprendizagem
-        </h2>
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              Historico
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white">
+              Tentativas anteriores
+            </h2>
+          </div>
+          <span className="rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted">
+            Melhor: {overview.historySummary.bestPercentage}%
+          </span>
+        </div>
 
-        <div className="mt-5 grid gap-4 lg:grid-cols-4">
-          {learningFoundationItems.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-md border border-border-soft bg-background p-4"
-            >
-              <item.Icon
-                className="size-5 text-pgm-yellow"
-                aria-hidden="true"
-              />
-              <p className="mt-4 text-sm font-semibold text-white">
-                {item.title}
+        <div className="mt-5 grid gap-3">
+          {overview.attempts.length === 0 ? (
+            <div className="rounded-md border border-border-soft bg-background p-4">
+              <p className="text-sm font-semibold text-white">
+                Nenhuma tentativa registrada
               </p>
               <p className="mt-2 text-sm leading-6 text-muted">
-                {item.description}
+                Inicie um template disponivel para acompanhar desempenho,
+                acertos e evolucao por categoria.
               </p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-5 rounded-md border border-border-soft bg-surface p-5">
-          <p className="text-sm font-semibold text-white">
-            Banco objetivo ativo
-          </p>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            {activeObjectiveQuestionsCount} questoes objetivas visiveis para o
-            usuario atual. A Etapa 8B nao insere questoes no banco real.
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
-          Seeds estruturais
-        </p>
-        <div className="mt-5 grid gap-4 lg:grid-cols-3">
-          {seededCategoryGroups.map((group) => (
-            <article
-              key={group.title}
-              className="rounded-md border border-border-soft bg-background p-4"
-            >
-              <h2 className="text-lg font-semibold text-white">
-                {group.title}
-              </h2>
-              <ul className="mt-4 grid gap-2">
-                {group.categories.map((category) => (
-                  <li
-                    key={category}
-                    className="flex items-center gap-2 text-sm text-muted"
-                  >
-                    <CheckCircle2
-                      className="size-4 shrink-0 text-pgm-yellow"
-                      aria-hidden="true"
-                    />
-                    {category}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+            </div>
+          ) : (
+            overview.attempts.map((attempt) => (
+              <div
+                key={attempt.id}
+                className="grid gap-4 rounded-md border border-border-soft bg-background p-4 lg:grid-cols-[1fr_180px_160px]"
+              >
+                <div>
+                  <p className="text-sm font-semibold text-white">
+                    {attempt.templateTitle}
+                  </p>
+                  <p className="mt-1 text-xs text-muted">
+                    {dateFormatter.format(new Date(attempt.started_at))} ·{" "}
+                    {statusLabel[attempt.status]} · {attempt.answerCount} questoes
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    Pontuacao
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    {attempt.percentage === null
+                      ? "--"
+                      : `${attempt.percentage}%`}
+                  </p>
+                </div>
+                <Link
+                  href={
+                    attempt.status === "completed"
+                      ? `/simulados/tentativas/${attempt.id}/resultado`
+                      : `/simulados/tentativas/${attempt.id}`
+                  }
+                  className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+                >
+                  {attempt.status === "completed" ? "Ver resultado" : "Continuar"}
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
+              </div>
+            ))
+          )}
         </div>
       </section>
     </main>

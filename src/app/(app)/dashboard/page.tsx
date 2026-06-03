@@ -4,13 +4,22 @@ import { redirect } from "next/navigation";
 import {
   ArrowRight,
   BadgeCheck,
+  BarChart3,
+  Brain,
   BookOpenCheck,
   CheckCircle2,
   CircleDollarSign,
+  Layers3,
   LockKeyhole,
+  MessageCircle,
+  MessageSquareCheck,
+  PenLine,
+  Route,
 } from "lucide-react";
 
 import { PaymentButton } from "@/components/billing/payment-button";
+import { getLearningDashboardStats } from "@/lib/learning/service";
+import { getManualReviewStats } from "@/lib/manual-review/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -74,6 +83,10 @@ export default async function DashboardPage() {
     .order("created_at", { ascending: false })
     .limit(1)
     .maybeSingle();
+  const [learningStats, manualStats] = await Promise.all([
+    getLearningDashboardStats(user.id),
+    getManualReviewStats(user.id),
+  ]);
 
   const profile = profileResponse.data as {
     access_status: keyof typeof accessLabel;
@@ -232,6 +245,139 @@ export default async function DashboardPage() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              Correcao manual
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white">
+              Subjetivas e entrevista
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
+              Acompanhe respostas enviadas, pendencias e feedbacks humanos
+              recebidos pela plataforma.
+            </p>
+          </div>
+          <Link
+            href="/subjetivas/minhas-respostas"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+          >
+            Ver respostas
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {[
+            {
+              title: "Subjetivas pendentes",
+              value: manualStats.subjectivePending,
+              Icon: PenLine,
+            },
+            {
+              title: "Subjetivas corrigidas",
+              value: manualStats.subjectiveReviewed,
+              Icon: MessageSquareCheck,
+            },
+            {
+              title: "Treinos enviados",
+              value: manualStats.psychosocialSubmitted,
+              Icon: MessageCircle,
+            },
+            {
+              title: "Feedbacks recebidos",
+              value: manualStats.feedbacksReceived,
+              Icon: BadgeCheck,
+            },
+          ].map((item) => (
+            <article
+              key={item.title}
+              className="rounded-md border border-border-soft bg-background p-4"
+            >
+              <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
+              <p className="mt-4 text-sm font-medium text-muted">
+                {item.title}
+              </p>
+              <p className="mt-2 font-mono text-3xl font-semibold text-white">
+                {item.value}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-pgm-yellow">
+              Meu progresso
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white">
+              Evolucao de aprendizagem
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
+              Primeira camada de progresso para materiais, trilhas e
+              flashcards. A gamificacao fica preparada para uma etapa futura.
+            </p>
+          </div>
+
+          <Link
+            href="/analytics"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+          >
+            Ver analytics
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+          {[
+            {
+              title: "Materiais concluidos",
+              value: learningStats.completedMaterials,
+              Icon: BookOpenCheck,
+            },
+            {
+              title: "Trilhas iniciadas",
+              value: learningStats.startedPaths,
+              Icon: Route,
+            },
+            {
+              title: "Trilhas concluidas",
+              value: learningStats.completedPaths,
+              Icon: Layers3,
+            },
+            {
+              title: "Flashcards revisados",
+              value: learningStats.reviewedFlashcards,
+              Icon: Brain,
+            },
+            {
+              title: "Analytics ativo",
+              value:
+                learningStats.completedMaterials +
+                learningStats.reviewedFlashcards +
+                learningStats.completedPaths,
+              Icon: BarChart3,
+            },
+          ].map((item) => (
+            <article
+              key={item.title}
+              className="rounded-md border border-border-soft bg-background p-4"
+            >
+              <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
+              <p className="mt-4 text-sm font-medium text-muted">
+                {item.title}
+              </p>
+              <p className="mt-2 font-mono text-3xl font-semibold text-white">
+                {item.value}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 

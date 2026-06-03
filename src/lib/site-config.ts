@@ -1,30 +1,33 @@
 export const siteConfig = {
   name: "PGM Academy",
   price: "R$ 29,90",
-  paymentModel: "Pagamento único",
+  paymentModel: "Pagamento unico",
   disclaimer:
-    "Plataforma independente de preparação. Não possui vínculo oficial com o Governo de Pernambuco.",
+    "Plataforma independente de preparacao. Consulte sempre o edital vigente e os canais oficiais do Programa Ganhe o Mundo.",
+  institutionalNotice:
+    "A PGM Academy e uma plataforma independente de preparacao. Nao possui vinculo oficial com o Governo de Pernambuco nem com o Programa Ganhe o Mundo. Consulte sempre os editais e canais oficiais.",
   editalUrl:
     "https://portal.educacao.pe.gov.br/wp-content/uploads/2026/05/0d68cd50-48a7-492c-88f7-0c7b9af530c0.pdf",
 };
 
 export const navigationItems = [
-  { label: "Diagnóstico", href: "#diagnostico" },
-  { label: "Trilha", href: "#trilha" },
-  { label: "IA", href: "#ia" },
-  { label: "Premium", href: "#premium" },
+  { label: "Inicio", href: "/" },
+  { label: "Plataforma", href: "/#plataforma" },
+  { label: "Planos", href: "/planos" },
+  { label: "Avaliacoes", href: "/avaliacoes" },
+  { label: "FAQ", href: "/planos#faq" },
 ];
 
 export const eligibilitySignals = [
   {
-    label: "Frequência",
+    label: "Frequencia",
     value: "85%+",
-    detail: "Sinal crítico para elegibilidade no edital.",
+    detail: "Sinal critico para elegibilidade no edital.",
   },
   {
-    label: "Médias",
+    label: "Medias",
     value: "7,0+",
-    detail: "Português, Matemática e Humanas entram no diagnóstico.",
+    detail: "Portugues, Matematica e Humanas entram no diagnostico.",
   },
   {
     label: "Status",
@@ -34,7 +37,7 @@ export const eligibilitySignals = [
 ];
 
 export const approvalSteps = [
-  "Verificação dos requisitos",
+  "Verificacao dos requisitos",
   "Prova objetiva",
   "Prova subjetiva",
   "Entrevista psicossocial",
@@ -42,34 +45,34 @@ export const approvalSteps = [
 
 export const platformModules = [
   {
-    title: "Diagnóstico de elegibilidade",
+    title: "Diagnostico de elegibilidade",
     description:
-      "Coleta idade, série, frequência e médias escolares para orientar o estudante com base no edital informado.",
+      "Ajuda o aluno a entender requisitos, prontidao inicial e proximos passos de preparacao.",
   },
   {
-    title: "Plano de aprovação",
+    title: "Central de estudos",
     description:
-      "Transforma o processo seletivo em uma trilha visível, com etapas e progresso do aluno.",
+      "Organiza materiais autorais, categorias, idiomas e dificuldade para estudar com foco.",
   },
   {
-    title: "Simulados inteligentes",
+    title: "Simulados realistas",
     description:
-      "Estrutura preparada para banco de questões, histórico de desempenho e ranking pessoal.",
+      "Usa questoes objetivas autorais importadas e correcao automatica protegida.",
   },
   {
-    title: "Correção com IA",
+    title: "Subjetivas com feedback",
     description:
-      "Arquitetura pronta para avaliar respostas escritas em inglês e espanhol pelo backend.",
+      "Permite treinar respostas em idiomas com acompanhamento manual dentro do plano premium.",
   },
   {
-    title: "Mentor IA",
+    title: "Entrevista psicossocial",
     description:
-      "Base preparada para um chatbot especializado em edital, intercâmbio e processo seletivo.",
+      "Prepara postura, maturidade, responsabilidade e adaptacao cultural com perguntas autorais.",
   },
   {
-    title: "Painel administrativo",
+    title: "Analytics de evolucao",
     description:
-      "Fundação planejada para conteúdos, simulados, usuários, métricas e pagamentos.",
+      "Transforma desempenho e progresso em metas, diagnosticos e recomendacoes baseadas em regras.",
   },
 ];
 
@@ -77,7 +80,7 @@ export const architecturePillars = [
   "Dados isolados por aluno",
   "Acesso premium controlado",
   "Pagamento seguro via Asaas",
-  "IA protegida no backend",
-  "Histórico e auditoria planejados",
+  "Historico e auditoria planejados",
+  "RLS e autorizacao no servidor",
   "Infraestrutura pronta para escala",
 ];

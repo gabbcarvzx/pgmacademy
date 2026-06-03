@@ -7,7 +7,7 @@ import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Mentor PGM",
-  description: "Chat premium da PGM Academy para preparacao do aluno.",
+  description: "Recurso premium da PGM Academy para preparacao do aluno.",
 };
 
 export default async function MentorPage() {
@@ -31,17 +31,17 @@ export default async function MentorPage() {
             Recurso premium
           </p>
           <h1 className="mt-4 text-3xl font-semibold text-white">
-            Mentor PGM bloqueado
+            Recurso premium bloqueado
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
-            O Mentor PGM esta disponivel apenas para alunos premium. Libere o
-            acesso com pagamento unico para usar o chat especializado.
+            O premium libera a experiencia completa de preparacao da PGM
+            Academy. Consulte os planos para desbloquear os recursos avancados.
           </p>
           <Link
-            href="/dashboard#premium"
+            href="/planos"
             className="mt-6 inline-flex h-12 items-center justify-center rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
           >
-            Ver plano premium
+            Ver planos premium
           </Link>
         </section>
       </main>

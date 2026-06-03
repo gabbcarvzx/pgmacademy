@@ -102,6 +102,15 @@ const templateAccess = buildTemplateAccessList(
       total_questions: 5,
       is_premium: false,
     },
+    {
+      id: "insufficient-template",
+      title: "Fixture insufficient",
+      description: null,
+      type: "quick",
+      language: "english",
+      total_questions: 3,
+      is_premium: false,
+    },
   ],
   [
     { id: "q1", language: "english", type: "objective" },
@@ -132,6 +141,11 @@ assert.deepEqual(
       id: "empty-template",
       availableQuestionCount: 0,
       lockedReason: "no_questions",
+    },
+    {
+      id: "insufficient-template",
+      availableQuestionCount: 2,
+      lockedReason: "insufficient_questions",
     },
   ],
 );

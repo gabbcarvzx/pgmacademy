@@ -45,10 +45,10 @@ export default async function PremiumPage() {
             edital vigente ou canais oficiais.
           </p>
           <Link
-            href="/dashboard#premium"
+            href="/planos"
             className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
           >
-            Ver acesso premium
+            Desbloquear acesso premium
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </section>

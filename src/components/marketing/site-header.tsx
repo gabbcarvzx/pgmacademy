@@ -1,7 +1,7 @@
 import { ArrowRight, GraduationCap } from "lucide-react";
 import Link from "next/link";
 
-import { navigationItems, siteConfig } from "@/lib/site-config";
+import { navigationItems } from "@/lib/site-config";
 
 export function SiteHeader() {
   return (
@@ -23,13 +23,13 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted md:flex">
           {navigationItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="transition hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -40,13 +40,13 @@ export function SiteHeader() {
           >
             Entrar
           </Link>
-          <a
-            href="#premium"
+          <Link
+            href="/planos"
             className="inline-flex h-10 items-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
           >
-            {siteConfig.price}
+            Ver planos
             <ArrowRight className="size-4" aria-hidden="true" />
-          </a>
+          </Link>
         </div>
       </div>
     </header>

@@ -153,6 +153,7 @@ export type Database = {
       question_banks: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
@@ -164,11 +165,13 @@ export type Database = {
             | "psychosocial";
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
@@ -180,10 +183,12 @@ export type Database = {
             | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
@@ -195,6 +200,7 @@ export type Database = {
             | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -202,6 +208,7 @@ export type Database = {
       question_categories: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           parent_id: string | null;
           name: string;
@@ -212,11 +219,13 @@ export type Database = {
             | "portuguese"
             | "mixed"
             | "psychosocial";
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           parent_id?: string | null;
           name: string;
@@ -227,10 +236,12 @@ export type Database = {
             | "portuguese"
             | "mixed"
             | "psychosocial";
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           parent_id?: string | null;
           name?: string;
@@ -241,6 +252,7 @@ export type Database = {
             | "portuguese"
             | "mixed"
             | "psychosocial";
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -248,6 +260,7 @@ export type Database = {
       questions: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           bank_id: string;
           category_id: string | null;
@@ -268,6 +281,7 @@ export type Database = {
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           bank_id: string;
           category_id?: string | null;
@@ -287,6 +301,7 @@ export type Database = {
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           bank_id?: string;
           category_id?: string | null;
@@ -340,6 +355,7 @@ export type Database = {
       simulation_templates: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
@@ -353,11 +369,13 @@ export type Database = {
           total_questions: number;
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
@@ -371,10 +389,12 @@ export type Database = {
           total_questions: number;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
@@ -388,6 +408,7 @@ export type Database = {
           total_questions?: number;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -463,6 +484,7 @@ export type Database = {
       study_materials: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           category_id: string | null;
           title: string;
@@ -478,11 +500,13 @@ export type Database = {
           estimated_time: number;
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category_id?: string | null;
           title: string;
@@ -498,10 +522,12 @@ export type Database = {
           estimated_time?: number;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category_id?: string | null;
           title?: string;
@@ -517,6 +543,7 @@ export type Database = {
           estimated_time?: number;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -524,6 +551,7 @@ export type Database = {
       flashcards: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           category_id: string | null;
           front_content: string;
@@ -537,11 +565,13 @@ export type Database = {
           difficulty: "beginner" | "intermediate" | "advanced" | "mixed";
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category_id?: string | null;
           front_content: string;
@@ -555,10 +585,12 @@ export type Database = {
           difficulty?: "beginner" | "intermediate" | "advanced" | "mixed";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category_id?: string | null;
           front_content?: string;
@@ -572,6 +604,7 @@ export type Database = {
           difficulty?: "beginner" | "intermediate" | "advanced" | "mixed";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -579,9 +612,11 @@ export type Database = {
       learning_paths: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
+          slug: string | null;
           language:
             | "english"
             | "spanish"
@@ -590,14 +625,17 @@ export type Database = {
             | "psychosocial";
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
+          slug?: string | null;
           language?:
             | "english"
             | "spanish"
@@ -606,13 +644,16 @@ export type Database = {
             | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
+          slug?: string | null;
           language?:
             | "english"
             | "spanish"
@@ -621,6 +662,7 @@ export type Database = {
             | "psychosocial";
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           updated_at?: string;
         };
         Relationships: [];
@@ -671,9 +713,62 @@ export type Database = {
         };
         Relationships: [];
       };
+      user_learning_progress: {
+        Row: {
+          id: string;
+          tenant_id: string;
+          user_id: string;
+          path_id: string | null;
+          item_type:
+            | "study_material"
+            | "flashcard"
+            | "question"
+            | "psychosocial_question"
+            | "simulation_template";
+          item_id: string;
+          completed: boolean;
+          completed_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+          path_id?: string | null;
+          item_type:
+            | "study_material"
+            | "flashcard"
+            | "question"
+            | "psychosocial_question"
+            | "simulation_template";
+          item_id: string;
+          completed?: boolean;
+          completed_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          tenant_id?: string;
+          user_id?: string;
+          path_id?: string | null;
+          item_type?:
+            | "study_material"
+            | "flashcard"
+            | "question"
+            | "psychosocial_question"
+            | "simulation_template";
+          item_id?: string;
+          completed?: boolean;
+          completed_at?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       psychosocial_questions: {
         Row: {
           id: string;
+          editorial_id: string | null;
           tenant_id: string | null;
           category: string;
           question: string;
@@ -681,11 +776,13 @@ export type Database = {
           common_mistakes: string | null;
           is_premium: boolean;
           is_active: boolean;
+          source_reference: string | null;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category: string;
           question: string;
@@ -693,10 +790,12 @@ export type Database = {
           common_mistakes?: string | null;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
+          editorial_id?: string | null;
           tenant_id?: string | null;
           category?: string;
           question?: string;
@@ -704,6 +803,99 @@ export type Database = {
           common_mistakes?: string | null;
           is_premium?: boolean;
           is_active?: boolean;
+          source_reference?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      subjective_attempts: {
+        Row: {
+          id: string;
+          tenant_id: string;
+          user_id: string;
+          question_id: string;
+          answer_text: string;
+          status: "pending" | "reviewed" | "returned";
+          score: number | null;
+          max_score: number;
+          feedback: string | null;
+          reviewed_by: string | null;
+          reviewed_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+          question_id: string;
+          answer_text: string;
+          status?: "pending" | "reviewed" | "returned";
+          score?: number | null;
+          max_score?: number;
+          feedback?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          tenant_id?: string;
+          user_id?: string;
+          question_id?: string;
+          answer_text?: string;
+          status?: "pending" | "reviewed" | "returned";
+          score?: number | null;
+          max_score?: number;
+          feedback?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      psychosocial_attempts: {
+        Row: {
+          id: string;
+          tenant_id: string;
+          user_id: string;
+          psychosocial_question_id: string;
+          answer_text: string;
+          status: "pending" | "reviewed" | "returned";
+          score: number | null;
+          max_score: number;
+          feedback: string | null;
+          reviewed_by: string | null;
+          reviewed_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+          psychosocial_question_id: string;
+          answer_text: string;
+          status?: "pending" | "reviewed" | "returned";
+          score?: number | null;
+          max_score?: number;
+          feedback?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          tenant_id?: string;
+          user_id?: string;
+          psychosocial_question_id?: string;
+          answer_text?: string;
+          status?: "pending" | "reviewed" | "returned";
+          score?: number | null;
+          max_score?: number;
+          feedback?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
           updated_at?: string;
         };
         Relationships: [];

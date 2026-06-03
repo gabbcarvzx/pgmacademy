@@ -17,7 +17,7 @@ export type ObjectiveQuestionCatalogItem = {
 
 export type SimulationTemplateAccess = SimulationTemplateCatalogItem & {
   availableQuestionCount: number;
-  lockedReason: "premium_required" | "no_questions" | null;
+  lockedReason: "premium_required" | "no_questions" | "insufficient_questions" | null;
 };
 
 export function getTemplateLockReason(
@@ -40,11 +40,7 @@ export function countQuestionsForTemplate(
       return false;
     }
 
-    return (
-      template.language === "mixed" ||
-      question.language === "mixed" ||
-      question.language === template.language
-    );
+    return template.language === "mixed" || question.language === template.language;
   }).length;
 }
 
@@ -64,7 +60,12 @@ export function buildTemplateAccessList(
       ...template,
       availableQuestionCount,
       lockedReason:
-        premiumLock ?? (availableQuestionCount === 0 ? "no_questions" : null),
+        premiumLock ??
+        (availableQuestionCount === 0
+          ? "no_questions"
+          : availableQuestionCount < template.total_questions
+            ? "insufficient_questions"
+            : null),
     } satisfies SimulationTemplateAccess;
   });
 }

@@ -1,12 +1,17 @@
 import Link from "next/link";
 import {
+  BarChart3,
   BookOpenCheck,
+  BookText,
+  Brain,
+  CreditCard,
   Gauge,
   GraduationCap,
   LayoutDashboard,
   ListChecks,
   LogOut,
-  MessageCircle,
+  MessageSquareText,
+  PenLine,
   ShieldCheck,
 } from "lucide-react";
 
@@ -14,9 +19,15 @@ import { signOutAction } from "@/app/(app)/actions";
 
 const appNavigation = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutDashboard },
+  { label: "Analytics", href: "/analytics", Icon: BarChart3 },
+  { label: "Estudos", href: "/estudos", Icon: BookText },
+  { label: "Trilhas", href: "/trilhas", Icon: GraduationCap },
+  { label: "Flashcards", href: "/flashcards", Icon: Brain },
+  { label: "Subjetivas", href: "/subjetivas", Icon: PenLine },
+  { label: "Entrevista", href: "/entrevista", Icon: MessageSquareText },
   { label: "Diagnostico", href: "/diagnostico", Icon: Gauge },
   { label: "Simulados", href: "/simulados", Icon: ListChecks },
-  { label: "Mentor PGM", href: "/mentor", Icon: MessageCircle },
+  { label: "Planos", href: "/planos", Icon: CreditCard },
   { label: "Area Premium", href: "/premium", Icon: BookOpenCheck },
 ];
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | PGM Academy",
   },
   description:
-    "Plataforma independente de preparacao para estudantes que desejam competir no Programa Ganhe o Mundo.",
+    "Plataforma independente de preparacao para estudantes que desejam chegar mais confiantes ao Programa Ganhe o Mundo.",
   applicationName: "PGM Academy",
   keywords: [
     "PGM Academy",
@@ -27,13 +27,15 @@ export const metadata: Metadata = {
     "intercambio",
     "Pernambuco",
     "simulados",
+    "trilhas",
+    "preparacao",
   ],
   authors: [{ name: "PGM Academy" }],
   creator: "PGM Academy",
   openGraph: {
     title: "PGM Academy",
     description:
-      "Preparacao independente para o processo seletivo do Programa Ganhe o Mundo.",
+      "Materiais, simulados, trilhas e feedback para preparacao independente ao Programa Ganhe o Mundo.",
     type: "website",
     locale: "pt_BR",
     siteName: "PGM Academy",
