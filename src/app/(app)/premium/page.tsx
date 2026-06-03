@@ -93,7 +93,7 @@ export default async function PremiumPage() {
               />
             </div>
             <p className="mt-3 text-xs leading-5 text-muted">
-              Modulos com conteúdo inicial publicado. Regras oficiais seguem
+              Módulos com conteúdo inicial publicado. Regras oficiais seguem
               dependentes do edital vigente e dos comunicados oficiais.
             </p>
           </div>

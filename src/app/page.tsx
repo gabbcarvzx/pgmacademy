@@ -145,7 +145,7 @@ export default function Home() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Modulos"
+            eyebrow="Módulos"
             title="Uma plataforma completa para o aluno competir melhor."
             description="O foco é preparação vendável e recorrente: conteúdo autoral, progresso, simulados, feedback manual e analytics sem expor dados entre usuários."
           />
@@ -168,7 +168,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Jornada do sonho"
             title="Do primeiro interesse ao preparo para uma experiência internacional."
-            description="A comunicação e emocional, mas a plataforma continua responsável: prepara o aluno, não promete vaga, destino ou embarque."
+            description="A comunicação é emocional, mas a plataforma continua responsável: prepara o aluno, não promete vaga, destino ou embarque."
           />
 
           <div className="grid gap-3">
@@ -254,7 +254,7 @@ export default function Home() {
               Pronto para transformar vontade em rotina de preparação?
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              Crie sua conta, conheca o gratuito e desbloqueie o premium quando
+              Crie sua conta, conheça o gratuito e desbloqueie o premium quando
               quiser acessar a experiência completa.
             </p>
           </div>
