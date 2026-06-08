@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ArrowRight, LockKeyhole, Route } from "lucide-react";
 
+import { ProgressBar, StatusBadge } from "@/components/design-system";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
 import { languageLabel } from "@/lib/learning/labels";
@@ -77,22 +78,17 @@ export default async function TrilhasPage() {
               <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                 {path.completedItemCount} concluídos
               </span>
-              <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-pgm-yellow">
+              <StatusBadge tone={path.isPremium ? "premium" : "neutral"} size="md">
                 {path.isPremium ? "Premium" : "Gratuita"}
-              </span>
+              </StatusBadge>
             </div>
 
             <div className="mt-5">
-              <div className="flex items-center justify-between text-xs font-semibold text-muted">
-                <span>Progresso</span>
-                <span>{path.progressPercent}%</span>
-              </div>
-              <div className="mt-2 h-2 rounded-full bg-background">
-                <div
-                  className="h-2 rounded-full bg-pgm-yellow"
-                  style={{ width: `${path.progressPercent}%` }}
-                />
-              </div>
+              <ProgressBar
+                value={path.progressPercent}
+                label="Progresso"
+                showValue
+              />
             </div>
 
             <Link

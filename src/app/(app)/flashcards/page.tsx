@@ -3,6 +3,11 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Layers3, LockKeyhole } from "lucide-react";
 
+import {
+  PremiumLockCard,
+  ProgressBar,
+  StatusBadge,
+} from "@/components/design-system";
 import { FlashcardDeck } from "@/components/learning/flashcard-deck";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
@@ -85,17 +90,21 @@ export default async function FlashcardsPage({ searchParams }: PageProps) {
                     <LockKeyhole className="size-4 text-pgm-yellow" aria-hidden="true" />
                   )}
                 </div>
-                <div className="mt-3 h-2 rounded-full bg-background">
-                  <div
-                    className="h-2 rounded-full bg-pgm-yellow"
-                    style={{
-                      width:
-                        deck.totalCards === 0
-                          ? "0%"
-                          : `${Math.round((deck.reviewedCards / deck.totalCards) * 100)}%`,
-                    }}
-                  />
+                <div className="mt-3">
+                  <StatusBadge tone={deck.canAccess ? "premium" : "warning"}>
+                    {deck.canAccess ? "Liberado" : "Premium"}
+                  </StatusBadge>
                 </div>
+                <ProgressBar
+                  value={
+                    deck.totalCards === 0
+                      ? 0
+                      : Math.round((deck.reviewedCards / deck.totalCards) * 100)
+                  }
+                  label={deck.categoryName}
+                  size="sm"
+                  className="mt-3"
+                />
               </Link>
             );
           })}
@@ -103,7 +112,10 @@ export default async function FlashcardsPage({ searchParams }: PageProps) {
 
         <div>
           {data.selectedDeck && !data.selectedDeck.canAccess ? (
-            <PremiumUpgradeCard description="Flashcards do lote aprovado são premium. Faça upgrade para revisar frente e verso." />
+            <PremiumLockCard
+              description="Flashcards do lote aprovado são premium. Faça upgrade para revisar frente e verso."
+              ctaLabel="Desbloquear flashcards"
+            />
           ) : (
             <FlashcardDeck
               cards={data.cards}

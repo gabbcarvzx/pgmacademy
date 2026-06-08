@@ -20,6 +20,7 @@ import {
   Trophy,
 } from "lucide-react";
 
+import { MetricCard, ProgressBar } from "@/components/design-system";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
 import type {
@@ -49,27 +50,6 @@ function metricValue(value: number, suffix = "") {
   return `${formatNumber(value)}${suffix}`;
 }
 
-function MetricCard({
-  title,
-  value,
-  description,
-  Icon,
-}: {
-  title: string;
-  value: string;
-  description: string;
-  Icon: typeof Gauge;
-}) {
-  return (
-    <article className="rounded-md border border-border-soft bg-surface p-5">
-      <Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-      <p className="mt-5 text-sm font-medium text-muted">{title}</p>
-      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
-      <p className="mt-3 text-sm leading-6 text-muted">{description}</p>
-    </article>
-  );
-}
-
 function CategoryRow({ category }: { category: CategoryAnalytics }) {
   return (
     <div className="rounded-md border border-border-soft bg-background p-4">
@@ -88,12 +68,12 @@ function CategoryRow({ category }: { category: CategoryAnalytics }) {
           {category.percentage}%
         </span>
       </div>
-      <div className="mt-3 h-2 rounded-full bg-surface">
-        <div
-          className="h-2 rounded-full bg-pgm-yellow"
-          style={{ width: `${category.percentage}%` }}
-        />
-      </div>
+      <ProgressBar
+        value={category.percentage}
+        label={category.categoryName}
+        size="sm"
+        className="mt-3"
+      />
     </div>
   );
 }
@@ -413,12 +393,12 @@ export default async function AnalyticsPage() {
                         {goal.progress}/{goal.target}
                       </span>
                     </div>
-                    <div className="mt-3 h-2 rounded-full bg-surface">
-                      <div
-                        className="h-2 rounded-full bg-pgm-yellow"
-                        style={{ width: `${goal.percentage}%` }}
-                      />
-                    </div>
+                    <ProgressBar
+                      value={goal.percentage}
+                      label={goal.title}
+                      size="sm"
+                      className="mt-3"
+                    />
                   </div>
                 ))}
               </div>

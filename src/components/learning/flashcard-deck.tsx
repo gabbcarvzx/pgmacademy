@@ -4,6 +4,7 @@ import { useMemo, useState, useTransition } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, RotateCcw } from "lucide-react";
 
 import { reviewFlashcardAction } from "@/app/(app)/learning-actions";
+import { EmptyState, ProgressBar } from "@/components/design-system";
 import type { FlashcardItem } from "@/lib/learning/service";
 
 export function FlashcardDeck({
@@ -24,14 +25,11 @@ export function FlashcardDeck({
 
   if (!currentCard) {
     return (
-      <div className="rounded-md border border-border-soft bg-surface p-5">
-        <p className="text-sm font-semibold text-white">
-          Nenhum flashcard disponível
-        </p>
-        <p className="mt-2 text-sm leading-6 text-muted">
-          Escolha outra categoria ou libere o acesso premium.
-        </p>
-      </div>
+      <EmptyState
+        title="Nenhum flashcard disponível"
+        description="Escolha outra categoria ou libere o acesso premium."
+        compact
+      />
     );
   }
 
@@ -63,12 +61,11 @@ export function FlashcardDeck({
             {reviewedCount} revisados neste conjunto
           </p>
         </div>
-        <div className="h-2 w-full rounded-full bg-background sm:max-w-xs">
-          <div
-            className="h-2 rounded-full bg-pgm-yellow"
-            style={{ width: `${Math.round(((currentIndex + 1) / cards.length) * 100)}%` }}
-          />
-        </div>
+        <ProgressBar
+          value={Math.round(((currentIndex + 1) / cards.length) * 100)}
+          label="Progresso do baralho"
+          className="w-full sm:max-w-xs"
+        />
       </div>
 
       <button
@@ -116,9 +113,9 @@ export function FlashcardDeck({
           onClick={() => goTo(currentIndex + 1)}
           disabled={currentIndex === cards.length - 1}
           className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45"
-          title="Proximo card"
+          title="Próximo card"
         >
-          Proximo
+          Próximo
           <ArrowRight className="size-4" aria-hidden="true" />
         </button>
       </div>

@@ -7,8 +7,6 @@ import {
   BarChart3,
   BookOpenCheck,
   Brain,
-  CheckCircle2,
-  Circle,
   CircleDollarSign,
   Clock3,
   Flame,
@@ -17,11 +15,25 @@ import {
   LockKeyhole,
   PenLine,
   Route,
+  Sparkles,
   Target,
 } from "lucide-react";
 
 import { PaymentButton } from "@/components/billing/payment-button";
-import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
+import {
+  AppPageHeader,
+  ContentCard,
+  EmptyState,
+  LearningStepRow,
+  MetricCard,
+  MobileActionBar,
+  PremiumLockCard,
+  PrimaryActionPanel,
+  ProgressBar,
+  SectionHeader,
+  StatusBadge,
+} from "@/components/design-system";
+import type { DesignSystemTone } from "@/components/design-system";
 import type { MissionDashboardData } from "@/lib/mission/service";
 import { getMissionDashboard } from "@/lib/mission/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
@@ -37,6 +49,13 @@ const accessLabel = {
   blocked: "Bloqueado",
   refunded: "Reembolsado",
 } as const;
+
+const accessTone = {
+  free: "neutral",
+  paid: "premium",
+  blocked: "error",
+  refunded: "warning",
+} satisfies Record<keyof typeof accessLabel, DesignSystemTone>;
 
 const subscriptionLabel = {
   pending: "Pendente",
@@ -58,91 +77,58 @@ const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   year: "numeric",
 });
 
-function ProgressBar({ value }: { value: number }) {
-  return (
-    <div className="h-2 rounded-full bg-background">
-      <div
-        className="h-2 rounded-full bg-pgm-yellow transition-all"
-        style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
-      />
-    </div>
-  );
-}
-
-function MetricCard({
-  title,
-  value,
-  description,
-  Icon,
-}: {
-  title: string;
-  value: string | number;
-  description: string;
-  Icon: typeof Target;
-}) {
-  return (
-    <article className="rounded-md border border-border-soft bg-surface p-5">
-      <Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-      <p className="mt-5 text-sm font-medium text-muted">{title}</p>
-      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
-      <p className="mt-3 text-sm leading-6 text-muted">{description}</p>
-    </article>
-  );
+function taskProgressPercentage(progress: number, target: number) {
+  if (target <= 0) return progress > 0 ? 100 : 0;
+  return Math.round((progress / target) * 100);
 }
 
 function MissionTaskList({ data }: { data: MissionDashboardData }) {
-  return (
-    <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="text-sm font-semibold uppercase text-pgm-yellow">
-            Missão de hoje
-          </p>
-          <h2 className="mt-3 text-2xl font-semibold text-white">
-            Estudo guiado para hoje
-          </h2>
-        </div>
-        <span className="rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
-          {data.dailyMission.percentage}%
-        </span>
-      </div>
+  const firstOpenTaskId = data.dailyMission.tasks.find(
+    (task) => !task.completed,
+  )?.id;
 
-      <div className="mt-5">
-        <ProgressBar value={data.dailyMission.percentage} />
-      </div>
+  return (
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+      <SectionHeader
+        eyebrow="Missão de hoje"
+        title="Estudo guiado para hoje"
+        description="Atividades priorizadas para manter ritmo real de preparação."
+        density="compact"
+        action={
+          <StatusBadge tone="premium" size="md">
+            {data.dailyMission.percentage}%
+          </StatusBadge>
+        }
+      />
+
+      <ProgressBar
+        value={data.dailyMission.percentage}
+        label="Progresso da missão"
+        showValue
+        className="mt-5"
+      />
 
       <div className="mt-5 grid gap-3">
         {data.dailyMission.tasks.map((task) => (
-          <Link
+          <LearningStepRow
             key={task.id}
             href={task.href}
-            className="grid gap-4 rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35 lg:grid-cols-[1fr_120px]"
-          >
-            <div className="flex gap-3">
-              {task.completed ? (
-                <CheckCircle2
-                  className="mt-1 size-5 shrink-0 text-pgm-green"
-                  aria-hidden="true"
-                />
-              ) : (
-                <Circle
-                  className="mt-1 size-5 shrink-0 text-muted"
-                  aria-hidden="true"
-                />
-              )}
-              <div>
-                <p className="text-sm font-semibold text-white">{task.title}</p>
-                <p className="mt-1 text-sm leading-6 text-muted">
-                  {task.description}
-                </p>
-              </div>
-            </div>
-            <div className="self-center">
-              <p className="text-right font-mono text-sm font-semibold text-pgm-yellow">
+            title={task.title}
+            description={task.description}
+            state={
+              task.completed
+                ? "completed"
+                : task.id === firstOpenTaskId
+                  ? "current"
+                  : "upcoming"
+            }
+            progress={taskProgressPercentage(task.progress, task.target)}
+            metadata={
+              <span className="font-mono text-sm font-semibold text-accent-gold">
                 {task.progress}/{task.target}
-              </p>
-            </div>
-          </Link>
+              </span>
+            }
+          />
         ))}
       </div>
     </article>
@@ -151,49 +137,185 @@ function MissionTaskList({ data }: { data: MissionDashboardData }) {
 
 function PreparationPanel({ data }: { data: MissionDashboardData }) {
   return (
-    <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="text-sm font-semibold uppercase text-pgm-yellow">
-            Preparação PGM
-          </p>
-          <h2 className="mt-3 text-2xl font-semibold text-white">
-            {data.preparation.percentage}% concluído
-          </h2>
-        </div>
-        <GraduationCap className="size-6 text-pgm-yellow" aria-hidden="true" />
-      </div>
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+      <SectionHeader
+        eyebrow="Preparação PGM"
+        title={`${data.preparation.percentage}% concluído`}
+        description="Leitura consolidada do avanço em atividades reais."
+        density="compact"
+        action={<GraduationCap className="size-6 text-accent-gold" aria-hidden="true" />}
+      />
 
-      <div className="mt-5">
-        <ProgressBar value={data.preparation.percentage} />
-      </div>
+      <ProgressBar
+        value={data.preparation.percentage}
+        label="Preparação geral"
+        showValue
+        className="mt-5"
+      />
 
       <div className="mt-5 grid gap-3">
         {data.preparation.components.map((component) => (
-          <div
+          <ContentCard
             key={component.id}
-            className="rounded-md border border-border-soft bg-background p-4"
-          >
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  {component.title}
-                </p>
-                <p className="mt-1 text-xs text-muted">
-                  {component.completed} de {component.total}
-                </p>
-              </div>
-              <span className="font-mono text-sm font-semibold text-pgm-yellow">
-                {component.percentage}%
-              </span>
-            </div>
-            <div className="mt-3">
-              <ProgressBar value={component.percentage} />
-            </div>
-          </div>
+            title={component.title}
+            description={`${component.completed} de ${component.total} itens concluídos.`}
+            badge={`${component.percentage}%`}
+            tone={component.percentage >= 100 ? "success" : "premium"}
+            metadata={
+              <ProgressBar
+                value={component.percentage}
+                label={component.title}
+                size="sm"
+              />
+            }
+          />
         ))}
       </div>
     </article>
+  );
+}
+
+function ApprovalPlanPanel({ data }: { data: MissionDashboardData }) {
+  return (
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+      <SectionHeader
+        eyebrow="Plano de Aprovação PGM"
+        title="Próximas semanas"
+        description="Plano visual preservando as recomendações geradas pelo motor atual."
+        density="compact"
+        action={
+          data.hasPaidAccess ? (
+            <StatusBadge tone="premium" size="md">
+              Personalizado
+            </StatusBadge>
+          ) : (
+            <StatusBadge tone="warning" size="md">
+              Preview
+            </StatusBadge>
+          )
+        }
+      />
+
+      <div className="mt-5 grid gap-4">
+        {data.approvalPlan.map((week) => (
+          <ContentCard
+            key={week.week}
+            eyebrow={`Semana ${week.week}`}
+            title={week.title}
+            description={week.focus}
+            tone="premium"
+            metadata={
+              <div className="grid gap-2">
+                {week.tasks.map((task) => (
+                  <Link
+                    key={`${week.week}:${task.title}`}
+                    href={task.href}
+                    className="inline-flex min-h-10 items-center justify-between gap-3 rounded-ds-12 border border-border-soft px-3 py-2 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:text-text-primary"
+                  >
+                    {task.title}
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                ))}
+              </div>
+            }
+          />
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function StudentContextPanel({ data }: { data: MissionDashboardData }) {
+  return (
+    <aside className="grid content-start gap-4">
+      <ContentCard
+        title="Perfil de estudo"
+        description={
+          data.onboardingSummary.length === 0
+            ? "O perfil aparece depois do onboarding premium."
+            : "Dados usados para contextualizar a rotina de estudo."
+        }
+        Icon={Clock3}
+        tone="premium"
+        metadata={
+          data.onboardingSummary.length > 0 ? (
+            <div className="grid gap-3">
+              {data.onboardingSummary.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-ds-12 border border-border-soft bg-background-primary p-3"
+                >
+                  <p className="text-caption font-semibold uppercase text-text-muted">
+                    {item.label}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-text-primary">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : null
+        }
+      />
+
+      {!data.hasPaidAccess ? (
+        <ContentCard
+          title="Pagamento único"
+          description="Libere a rotina premium, recomendações completas e plano automático."
+          Icon={CircleDollarSign}
+          tone="premium"
+          metadata={
+            <p className="text-4xl font-semibold text-text-primary">R$ 29,90</p>
+          }
+          action={<PaymentButton disabled={data.accessStatus === "blocked"} />}
+        />
+      ) : null}
+    </aside>
+  );
+}
+
+function RecommendationsPanel({ data }: { data: MissionDashboardData }) {
+  return (
+    <section className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+      <SectionHeader
+        eyebrow="Recomendações personalizadas"
+        title="O que reforçar agora"
+        description="Sugestões calculadas a partir do uso real da plataforma."
+        density="compact"
+        action={
+          <Link
+            href="/analytics"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-ds-12 border border-border-soft px-4 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:text-text-primary"
+          >
+            Ver analytics
+            <BarChart3 className="size-4" aria-hidden="true" />
+          </Link>
+        }
+      />
+
+      <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        {data.recommendations.length === 0 ? (
+          <EmptyState
+            title="Nenhuma lacuna crítica detectada"
+            description="Continue seguindo a missão diária para gerar dados mais ricos."
+            Icon={BookOpenCheck}
+            compact
+            className="lg:col-span-2"
+          />
+        ) : (
+          data.recommendations.map((recommendation) => (
+            <ContentCard
+              key={`${recommendation.title}:${recommendation.href}`}
+              href={recommendation.href}
+              title={recommendation.title}
+              description={recommendation.description}
+              Icon={ArrowRight}
+              tone="premium"
+            />
+          ))
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -221,44 +343,90 @@ export default async function DashboardPage() {
   const latestAssessment = data.latestAssessment;
 
   return (
-    <main className="px-4 py-6 sm:px-6 lg:px-8">
-      <section className="grid gap-5 xl:grid-cols-[1fr_380px]">
-        <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
-          <p className="text-sm font-semibold uppercase text-pgm-yellow">
-            Painel de missão
-          </p>
-          <h1 className="mt-4 max-w-4xl text-3xl font-semibold text-white sm:text-4xl">
-            {data.nextAction.title}
-          </h1>
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
-            {data.nextAction.description}
-          </p>
-          <Link
-            href={data.nextAction.href}
-            className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
-          >
-            {data.nextAction.cta}
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-        </article>
+    <main className="px-4 pb-28 pt-5 sm:px-6 lg:px-8 lg:pb-8">
+      <AppPageHeader
+        eyebrow="Painel de Missão"
+        title="Seu cockpit diário de preparação"
+        description="Comece pela próxima ação recomendada e acompanhe o ritmo sem perder o foco."
+        density="compact"
+        aside={
+          <div className="rounded-ds-16 border border-border-soft bg-background-primary p-4">
+            <div className="flex items-center justify-between gap-4">
+              <Flame className="size-5 text-accent-gold" aria-hidden="true" />
+              <StatusBadge tone={accessTone[data.accessStatus]}>
+                {accessLabel[data.accessStatus]}
+              </StatusBadge>
+            </div>
+            <p className="mt-4 text-caption font-semibold uppercase text-text-muted">
+              Ritmo atual
+            </p>
+            <p className="mt-2 text-3xl font-semibold text-text-primary">
+              {data.stats.currentStreak} dias
+            </p>
+            <p className="mt-2 text-sm leading-6 text-text-muted">
+              Pagamento: {paymentValue}.
+            </p>
+          </div>
+        }
+      />
 
-        <aside className="rounded-md border border-border-soft bg-surface p-5">
-          <Flame className="size-5 text-pgm-yellow" aria-hidden="true" />
-          <p className="mt-4 text-sm font-medium text-muted">Ritmo atual</p>
-          <p className="mt-2 text-4xl font-semibold text-white">
-            {data.stats.currentStreak} dias
-          </p>
-          <p className="mt-3 text-sm leading-6 text-muted">
-            Acesso: {accessLabel[data.accessStatus]}. Pagamento: {paymentValue}.
-          </p>
-        </aside>
+      <section className="mt-5 grid gap-5 xl:grid-cols-[1fr_360px]">
+        <PrimaryActionPanel
+          eyebrow="Faça agora"
+          title={data.nextAction.title}
+          description={data.nextAction.description}
+          Icon={Target}
+          primaryAction={
+            <Link
+              href={data.nextAction.href}
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white"
+            >
+              {data.nextAction.cta}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          }
+          secondaryAction={
+            <Link
+              href={data.hasPaidAccess ? "/premium" : "/planos"}
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-ds-12 border border-border-soft px-5 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:text-text-primary"
+            >
+              {data.hasPaidAccess ? "Abrir Academia" : "Ver Premium"}
+              <Sparkles className="size-4" aria-hidden="true" />
+            </Link>
+          }
+          metadata={
+            <div className="flex flex-wrap gap-2">
+              <StatusBadge tone="premium">
+                Missão {data.dailyMission.percentage}%
+              </StatusBadge>
+              <StatusBadge tone="info">
+                Preparação {data.preparation.percentage}%
+              </StatusBadge>
+            </div>
+          }
+        />
+
+        {!data.hasPaidAccess ? (
+          <PremiumLockCard
+            title="Painel premium incompleto"
+            description="Ative o Premium para liberar onboarding, plano automático e recomendações completas do Painel de Missão."
+            benefits={[
+              "Rotina guiada por missão diária.",
+              "Plano de aprovação conectado ao progresso.",
+              "Recomendações completas por lacuna.",
+            ]}
+          />
+        ) : (
+          <ContentCard
+            title="Academia conectada"
+            description="Seu acesso premium está ativo. Continue a jornada completa pela Academia PGM."
+            href="/premium"
+            Icon={GraduationCap}
+            tone="premium"
+            badge="Premium"
+          />
+        )}
       </section>
-
-      {!data.hasPaidAccess ? (
-        <section className="mt-6">
-          <PremiumUpgradeCard description="Ative o premium para liberar onboarding, plano automático e recomendações completas do Painel de Missão." />
-        </section>
-      ) : null}
 
       <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
@@ -272,6 +440,7 @@ export default async function DashboardPage() {
               : "Primeiro passo recomendado para calibrar o plano."
           }
           Icon={BadgeCheck}
+          tone={latestAssessment ? "success" : "warning"}
         />
         <MetricCard
           title="Simulados"
@@ -299,158 +468,12 @@ export default async function DashboardPage() {
       </section>
 
       <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_380px]">
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase text-pgm-yellow">
-                Plano de Aprovação PGM
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">
-                Próximas semanas
-              </h2>
-            </div>
-            {data.hasPaidAccess ? (
-              <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-2 text-sm font-semibold text-pgm-yellow">
-                Personalizado
-              </span>
-            ) : (
-              <LockKeyhole className="size-5 text-pgm-yellow" aria-hidden="true" />
-            )}
-          </div>
-
-          <div className="mt-5 grid gap-4">
-            {data.approvalPlan.map((week) => (
-              <article
-                key={week.week}
-                className="rounded-md border border-border-soft bg-background p-4"
-              >
-                <p className="text-sm font-semibold text-pgm-yellow">
-                  {week.title}
-                </p>
-                <p className="mt-2 text-sm leading-6 text-muted">
-                  {week.focus}
-                </p>
-                <div className="mt-4 grid gap-2">
-                  {week.tasks.map((task) => (
-                    <Link
-                      key={`${week.week}:${task.title}`}
-                      href={task.href}
-                      className="inline-flex min-h-10 items-center justify-between gap-3 rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
-                    >
-                      {task.title}
-                      <ArrowRight className="size-4" aria-hidden="true" />
-                    </Link>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </article>
-
-        <aside className="grid content-start gap-4">
-          <article className="rounded-md border border-border-soft bg-surface p-5">
-            <Clock3 className="size-5 text-pgm-yellow" aria-hidden="true" />
-            <p className="mt-4 text-sm font-semibold text-white">
-              Perfil de estudo
-            </p>
-            <div className="mt-4 grid gap-3">
-              {data.onboardingSummary.length === 0 ? (
-                <p className="text-sm leading-6 text-muted">
-                  O perfil aparece depois do onboarding premium.
-                </p>
-              ) : (
-                data.onboardingSummary.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-md border border-border-soft bg-background p-3"
-                  >
-                    <p className="text-xs font-semibold uppercase text-muted">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-white">
-                      {item.value}
-                    </p>
-                  </div>
-                ))
-              )}
-            </div>
-          </article>
-
-          {!data.hasPaidAccess ? (
-            <article className="rounded-md border border-border-soft bg-surface p-5">
-              <CircleDollarSign
-                className="size-5 text-pgm-yellow"
-                aria-hidden="true"
-              />
-              <p className="mt-4 text-sm font-medium text-muted">
-                Pagamento único
-              </p>
-              <p className="mt-2 text-4xl font-semibold text-white">
-                R$ 29,90
-              </p>
-              <div className="mt-5">
-                <PaymentButton disabled={data.accessStatus === "blocked"} />
-              </div>
-            </article>
-          ) : null}
-        </aside>
+        <ApprovalPlanPanel data={data} />
+        <StudentContextPanel data={data} />
       </section>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Recomendações personalizadas
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">
-              O que reforçar agora
-            </h2>
-          </div>
-          <Link
-            href="/analytics"
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
-          >
-            Ver analytics
-            <BarChart3 className="size-4" aria-hidden="true" />
-          </Link>
-        </div>
-
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
-          {data.recommendations.length === 0 ? (
-            <div className="rounded-md border border-border-soft bg-background p-4">
-              <BookOpenCheck className="size-5 text-pgm-yellow" aria-hidden="true" />
-              <p className="mt-4 text-sm font-semibold text-white">
-                Nenhuma lacuna crítica detectada
-              </p>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Continue seguindo a missão diária para gerar dados mais ricos.
-              </p>
-            </div>
-          ) : (
-            data.recommendations.map((recommendation) => (
-              <Link
-                key={`${recommendation.title}:${recommendation.href}`}
-                href={recommendation.href}
-                className="rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-sm font-semibold text-white">
-                      {recommendation.title}
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      {recommendation.description}
-                    </p>
-                  </div>
-                  <ArrowRight
-                    className="size-4 shrink-0 text-pgm-yellow"
-                    aria-hidden="true"
-                  />
-                </div>
-              </Link>
-            ))
-          )}
-        </div>
+      <section className="mt-6">
+        <RecommendationsPanel data={data} />
       </section>
 
       <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -465,20 +488,39 @@ export default async function DashboardPage() {
           value={data.stats.completedPaths}
           description="Sequências completas finalizadas."
           Icon={Route}
+          tone="success"
         />
         <MetricCard
           title="Preparação"
           value={`${data.preparation.percentage}%`}
           description="Cálculo com dados reais da plataforma."
           Icon={GraduationCap}
+          footer={
+            <ProgressBar
+              value={data.preparation.percentage}
+              label="Preparação"
+              size="sm"
+            />
+          }
         />
         <MetricCard
           title="Acesso"
           value={accessLabel[data.accessStatus]}
           description="Controle central em profiles.access_status."
           Icon={LockKeyhole}
+          tone={accessTone[data.accessStatus]}
         />
       </section>
+
+      <MobileActionBar label="Próxima ação do Painel de Missão">
+        <Link
+          href={data.nextAction.href}
+          className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white"
+        >
+          {data.nextAction.cta}
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
+      </MobileActionBar>
     </main>
   );
 }

@@ -1,42 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #080a0f;
-  --foreground: #f7f9fc;
-  --muted: #a9b4c3;
+  --background-primary: #080a0f;
+  --background-secondary: #0b1118;
   --surface: #10141b;
   --surface-elevated: #171d26;
+  --accent-gold: #f6c945;
+  --accent-gold-soft: rgba(246, 201, 69, 0.14);
+  --success: #14b86a;
+  --warning: #f59e0b;
+  --error: #f05252;
+  --text-primary: #f7f9fc;
+  --text-secondary: #c6d0df;
+  --text-muted: #a9b4c3;
   --border-soft: rgba(247, 249, 252, 0.14);
+  --border-strong: rgba(247, 249, 252, 0.26);
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.22);
+  --shadow-elevated: 0 28px 80px rgba(0, 0, 0, 0.32);
+  --shadow-modal: 0 32px 120px rgba(0, 0, 0, 0.48);
+  --shadow-premium: 0 22px 70px rgba(246, 201, 69, 0.12);
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+
+  --background: var(--background-primary);
+  --foreground: var(--text-primary);
+  --muted: var(--text-muted);
   --pgm-blue: #2f80ed;
-  --pgm-green: #14b86a;
-  --pgm-yellow: #f6c945;
-  --pgm-red: #f05252;
+  --pgm-green: var(--success);
+  --pgm-yellow: var(--accent-gold);
+  --pgm-red: var(--error);
 }
 
 @theme inline {
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-gold-soft: var(--accent-gold-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
   --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
   --color-pgm-blue: var(--pgm-blue);
   --color-pgm-green: var(--pgm-green);
   --color-pgm-yellow: var(--pgm-yellow);
   --color-pgm-red: var(--pgm-red);
+  --radius-ds-12: var(--radius-12);
+  --radius-ds-16: var(--radius-16);
+  --radius-ds-20: var(--radius-20);
+  --radius-ds-24: var(--radius-24);
+  --shadow-card: var(--shadow-card);
+  --shadow-elevated: var(--shadow-elevated);
+  --shadow-modal: var(--shadow-modal);
+  --shadow-premium: var(--shadow-premium);
+  --text-display-xl: 4.5rem;
+  --text-display-xl--line-height: 1;
+  --text-display-xl--font-weight: 700;
+  --text-display-lg: 3.75rem;
+  --text-display-lg--line-height: 1.05;
+  --text-display-lg--font-weight: 700;
+  --text-heading-1: 3rem;
+  --text-heading-1--line-height: 1.08;
+  --text-heading-1--font-weight: 700;
+  --text-heading-2: 2.25rem;
+  --text-heading-2--line-height: 1.12;
+  --text-heading-2--font-weight: 650;
+  --text-heading-3: 1.5rem;
+  --text-heading-3--line-height: 1.25;
+  --text-heading-3--font-weight: 650;
+  --text-body-large: 1.125rem;
+  --text-body-large--line-height: 1.75;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.45;
   --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
 }
 
 html {
-  background: var(--background);
+  background: var(--background-primary);
 }
 
 body {
   background:
     linear-gradient(180deg, rgba(47, 128, 237, 0.08) 0%, transparent 34%),
-    linear-gradient(180deg, #080a0f 0%, #0b1118 52%, #080a0f 100%);
-  color: var(--foreground);
+    linear-gradient(
+      180deg,
+      var(--background-primary) 0%,
+      var(--background-secondary) 52%,
+      var(--background-primary) 100%
+    );
+  color: var(--text-primary);
   font-family: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -59,7 +133,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--pgm-yellow);
+  outline: 2px solid var(--accent-gold);
   outline-offset: 3px;
 }
 

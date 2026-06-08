@@ -14,6 +14,7 @@ import {
   Trophy,
 } from "lucide-react";
 
+import { EmptyState, MetricCard, ProgressBar, StatusBadge } from "@/components/design-system";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import {
   getSimulationResult,
@@ -118,19 +119,14 @@ export default async function SimulationResultPage({ params }: PageProps) {
             Icon: Clock3,
           },
         ].map((item) => (
-          <article
+          <MetricCard
             key={item.title}
-            className="rounded-md border border-border-soft bg-surface p-5"
-          >
-            <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-            <p className="mt-5 text-sm font-medium text-muted">{item.title}</p>
-            <p className="mt-2 text-3xl font-semibold text-white">
-              {item.value}
-            </p>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              {item.description}
-            </p>
-          </article>
+            title={item.title}
+            value={item.value}
+            description={item.description}
+            Icon={item.Icon}
+            tone={item.title === "Erros" ? "warning" : "premium"}
+          />
         ))}
       </section>
 
@@ -228,15 +224,13 @@ export default async function SimulationResultPage({ params }: PageProps) {
         </div>
         <div className="mt-5 grid gap-4 lg:grid-cols-3">
           {result.recommendedPaths.length === 0 ? (
-            <div className="rounded-md border border-border-soft bg-background p-4">
-              <p className="text-sm font-semibold text-white">
-                Nenhuma trilha ativa encontrada
-              </p>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Assim que houver trilhas ativas, este relatório passará a
-                recomendar conteúdo existente da plataforma.
-              </p>
-            </div>
+            <EmptyState
+              title="Nenhuma trilha ativa encontrada"
+              description="Assim que houver trilhas ativas, este relatório passará a recomendar conteúdo existente da plataforma."
+              Icon={BookOpen}
+              compact
+              className="bg-background lg:col-span-3"
+            />
           ) : (
             result.recommendedPaths.map((path) => (
               <Link
@@ -258,9 +252,12 @@ export default async function SimulationResultPage({ params }: PageProps) {
                     aria-hidden="true"
                   />
                 </div>
-                <span className="mt-4 inline-flex rounded-md border border-border-soft px-3 py-1 text-xs font-semibold text-muted">
+                <StatusBadge
+                  tone={path.isPremium ? "premium" : "neutral"}
+                  className="mt-4"
+                >
                   {path.isPremium ? "Premium" : "Gratuito"}
-                </span>
+                </StatusBadge>
               </Link>
             ))
           )}
@@ -295,12 +292,12 @@ export default async function SimulationResultPage({ params }: PageProps) {
                   {category.percentage}%
                 </span>
               </div>
-              <div className="mt-3 h-2 rounded-full bg-surface">
-                <div
-                  className="h-2 rounded-full bg-pgm-yellow"
-                  style={{ width: `${category.percentage}%` }}
-                />
-              </div>
+              <ProgressBar
+                value={category.percentage}
+                label={category.categoryName}
+                size="sm"
+                className="mt-3"
+              />
             </div>
           ))}
         </div>

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { completePathGroupAction } from "@/app/(app)/learning-actions";
+import { ProgressBar, StatusBadge } from "@/components/design-system";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
 import { itemTypeLabel, languageLabel } from "@/lib/learning/labels";
@@ -80,12 +81,11 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
               <span>{path.completedItemCount} de {path.itemCount} itens</span>
               <span>{path.progressPercent}%</span>
             </div>
-            <div className="mt-2 h-2 rounded-full bg-background">
-              <div
-                className="h-2 rounded-full bg-pgm-yellow"
-                style={{ width: `${path.progressPercent}%` }}
-              />
-            </div>
+            <ProgressBar
+              value={path.progressPercent}
+              label="Progresso da trilha"
+              className="mt-2"
+            />
           </div>
 
           {!path.canAccess ? (
@@ -132,9 +132,9 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
                     <p className="text-sm font-semibold text-white">
                       {group.title}
                     </p>
-                    <span className="rounded-md border border-border-soft bg-background px-2 py-1 text-xs font-semibold text-pgm-yellow">
+                    <StatusBadge tone="premium">
                       {itemTypeLabel[group.itemType]}
-                    </span>
+                    </StatusBadge>
                   </div>
                   <p className="mt-2 text-sm leading-6 text-muted">
                     {group.description}

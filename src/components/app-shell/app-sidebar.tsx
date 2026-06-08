@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import {
   BarChart3,
   BookOpenCheck,
@@ -11,29 +15,74 @@ import {
   LifeBuoy,
   ListChecks,
   LogOut,
+  Menu,
   MessageSquareText,
-  Sparkles,
   PenLine,
   ShieldCheck,
+  Sparkles,
+  type LucideIcon,
 } from "lucide-react";
 
 import { signOutAction } from "@/app/(app)/actions";
+import { MobileDrawer, StatusBadge } from "@/components/design-system";
+import type { DesignSystemTone } from "@/components/design-system";
+import { cx } from "@/lib/design-system/utils";
 
-const appNavigation = [
-  { label: "Missão", href: "/dashboard", Icon: LayoutDashboard },
-  { label: "Analytics", href: "/analytics", Icon: BarChart3 },
-  { label: "Onboarding", href: "/onboarding", Icon: Sparkles },
-  { label: "Estudos", href: "/estudos", Icon: BookText },
-  { label: "Trilhas", href: "/trilhas", Icon: GraduationCap },
-  { label: "Flashcards", href: "/flashcards", Icon: Brain },
-  { label: "Subjetivas", href: "/subjetivas", Icon: PenLine },
-  { label: "Entrevista", href: "/entrevista", Icon: MessageSquareText },
-  { label: "Diagnóstico", href: "/diagnostico", Icon: Gauge },
-  { label: "Simulados", href: "/simulados", Icon: ListChecks },
-  { label: "Central de Sucesso", href: "/sucesso", Icon: LifeBuoy },
-  { label: "Planos", href: "/planos", Icon: CreditCard },
-  { label: "Academia PGM", href: "/premium", Icon: BookOpenCheck },
-];
+type NavigationItem = {
+  label: string;
+  href: string;
+  Icon: LucideIcon;
+};
+
+type NavigationGroup = {
+  label: string;
+  items: NavigationItem[];
+};
+
+const navigationGroups = [
+  {
+    label: "Hoje",
+    items: [
+      { label: "Missão", href: "/dashboard", Icon: LayoutDashboard },
+      { label: "Academia PGM", href: "/premium", Icon: BookOpenCheck },
+      { label: "Onboarding", href: "/onboarding", Icon: Sparkles },
+    ],
+  },
+  {
+    label: "Estudar",
+    items: [
+      { label: "Estudos", href: "/estudos", Icon: BookText },
+      { label: "Trilhas", href: "/trilhas", Icon: GraduationCap },
+      { label: "Flashcards", href: "/flashcards", Icon: Brain },
+    ],
+  },
+  {
+    label: "Praticar",
+    items: [
+      { label: "Simulados", href: "/simulados", Icon: ListChecks },
+      { label: "Subjetivas", href: "/subjetivas", Icon: PenLine },
+      { label: "Entrevista", href: "/entrevista", Icon: MessageSquareText },
+    ],
+  },
+  {
+    label: "Evolução",
+    items: [
+      { label: "Analytics", href: "/analytics", Icon: BarChart3 },
+      { label: "Diagnóstico", href: "/diagnostico", Icon: Gauge },
+    ],
+  },
+  {
+    label: "Ajuda",
+    items: [
+      { label: "Central de Sucesso", href: "/sucesso", Icon: LifeBuoy },
+      { label: "Mentor IA", href: "/mentor", Icon: Sparkles },
+    ],
+  },
+  {
+    label: "Conta",
+    items: [{ label: "Planos", href: "/planos", Icon: CreditCard }],
+  },
+] satisfies NavigationGroup[];
 
 type AppSidebarProps = {
   userName: string | null;
@@ -49,70 +98,190 @@ const accessStatusLabel = {
   refunded: "Reembolsado",
 } satisfies Record<AppSidebarProps["accessStatus"], string>;
 
+const accessStatusTone = {
+  free: "neutral",
+  paid: "premium",
+  blocked: "error",
+  refunded: "warning",
+} satisfies Record<AppSidebarProps["accessStatus"], DesignSystemTone>;
+
+function isActiveRoute(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function LogoMark() {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="flex size-10 items-center justify-center rounded-ds-16 bg-accent-gold text-background-primary shadow-premium">
+        <GraduationCap className="size-5" aria-hidden="true" />
+      </span>
+      <div className="leading-none">
+        <p className="text-sm font-semibold text-text-primary">PGM</p>
+        <p className="mt-1 text-xs font-medium uppercase text-text-muted">
+          Academy
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function NavigationList({
+  groups,
+  pathname,
+  onNavigate,
+}: {
+  groups: NavigationGroup[];
+  pathname: string;
+  onNavigate?: () => void;
+}) {
+  return (
+    <nav className="grid gap-5">
+      {groups.map((group) => (
+        <div key={group.label}>
+          <p className="mb-2 px-2 text-[11px] font-semibold uppercase text-text-muted">
+            {group.label}
+          </p>
+          <div className="grid gap-1.5">
+            {group.items.map((item) => {
+              const active = isActiveRoute(pathname, item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={onNavigate}
+                  aria-current={active ? "page" : undefined}
+                  className={cx(
+                    "inline-flex min-h-10 items-center gap-3 rounded-ds-12 border px-3 py-2 text-sm font-semibold transition",
+                    active
+                      ? "border-accent-gold/50 bg-accent-gold-soft text-text-primary"
+                      : "border-transparent text-text-muted hover:border-border-soft hover:bg-white/[0.04] hover:text-text-primary",
+                  )}
+                >
+                  <item.Icon
+                    className={cx(
+                      "size-4 shrink-0",
+                      active ? "text-accent-gold" : "text-text-muted",
+                    )}
+                    aria-hidden="true"
+                  />
+                  <span className="truncate">{item.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </nav>
+  );
+}
+
+function UserCard({
+  userName,
+  userEmail,
+  accessStatus,
+}: Pick<AppSidebarProps, "userName" | "userEmail" | "accessStatus">) {
+  return (
+    <div className="rounded-ds-16 border border-border-soft bg-background-primary/72 p-3">
+      <p className="truncate text-sm font-semibold text-text-primary">
+        {userName ?? "Aluno PGM"}
+      </p>
+      <p className="mt-1 truncate text-xs text-text-muted">{userEmail}</p>
+      <div className="mt-3">
+        <StatusBadge tone={accessStatusTone[accessStatus]}>
+          {accessStatusLabel[accessStatus]}
+        </StatusBadge>
+      </div>
+    </div>
+  );
+}
+
+function SignOutButton() {
+  return (
+    <form action={signOutAction}>
+      <button
+        type="submit"
+        className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-ds-12 border border-border-soft bg-background-primary/50 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:bg-white/[0.04] hover:text-text-primary"
+      >
+        Sair
+        <LogOut className="size-4" aria-hidden="true" />
+      </button>
+    </form>
+  );
+}
+
 export function AppSidebar({
   userName,
   userEmail,
   accessStatus,
   userRole,
 }: AppSidebarProps) {
-  const navigation =
+  const pathname = usePathname();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const groups =
     userRole === "admin"
       ? [
-          ...appNavigation,
-          { label: "Admin", href: "/admin", Icon: ShieldCheck },
+          ...navigationGroups,
+          {
+            label: "Admin",
+            items: [{ label: "Admin", href: "/admin", Icon: ShieldCheck }],
+          },
         ]
-      : appNavigation;
+      : navigationGroups;
 
   return (
-    <aside className="border-b border-border-soft bg-surface/92 backdrop-blur lg:sticky lg:top-0 lg:min-h-screen lg:border-b-0 lg:border-r">
-      <div className="flex h-16 items-center gap-3 px-4 sm:px-6 lg:px-5">
-        <span className="flex size-10 items-center justify-center rounded-md bg-pgm-yellow text-background shadow-[0_14px_34px_rgba(246,201,69,0.18)]">
-          <GraduationCap className="size-5" aria-hidden="true" />
-        </span>
-        <div className="leading-none">
-          <p className="text-sm font-semibold text-white">
-            PGM
-          </p>
-          <p className="mt-1 text-xs font-medium uppercase text-muted">
-            Academy
-          </p>
+    <aside className="sticky top-0 z-30 border-b border-border-soft bg-surface/95 backdrop-blur lg:min-h-screen lg:border-b-0 lg:border-r">
+      <div className="flex h-16 items-center justify-between gap-3 px-4 sm:px-6 lg:px-5">
+        <LogoMark />
+        <button
+          type="button"
+          className="inline-flex h-10 items-center justify-center gap-2 rounded-ds-12 border border-border-soft px-3 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:text-text-primary lg:hidden"
+          aria-label="Abrir navegação"
+          onClick={() => setDrawerOpen(true)}
+        >
+          <Menu className="size-4" aria-hidden="true" />
+          Menu
+        </button>
+      </div>
+
+      <div className="hidden lg:block">
+        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto px-5 pb-5">
+          <NavigationList groups={groups} pathname={pathname} />
+
+          <div className="mt-6 border-t border-border-soft pt-4">
+            <UserCard
+              userName={userName}
+              userEmail={userEmail}
+              accessStatus={accessStatus}
+            />
+            <div className="mt-3">
+              <SignOutButton />
+            </div>
+          </div>
         </div>
       </div>
 
-      <nav className="flex gap-2 overflow-x-auto px-4 pb-4 sm:px-6 lg:grid lg:px-5">
-        {navigation.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="inline-flex h-11 shrink-0 items-center gap-3 rounded-md border border-border-soft bg-background/72 px-4 text-sm font-semibold text-muted transition hover:border-pgm-yellow/45 hover:bg-white/[0.04] hover:text-white lg:w-full"
-          >
-            <item.Icon className="size-4" aria-hidden="true" />
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-
-      <div className="border-t border-border-soft px-4 py-4 sm:px-6 lg:mx-5 lg:mt-2 lg:px-0">
-        <div className="rounded-md border border-border-soft bg-background/72 p-3">
-          <p className="truncate text-sm font-semibold text-white">
-            {userName ?? "Aluno PGM"}
-          </p>
-          <p className="mt-1 truncate text-xs text-muted">{userEmail}</p>
-          <p className="mt-3 inline-flex rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 px-2 py-1 text-xs font-semibold text-pgm-yellow">
-            {accessStatusLabel[accessStatus]}
-          </p>
-        </div>
-
-        <form action={signOutAction} className="mt-3">
-          <button
-            type="submit"
-            className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md border border-border-soft bg-background/50 text-sm font-semibold text-muted transition hover:border-white/35 hover:bg-white/[0.04] hover:text-white"
-          >
-            Sair
-            <LogOut className="size-4" aria-hidden="true" />
-          </button>
-        </form>
-      </div>
+      <MobileDrawer
+        open={drawerOpen}
+        title="Navegação"
+        onClose={() => setDrawerOpen(false)}
+        footer={
+          <div className="grid gap-3">
+            <UserCard
+              userName={userName}
+              userEmail={userEmail}
+              accessStatus={accessStatus}
+            />
+            <SignOutButton />
+          </div>
+        }
+      >
+        <NavigationList
+          groups={groups}
+          pathname={pathname}
+          onNavigate={() => setDrawerOpen(false)}
+        />
+      </MobileDrawer>
     </aside>
   );
 }
