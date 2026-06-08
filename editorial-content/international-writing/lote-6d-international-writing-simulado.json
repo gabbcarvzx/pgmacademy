@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "WR-MX-0001",
+      "title": "Simulado Escrita Internacional 1",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0002",
+      "title": "Simulado Escrita Internacional 2",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0003",
+      "title": "Simulado Escrita Internacional 3",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0004",
+      "title": "Simulado Escrita Internacional 4",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0005",
+      "title": "Simulado Escrita Internacional 5",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0006",
+      "title": "Simulado Escrita Internacional 6",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0007",
+      "title": "Simulado Escrita Internacional 7",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0008",
+      "title": "Simulado Escrita Internacional 8",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0009",
+      "title": "Simulado Escrita Internacional 9",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-MX-0010",
+      "title": "Simulado Escrita Internacional 10",
+      "statement": "Ao elaborar uma resposta subjetiva para um processo de intercâmbio, qual prática contribui para uma redação mais eficaz?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar ideias, manter clareza e desenvolver a resposta de forma coerente."
+        },
+        {
+          "label": "B",
+          "text": "Responder sem seguir uma estrutura lógica."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o tema proposto e escrever sobre outro assunto."
+        },
+        {
+          "label": "D",
+          "text": "Usar frases desconectadas sem explicação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva combina estrutura, clareza e coerência. Isso facilita a compreensão do avaliador e demonstra capacidade de comunicação escrita.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

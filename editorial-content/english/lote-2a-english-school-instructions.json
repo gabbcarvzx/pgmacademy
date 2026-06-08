@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ENG-LS-0001",
+      "title": "School instruction: schedule change",
+      "statement": "Read the school announcement:\n\n\"Attention, exchange students. Tomorrow's language support class will begin at 9:30 a.m. instead of 8:30 a.m. Please arrive ten minutes early and bring your student notebook. The classroom will be Room 204, not Room 112 as previously informed.\"\n\nWhat is the main idea of the announcement?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "The language support class has a new time and room."
+        },
+        {
+          "label": "B",
+          "text": "The language support class has been canceled."
+        },
+        {
+          "label": "C",
+          "text": "Students must bring lunch to Room 112."
+        },
+        {
+          "label": "D",
+          "text": "Exchange students should arrive after 9:30 a.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The announcement mainly informs students that the class time and classroom have changed. It does not cancel the class, mention lunch, or tell students to arrive late.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "announcement",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0002",
+      "title": "School instruction: field trip reminder",
+      "statement": "Read the announcement:\n\n\"Students going on the museum visit must meet at the main entrance at 8:15 a.m. Bring your ID card, a water bottle, and a signed permission form. Students without the form will remain at school and complete an alternative activity.\"\n\nWhat is the main idea of the announcement?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students need specific items and a signed form for the museum visit."
+        },
+        {
+          "label": "B",
+          "text": "The museum visit will take place after school."
+        },
+        {
+          "label": "C",
+          "text": "Students without ID cards will travel without permission."
+        },
+        {
+          "label": "D",
+          "text": "The permission form is optional for exchange students."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The announcement lists the meeting time and required items, especially the signed permission form. The other options contradict the instructions or add information not present.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "field-trip",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0003",
+      "title": "School instruction: group project",
+      "statement": "Read the teacher's instruction:\n\n\"For the group presentation, each student must speak for at least one minute. You may use notes, but do not read the entire text from your paper. Your group should include one visual aid, such as a poster, slide, or chart.\"\n\nWhat can be inferred from the instruction?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students are expected to speak naturally and use notes only as support."
+        },
+        {
+          "label": "B",
+          "text": "Students should remain silent while one person presents everything."
+        },
+        {
+          "label": "C",
+          "text": "Visual aids are prohibited in the presentation."
+        },
+        {
+          "label": "D",
+          "text": "Students must memorize the entire presentation without notes."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The teacher allows notes but says students should not read the whole text. This implies that notes are for support, while students are expected to speak more naturally. A visual aid is required, not prohibited.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "presentation",
+        "inference"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0004",
+      "title": "School instruction: safety rules",
+      "statement": "Read the lab instruction:\n\n\"Before starting the experiment, put on your safety glasses and wait for your teacher's signal. Do not touch any chemical materials until your group has read the procedure. If something spills, raise your hand immediately and step back from the table.\"\n\nWhat is the main idea of the instruction?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students must follow safety procedures before and during the experiment."
+        },
+        {
+          "label": "B",
+          "text": "Students should begin the experiment before the teacher arrives."
+        },
+        {
+          "label": "C",
+          "text": "Students may touch chemicals before reading the procedure."
+        },
+        {
+          "label": "D",
+          "text": "Students should clean spills without telling the teacher."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The instruction emphasizes safety: wearing glasses, waiting for the teacher, reading procedures, and reporting spills. The other options contradict the safety rules.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "safety",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0005",
+      "title": "School instruction: library notice",
+      "statement": "Read the library notice:\n\n\"The school library will be closed during lunch on Wednesday because of a staff meeting. Students may return books before first period or after 2:00 p.m. Online resources will remain available throughout the day using the student login.\"\n\nWhat is the main idea of the notice?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "The library has limited physical access on Wednesday, but online resources remain available."
+        },
+        {
+          "label": "B",
+          "text": "The library will be permanently closed after Wednesday."
+        },
+        {
+          "label": "C",
+          "text": "Students cannot return books at any time on Wednesday."
+        },
+        {
+          "label": "D",
+          "text": "Online resources will be unavailable during the staff meeting."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The notice says the library is closed only during lunch, gives return times, and states that online resources remain available. Option A summarizes these points accurately.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "library",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0006",
+      "title": "School instruction: late arrival",
+      "statement": "Read the school office message:\n\n\"If you arrive after the first bell, go directly to the office before entering class. The secretary will give you a late pass. Do not enter the classroom without it, because teachers must record attendance correctly.\"\n\nWhat can be inferred from the message?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The late pass helps the school manage attendance accurately."
+        },
+        {
+          "label": "B",
+          "text": "Students who are late should go home immediately."
+        },
+        {
+          "label": "C",
+          "text": "Teachers do not need to know who is present."
+        },
+        {
+          "label": "D",
+          "text": "Late students may enter class without informing anyone."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The message connects the late pass to correct attendance records. Therefore, it can be inferred that the pass is part of the school's attendance control process.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "attendance",
+        "inference"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0007",
+      "title": "School instruction: sports practice",
+      "statement": "Read the coach's message:\n\n\"Soccer practice will take place indoors today because of heavy rain. Students should bring clean shoes and meet in the gym instead of the field. If you do not have clean shoes, you may still watch the practice from the benches.\"\n\nWhat is the main idea of the message?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Soccer practice has moved indoors and students need clean shoes to participate."
+        },
+        {
+          "label": "B",
+          "text": "Soccer practice has been canceled because of the rain."
+        },
+        {
+          "label": "C",
+          "text": "Students must meet on the field as usual."
+        },
+        {
+          "label": "D",
+          "text": "Students without clean shoes must leave school."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The message explains that practice will happen in the gym, not on the field, and that clean shoes are needed to participate. Watching is allowed for students without clean shoes.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "sports",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0008",
+      "title": "School instruction: assignment deadline",
+      "statement": "Read the teacher's message:\n\n\"Your reflection paragraph is due on Friday at 3:00 p.m. Submit it through the online classroom platform, not by email. If you have trouble uploading the file, send a message before the deadline so I can help you solve the problem.\"\n\nWhat can be inferred from the teacher's message?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students are expected to communicate technical problems before the deadline."
+        },
+        {
+          "label": "B",
+          "text": "Students should email the assignment after the deadline."
+        },
+        {
+          "label": "C",
+          "text": "The teacher will not help students with upload problems."
+        },
+        {
+          "label": "D",
+          "text": "The assignment has no specific submission time."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The teacher gives a deadline and asks students to report upload problems before that time. This implies that early communication is expected when technical issues happen.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "deadline",
+        "inference"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0009",
+      "title": "School instruction: cafeteria rules",
+      "statement": "Read the cafeteria notice:\n\n\"Please keep your lunch table clean. Before leaving, throw away your trash, return trays to the counter, and push your chair back under the table. These small actions help the next group of students use the cafeteria comfortably.\"\n\nWhat is the main idea of the notice?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should clean their area so others can use the cafeteria comfortably."
+        },
+        {
+          "label": "B",
+          "text": "Students should leave trays and trash on the table."
+        },
+        {
+          "label": "C",
+          "text": "The cafeteria is closed to exchange students."
+        },
+        {
+          "label": "D",
+          "text": "Students must eat lunch in the classroom."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The notice gives specific cleaning instructions and explains that they help the next group. Option A summarizes both the action and the reason behind it.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "cafeteria",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0010",
+      "title": "School instruction: counselor appointment",
+      "statement": "Read the counselor's message:\n\n\"If you need to discuss academic stress, cultural adaptation, or problems with your host routine, you can schedule a short appointment with the school counselor. The service is confidential, except when there is a serious safety concern. Asking for support is considered a responsible step.\"\n\nWhat is the main idea of the message?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students can responsibly seek confidential support for academic or adaptation difficulties."
+        },
+        {
+          "label": "B",
+          "text": "Students should avoid talking about stress or adaptation problems."
+        },
+        {
+          "label": "C",
+          "text": "Counselor appointments are only for serious punishments."
+        },
+        {
+          "label": "D",
+          "text": "Host routine problems cannot be discussed at school."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The message explains that students can schedule appointments for stress, adaptation, or host routine concerns and states that seeking support is responsible. The confidentiality note adds nuance but does not change the main idea.",
+      "tags": [
+        "sprint-6b-3",
+        "school-instructions",
+        "counselor",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

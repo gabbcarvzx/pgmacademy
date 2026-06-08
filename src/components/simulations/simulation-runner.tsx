@@ -1,11 +1,13 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { type FormEvent, useEffect, useMemo, useState, useTransition } from "react";
 import {
+  AlertTriangle,
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
   Circle,
+  Clock3,
   Loader2,
   Send,
 } from "lucide-react";
@@ -18,14 +20,19 @@ import type { SimulationRunnerView } from "@/lib/simulations/service";
 
 type SimulationRunnerProps = {
   attemptId: string;
+  startedAt: string;
+  durationMinutes: number;
   questions: SimulationRunnerView["questions"];
 };
 
 export function SimulationRunner({
   attemptId,
+  startedAt,
+  durationMinutes,
   questions,
 }: SimulationRunnerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [now, setNow] = useState(() => Date.now());
   const [selectedOptionIds, setSelectedOptionIds] = useState(() => {
     return new Map(
       questions.map((question) => [question.id, question.selectedOptionId]),
@@ -40,10 +47,22 @@ export function SimulationRunner({
         .length,
     [questions, selectedOptionIds],
   );
+  const unansweredCount = questions.length - answeredCount;
   const progressPercent =
     questions.length === 0
       ? 0
       : Math.round((answeredCount / questions.length) * 100);
+  const startedAtTime = useMemo(() => new Date(startedAt).getTime(), [startedAt]);
+  const durationMs = durationMinutes * 60 * 1000;
+  const elapsedMs = Math.max(now - startedAtTime, 0);
+  const remainingMs = Math.max(durationMs - elapsedMs, 0);
+  const isTimeOver = durationMs > 0 && remainingMs === 0;
+  const elapsedMinutes = Math.max(Math.floor(elapsedMs / 60000), 0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   function goToQuestion(index: number) {
     setCurrentIndex(Math.min(Math.max(index, 0), questions.length - 1));
@@ -65,9 +84,34 @@ export function SimulationRunner({
           selectedOptionId,
         });
       } catch {
-        setSaveError("Não foi possível salvar está resposta. Tente novamente.");
+        setSaveError("Não foi possível salvar esta resposta. Tente novamente.");
       }
     });
+  }
+
+  function formatDuration(milliseconds: number) {
+    const totalSeconds = Math.max(Math.floor(milliseconds / 1000), 0);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return [hours, minutes, seconds]
+      .map((part) => String(part).padStart(2, "0"))
+      .join(":");
+  }
+
+  function handleFinishSubmit(event: FormEvent<HTMLFormElement>) {
+    if (unansweredCount === 0) {
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Você ainda tem ${unansweredCount} questão(ões) sem resposta. Deseja finalizar mesmo assim?`,
+    );
+
+    if (!confirmed) {
+      event.preventDefault();
+    }
   }
 
   if (!currentQuestion) {
@@ -194,6 +238,36 @@ export function SimulationRunner({
 
       <aside className="grid gap-4 self-start">
         <article className="rounded-md border border-border-soft bg-surface p-5">
+          <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-4">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase text-pgm-yellow">
+                  Cronômetro oficial
+                </p>
+                <p className="mt-2 font-mono text-3xl font-semibold text-white">
+                  {formatDuration(remainingMs)}
+                </p>
+              </div>
+              <Clock3 className="size-6 text-pgm-yellow" aria-hidden="true" />
+            </div>
+            <p className="mt-3 text-xs leading-5 text-muted">
+              Tempo de referência: {durationMinutes} min. Tempo gasto:{" "}
+              {elapsedMinutes} min.
+            </p>
+            {isTimeOver ? (
+              <p className="mt-3 inline-flex items-start gap-2 rounded-md border border-red-300/40 bg-red-400/10 px-3 py-2 text-xs font-semibold leading-5 text-red-200">
+                <AlertTriangle
+                  className="mt-0.5 size-4 shrink-0"
+                  aria-hidden="true"
+                />
+                Tempo oficial esgotado. Revise o mínimo necessário e finalize a
+                tentativa.
+              </p>
+            ) : null}
+          </div>
+        </article>
+
+        <article className="rounded-md border border-border-soft bg-surface p-5">
           <p className="text-sm font-semibold text-white">Revisão</p>
           <p className="mt-2 text-sm leading-6 text-muted">
             {answeredCount} de {questions.length} respondidas. Você pode voltar
@@ -245,7 +319,11 @@ export function SimulationRunner({
             ))}
           </ul>
 
-          <form action={finishSimulationAttemptAction} className="mt-5">
+          <form
+            action={finishSimulationAttemptAction}
+            className="mt-5"
+            onSubmit={handleFinishSubmit}
+          >
             <input type="hidden" name="attemptId" value={attemptId} />
             <button
               type="submit"

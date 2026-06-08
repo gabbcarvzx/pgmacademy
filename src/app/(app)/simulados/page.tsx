@@ -7,6 +7,7 @@ import {
   History,
   ListChecks,
   LockKeyhole,
+  PencilLine,
   ShieldCheck,
   Trophy,
 } from "lucide-react";
@@ -14,12 +15,16 @@ import {
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
 import { languageLabel } from "@/lib/learning/labels";
+import {
+  officialSubjectiveSimulation,
+  simulationDurationMinutes,
+} from "@/lib/simulations/official-pgm";
 import { getSimulationOverview } from "@/lib/simulations/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Simulados",
-  description: "Simulados objetivos da PGM Academy.",
+  description: "Simulados oficiais objetivos e subjetivos da PGM Academy.",
 };
 
 const accessLabel = {
@@ -37,7 +42,7 @@ const statusLabel = {
 
 const typeLabel = {
   quick: "Rápido",
-  full: "Completo",
+  full: "Oficial PGM",
 } as const;
 
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
@@ -45,10 +50,6 @@ const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   month: "2-digit",
   year: "numeric",
 });
-
-function estimatedMinutes(totalQuestions: number) {
-  return Math.max(Math.ceil(totalQuestions * 1.5), 10);
-}
 
 function lockLabel(reason: string | null) {
   if (reason === "premium_required") return "Premium bloqueado";
@@ -135,6 +136,46 @@ export default async function SimuladosPage() {
       </section>
 
       <section className="mt-6">
+        <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
+                Simulado subjetivo oficial
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
+                {officialSubjectiveSimulation.title}
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+                {officialSubjectiveSimulation.description} O envio usa a fila de
+                correção manual já existente e prepara a arquitetura para
+                avaliação por rubrica.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[430px]">
+              <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                {officialSubjectiveSimulation.questionCount} questões
+              </span>
+              <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                {officialSubjectiveSimulation.minWords}-
+                {officialSubjectiveSimulation.maxWords} palavras
+              </span>
+              <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-2 text-sm font-semibold text-pgm-yellow">
+                Premium
+              </span>
+            </div>
+          </div>
+
+          <Link
+            href="/simulados/subjetivo-oficial"
+            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
+          >
+            Abrir subjetivo oficial
+            <PencilLine className="size-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -204,7 +245,7 @@ export default async function SimuladosPage() {
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     <Clock3 className="size-4" aria-hidden="true" />
-                    {estimatedMinutes(template.total_questions)} min
+                    {simulationDurationMinutes(template)} min
                   </span>
                   <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     {template.availableQuestionCount} no banco

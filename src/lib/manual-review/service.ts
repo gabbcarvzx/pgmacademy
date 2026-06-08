@@ -4,6 +4,11 @@ import {
   canAccessPremiumContent,
   hasPremiumAccess,
 } from "@/lib/access/premium";
+import {
+  officialSubjectiveRubric,
+  officialSubjectiveSimulation,
+  validateOfficialSubjectiveAnswer,
+} from "@/lib/simulations/official-pgm";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -128,6 +133,20 @@ export type ManualReviewStats = {
   psychosocialReviewed: number;
   psychosocialAverage: number;
   feedbacksReceived: number;
+};
+
+export type OfficialSubjectiveSimulationView = {
+  accessStatus: AccessStatus;
+  hasPaidAccess: boolean;
+  canSubmit: boolean;
+  blockingReason: string | null;
+  questionCount: number;
+  minWords: number;
+  maxWords: number;
+  maxScore: number;
+  pointsPerQuestion: number;
+  rubric: typeof officialSubjectiveRubric;
+  questions: ManualQuestionCard[];
 };
 
 export type ManualReviewFilters = {
@@ -431,6 +450,123 @@ export async function getSubjectiveQuestionList(
       difficulties: [...new Set(cards.map((card) => card.difficulty))],
     },
   };
+}
+
+export async function getOfficialSubjectiveSimulation(
+  userId: string,
+): Promise<OfficialSubjectiveSimulationView> {
+  const list = await getSubjectiveQuestionList(userId, {});
+  const questions = list.questions
+    .slice(0, officialSubjectiveSimulation.questionCount)
+    .map((question) => ({
+      ...question,
+      canSubmit: question.canSubmit && question.latestStatus !== "pending",
+    }));
+  const hasEnoughQuestions =
+    questions.length === officialSubjectiveSimulation.questionCount;
+  const hasPendingAnswer = questions.some(
+    (question) => question.latestStatus === "pending",
+  );
+  const allQuestionsAvailable = questions.every((question) => question.canSubmit);
+  let blockingReason: string | null = null;
+
+  if (!list.hasPaidAccess) {
+    blockingReason =
+      "O simulado subjetivo oficial está disponível apenas para alunos premium.";
+  } else if (!hasEnoughQuestions) {
+    blockingReason =
+      "Ainda não há 5 questões subjetivas ativas para montar o simulado oficial.";
+  } else if (hasPendingAnswer) {
+    blockingReason =
+      "Você já possui resposta pendente em uma das questões oficiais. Aguarde a correção antes de reenviar.";
+  } else if (!allQuestionsAvailable) {
+    blockingReason =
+      "Uma ou mais questões do simulado oficial estão indisponíveis para envio.";
+  }
+
+  return {
+    accessStatus: list.accessStatus,
+    hasPaidAccess: list.hasPaidAccess,
+    canSubmit:
+      list.hasPaidAccess &&
+      hasEnoughQuestions &&
+      !hasPendingAnswer &&
+      allQuestionsAvailable,
+    blockingReason,
+    questionCount: officialSubjectiveSimulation.questionCount,
+    minWords: officialSubjectiveSimulation.minWords,
+    maxWords: officialSubjectiveSimulation.maxWords,
+    maxScore: officialSubjectiveSimulation.maxScore,
+    pointsPerQuestion: officialSubjectiveSimulation.pointsPerQuestion,
+    rubric: officialSubjectiveRubric,
+    questions,
+  };
+}
+
+export async function submitOfficialSubjectiveSimulation(
+  userId: string,
+  answers: Array<{ questionId: string; answerText: string }>,
+) {
+  const admin = getSupabaseAdminClient();
+  const profile = await getProfile(userId);
+
+  if (!hasPremiumAccess(profile)) {
+    throw new Error("Envio do simulado subjetivo oficial é um recurso premium.");
+  }
+
+  const simulation = await getOfficialSubjectiveSimulation(userId);
+
+  if (!simulation.canSubmit) {
+    throw new Error(
+      simulation.blockingReason ?? "Simulado subjetivo oficial indisponível.",
+    );
+  }
+
+  const expectedQuestionIds = new Set(
+    simulation.questions.map((question) => question.id),
+  );
+  const answerByQuestionId = new Map(
+    answers.map((answer) => [answer.questionId, answer.answerText]),
+  );
+
+  if (answerByQuestionId.size !== simulation.questions.length) {
+    throw new Error("Envie uma resposta para cada questão subjetiva oficial.");
+  }
+
+  const rows = simulation.questions.map((question) => {
+    if (!expectedQuestionIds.has(question.id)) {
+      throw new Error("Questão subjetiva inválida para este simulado.");
+    }
+
+    const answerText = answerByQuestionId.get(question.id);
+    if (!answerText) {
+      throw new Error("Envie uma resposta para cada questão subjetiva oficial.");
+    }
+
+    const normalizedAnswer = normalizeAnswer(answerText);
+    const validation = validateOfficialSubjectiveAnswer(normalizedAnswer);
+
+    if (!validation.valid) {
+      throw new Error(
+        `A resposta "${question.title}" possui ${validation.count} palavra(s). Cada resposta deve ter entre ${simulation.minWords} e ${simulation.maxWords} palavras.`,
+      );
+    }
+
+    return {
+      tenant_id: profile.tenant_id,
+      user_id: userId,
+      question_id: question.id,
+      answer_text: normalizedAnswer,
+      status: "pending" as const,
+      max_score: simulation.pointsPerQuestion,
+    };
+  });
+
+  const { error } = await admin.from("subjective_attempts").insert(rows);
+
+  if (error) {
+    throw new Error("Não foi possível enviar o simulado subjetivo oficial.");
+  }
 }
 
 export async function getSubjectiveQuestionDetail(userId: string, questionId: string) {

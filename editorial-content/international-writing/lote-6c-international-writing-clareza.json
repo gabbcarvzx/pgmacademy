@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "WR-CL-0001",
+      "title": "Clareza textual 1",
+      "statement": "Leia a situação:\n\n\"Uma resposta subjetiva apresenta muitas ideias, mas o leitor não consegue identificar claramente a mensagem principal.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0002",
+      "title": "Clareza textual 2",
+      "statement": "Leia a situação:\n\n\"Um candidato usa frases muito longas e confusas ao explicar por que deseja participar do intercâmbio.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0003",
+      "title": "Clareza textual 3",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer responder dentro do limite de palavras sem perder objetividade.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0004",
+      "title": "Clareza textual 4",
+      "statement": "Leia a situação:\n\n\"Um aluno escreve uma resposta com informações repetidas e pouco foco no tema proposto.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0005",
+      "title": "Clareza textual 5",
+      "statement": "Leia a situação:\n\n\"Uma candidata precisa explicar uma situação de adaptação cultural de forma direta e compreensível.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0006",
+      "title": "Clareza textual 6",
+      "statement": "Leia a situação:\n\n\"Um estudante quer revisar sua resposta para remover trechos desnecessários.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0007",
+      "title": "Clareza textual 7",
+      "statement": "Leia a situação:\n\n\"Uma resposta possui boa intenção, mas mistura exemplos sem explicar a relação com o tema.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0008",
+      "title": "Clareza textual 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer tornar o fechamento da resposta mais claro.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0009",
+      "title": "Clareza textual 9",
+      "statement": "Leia a situação:\n\n\"Um candidato precisa evitar ambiguidades em uma resposta sobre host family.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CL-0010",
+      "title": "Clareza textual 10",
+      "statement": "Leia a situação:\n\n\"Uma resposta subjetiva precisa ser objetiva, compreensível e adequada ao comando da questão.\"\n\nQual estratégia melhora a clareza da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "clareza",
+      "competence": "writing-keep-clarity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Escrever com objetividade, foco no tema e frases compreensíveis."
+        },
+        {
+          "label": "B",
+          "text": "Aumentar a resposta com informações repetidas e sem relação com o tema."
+        },
+        {
+          "label": "C",
+          "text": "Usar frases confusas para parecer mais complexo."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar o comando da questão e escrever sobre outro assunto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a clareza depende de objetividade, foco e organização compreensível das ideias. As demais alternativas prejudicam a leitura, criam confusão ou afastam a resposta do tema solicitado.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "clareza"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ type PageProps = {
 
 const typeLabel = {
   quick: "Rápido",
-  full: "Completo",
+  full: "Oficial PGM",
 } as const;
 
 export async function generateMetadata({
@@ -125,9 +125,12 @@ export default async function SimulationStartPage({ params }: PageProps) {
             <ul className="mt-4 grid gap-3">
               {[
                 "Leia cada enunciado com calma antes de marcar uma alternativa.",
-                "Sua resposta e salva automaticamente durante a tentativa.",
+                "Sua resposta é salva automaticamente durante a tentativa.",
                 "Você pode revisar as questões antes de finalizar.",
-                "O gabarito e as explicacoes aparecem somente depois da finalização.",
+                "O gabarito e as explicações aparecem somente depois da finalização.",
+                data.template.type === "full"
+                  ? "Use o cronômetro como referência profissional de 4 horas."
+                  : "Use o cronômetro para treinar ritmo e foco.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-6 text-muted">
                   <CheckCircle2

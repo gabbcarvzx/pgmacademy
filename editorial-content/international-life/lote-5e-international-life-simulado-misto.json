@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "LIFE-SM-0001",
+      "title": "Simulado Vida Internacional 1",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0002",
+      "title": "Simulado Vida Internacional 2",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0003",
+      "title": "Simulado Vida Internacional 3",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0004",
+      "title": "Simulado Vida Internacional 4",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0005",
+      "title": "Simulado Vida Internacional 5",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0006",
+      "title": "Simulado Vida Internacional 6",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0007",
+      "title": "Simulado Vida Internacional 7",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0008",
+      "title": "Simulado Vida Internacional 8",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0009",
+      "title": "Simulado Vida Internacional 9",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SM-0010",
+      "title": "Simulado Vida Internacional 10",
+      "statement": "Leia a situação:\n\n\"Você está participando de um intercâmbio e encontra uma situação envolvendo escola, cultura ou convivência com a host family.\"\n\nQual atitude demonstra melhor adaptação internacional?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, comunicação e adaptação ao contexto."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar regras e orientações locais."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer interação com outras pessoas."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas seus hábitos estão corretos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra competências importantes para a vida internacional: respeito cultural, comunicação, responsabilidade e adaptação. As demais atitudes dificultam a convivência e o aprendizado durante o intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

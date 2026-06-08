@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PSY-RC-0001",
+      "title": "Resolução de conflitos 1",
+      "statement": "Leia a situação:\n\n\"Um intercambista teve um desacordo com um colega sobre a divisão de tarefas em um projeto escolar.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0002",
+      "title": "Resolução de conflitos 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante percebeu que uma fala sua foi mal interpretada por membros da host family.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0003",
+      "title": "Resolução de conflitos 3",
+      "statement": "Leia a situação:\n\n\"Um aluno está incomodado com uma regra da casa, mas não sabe como conversar sobre isso.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0004",
+      "title": "Resolução de conflitos 4",
+      "statement": "Leia a situação:\n\n\"Uma intercambista discorda de uma decisão do grupo durante uma atividade.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0005",
+      "title": "Resolução de conflitos 5",
+      "statement": "Leia a situação:\n\n\"Um estudante ouviu um comentário que o deixou desconfortável e precisa responder com maturidade.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0006",
+      "title": "Resolução de conflitos 6",
+      "statement": "Leia a situação:\n\n\"Uma aluna quer resolver uma tensão com uma colega sem criar constrangimento.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0007",
+      "title": "Resolução de conflitos 7",
+      "statement": "Leia a situação:\n\n\"Um intercambista percebe que um problema pequeno pode crescer se não for conversado.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0008",
+      "title": "Resolução de conflitos 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa pedir desculpas após agir de forma impulsiva.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0009",
+      "title": "Resolução de conflitos 9",
+      "statement": "Leia a situação:\n\n\"Um aluno quer apresentar seu ponto de vista sem desrespeitar outra pessoa.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-RC-0010",
+      "title": "Resolução de conflitos 10",
+      "statement": "Leia a situação:\n\n\"Uma intercambista busca uma solução equilibrada para um conflito de convivência.\"\n\nQual atitude demonstra melhor resolução de conflitos?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dialogar com respeito, ouvir o outro lado e buscar uma solução equilibrada."
+        },
+        {
+          "label": "B",
+          "text": "Evitar qualquer conversa e deixar o problema aumentar."
+        },
+        {
+          "label": "C",
+          "text": "Responder com agressividade para impor sua opinião."
+        },
+        {
+          "label": "D",
+          "text": "Culpar outras pessoas sem tentar compreender a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque resolver conflitos exige diálogo respeitoso, escuta ativa, responsabilidade e busca por uma solução equilibrada. A alternativa B evita o problema. A alternativa C aumenta a tensão. A alternativa D impede compreensão e cooperação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "resolucao-de-conflitos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PSY-DC-0001",
+      "title": "Diversidade cultural 1",
+      "statement": "Leia a situação:\n\n\"Um intercambista conhece colegas com costumes muito diferentes dos seus.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0002",
+      "title": "Diversidade cultural 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante participa de uma celebração cultural desconhecida.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0003",
+      "title": "Diversidade cultural 3",
+      "statement": "Leia a situação:\n\n\"Um aluno ouve opiniões diferentes das que costuma ouvir em seu ambiente social.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0004",
+      "title": "Diversidade cultural 4",
+      "statement": "Leia a situação:\n\n\"Uma intercambista convive com pessoas de nacionalidades diversas.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0005",
+      "title": "Diversidade cultural 5",
+      "statement": "Leia a situação:\n\n\"Um estudante percebe hábitos alimentares diferentes dos seus.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0006",
+      "title": "Diversidade cultural 6",
+      "statement": "Leia a situação:\n\n\"Uma aluna observa tradições locais que nunca havia conhecido.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0007",
+      "title": "Diversidade cultural 7",
+      "statement": "Leia a situação:\n\n\"Um intercambista participa de atividades culturais do país anfitrião.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0008",
+      "title": "Diversidade cultural 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa trabalhar em grupo com pessoas de diferentes origens.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0009",
+      "title": "Diversidade cultural 9",
+      "statement": "Leia a situação:\n\n\"Um aluno encontra formas diferentes de viver, estudar e se comunicar.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-DC-0010",
+      "title": "Diversidade cultural 10",
+      "statement": "Leia a situação:\n\n\"Uma intercambista deseja aproveitar a experiência internacional para aprender com outras culturas.\"\n\nQual atitude demonstra respeito à diversidade cultural?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, abertura ao aprendizado e ausência de preconceitos."
+        },
+        {
+          "label": "B",
+          "text": "Julgar outras culturas como inferiores."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas diferentes."
+        },
+        {
+          "label": "D",
+          "text": "Considerar apenas seus próprios costumes como válidos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque o respeito à diversidade cultural envolve abertura ao aprendizado, valorização das diferenças e convivência sem preconceitos. As demais alternativas demonstram intolerância ou fechamento cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "diversidade-cultural"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

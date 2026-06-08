@@ -339,11 +339,11 @@ function derivedSimulationTemplates(): TemplateSeed[] {
   return [
     {
       editorialId: "TEMPLATE-SCALE-FULL-MIXED",
-      title: "Simulado Completo - Lote 8F",
-      description: "Simulado premium com base no pacote autoral aprovado da Etapa 8F.",
+      title: "Simulado Objetivo Oficial PGM 2026",
+      description: "Simulado premium com 30 questões objetivas no formato oficial de treino PGM 2026.",
       type: "full",
       language: "mixed",
-      totalQuestions: 60,
+      totalQuestions: 30,
       isPremium: true,
       sourceReference: SOURCE_REFERENCE,
     },

@@ -3,10 +3,14 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import {
   ArrowLeft,
+  ArrowRight,
   BarChart3,
+  BookOpen,
   CheckCircle2,
+  Clock3,
   CircleX,
   ListChecks,
+  Target,
   Trophy,
 } from "lucide-react";
 
@@ -92,7 +96,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           {
             title: "Nota",
             value: `${result.percentage}%`,
-            description: `${result.score} de ${result.totalQuestions} pontos`,
+            description: `${result.score} de ${result.maxScore} pontos`,
             Icon: Trophy,
           },
           {
@@ -108,10 +112,10 @@ export default async function SimulationResultPage({ params }: PageProps) {
             Icon: CircleX,
           },
           {
-            title: "Categorias",
-            value: String(result.byCategory.length),
-            description: "Desempenho agrupado por assunto.",
-            Icon: BarChart3,
+            title: "Tempo",
+            value: `${result.elapsedMinutes} min`,
+            description: "Tempo gasto na tentativa oficial.",
+            Icon: Clock3,
           },
         ].map((item) => (
           <article
@@ -130,36 +134,136 @@ export default async function SimulationResultPage({ params }: PageProps) {
         ))}
       </section>
 
-      <section className="mt-6 rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Proximo passo
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">
-              Quer acesso a todos os simulados e materiais?
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-              Use este resultado para reforçar categorias fracas, acompanhar
-              analytics e continuar evoluindo com a experiência premium.
-            </p>
+      <section className="mt-6 grid gap-4 xl:grid-cols-3">
+        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+          <CheckCircle2 className="size-5 text-pgm-yellow" aria-hidden="true" />
+          <h2 className="mt-4 text-xl font-semibold text-white">
+            Competências fortes
+          </h2>
+          <div className="mt-4 grid gap-3">
+            {result.strongCategories.length === 0 ? (
+              <p className="text-sm leading-6 text-muted">
+                Ainda não há categoria acima de 75%. Foque nas trilhas
+                recomendadas antes de refazer o oficial.
+              </p>
+            ) : (
+              result.strongCategories.map((category) => (
+                <div
+                  key={category.categoryId}
+                  className="rounded-md border border-border-soft bg-background p-3"
+                >
+                  <p className="text-sm font-semibold text-white">
+                    {category.categoryName}
+                  </p>
+                  <p className="mt-1 text-xs text-muted">
+                    {category.percentage}% de aproveitamento
+                  </p>
+                </div>
+              ))
+            )}
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/analytics"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/8"
-            >
-              Ver analytics
-              <BarChart3 className="size-4" aria-hidden="true" />
-            </Link>
-            <Link
-              href="/planos"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
-            >
-              Quero continuar evoluindo
-              <Trophy className="size-4" aria-hidden="true" />
-            </Link>
+        </article>
+
+        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+          <Target className="size-5 text-pgm-yellow" aria-hidden="true" />
+          <h2 className="mt-4 text-xl font-semibold text-white">
+            Competências fracas
+          </h2>
+          <div className="mt-4 grid gap-3">
+            {result.weakCategories.length === 0 ? (
+              <p className="text-sm leading-6 text-muted">
+                Nenhuma categoria abaixo de 60%. Mantenha revisão e avance para
+                treino subjetivo.
+              </p>
+            ) : (
+              result.weakCategories.map((category) => (
+                <div
+                  key={category.categoryId}
+                  className="rounded-md border border-red-300/35 bg-red-400/10 p-3"
+                >
+                  <p className="text-sm font-semibold text-white">
+                    {category.categoryName}
+                  </p>
+                  <p className="mt-1 text-xs text-red-200">
+                    {category.percentage}% de aproveitamento
+                  </p>
+                </div>
+              ))
+            )}
           </div>
+        </article>
+
+        <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+          <Trophy className="size-5 text-pgm-yellow" aria-hidden="true" />
+          <h2 className="mt-4 text-xl font-semibold text-white">
+            Próximos passos
+          </h2>
+          <ul className="mt-4 grid gap-3">
+            {result.nextSteps.map((step) => (
+              <li key={step} className="flex gap-3 text-sm leading-6 text-muted">
+                <CheckCircle2
+                  className="mt-1 size-4 shrink-0 text-pgm-yellow"
+                  aria-hidden="true"
+                />
+                {step}
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="/analytics"
+            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/8"
+          >
+            Ver analytics
+            <BarChart3 className="size-4" aria-hidden="true" />
+          </Link>
+        </article>
+      </section>
+
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+        <div className="flex items-center gap-3">
+          <BookOpen className="size-5 text-pgm-yellow" aria-hidden="true" />
+          <h2 className="text-xl font-semibold text-white">
+            Trilhas recomendadas
+          </h2>
+        </div>
+        <div className="mt-5 grid gap-4 lg:grid-cols-3">
+          {result.recommendedPaths.length === 0 ? (
+            <div className="rounded-md border border-border-soft bg-background p-4">
+              <p className="text-sm font-semibold text-white">
+                Nenhuma trilha ativa encontrada
+              </p>
+              <p className="mt-2 text-sm leading-6 text-muted">
+                Assim que houver trilhas ativas, este relatório passará a
+                recomendar conteúdo existente da plataforma.
+              </p>
+            </div>
+          ) : (
+            result.recommendedPaths.map((path) => (
+              <Link
+                key={path.id}
+                href={path.href}
+                className="rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      {path.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted">
+                      {path.reason}
+                    </p>
+                  </div>
+                  <ArrowRight
+                    className="size-4 shrink-0 text-pgm-yellow"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span className="mt-4 inline-flex rounded-md border border-border-soft px-3 py-1 text-xs font-semibold text-muted">
+                  {path.isPremium ? "Premium" : "Gratuito"}
+                </span>
+              </Link>
+            ))
+          )}
         </div>
       </section>
 

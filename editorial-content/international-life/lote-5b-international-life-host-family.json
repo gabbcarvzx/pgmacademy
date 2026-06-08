@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "LIFE-HF-0001",
+      "title": "Host Family 1",
+      "statement": "Leia a situação:\n\n\"Uma família anfitriã estabelece horário para retorno à residência durante a semana.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0002",
+      "title": "Host Family 2",
+      "statement": "Leia a situação:\n\n\"Um intercambista percebe que a família possui regras diferentes para uso de eletrônicos.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0003",
+      "title": "Host Family 3",
+      "statement": "Leia a situação:\n\n\"Uma estudante deseja convidar amigos para a casa da host family.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0004",
+      "title": "Host Family 4",
+      "statement": "Leia a situação:\n\n\"Um aluno esqueceu de avisar que chegaria mais tarde do que o habitual.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0005",
+      "title": "Host Family 5",
+      "statement": "Leia a situação:\n\n\"Uma família anfitriã organiza tarefas domésticas compartilhadas.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0006",
+      "title": "Host Family 6",
+      "statement": "Leia a situação:\n\n\"Um estudante possui um hábito que causa desconforto aos membros da casa.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0007",
+      "title": "Host Family 7",
+      "statement": "Leia a situação:\n\n\"Uma intercambista não entendeu uma orientação dada pela host family.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0008",
+      "title": "Host Family 8",
+      "statement": "Leia a situação:\n\n\"Um aluno percebe diferenças de rotina entre sua casa e a família anfitriã.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0009",
+      "title": "Host Family 9",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa resolver um mal-entendido com a host family.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-HF-0010",
+      "title": "Host Family 10",
+      "statement": "Leia a situação:\n\n\"Um intercambista quer fortalecer a convivência com sua família anfitriã.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar as regras, comunicar-se com clareza e buscar convivência harmoniosa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as orientações da família anfitriã."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo sobre o problema."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que as regras não se aplicam ao intercambista."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a convivência com a host family exige respeito às regras da casa, comunicação clara e disposição para resolver situações de forma madura. As demais alternativas prejudicam a adaptação e a convivência.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

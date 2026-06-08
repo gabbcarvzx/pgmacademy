@@ -68,6 +68,65 @@ export type Database = {
         };
         Relationships: [];
       };
+      student_onboarding: {
+        Row: {
+          id: string;
+          tenant_id: string;
+          user_id: string;
+          idioma: "english" | "spanish";
+          ano_escolar: "first" | "second" | "third";
+          tempo_disponivel: "15m" | "30m" | "1h" | "2h_plus";
+          ja_participou_pgm: boolean;
+          objetivo_principal:
+            | "improve_english"
+            | "improve_spanish"
+            | "pass_exam"
+            | "improve_writing"
+            | "improve_interview";
+          onboarding_completed: boolean;
+          plan_version: string;
+          plan: Json;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+          idioma: "english" | "spanish";
+          ano_escolar: "first" | "second" | "third";
+          tempo_disponivel: "15m" | "30m" | "1h" | "2h_plus";
+          ja_participou_pgm?: boolean;
+          objetivo_principal:
+            | "improve_english"
+            | "improve_spanish"
+            | "pass_exam"
+            | "improve_writing"
+            | "improve_interview";
+          onboarding_completed?: boolean;
+          plan_version?: string;
+          plan?: Json;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          idioma?: "english" | "spanish";
+          ano_escolar?: "first" | "second" | "third";
+          tempo_disponivel?: "15m" | "30m" | "1h" | "2h_plus";
+          ja_participou_pgm?: boolean;
+          objetivo_principal?:
+            | "improve_english"
+            | "improve_spanish"
+            | "pass_exam"
+            | "improve_writing"
+            | "improve_interview";
+          onboarding_completed?: boolean;
+          plan_version?: string;
+          plan?: Json;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       subscriptions: {
         Row: {
           id: string;
@@ -150,10 +209,210 @@ export type Database = {
         };
         Relationships: [];
       };
+      editorial_versions: {
+        Row: {
+          id: string;
+          code: string;
+          title: string;
+          edital_year: number;
+          status: "draft" | "active" | "deprecated";
+          source_reference: string;
+          official_source_url: string | null;
+          summary: string | null;
+          published_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          code: string;
+          title: string;
+          edital_year: number;
+          status?: "draft" | "active" | "deprecated";
+          source_reference: string;
+          official_source_url?: string | null;
+          summary?: string | null;
+          published_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          title?: string;
+          edital_year?: number;
+          status?: "draft" | "active" | "deprecated";
+          source_reference?: string;
+          official_source_url?: string | null;
+          summary?: string | null;
+          published_at?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      editorial_competencies: {
+        Row: {
+          id: string;
+          code: string;
+          title: string;
+          description: string;
+          category_slug: string;
+          subcategory_slug: string;
+          language:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          is_active: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          code: string;
+          title: string;
+          description?: string;
+          category_slug: string;
+          subcategory_slug: string;
+          language:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          is_active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          title?: string;
+          description?: string;
+          category_slug?: string;
+          subcategory_slug?: string;
+          language?:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          is_active?: boolean;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      simulation_blueprints: {
+        Row: {
+          id: string;
+          code: string;
+          editorial_version_id: string;
+          title: string;
+          simulation_type: "objective" | "subjective" | "psychosocial";
+          language:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          total_items: number;
+          duration_minutes: number | null;
+          distribution: Json;
+          minimum_competency_codes: string[];
+          is_active: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          code: string;
+          editorial_version_id: string;
+          title: string;
+          simulation_type: "objective" | "subjective" | "psychosocial";
+          language?:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          total_items: number;
+          duration_minutes?: number | null;
+          distribution?: Json;
+          minimum_competency_codes?: string[];
+          is_active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          editorial_version_id?: string;
+          title?: string;
+          simulation_type?: "objective" | "subjective" | "psychosocial";
+          language?:
+            | "english"
+            | "spanish"
+            | "portuguese"
+            | "mixed"
+            | "psychosocial";
+          total_items?: number;
+          duration_minutes?: number | null;
+          distribution?: Json;
+          minimum_competency_codes?: string[];
+          is_active?: boolean;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      academy_blueprints: {
+        Row: {
+          id: string;
+          editorial_version_id: string;
+          module_id: string;
+          module_order: number;
+          title: string;
+          objectives: Json;
+          competency_codes: string[];
+          contents: Json;
+          activities: Json;
+          related_simulation_codes: string[];
+          is_active: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          editorial_version_id: string;
+          module_id: string;
+          module_order: number;
+          title: string;
+          objectives?: Json;
+          competency_codes?: string[];
+          contents?: Json;
+          activities?: Json;
+          related_simulation_codes?: string[];
+          is_active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          editorial_version_id?: string;
+          module_id?: string;
+          module_order?: number;
+          title?: string;
+          objectives?: Json;
+          competency_codes?: string[];
+          contents?: Json;
+          activities?: Json;
+          related_simulation_codes?: string[];
+          is_active?: boolean;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       question_banks: {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
@@ -166,12 +425,14 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
@@ -184,11 +445,13 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
@@ -201,6 +464,7 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];
@@ -209,6 +473,7 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
           tenant_id: string | null;
           parent_id: string | null;
           name: string;
@@ -220,12 +485,14 @@ export type Database = {
             | "mixed"
             | "psychosocial";
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
           tenant_id?: string | null;
           parent_id?: string | null;
           name: string;
@@ -237,11 +504,13 @@ export type Database = {
             | "mixed"
             | "psychosocial";
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
           tenant_id?: string | null;
           parent_id?: string | null;
           name?: string;
@@ -253,6 +522,7 @@ export type Database = {
             | "mixed"
             | "psychosocial";
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];
@@ -261,9 +531,13 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          primary_competency_id: string | null;
+          editorial_difficulty_level: number | null;
           tenant_id: string | null;
           bank_id: string;
           category_id: string | null;
+          title: string | null;
           type: "objective" | "subjective" | "psychosocial";
           difficulty: "beginner" | "intermediate" | "advanced" | "mixed";
           language:
@@ -275,6 +549,7 @@ export type Database = {
           statement: string;
           explanation: string | null;
           source_reference: string | null;
+          tags: string[];
           is_active: boolean;
           created_at: string;
           updated_at: string;
@@ -282,9 +557,13 @@ export type Database = {
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           bank_id: string;
           category_id?: string | null;
+          title?: string | null;
           type: "objective" | "subjective" | "psychosocial";
           difficulty?: "beginner" | "intermediate" | "advanced" | "mixed";
           language?:
@@ -296,15 +575,20 @@ export type Database = {
           statement: string;
           explanation?: string | null;
           source_reference?: string | null;
+          tags?: string[];
           is_active?: boolean;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           bank_id?: string;
           category_id?: string | null;
+          title?: string | null;
           type?: "objective" | "subjective" | "psychosocial";
           difficulty?: "beginner" | "intermediate" | "advanced" | "mixed";
           language?:
@@ -316,6 +600,7 @@ export type Database = {
           statement?: string;
           explanation?: string | null;
           source_reference?: string | null;
+          tags?: string[];
           is_active?: boolean;
           updated_at?: string;
         };
@@ -356,6 +641,8 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          blueprint_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
@@ -370,12 +657,15 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          blueprint_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
@@ -390,11 +680,14 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          blueprint_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
@@ -409,6 +702,7 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];
@@ -485,6 +779,9 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          primary_competency_id: string | null;
+          editorial_difficulty_level: number | null;
           tenant_id: string | null;
           category_id: string | null;
           title: string;
@@ -501,12 +798,17 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
+          material_structure: Json;
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category_id?: string | null;
           title: string;
@@ -523,11 +825,16 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
+          material_structure?: Json;
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category_id?: string | null;
           title?: string;
@@ -544,6 +851,8 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
+          material_structure?: Json;
           updated_at?: string;
         };
         Relationships: [];
@@ -552,6 +861,9 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          primary_competency_id: string | null;
+          editorial_difficulty_level: number | null;
           tenant_id: string | null;
           category_id: string | null;
           front_content: string;
@@ -566,12 +878,16 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category_id?: string | null;
           front_content: string;
@@ -586,11 +902,15 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category_id?: string | null;
           front_content?: string;
@@ -605,6 +925,7 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];
@@ -613,6 +934,8 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          academy_blueprint_id: string | null;
           tenant_id: string | null;
           title: string;
           description: string | null;
@@ -626,12 +949,15 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          academy_blueprint_id?: string | null;
           tenant_id?: string | null;
           title: string;
           description?: string | null;
@@ -645,11 +971,14 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          academy_blueprint_id?: string | null;
           tenant_id?: string | null;
           title?: string;
           description?: string | null;
@@ -663,6 +992,7 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];
@@ -769,6 +1099,9 @@ export type Database = {
         Row: {
           id: string;
           editorial_id: string | null;
+          editorial_version_id: string | null;
+          primary_competency_id: string | null;
+          editorial_difficulty_level: number | null;
           tenant_id: string | null;
           category: string;
           question: string;
@@ -777,12 +1110,16 @@ export type Database = {
           is_premium: boolean;
           is_active: boolean;
           source_reference: string | null;
+          tags: string[];
           created_at: string;
           updated_at: string;
         };
         Insert: {
           id?: string;
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category: string;
           question: string;
@@ -791,11 +1128,15 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
         Update: {
           editorial_id?: string | null;
+          editorial_version_id?: string | null;
+          primary_competency_id?: string | null;
+          editorial_difficulty_level?: number | null;
           tenant_id?: string | null;
           category?: string;
           question?: string;
@@ -804,6 +1145,7 @@ export type Database = {
           is_premium?: boolean;
           is_active?: boolean;
           source_reference?: string | null;
+          tags?: string[];
           updated_at?: string;
         };
         Relationships: [];

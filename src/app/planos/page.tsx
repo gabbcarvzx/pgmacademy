@@ -24,6 +24,7 @@ import {
   hasPremiumAccess,
   type PremiumAccessProfile,
 } from "@/lib/access/premium";
+import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
 import { siteConfig } from "@/lib/site-config";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -91,6 +92,13 @@ const journeySteps = [
   "Você domina os conteúdos.",
   "Você chega preparado para a seleção.",
   "Você vive seu intercâmbio internacional, se for convocado oficialmente.",
+];
+
+const officialPlanHighlights = [
+  `${pgm2026OfficialSnapshot.totalVacancies.toLocaleString("pt-BR")} vagas no edital 2026`,
+  "30 questões objetivas",
+  "5 respostas subjetivas",
+  "Entrevista psicossocial telepresencial",
 ];
 
 const faqItems = [
@@ -183,6 +191,17 @@ export default async function PlansPage() {
               para cada etapa da seleção.
             </p>
 
+            <div className="mt-6 grid max-w-4xl gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {officialPlanHighlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="rounded-md border border-white/16 bg-background/45 px-3 py-2 text-sm font-semibold text-white backdrop-blur"
+                >
+                  {highlight}
+                </div>
+              ))}
+            </div>
+
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#checkout"
@@ -212,11 +231,11 @@ export default async function PlansPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_390px] lg:px-8">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Conversão premium
+              Preparação premium
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-              O Premium não é apenas mais conteúdo. É uma rotina completa de
-              preparação.
+              O Premium organiza sua rotina para objetiva, subjetiva e
+              entrevista.
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-muted">
               Acesso aos recursos que aumentam clareza, consistência e

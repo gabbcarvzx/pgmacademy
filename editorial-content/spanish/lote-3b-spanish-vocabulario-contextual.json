@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ESP-RC-0011",
+      "title": "Vocabulario contextual 1",
+      "statement": "Lee el texto:\n\n\"Los estudiantes van a viajar a otro país el próximo mes. Antes de salir, deben revisar sus documentos y organizar la maleta.\"\n\nO que significa 'viajar' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "ir a outro país"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0012",
+      "title": "Vocabulario contextual 2",
+      "statement": "Lee el texto:\n\n\"La escuela organiza una reunión para explicar las reglas del intercambio. Todos los estudiantes seleccionados deben participar.\"\n\nO que significa 'escuela' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "instituição de ensino"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0013",
+      "title": "Vocabulario contextual 3",
+      "statement": "Lee el texto:\n\n\"La familia anfitriona recibe al estudiante, explica las reglas de la casa y ayuda durante los primeros días.\"\n\nO que significa 'familia anfitriona' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "família que hospeda o estudante"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0014",
+      "title": "Vocabulario contextual 4",
+      "statement": "Lee el texto:\n\n\"El horario de clases empieza a las ocho de la mañana. Por eso, los estudiantes deben llegar antes del primer timbre.\"\n\nO que significa 'horario' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "programação de tempo"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0015",
+      "title": "Vocabulario contextual 5",
+      "statement": "Lee el texto:\n\n\"Al principio, la comida parecía diferente, pero el estudiante aprendió a probar nuevos platos con respeto.\"\n\nO que significa 'comida' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "alimentos/refeições"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0016",
+      "title": "Vocabulario contextual 6",
+      "statement": "Lee el texto:\n\n\"Durante el intercambio, el estudiante puede aprender nuevas palabras, costumbres y formas de comunicarse.\"\n\nO que significa 'aprender' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "adquirir conhecimento"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0017",
+      "title": "Vocabulario contextual 7",
+      "statement": "Lee el texto:\n\n\"Cuando no entiende una instrucción, el estudiante debe pedir ayuda al profesor o al coordinador.\"\n\nO que significa 'ayuda' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "apoio ou assistência"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0018",
+      "title": "Vocabulario contextual 8",
+      "statement": "Lee el texto:\n\n\"Las reglas de la casa deben ser respetadas para que la convivencia sea tranquila y organizada.\"\n\nO que significa 'reglas' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "normas"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0019",
+      "title": "Vocabulario contextual 9",
+      "statement": "Lee el texto:\n\n\"Los compañeros de clase pueden ayudar al estudiante a entender actividades y participar en proyectos.\"\n\nO que significa 'compañeros' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "colegas"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0020",
+      "title": "Vocabulario contextual 10",
+      "statement": "Lee el texto:\n\n\"El intercambio favorece el crecimiento personal porque el estudiante aprende a resolver problemas y tomar decisiones.\"\n\nO que significa 'crecimiento' no contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "desenvolvimento"
+        },
+        {
+          "label": "B",
+          "text": "uma obrigação financeira"
+        },
+        {
+          "label": "C",
+          "text": "um documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "um problema sem solução"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o significado da palavra deve ser interpretado pelo contexto da frase em espanhol. As demais alternativas não se relacionam com a situação apresentada: não há indicação de obrigação financeira, documento oficial específico ou problema sem solução.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "vocabulario",
+        "contextual"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

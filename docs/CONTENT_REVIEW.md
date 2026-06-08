@@ -6,7 +6,7 @@ Destino futuro: seeds, painel admin ou migrations apos aprovacao
 
 ## Politica Editorial
 
-Este pacote e autoral da PGM Academy. Os editais PGM 2024 e 2026 foram usados apenas como referencia de estrutura, competencias, habilidades cobradas, etapas do processo seletivo e cuidados gerais de preparacao.
+Este pacote e autoral da PGM Academy. O Edital de Abertura PGM 2026 e a noticia oficial da SEE foram usados como referencia principal de estrutura, competencias, habilidades cobradas, etapas do processo seletivo e cuidados gerais de preparacao.
 
 Regras deste documento:
 

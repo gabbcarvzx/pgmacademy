@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "WR-CO-0001",
+      "title": "Coesão textual 1",
+      "statement": "Leia a situação:\n\n\"Uma resposta subjetiva apresenta boas ideias, mas não usa conectivos para ligar as frases.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0002",
+      "title": "Coesão textual 2",
+      "statement": "Leia a situação:\n\n\"Um candidato escreve sobre adaptação cultural, mas muda de assunto sem transição.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0003",
+      "title": "Coesão textual 3",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer conectar causa e consequência em sua resposta.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0004",
+      "title": "Coesão textual 4",
+      "statement": "Leia a situação:\n\n\"Um aluno precisa organizar uma sequência de ideias sobre convivência com host family.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0005",
+      "title": "Coesão textual 5",
+      "statement": "Leia a situação:\n\n\"Uma candidata repete a mesma ideia várias vezes sem desenvolver progressão textual.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0006",
+      "title": "Coesão textual 6",
+      "statement": "Leia a situação:\n\n\"Um estudante deseja comparar duas experiências vividas no intercâmbio.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0007",
+      "title": "Coesão textual 7",
+      "statement": "Leia a situação:\n\n\"Uma resposta começa falando de escola, depois família anfitriã, mas precisa manter relação lógica.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0008",
+      "title": "Coesão textual 8",
+      "statement": "Leia a situação:\n\n\"Uma candidata quer concluir sua resposta retomando a ideia principal.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0009",
+      "title": "Coesão textual 9",
+      "statement": "Leia a situação:\n\n\"Um aluno precisa usar marcadores textuais para deixar a resposta mais fluida.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-CO-0010",
+      "title": "Coesão textual 10",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer melhorar a ligação entre introdução, desenvolvimento e fechamento.\"\n\nQual estratégia melhora a coesão da resposta?",
+      "language": "mixed",
+      "category": "international-writing",
+      "subcategory": "coesao",
+      "competence": "writing-use-cohesion",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar conectivos e relações lógicas para ligar as ideias com clareza."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases isoladas sem relação entre si."
+        },
+        {
+          "label": "C",
+          "text": "Mudar de assunto sem orientar o leitor."
+        },
+        {
+          "label": "D",
+          "text": "Repetir palavras aleatórias para aumentar o tamanho da resposta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a coesão depende da ligação lógica entre as ideias, usando conectivos, retomadas e progressão textual. As demais alternativas prejudicam a clareza, fragmentam a resposta ou criam repetição sem desenvolvimento.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "coesao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

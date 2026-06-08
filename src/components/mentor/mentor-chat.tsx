@@ -14,7 +14,7 @@ const initialMessages: ChatMessage[] = [
     id: "welcome",
     role: "assistant",
     content:
-      "Oi, eu sou o Mentor PGM. Posso te ajudar com requisitos, preparação para provas, entrevista psicossocial e planejamento para o intercâmbio. A PGM Academy é independente e não substitui os canais oficiais.",
+      "Oi, eu sou o Mentor PGM. Posso te ajudar com requisitos do edital 2026, prova objetiva, subjetiva, entrevista psicossocial e planejamento para o intercâmbio. A PGM Academy é independente e não substitui os canais oficiais.",
   },
 ];
 

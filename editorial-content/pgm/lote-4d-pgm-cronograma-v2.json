@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "PGM-CR-0001",
+      "title": "Interpretação do edital: cronograma 1",
+      "statement": "Leia a situação:\n\n\"Um candidato viu uma data em um grupo de mensagens, mas não conferiu se ela aparece no cronograma oficial do edital.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Consultar o cronograma oficial antes de tomar decisões sobre prazos."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0002",
+      "title": "Interpretação do edital: cronograma 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante sabe a data da prova, mas não verificou prazos de inscrição, confirmação ou etapas posteriores.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Acompanhar todas as datas do processo, não apenas a data da prova."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0003",
+      "title": "Interpretação do edital: cronograma 3",
+      "statement": "Leia a situação:\n\n\"Um aluno perdeu um prazo porque acreditou que as datas seriam lembradas pela escola ou por colegas.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade pessoal pelo acompanhamento do cronograma oficial."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0004",
+      "title": "Interpretação do edital: cronograma 4",
+      "statement": "Leia a situação:\n\n\"Uma candidata encontrou duas informações diferentes sobre uma etapa do processo seletivo.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Priorizar o edital e comunicados oficiais para confirmar a data correta."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0005",
+      "title": "Interpretação do edital: cronograma 5",
+      "statement": "Leia a situação:\n\n\"Um estudante salvou um print antigo com datas do processo, mas não verificou se houve retificação posterior.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Verificar atualizações oficiais para evitar seguir informações desatualizadas."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0006",
+      "title": "Interpretação do edital: cronograma 6",
+      "statement": "Leia a situação:\n\n\"Uma candidata quer montar um plano de estudos, mas não analisou quanto tempo falta para cada etapa do processo.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar o cronograma oficial para organizar a preparação com antecedência."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0007",
+      "title": "Interpretação do edital: cronograma 7",
+      "statement": "Leia a situação:\n\n\"Um estudante só começou a procurar documentos depois do prazo indicado no cronograma.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Relacionar o cronograma às obrigações de cada etapa, como documentação e inscrição."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0008",
+      "title": "Interpretação do edital: cronograma 8",
+      "statement": "Leia a situação:\n\n\"Uma aluna acompanhou apenas a data final do processo e ignorou etapas intermediárias.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Observar todas as etapas intermediárias previstas no edital."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0009",
+      "title": "Interpretação do edital: cronograma 9",
+      "statement": "Leia a situação:\n\n\"Um candidato acredita que, se perder um prazo, poderá participar normalmente da etapa seguinte.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Compreender que prazos oficiais podem afetar a continuidade no processo."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-CR-0010",
+      "title": "Interpretação do edital: cronograma 10",
+      "statement": "Leia a situação:\n\n\"Uma estudante criou lembretes com base nas datas oficiais e revisou possíveis comunicados de atualização.\"\n\nQual é a conduta mais adequada para interpretar corretamente o cronograma do processo seletivo?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar lembretes e acompanhar canais oficiais é uma prática responsável."
+        },
+        {
+          "label": "B",
+          "text": "Confiar apenas em boatos ou mensagens informais."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar o cronograma até o dia da prova."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que prazos oficiais não influenciam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o cronograma deve ser interpretado a partir do edital e dos comunicados oficiais. A alternativa B é insegura, pois informações informais podem estar erradas. A alternativa C é inadequada porque o processo possui várias etapas e prazos. A alternativa D é falsa, pois o descumprimento de prazos pode prejudicar a participação do candidato.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "cronograma",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

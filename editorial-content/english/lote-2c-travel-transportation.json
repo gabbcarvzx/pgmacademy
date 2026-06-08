@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "ENG-LS-0021",
+      "title": "Travel and transportation 21",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0022",
+      "title": "Travel and transportation 22",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0023",
+      "title": "Travel and transportation 23",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0024",
+      "title": "Travel and transportation 24",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0025",
+      "title": "Travel and transportation 25",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0026",
+      "title": "Travel and transportation 26",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0027",
+      "title": "Travel and transportation 27",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0028",
+      "title": "Travel and transportation 28",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0029",
+      "title": "Travel and transportation 29",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0030",
+      "title": "Travel and transportation 30",
+      "statement": "Read the situation: An exchange student is using public transportation and must understand directions, schedules, or travel instructions during a trip. What is the best interpretation of the situation described?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should follow the transportation guidance provided."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore all instructions."
+        },
+        {
+          "label": "C",
+          "text": "The student must cancel the trip immediately."
+        },
+        {
+          "label": "D",
+          "text": "The information is unrelated to transportation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the scenario focuses on understanding schedules, directions, or transportation procedures. Option B contradicts the purpose of travel guidance. Option C is unsupported because there is no indication the trip must be canceled. Option D is incorrect because the entire situation involves transportation and travel-related communication.",
+      "tags": [
+        "sprint-6b-3",
+        "travel",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

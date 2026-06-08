@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ESP-RC-0031",
+      "title": "Comunicación cotidiana 1",
+      "statement": "Lee la situación:\n\nUn estudiante necesita preguntar dónde está la biblioteca.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Excuse me, where is the library?"
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0032",
+      "title": "Comunicación cotidiana 2",
+      "statement": "Lee la situación:\n\nUna estudiante quiere pedir información sobre el horario escolar.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Could you tell me the school schedule?"
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0033",
+      "title": "Comunicación cotidiana 3",
+      "statement": "Lee la situación:\n\nUn alumno llega tarde y necesita explicar la situación.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "I am sorry, the bus arrived late."
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0034",
+      "title": "Comunicación cotidiana 4",
+      "statement": "Lee la situación:\n\nUn estudiante quiere comprar un billete de transporte.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "I would like to buy a ticket, please."
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0035",
+      "title": "Comunicación cotidiana 5",
+      "statement": "Lee la situación:\n\nUna estudiante necesita pedir ayuda a un profesor.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Could you help me with this activity?"
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0036",
+      "title": "Comunicación cotidiana 6",
+      "statement": "Lee la situación:\n\nUn alumno quiere participar en una actividad escolar.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "I would like to join the activity."
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0037",
+      "title": "Comunicación cotidiana 7",
+      "statement": "Lee la situación:\n\nUna estudiante necesita confirmar una reunión.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "What time does the meeting start?"
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0038",
+      "title": "Comunicación cotidiana 8",
+      "statement": "Lee la situación:\n\nUn alumno pregunta cómo llegar a una dirección.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "How can I get to this address?"
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0039",
+      "title": "Comunicación cotidiana 9",
+      "statement": "Lee la situación:\n\nUna estudiante necesita pedir comida en una cafetería.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "I would like to order lunch, please."
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0040",
+      "title": "Comunicación cotidiana 10",
+      "statement": "Lee la situación:\n\nUn alumno necesita informar un problema sencillo.\n\n¿Cuál es la respuesta o expresión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comunicacion",
+      "competence": "spa-everyday-communication",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "I need help because I lost my card."
+        },
+        {
+          "label": "B",
+          "text": "Respuesta que no tiene relación con la situación."
+        },
+        {
+          "label": "C",
+          "text": "Comentario irrelevante al contexto."
+        },
+        {
+          "label": "D",
+          "text": "Expresión que no resuelve la necesidad presentada."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque responde directamente a la necesidad comunicativa descrita. Las demás alternativas no ayudan a resolver la situación planteada y no representan una comunicación adecuada para el contexto.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "communication",
+        "everyday"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

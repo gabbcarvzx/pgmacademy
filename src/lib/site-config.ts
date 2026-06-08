@@ -1,13 +1,15 @@
+import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
+
 export const siteConfig = {
   name: "PGM Academy",
   price: "R$ 29,90",
   paymentModel: "Pagamento único",
   disclaimer:
     "Plataforma independente de preparação. Consulte sempre o edital vigente e os canais oficiais do Programa Ganhe o Mundo.",
-  institutionalNotice:
-    "A PGM Academy é uma plataforma independente de preparação. Não possui vínculo oficial com o Governo de Pernambuco nem com o Programa Ganhe o Mundo. Consulte sempre os editais e canais oficiais.",
-  editalUrl:
-    "https://portal.educacao.pe.gov.br/wp-content/uploads/2026/05/0d68cd50-48a7-492c-88f7-0c7b9af530c0.pdf",
+  institutionalNotice: pgm2026OfficialSnapshot.institutionalNotice,
+  editalUrl: pgm2026OfficialSnapshot.editalUrl,
+  officialNewsUrl: pgm2026OfficialSnapshot.seeNewsUrl,
+  officialSelectionUrl: pgm2026OfficialSnapshot.igeducUrl,
 };
 
 export const navigationItems = [
@@ -38,9 +40,9 @@ export const eligibilitySignals = [
 
 export const approvalSteps = [
   "Verificação dos requisitos",
-  "Prova objetiva",
-  "Prova subjetiva",
-  "Entrevista psicossocial",
+  "Prova objetiva: 30 questões",
+  "Prova subjetiva: 5 respostas",
+  "Entrevista psicossocial telepresencial",
 ];
 
 export const platformModules = [
@@ -57,12 +59,12 @@ export const platformModules = [
   {
     title: "Simulados realistas",
     description:
-      "Usa questões objetivas autorais importadas e correção automática protegida.",
+      "Prepara o aluno para a prova objetiva de 30 questões com correção protegida.",
   },
   {
     title: "Subjetivas com feedback",
     description:
-      "Permite treinar respostas em idiomas com acompanhamento manual dentro do plano premium.",
+      "Treina respostas de 90 a 150 palavras com rubrica linguística e acompanhamento manual.",
   },
   {
     title: "Entrevista psicossocial",

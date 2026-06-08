@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "PGM-MX-0001",
+      "title": "Simulado misto PGM: Edital e fonte oficial",
+      "statement": "Leia a situação:\n\n\"Um candidato recebeu uma informação sobre o processo seletivo em um grupo, mas ela não aparece no edital nem em comunicado oficial.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conferir a informação em fonte oficial antes de tomar qualquer decisão."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0002",
+      "title": "Simulado misto PGM: Elegibilidade antes da inscrição",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer se inscrever, mas ainda não verificou se atende aos critérios de ano escolar, vínculo, frequência e desempenho.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Verificar todos os critérios de elegibilidade antes de finalizar a inscrição."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "eligibilidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0003",
+      "title": "Simulado misto PGM: Documentos organizados",
+      "statement": "Leia a situação:\n\n\"Um aluno deixou para procurar documentos somente depois de ser convocado para uma etapa com prazo curto.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar documentos com antecedência para evitar problemas com prazos."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0004",
+      "title": "Simulado misto PGM: Retificação do edital",
+      "statement": "Leia a situação:\n\n\"Uma candidata salvou um resumo antigo do processo, mas depois foi publicado um comunicado atualizando orientações.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Acompanhar atualizações oficiais e considerar a versão mais recente das orientações."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0005",
+      "title": "Simulado misto PGM: Elegibilidade não é aprovação",
+      "statement": "Leia a situação:\n\n\"Um estudante percebeu que atende aos critérios de participação e concluiu que sua vaga já está garantida.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Entender que elegibilidade permite participar, mas não garante aprovação final."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "eligibilidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0006",
+      "title": "Simulado misto PGM: Comprovação escolar",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa confirmar dados de frequência e médias para saber se atende aos requisitos.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conferir dados escolares em registros confiáveis e conforme o edital."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "eligibilidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0007",
+      "title": "Simulado misto PGM: Checklist de documentos",
+      "statement": "Leia a situação:\n\n\"Um candidato precisa entregar documentos em uma etapa e quer reduzir risco de esquecer algum item.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Usar um checklist baseado na lista oficial de documentos exigidos."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0008",
+      "title": "Simulado misto PGM: Leitura parcial do edital",
+      "statement": "Leia a situação:\n\n\"Uma aluna leu apenas a parte sobre prova objetiva e ignorou critérios, recursos, prazos e documentos.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ler o edital de forma completa para compreender todas as exigências."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "edital"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0009",
+      "title": "Simulado misto PGM: Informação informal sobre elegibilidade",
+      "statement": "Leia a situação:\n\n\"Um grupo afirmou que todos os estudantes podem participar, sem exceção, mas ninguém apresentou o trecho oficial.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Não depender de boatos; conferir os critérios oficiais de elegibilidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "eligibilidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-MX-0010",
+      "title": "Simulado misto PGM: Documento incompleto",
+      "statement": "Leia a situação:\n\n\"Um estudante percebeu que um documento exigido está incompleto, mas pensa em enviar mesmo assim.\"\n\nQual é a conduta mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Regularizar e conferir a documentação antes do envio, conforme as regras oficiais."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as regras oficiais e seguir apenas comentários informais."
+        },
+        {
+          "label": "C",
+          "text": "Aguardar até o fim do processo para resolver a situação."
+        },
+        {
+          "label": "D",
+          "text": "Considerar que a preparação substitui documentos e critérios oficiais."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque segue uma conduta segura e alinhada ao processo seletivo: consultar regras oficiais, verificar critérios e organizar documentação conforme necessário. A alternativa B é inadequada porque informações informais podem estar incorretas. A alternativa C é arriscada por ignorar prazos e etapas. A alternativa D é falsa, pois preparação não substitui edital, elegibilidade nem documentos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "simulado-misto",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export type PremiumModule = {
 };
 
 const sourceTag =
-  "Base editorial inicial: editais PGM 2024 e 2026. Regras oficiais devem ser confirmadas no edital vigente e nos canais oficiais.";
+  "Base editorial inicial: Edital de Abertura PGM 2026. Regras oficiais devem ser confirmadas no edital vigente, no IGEDUC e nos canais oficiais.";
 
 export const premiumModules: PremiumModule[] = [
   {

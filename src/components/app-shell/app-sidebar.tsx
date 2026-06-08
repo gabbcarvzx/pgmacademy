@@ -8,9 +8,11 @@ import {
   Gauge,
   GraduationCap,
   LayoutDashboard,
+  LifeBuoy,
   ListChecks,
   LogOut,
   MessageSquareText,
+  Sparkles,
   PenLine,
   ShieldCheck,
 } from "lucide-react";
@@ -18,8 +20,9 @@ import {
 import { signOutAction } from "@/app/(app)/actions";
 
 const appNavigation = [
-  { label: "Dashboard", href: "/dashboard", Icon: LayoutDashboard },
+  { label: "Missão", href: "/dashboard", Icon: LayoutDashboard },
   { label: "Analytics", href: "/analytics", Icon: BarChart3 },
+  { label: "Onboarding", href: "/onboarding", Icon: Sparkles },
   { label: "Estudos", href: "/estudos", Icon: BookText },
   { label: "Trilhas", href: "/trilhas", Icon: GraduationCap },
   { label: "Flashcards", href: "/flashcards", Icon: Brain },
@@ -27,8 +30,9 @@ const appNavigation = [
   { label: "Entrevista", href: "/entrevista", Icon: MessageSquareText },
   { label: "Diagnóstico", href: "/diagnostico", Icon: Gauge },
   { label: "Simulados", href: "/simulados", Icon: ListChecks },
+  { label: "Central de Sucesso", href: "/sucesso", Icon: LifeBuoy },
   { label: "Planos", href: "/planos", Icon: CreditCard },
-  { label: "Área Premium", href: "/premium", Icon: BookOpenCheck },
+  { label: "Academia PGM", href: "/premium", Icon: BookOpenCheck },
 ];
 
 type AppSidebarProps = {

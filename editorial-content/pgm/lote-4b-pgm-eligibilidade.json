@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "PGM-EL-0001",
+      "title": "Elegibilidade: conferência inicial",
+      "statement": "Leia a situação:\n\n\"Um estudante deseja participar do processo seletivo, mas ainda não verificou se atende aos requisitos de escola, série/ano, desempenho acadêmico e demais critérios oficiais.\"\n\nQual deve ser a atitude mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conferir todos os critérios de elegibilidade antes de considerar a inscrição concluída."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os critérios e focar apenas nos simulados."
+        },
+        {
+          "label": "C",
+          "text": "Assumir que qualquer estudante pode participar sem restrições."
+        },
+        {
+          "label": "D",
+          "text": "Esperar o dia da prova para verificar se é elegível."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a elegibilidade é uma condição básica para participar do processo seletivo. As alternativas B, C e D são inadequadas porque ignoram requisitos oficiais que podem impedir ou comprometer a participação do estudante.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "criterios"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0002",
+      "title": "Elegibilidade: desempenho acadêmico",
+      "statement": "Leia a situação:\n\n\"Uma estudante ouviu que o desempenho acadêmico pode ser usado como critério de participação. Mesmo assim, ela não conferiu quais disciplinas, médias ou períodos são considerados no edital.\"\n\nQual interpretação é mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ela deve conferir no edital quais critérios acadêmicos são exigidos."
+        },
+        {
+          "label": "B",
+          "text": "O desempenho acadêmico nunca pode ser critério de seleção."
+        },
+        {
+          "label": "C",
+          "text": "Basta ter interesse no intercâmbio para ser elegível."
+        },
+        {
+          "label": "D",
+          "text": "As médias escolares não precisam ser verificadas em nenhum momento."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque critérios acadêmicos, quando previstos, precisam ser analisados conforme o edital. As alternativas B, C e D generalizam ou ignoram exigências formais que podem ser determinantes para a elegibilidade.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "desempenho-academico"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0003",
+      "title": "Elegibilidade: frequência escolar",
+      "statement": "Leia a situação:\n\n\"Um candidato tem boas notas, mas não sabe se sua frequência escolar atende ao mínimo exigido pelo processo seletivo.\"\n\nO que ele deve fazer?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Verificar a regra de frequência no edital e conferir sua situação escolar."
+        },
+        {
+          "label": "B",
+          "text": "Considerar que boas notas anulam qualquer regra de frequência."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a frequência porque ela não se relaciona com intercâmbio."
+        },
+        {
+          "label": "D",
+          "text": "Perguntar apenas a colegas, sem consultar documento oficial."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque frequência pode ser um critério de elegibilidade e deve ser conferida oficialmente. Boas notas não necessariamente anulam outros requisitos. Colegas podem ajudar, mas não substituem o edital nem os registros escolares.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "frequencia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0004",
+      "title": "Elegibilidade: ano escolar",
+      "statement": "Leia a situação:\n\n\"Uma aluna quer participar, mas está em dúvida se o seu ano/série escolar é aceito no edital vigente.\"\n\nQual é a melhor orientação?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Consultar o edital para confirmar quais anos/séries são permitidos."
+        },
+        {
+          "label": "B",
+          "text": "Inscrever-se sem verificar essa informação."
+        },
+        {
+          "label": "C",
+          "text": "Concluir que todos os anos escolares são aceitos."
+        },
+        {
+          "label": "D",
+          "text": "Conferir apenas depois da etapa final."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o ano ou série escolar pode ser um critério objetivo de elegibilidade. As alternativas B, C e D são arriscadas, pois podem levar a uma inscrição incompatível com as regras do edital.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "ano-escolar"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0005",
+      "title": "Elegibilidade: matrícula ativa",
+      "statement": "Leia a situação:\n\n\"Um estudante acredita que basta ter estudado em escola pública no passado para participar, mas não verificou se o edital exige matrícula ativa em rede específica durante o processo.\"\n\nQual é a conclusão mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ele deve verificar exatamente qual vínculo escolar o edital exige."
+        },
+        {
+          "label": "B",
+          "text": "Histórico escolar passado sempre basta, independentemente da matrícula atual."
+        },
+        {
+          "label": "C",
+          "text": "O vínculo com a escola nunca é analisado."
+        },
+        {
+          "label": "D",
+          "text": "A matrícula ativa só importa depois da viagem."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o vínculo escolar exigido deve ser analisado conforme o edital vigente. As alternativas B, C e D fazem afirmações absolutas e inseguras, sem considerar as regras formais do processo seletivo.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "matricula"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0006",
+      "title": "Elegibilidade: critérios cumulativos",
+      "statement": "Leia a situação:\n\n\"Um candidato atende a um critério do edital, mas não verificou os demais. Ele acredita que cumprir apenas um requisito já garante sua participação.\"\n\nQual é a interpretação correta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "A elegibilidade deve ser conferida considerando todos os critérios exigidos."
+        },
+        {
+          "label": "B",
+          "text": "Cumprir um único critério sempre garante participação."
+        },
+        {
+          "label": "C",
+          "text": "Critérios oficiais são apenas recomendações opcionais."
+        },
+        {
+          "label": "D",
+          "text": "A análise de elegibilidade acontece sem relação com o edital."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque processos seletivos normalmente exigem o cumprimento conjunto dos critérios definidos. Cumprir apenas um requisito não garante elegibilidade se outros também forem obrigatórios. As demais alternativas desconsideram a lógica de regras cumulativas.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "criterios-cumulativos"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0007",
+      "title": "Elegibilidade: informação informal",
+      "statement": "Leia a situação:\n\n\"Uma candidata recebeu em um grupo de mensagens a informação de que todos os alunos da escola podem participar, sem exceções. Ela não conferiu o edital.\"\n\nQual é o risco dessa atitude?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ela pode confiar em informação incompleta ou incorreta sobre os critérios."
+        },
+        {
+          "label": "B",
+          "text": "Ela garante automaticamente sua elegibilidade."
+        },
+        {
+          "label": "C",
+          "text": "Grupos de mensagens substituem o edital oficial."
+        },
+        {
+          "label": "D",
+          "text": "Critérios de elegibilidade nunca mudam."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque informações informais podem estar incompletas, desatualizadas ou incorretas. O edital é a fonte que deve orientar a conferência de elegibilidade. As alternativas B, C e D são afirmações inseguras e sem base oficial.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "informacao-informal"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0008",
+      "title": "Elegibilidade: conferência com a escola",
+      "statement": "Leia a situação:\n\n\"Um estudante está em dúvida sobre suas médias, frequência e dados escolares registrados.\"\n\nAlém de consultar o edital, qual medida pode ajudar?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conferir suas informações acadêmicas com a escola ou sistema oficial disponível."
+        },
+        {
+          "label": "B",
+          "text": "Inventar uma média aproximada para se inscrever."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar os dados escolares porque eles não influenciam."
+        },
+        {
+          "label": "D",
+          "text": "Usar apenas lembranças pessoais, sem verificar registros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque informações como médias e frequência devem ser conferidas em registros confiáveis. As alternativas B e D podem gerar erro. A alternativa C é incorreta porque dados escolares podem estar ligados à elegibilidade.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "dados-escolares"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0009",
+      "title": "Elegibilidade: aprovação não garantida",
+      "statement": "Leia a situação:\n\n\"Um estudante atende aos critérios de elegibilidade e acredita que isso garante automaticamente sua vaga no intercâmbio.\"\n\nQual é a interpretação correta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ser elegível permite participar, mas não garante aprovação ou vaga."
+        },
+        {
+          "label": "B",
+          "text": "Elegibilidade é o mesmo que aprovação final."
+        },
+        {
+          "label": "C",
+          "text": "Quem é elegível não precisa fazer nenhuma etapa."
+        },
+        {
+          "label": "D",
+          "text": "A vaga é garantida sem classificação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque elegibilidade significa atender aos requisitos para participar, não necessariamente ser aprovado. As alternativas B, C e D confundem critérios de participação com resultado final do processo seletivo.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "aprovacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-EL-0010",
+      "title": "Elegibilidade: revisão antes da inscrição",
+      "statement": "Leia a situação:\n\n\"Antes de finalizar sua inscrição, uma candidata revisa seus dados escolares, confere o edital e verifica se cumpre os critérios exigidos.\"\n\nO que essa atitude demonstra?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "eligibilidade",
+      "competence": "pgm-check-eligibility",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Responsabilidade na conferência da própria elegibilidade."
+        },
+        {
+          "label": "B",
+          "text": "Desnecessária preocupação com regras oficiais."
+        },
+        {
+          "label": "C",
+          "text": "Tentativa de evitar todas as etapas do processo."
+        },
+        {
+          "label": "D",
+          "text": "Confirmação automática de aprovação final."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque revisar dados e critérios antes da inscrição é uma atitude responsável. A alternativa B minimiza indevidamente as regras. A alternativa C não tem relação com a situação. A alternativa D confunde elegibilidade com aprovação.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "eligibilidade",
+        "revisao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

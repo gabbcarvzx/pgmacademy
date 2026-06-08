@@ -1,0 +1,414 @@
+{
+  "questions": [
+    {
+      "id": "ENG-RC-0021",
+      "title": "Context vocabulary: reluctant",
+      "statement": "Read the text:\n\n\"On the first day of class abroad, Bianca was reluctant to introduce herself. She looked at her notebook several times and waited before raising her hand. After a classmate smiled and invited her to join the group, she finally said her name and answered the teacher's question.\"\n\nIn the text, the word \"reluctant\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "hesitant"
+        },
+        {
+          "label": "B",
+          "text": "angry"
+        },
+        {
+          "label": "C",
+          "text": "prepared"
+        },
+        {
+          "label": "D",
+          "text": "excited"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The context shows that Bianca waited, looked at her notebook, and only spoke after being encouraged. This indicates that she was hesitant, not angry or excited. 'Prepared' does not fit because the sentence emphasizes her difficulty starting, not her readiness.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "reluctant",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0022",
+      "title": "Context vocabulary: encouraged",
+      "statement": "Read the text:\n\n\"During the first week with his host family, Daniel avoided long conversations because he was afraid of making mistakes. His host brother encouraged him to speak more by asking simple questions and listening patiently. After a few days, Daniel started answering with longer sentences.\"\n\nIn the text, the word \"encouraged\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "punished"
+        },
+        {
+          "label": "B",
+          "text": "supported"
+        },
+        {
+          "label": "C",
+          "text": "ignored"
+        },
+        {
+          "label": "D",
+          "text": "interrupted"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The host brother helps Daniel speak by asking simple questions and listening patiently. These actions show support. The other options are negative or unrelated to the supportive behavior described in the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "encouraged",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0023",
+      "title": "Context vocabulary: adjust",
+      "statement": "Read the text:\n\n\"The school day in the host country started earlier than Sofia expected. At first, she felt tired in the morning, but she began sleeping earlier and preparing her backpack at night. These small changes helped her adjust to the new routine.\"\n\nIn the text, the word \"adjust\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "adapt"
+        },
+        {
+          "label": "B",
+          "text": "refuse"
+        },
+        {
+          "label": "C",
+          "text": "forget"
+        },
+        {
+          "label": "D",
+          "text": "delay"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Sofia changes her habits to deal with the new school schedule. In this context, 'adjust' means adapt to a new situation. 'Refuse', 'forget', and 'delay' do not match the idea of changing behavior to fit a new routine.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "adjust",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0024",
+      "title": "Context vocabulary: reliable",
+      "statement": "Read the text:\n\n\"Before the museum visit, the coordinator asked students to be reliable. They had to arrive on time, keep their phones charged, and stay with the group. Students who followed these instructions helped the trip happen safely and without unnecessary delays.\"\n\nIn the text, the word \"reliable\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "funny"
+        },
+        {
+          "label": "B",
+          "text": "responsible"
+        },
+        {
+          "label": "C",
+          "text": "silent"
+        },
+        {
+          "label": "D",
+          "text": "confused"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The coordinator expects students to arrive on time, keep their phones charged, and stay with the group. These are responsible behaviors. Therefore, 'reliable' means someone who can be trusted to act responsibly.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "reliable",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0025",
+      "title": "Context vocabulary: overwhelmed",
+      "statement": "Read the text:\n\n\"In her first week abroad, Laura had to understand new bus routes, classroom rules, meal times, and family expectations. She felt overwhelmed because everything seemed to happen at once. Her host mother helped her make a simple list of daily tasks, and Laura felt calmer.\"\n\nIn the text, the word \"overwhelmed\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "relaxed"
+        },
+        {
+          "label": "B",
+          "text": "confident"
+        },
+        {
+          "label": "C",
+          "text": "stressed by too many things"
+        },
+        {
+          "label": "D",
+          "text": "uninterested in learning"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Laura has many new responsibilities and feels that everything is happening at once. The support she receives helps her feel calmer, which confirms that 'overwhelmed' means stressed or affected by too many things.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "overwhelmed",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0026",
+      "title": "Context vocabulary: broaden",
+      "statement": "Read the text:\n\n\"Exchange programs can broaden a student's view of the world. By attending school in another country, living with a host family, and meeting people with different opinions, students begin to understand that there are many ways to solve problems and organize daily life.\"\n\nIn the text, the word \"broaden\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "limit"
+        },
+        {
+          "label": "B",
+          "text": "expand"
+        },
+        {
+          "label": "C",
+          "text": "hide"
+        },
+        {
+          "label": "D",
+          "text": "repeat"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text says students experience different opinions and ways of life, which helps them see the world in a wider way. Therefore, 'broaden' means expand. 'Limit' is the opposite, and 'hide' or 'repeat' do not fit the context.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "broaden",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0027",
+      "title": "Context vocabulary: approach",
+      "statement": "Read the text:\n\n\"When Miguel had difficulty understanding a science assignment, he changed his approach. Instead of translating every word, he looked for key ideas, checked the images, and asked a classmate to confirm the instructions. This strategy helped him complete the task.\"\n\nIn the text, the word \"approach\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "method"
+        },
+        {
+          "label": "B",
+          "text": "address"
+        },
+        {
+          "label": "C",
+          "text": "mistake"
+        },
+        {
+          "label": "D",
+          "text": "schedule"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Miguel changes the way he deals with the assignment by using key ideas, images, and help from a classmate. In this context, 'approach' means method or strategy. 'Address' can be a different meaning of approach, but it does not fit this sentence.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "approach",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0028",
+      "title": "Context vocabulary: cope with",
+      "statement": "Read the text:\n\n\"Some students feel homesick during the first weeks of an exchange. To cope with this feeling, they may write in a journal, talk to coordinators, join school activities, or schedule calls with their families. These actions can make the adjustment period healthier.\"\n\nIn the text, the expression \"cope with\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "deal with"
+        },
+        {
+          "label": "B",
+          "text": "celebrate"
+        },
+        {
+          "label": "C",
+          "text": "create"
+        },
+        {
+          "label": "D",
+          "text": "forget immediately"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The text presents actions students can take when they feel homesick. These actions help them manage the feeling, so 'cope with' means deal with. It does not mean celebrate or forget the problem immediately.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "cope-with",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0029",
+      "title": "Context vocabulary: meaningful",
+      "statement": "Read the text:\n\n\"For many students, the most meaningful moments of an exchange are not always the biggest events. A conversation with a host sibling, a successful presentation in class, or the first time they solve a problem alone can become memories that shape their confidence.\"\n\nIn the text, the word \"meaningful\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "expensive"
+        },
+        {
+          "label": "B",
+          "text": "important"
+        },
+        {
+          "label": "C",
+          "text": "ordinary and useless"
+        },
+        {
+          "label": "D",
+          "text": "difficult to remember"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text describes moments that become important memories and influence students' confidence. In this context, 'meaningful' means important or significant, not expensive or useless.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "meaningful",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0030",
+      "title": "Context vocabulary: take part in",
+      "statement": "Read the text:\n\n\"At the beginning of the semester, Thomas watched most school activities from a distance. Later, he decided to take part in a volunteer project organized by his class. Working with local students helped him practice English and feel more connected to the school community.\"\n\nIn the text, the expression \"take part in\" is closest in meaning to:",
+      "language": "english",
+      "category": "english",
+      "subcategory": "vocabulary",
+      "competence": "eng-contextual-vocabulary",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "participate in"
+        },
+        {
+          "label": "B",
+          "text": "look for"
+        },
+        {
+          "label": "C",
+          "text": "move away from"
+        },
+        {
+          "label": "D",
+          "text": "complain about"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Thomas joins a volunteer project and works with local students. This shows that 'take part in' means participate in. The other options do not match the action of joining an activity.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "context-vocabulary",
+        "take-part-in",
+        "english-vocabulary"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+import { submitOfficialSubjectiveSimulation } from "@/lib/manual-review/service";
 import {
   finishSimulationAttempt,
   saveSimulationAnswer,
@@ -21,6 +22,23 @@ async function requireUserId() {
   }
 
   return user.id;
+}
+
+function formString(formData: FormData, key: string) {
+  const value = formData.get(key);
+  return typeof value === "string" ? value : "";
+}
+
+function redirectWithError(target: string, error: unknown): never {
+  const message =
+    error instanceof Error ? error.message : "Não foi possível enviar.";
+  const separator = target.includes("?") ? "&" : "?";
+  redirect(`${target}${separator}error=${encodeURIComponent(message)}`);
+}
+
+function redirectWithSuccess(target: string, message: string): never {
+  const separator = target.includes("?") ? "&" : "?";
+  redirect(`${target}${separator}success=${encodeURIComponent(message)}`);
 }
 
 export async function startSimulationAttemptAction(formData: FormData) {
@@ -63,4 +81,35 @@ export async function finishSimulationAttemptAction(formData: FormData) {
   revalidatePath("/simulados");
   revalidatePath(`/simulados/tentativas/${attemptId}`);
   redirect(`/simulados/tentativas/${attemptId}/resultado`);
+}
+
+export async function submitOfficialSubjectiveSimulationAction(
+  formData: FormData,
+) {
+  const userId = await requireUserId();
+  const target = "/simulados/subjetivo-oficial";
+  const questionIds = formData
+    .getAll("question_id")
+    .filter((value): value is string => typeof value === "string");
+  const answers = questionIds.map((questionId) => ({
+    questionId,
+    answerText: formString(formData, `answer_${questionId}`),
+  }));
+
+  try {
+    await submitOfficialSubjectiveSimulation(userId, answers);
+  } catch (error) {
+    redirectWithError(target, error);
+  }
+
+  revalidatePath("/dashboard");
+  revalidatePath("/analytics");
+  revalidatePath("/simulados");
+  revalidatePath(target);
+  revalidatePath("/subjetivas");
+  revalidatePath("/subjetivas/minhas-respostas");
+  redirectWithSuccess(
+    "/subjetivas/minhas-respostas",
+    "Simulado subjetivo oficial enviado para correção manual.",
+  );
 }

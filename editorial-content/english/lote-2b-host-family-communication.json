@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "ENG-LS-0011",
+      "title": "Host family house rules",
+      "statement": "Read the text:\n\n\"On the first evening, the host family explained a few simple rules. Students should inform the family if they will arrive home late, keep shared spaces organized, and participate in family meals whenever possible. The family explained that these habits help everyone live together respectfully.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The host family explained basic expectations for living together."
+        },
+        {
+          "label": "B",
+          "text": "The student was asked to avoid family meals."
+        },
+        {
+          "label": "C",
+          "text": "The family prohibited communication."
+        },
+        {
+          "label": "D",
+          "text": "The student had no responsibilities."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the text presents rules for living respectfully with a host family: communicating delays, organizing shared spaces, and joining meals when possible. Option B contradicts the text because meals are encouraged. Option C is wrong because communication is required. Option D is incorrect because the passage clearly gives responsibilities to the student.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0012",
+      "title": "Respectful communication",
+      "statement": "Read the text:\n\n\"When Lucas was unsure about a house rule, he asked his host mother politely instead of making assumptions. She appreciated his attitude, clarified the expectation, and told him that asking questions was better than creating confusion.\"\n\nWhat can be inferred?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Asking questions helped avoid misunderstandings."
+        },
+        {
+          "label": "B",
+          "text": "Lucas ignored the house rules."
+        },
+        {
+          "label": "C",
+          "text": "The host mother refused to answer."
+        },
+        {
+          "label": "D",
+          "text": "The situation created conflict."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because Lucas asks politely before acting, and the host mother clarifies the rule. This shows that communication prevented confusion. Option B is wrong because Lucas did not ignore the rule; he tried to understand it. Option C contradicts the text because the host mother answered. Option D is incorrect because the interaction reduced conflict rather than created it.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "inference"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0013",
+      "title": "Family dinner",
+      "statement": "Read the text:\n\n\"The host family often talked together during dinner. Although Mariana was shy at first, she gradually started sharing stories about her school day. Over time, dinner became one of the moments when she practiced English and felt included in the family routine.\"\n\nWhat is the main idea?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Dinner conversations helped Mariana participate more."
+        },
+        {
+          "label": "B",
+          "text": "Mariana avoided speaking at dinner."
+        },
+        {
+          "label": "C",
+          "text": "The family ate separately."
+        },
+        {
+          "label": "D",
+          "text": "School was discussed only once."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the text shows Mariana moving from shyness to active participation during dinner. The conversations helped her practice English and feel included. Option B is wrong because she eventually started sharing stories. Option C contradicts the text because the family talked together. Option D is incorrect because the text describes a repeated routine, not a single conversation.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "main-idea"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0014",
+      "title": "Household responsibility",
+      "statement": "Read the text:\n\n\"In the host family, each student was responsible for keeping their room organized and helping with small daily tasks, such as clearing the table after meals. The family explained that these tasks were not punishments, but part of sharing a home respectfully.\"\n\nWhat is the main idea?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students share responsibility in the household."
+        },
+        {
+          "label": "B",
+          "text": "Students do all household work."
+        },
+        {
+          "label": "C",
+          "text": "Students are forbidden from helping."
+        },
+        {
+          "label": "D",
+          "text": "Organization is unnecessary."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the text describes reasonable shared responsibilities in the home. Option B exaggerates the idea by saying students do all household work. Option C directly contradicts the text because helping is expected. Option D is wrong because room organization is specifically mentioned as important.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "responsibility"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0015",
+      "title": "Adapting routines",
+      "statement": "Read the text:\n\n\"Pedro noticed that breakfast happened much earlier than in Brazil. During the first days, he felt tired and almost missed the school bus. After talking with his host family, he began preparing his clothes at night and going to bed earlier. Within a week, the new schedule felt easier.\"\n\nWhat can be inferred?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Pedro became more comfortable with the host family's schedule."
+        },
+        {
+          "label": "B",
+          "text": "Pedro refused the routine."
+        },
+        {
+          "label": "C",
+          "text": "Breakfast was cancelled."
+        },
+        {
+          "label": "D",
+          "text": "Pedro returned home."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because Pedro changes his habits and the schedule becomes easier for him. This supports the inference that he adapted. Option B is wrong because he did not refuse the routine; he adjusted to it. Option C is not mentioned. Option D is incorrect because the text says he stayed and adapted, not that he returned home.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "adaptation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0016",
+      "title": "Requesting help",
+      "statement": "Read the text:\n\n\"When Sofia could not understand how to use the washing machine, she asked her host sister for help. Her host sister demonstrated the basic steps and asked Sofia to repeat them. The next weekend, Sofia used the machine without assistance.\"\n\nWhat can be inferred?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Seeking help allowed Sofia to solve the problem."
+        },
+        {
+          "label": "B",
+          "text": "Sofia ignored the problem."
+        },
+        {
+          "label": "C",
+          "text": "Nobody helped Sofia."
+        },
+        {
+          "label": "D",
+          "text": "The washing machine was broken."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because Sofia asks for help, receives a demonstration, practices, and later uses the machine alone. Option B is wrong because she addresses the problem. Option C contradicts the text because her host sister helped. Option D is not supported because the machine works normally.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "help"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0017",
+      "title": "Weekend planning",
+      "statement": "Read the text:\n\n\"The family asked Gabriel if he wanted to join a weekend trip to a nearby park. They explained the schedule, what he should bring, and what time they would return. Gabriel asked a few questions and decided to participate because he felt included in the planning.\"\n\nWhat is the main idea?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The family included Gabriel in planning activities."
+        },
+        {
+          "label": "B",
+          "text": "The family forced Gabriel to travel."
+        },
+        {
+          "label": "C",
+          "text": "The trip was cancelled."
+        },
+        {
+          "label": "D",
+          "text": "Gabriel was excluded."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the family invites Gabriel, explains the trip, answers questions, and lets him decide. Option B is wrong because he was not forced. Option C contradicts the text because the trip is planned. Option D is incorrect because the text emphasizes inclusion.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "activities"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0018",
+      "title": "Cultural difference",
+      "statement": "Read the text:\n\n\"The family removed their shoes before entering the house. This was different from João's habit in Brazil, where he usually kept his shoes on indoors. After the family explained the reason, João respected the rule and began leaving his shoes near the door.\"\n\nWhat can be inferred?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "João adapted to a different cultural practice."
+        },
+        {
+          "label": "B",
+          "text": "João refused to follow the rule."
+        },
+        {
+          "label": "C",
+          "text": "The family changed the rule."
+        },
+        {
+          "label": "D",
+          "text": "Shoes were prohibited everywhere."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because João learns a different household custom and adjusts his behavior. Option B is wrong because he respects the rule. Option C is incorrect because the family does not change the rule. Option D exaggerates the situation; the rule applies to the house, not everywhere.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "culture"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0019",
+      "title": "Daily communication",
+      "statement": "Read the text:\n\n\"Every morning, the host father asked whether the student needed help with transportation or school schedules. Sometimes the student already knew the route, but the question made him feel supported and reminded him that he could ask for help when necessary.\"\n\nWhat is the main idea?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "The host father regularly offered support."
+        },
+        {
+          "label": "B",
+          "text": "Transportation was unavailable."
+        },
+        {
+          "label": "C",
+          "text": "The student missed school daily."
+        },
+        {
+          "label": "D",
+          "text": "Schedules were never discussed."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the host father repeatedly offers help with transportation and schedules. Option B is wrong because transportation exists. Option C is not mentioned. Option D contradicts the passage because schedules are discussed every morning.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "support"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0020",
+      "title": "Building trust",
+      "statement": "Read the text:\n\n\"By informing the family about his plans and respecting agreed schedules, Eduardo gradually earned their trust. When he wanted to attend a school event, the family felt comfortable discussing the plan because he had shown responsibility before.\"\n\nWhat can be inferred?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Responsible behavior helped create trust."
+        },
+        {
+          "label": "B",
+          "text": "Trust was automatic and unrelated to actions."
+        },
+        {
+          "label": "C",
+          "text": "Eduardo ignored family expectations."
+        },
+        {
+          "label": "D",
+          "text": "The family stopped communicating with Eduardo."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the text connects Eduardo's responsible behavior with the family's growing trust. Option B is wrong because trust is shown as a result of his actions. Option C contradicts the text because he respects expectations. Option D is incorrect because the family continues discussing plans with him.",
+      "tags": [
+        "sprint-6b-3",
+        "host-family",
+        "trust"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -5,33 +5,31 @@ import {
   ArrowRight,
   BadgeCheck,
   BarChart3,
-  Brain,
   BookOpenCheck,
+  Brain,
   CheckCircle2,
+  Circle,
   CircleDollarSign,
-  Layers3,
+  Clock3,
+  Flame,
+  GraduationCap,
+  ListChecks,
   LockKeyhole,
-  MessageCircle,
-  MessageSquareCheck,
   PenLine,
   Route,
+  Target,
 } from "lucide-react";
 
 import { PaymentButton } from "@/components/billing/payment-button";
-import { getLearningDashboardStats } from "@/lib/learning/service";
-import { getManualReviewStats } from "@/lib/manual-review/service";
+import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
+import type { MissionDashboardData } from "@/lib/mission/service";
+import { getMissionDashboard } from "@/lib/mission/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Área inicial do estudante na PGM Academy.",
+  title: "Painel de Missão",
+  description: "Missão diária e plano automático da PGM Academy.",
 };
-
-const statusLabel = {
-  eligible: "Elegível",
-  partial: "Parcial",
-  ineligible: "Não elegível",
-} as const;
 
 const accessLabel = {
   free: "Gratuito",
@@ -48,11 +46,156 @@ const subscriptionLabel = {
   refunded: "Reembolsado",
 } as const;
 
+const statusLabel = {
+  eligible: "Elegível",
+  partial: "Parcial",
+  ineligible: "Não elegível",
+} as const;
+
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 });
+
+function ProgressBar({ value }: { value: number }) {
+  return (
+    <div className="h-2 rounded-full bg-background">
+      <div
+        className="h-2 rounded-full bg-pgm-yellow transition-all"
+        style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
+      />
+    </div>
+  );
+}
+
+function MetricCard({
+  title,
+  value,
+  description,
+  Icon,
+}: {
+  title: string;
+  value: string | number;
+  description: string;
+  Icon: typeof Target;
+}) {
+  return (
+    <article className="rounded-md border border-border-soft bg-surface p-5">
+      <Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
+      <p className="mt-5 text-sm font-medium text-muted">{title}</p>
+      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
+      <p className="mt-3 text-sm leading-6 text-muted">{description}</p>
+    </article>
+  );
+}
+
+function MissionTaskList({ data }: { data: MissionDashboardData }) {
+  return (
+    <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
+            Missão de hoje
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-white">
+            Estudo guiado para hoje
+          </h2>
+        </div>
+        <span className="rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
+          {data.dailyMission.percentage}%
+        </span>
+      </div>
+
+      <div className="mt-5">
+        <ProgressBar value={data.dailyMission.percentage} />
+      </div>
+
+      <div className="mt-5 grid gap-3">
+        {data.dailyMission.tasks.map((task) => (
+          <Link
+            key={task.id}
+            href={task.href}
+            className="grid gap-4 rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35 lg:grid-cols-[1fr_120px]"
+          >
+            <div className="flex gap-3">
+              {task.completed ? (
+                <CheckCircle2
+                  className="mt-1 size-5 shrink-0 text-pgm-green"
+                  aria-hidden="true"
+                />
+              ) : (
+                <Circle
+                  className="mt-1 size-5 shrink-0 text-muted"
+                  aria-hidden="true"
+                />
+              )}
+              <div>
+                <p className="text-sm font-semibold text-white">{task.title}</p>
+                <p className="mt-1 text-sm leading-6 text-muted">
+                  {task.description}
+                </p>
+              </div>
+            </div>
+            <div className="self-center">
+              <p className="text-right font-mono text-sm font-semibold text-pgm-yellow">
+                {task.progress}/{task.target}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function PreparationPanel({ data }: { data: MissionDashboardData }) {
+  return (
+    <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
+            Preparação PGM
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-white">
+            {data.preparation.percentage}% concluído
+          </h2>
+        </div>
+        <GraduationCap className="size-6 text-pgm-yellow" aria-hidden="true" />
+      </div>
+
+      <div className="mt-5">
+        <ProgressBar value={data.preparation.percentage} />
+      </div>
+
+      <div className="mt-5 grid gap-3">
+        {data.preparation.components.map((component) => (
+          <div
+            key={component.id}
+            className="rounded-md border border-border-soft bg-background p-4"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  {component.title}
+                </p>
+                <p className="mt-1 text-xs text-muted">
+                  {component.completed} de {component.total}
+                </p>
+              </div>
+              <span className="font-mono text-sm font-semibold text-pgm-yellow">
+                {component.percentage}%
+              </span>
+            </div>
+            <div className="mt-3">
+              <ProgressBar value={component.percentage} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+}
 
 export default async function DashboardPage() {
   const supabase = await getServerSupabaseClient();
@@ -64,357 +207,277 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  const profileResponse = await supabase
-    .from("profiles")
-    .select("access_status")
-    .eq("id", user.id)
-    .maybeSingle();
-  const assessmentResponse = await supabase
-    .from("eligibility_assessments")
-    .select("status, readiness_score, created_at")
-    .eq("user_id", user.id)
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-  const subscriptionResponse = await supabase
-    .from("subscriptions")
-    .select("status")
-    .eq("user_id", user.id)
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-  const [learningStats, manualStats] = await Promise.all([
-    getLearningDashboardStats(user.id),
-    getManualReviewStats(user.id),
-  ]);
+  const data = await getMissionDashboard(user.id);
 
-  const profile = profileResponse.data as {
-    access_status: keyof typeof accessLabel;
-  } | null;
-  const latestAssessment = assessmentResponse.data as {
-    status: keyof typeof statusLabel;
-    readiness_score: number;
-    created_at: string;
-  } | null;
-  const subscription = subscriptionResponse.data as { status: string } | null;
+  if (data.requiresOnboarding) {
+    redirect("/onboarding");
+  }
 
-  const accessStatus = profile?.access_status ?? "free";
-  const paymentStatus = subscription?.status;
+  const subscriptionStatus = data.subscription?.status;
   const paymentValue =
-    paymentStatus && paymentStatus in subscriptionLabel
-      ? subscriptionLabel[paymentStatus as keyof typeof subscriptionLabel]
+    subscriptionStatus && subscriptionStatus in subscriptionLabel
+      ? subscriptionLabel[subscriptionStatus as keyof typeof subscriptionLabel]
       : "Asaas";
-  const diagnosisValue = latestAssessment
-    ? statusLabel[latestAssessment.status]
-    : "Pendente";
-  const diagnosisDescription = latestAssessment
-    ? `último diagnóstico salvo em ${dateFormatter.format(new Date(latestAssessment.created_at))}.`
-    : "Resultado ainda não salvo no painel.";
+  const latestAssessment = data.latestAssessment;
 
   return (
     <main className="px-4 py-6 sm:px-6 lg:px-8">
-      <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Área do aluno
-            </p>
-            <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              Painel de preparação
-            </h1>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
-              Comece pelo diagnóstico e avance pela trilha de aprovação com
-              clareza sobre requisitos, provas e preparação premium.
-            </p>
-          </div>
-
+      <section className="grid gap-5 xl:grid-cols-[1fr_380px]">
+        <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+          <p className="text-sm font-semibold uppercase text-pgm-yellow">
+            Painel de missão
+          </p>
+          <h1 className="mt-4 max-w-4xl text-3xl font-semibold text-white sm:text-4xl">
+            {data.nextAction.title}
+          </h1>
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
+            {data.nextAction.description}
+          </p>
           <Link
-            href="/diagnostico"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
+            href={data.nextAction.href}
+            className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
           >
-            Fazer diagnóstico
+            {data.nextAction.cta}
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
-        </div>
+        </article>
+
+        <aside className="rounded-md border border-border-soft bg-surface p-5">
+          <Flame className="size-5 text-pgm-yellow" aria-hidden="true" />
+          <p className="mt-4 text-sm font-medium text-muted">Ritmo atual</p>
+          <p className="mt-2 text-4xl font-semibold text-white">
+            {data.stats.currentStreak} dias
+          </p>
+          <p className="mt-3 text-sm leading-6 text-muted">
+            Acesso: {accessLabel[data.accessStatus]}. Pagamento: {paymentValue}.
+          </p>
+        </aside>
       </section>
+
+      {!data.hasPaidAccess ? (
+        <section className="mt-6">
+          <PremiumUpgradeCard description="Ative o premium para liberar onboarding, plano automático e recomendações completas do Painel de Missão." />
+        </section>
+      ) : null}
 
       <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        {[
-          {
-            title: "Diagnóstico",
-            value: diagnosisValue,
-            description: diagnosisDescription,
-            Icon: BadgeCheck,
-          },
-          {
-            title: "Aderencia",
-            value: latestAssessment
-              ? `${latestAssessment.readiness_score}%`
-              : "--",
-            description: "Pontuacao calculada pelos requisitos avaliados.",
-            Icon: BookOpenCheck,
-          },
-          {
-            title: "Premium",
-            value: accessLabel[accessStatus],
-            description: "Acesso será controlado por status financeiro.",
-            Icon: LockKeyhole,
-          },
-          {
-            title: "Pagamento",
-            value: paymentValue,
-            description: "Modelo inicial de pagamento único.",
-            Icon: CircleDollarSign,
-          },
-        ].map((item) => (
-          <article
-            key={item.title}
-            className="rounded-md border border-border-soft bg-surface p-5"
-          >
-            <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-            <p className="mt-5 text-sm font-medium text-muted">{item.title}</p>
-            <p className="mt-2 text-2xl font-semibold text-white">
-              {item.value}
-            </p>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              {item.description}
-            </p>
-          </article>
-        ))}
+        <MetricCard
+          title="Diagnóstico"
+          value={
+            latestAssessment ? statusLabel[latestAssessment.status] : "Pendente"
+          }
+          description={
+            latestAssessment
+              ? `Salvo em ${dateFormatter.format(new Date(latestAssessment.created_at))}.`
+              : "Primeiro passo recomendado para calibrar o plano."
+          }
+          Icon={BadgeCheck}
+        />
+        <MetricCard
+          title="Simulados"
+          value={data.stats.completedSimulations}
+          description="Tentativas finalizadas com resultado real."
+          Icon={ListChecks}
+        />
+        <MetricCard
+          title="Subjetivas"
+          value={data.stats.subjectiveSubmitted}
+          description="Atividades enviadas para correção manual."
+          Icon={PenLine}
+        />
+        <MetricCard
+          title="Flashcards"
+          value={data.stats.reviewedFlashcards}
+          description="Revisões registradas no progresso."
+          Icon={Brain}
+        />
       </section>
 
-      <section
-        id="premium"
-        className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6"
-      >
-        <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-center">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Acesso premium
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold text-white">
-              Plano único para preparar sua aprovação
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-              Pagamento único de R$ 29,90 processado pelo Asaas. O acesso
-              premium será liberado automaticamente após confirmação do
-              pagamento pelo webhook.
-            </p>
+      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_380px]">
+        <MissionTaskList data={data} />
+        <PreparationPanel data={data} />
+      </section>
 
-            <div className="mt-5 grid gap-3 sm:grid-cols-3">
-              {["PIX", "Cartão", "Boleto"].map((method) => (
-                <div
-                  key={method}
-                  className="rounded-md border border-border-soft bg-background px-4 py-3"
-                >
-                  <CheckCircle2
-                    className="size-4 text-pgm-yellow"
-                    aria-hidden="true"
-                  />
-                  <p className="mt-2 text-sm font-semibold text-white">
-                    {method}
-                  </p>
-                </div>
-              ))}
+      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_380px]">
+        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
+                Plano de Aprovação PGM
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
+                Próximas semanas
+              </h2>
             </div>
+            {data.hasPaidAccess ? (
+              <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-2 text-sm font-semibold text-pgm-yellow">
+                Personalizado
+              </span>
+            ) : (
+              <LockKeyhole className="size-5 text-pgm-yellow" aria-hidden="true" />
+            )}
           </div>
 
-          <div className="rounded-md border border-border-soft bg-background p-4">
-            <p className="text-sm font-medium text-muted">Pagamento único</p>
-            <p className="mt-2 text-4xl font-semibold text-white">R$ 29,90</p>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              Status atual: {accessLabel[accessStatus]}
-            </p>
-
-            <div className="mt-5">
-              {accessStatus === "paid" ? (
-                <div className="rounded-md border border-pgm-green/40 bg-pgm-green/10 p-4">
-                  <CheckCircle2
-                    className="size-5 text-pgm-green"
-                    aria-hidden="true"
-                  />
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    Premium ativo
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-muted">
-                    Seu acesso já foi liberado.
-                  </p>
+          <div className="mt-5 grid gap-4">
+            {data.approvalPlan.map((week) => (
+              <article
+                key={week.week}
+                className="rounded-md border border-border-soft bg-background p-4"
+              >
+                <p className="text-sm font-semibold text-pgm-yellow">
+                  {week.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  {week.focus}
+                </p>
+                <div className="mt-4 grid gap-2">
+                  {week.tasks.map((task) => (
+                    <Link
+                      key={`${week.week}:${task.title}`}
+                      href={task.href}
+                      className="inline-flex min-h-10 items-center justify-between gap-3 rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+                    >
+                      {task.title}
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </Link>
+                  ))}
                 </div>
+              </article>
+            ))}
+          </div>
+        </article>
+
+        <aside className="grid content-start gap-4">
+          <article className="rounded-md border border-border-soft bg-surface p-5">
+            <Clock3 className="size-5 text-pgm-yellow" aria-hidden="true" />
+            <p className="mt-4 text-sm font-semibold text-white">
+              Perfil de estudo
+            </p>
+            <div className="mt-4 grid gap-3">
+              {data.onboardingSummary.length === 0 ? (
+                <p className="text-sm leading-6 text-muted">
+                  O perfil aparece depois do onboarding premium.
+                </p>
               ) : (
-                <PaymentButton disabled={accessStatus === "blocked"} />
+                data.onboardingSummary.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-md border border-border-soft bg-background p-3"
+                  >
+                    <p className="text-xs font-semibold uppercase text-muted">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white">
+                      {item.value}
+                    </p>
+                  </div>
+                ))
               )}
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Correção manual
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold text-white">
-              Subjetivas e entrevista
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-              Acompanhe respostas enviadas, pendencias e feedbacks humanos
-              recebidos pela plataforma.
-            </p>
-          </div>
-          <Link
-            href="/subjetivas/minhas-respostas"
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
-          >
-            Ver respostas
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-        </div>
-
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {[
-            {
-              title: "Subjetivas pendentes",
-              value: manualStats.subjectivePending,
-              Icon: PenLine,
-            },
-            {
-              title: "Subjetivas corrigidas",
-              value: manualStats.subjectiveReviewed,
-              Icon: MessageSquareCheck,
-            },
-            {
-              title: "Treinos enviados",
-              value: manualStats.psychosocialSubmitted,
-              Icon: MessageCircle,
-            },
-            {
-              title: "Feedbacks recebidos",
-              value: manualStats.feedbacksReceived,
-              Icon: BadgeCheck,
-            },
-          ].map((item) => (
-            <article
-              key={item.title}
-              className="rounded-md border border-border-soft bg-background p-4"
-            >
-              <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
+          {!data.hasPaidAccess ? (
+            <article className="rounded-md border border-border-soft bg-surface p-5">
+              <CircleDollarSign
+                className="size-5 text-pgm-yellow"
+                aria-hidden="true"
+              />
               <p className="mt-4 text-sm font-medium text-muted">
-                {item.title}
+                Pagamento único
               </p>
-              <p className="mt-2 font-mono text-3xl font-semibold text-white">
-                {item.value}
+              <p className="mt-2 text-4xl font-semibold text-white">
+                R$ 29,90
               </p>
+              <div className="mt-5">
+                <PaymentButton disabled={data.accessStatus === "blocked"} />
+              </div>
             </article>
-          ))}
-        </div>
+          ) : null}
+        </aside>
       </section>
 
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Meu progresso
+              Recomendações personalizadas
             </p>
-            <h2 className="mt-4 text-2xl font-semibold text-white">
-              Evolução de aprendizagem
+            <h2 className="mt-3 text-2xl font-semibold text-white">
+              O que reforçar agora
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
-              Primeira camada de progresso para materiais, trilhas e
-              flashcards. A gamificação fica preparada para uma etapa futura.
-            </p>
           </div>
-
           <Link
             href="/analytics"
             className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
           >
             Ver analytics
-            <ArrowRight className="size-4" aria-hidden="true" />
+            <BarChart3 className="size-4" aria-hidden="true" />
           </Link>
         </div>
 
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-          {[
-            {
-              title: "Materiais concluídos",
-              value: learningStats.completedMaterials,
-              Icon: BookOpenCheck,
-            },
-            {
-              title: "Trilhas iniciadas",
-              value: learningStats.startedPaths,
-              Icon: Route,
-            },
-            {
-              title: "Trilhas concluídas",
-              value: learningStats.completedPaths,
-              Icon: Layers3,
-            },
-            {
-              title: "Flashcards revisados",
-              value: learningStats.reviewedFlashcards,
-              Icon: Brain,
-            },
-            {
-              title: "Analytics ativo",
-              value:
-                learningStats.completedMaterials +
-                learningStats.reviewedFlashcards +
-                learningStats.completedPaths,
-              Icon: BarChart3,
-            },
-          ].map((item) => (
-            <article
-              key={item.title}
-              className="rounded-md border border-border-soft bg-background p-4"
-            >
-              <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
-              <p className="mt-4 text-sm font-medium text-muted">
-                {item.title}
+        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+          {data.recommendations.length === 0 ? (
+            <div className="rounded-md border border-border-soft bg-background p-4">
+              <BookOpenCheck className="size-5 text-pgm-yellow" aria-hidden="true" />
+              <p className="mt-4 text-sm font-semibold text-white">
+                Nenhuma lacuna crítica detectada
               </p>
-              <p className="mt-2 font-mono text-3xl font-semibold text-white">
-                {item.value}
+              <p className="mt-2 text-sm leading-6 text-muted">
+                Continue seguindo a missão diária para gerar dados mais ricos.
               </p>
-            </article>
-          ))}
+            </div>
+          ) : (
+            data.recommendations.map((recommendation) => (
+              <Link
+                key={`${recommendation.title}:${recommendation.href}`}
+                href={recommendation.href}
+                className="rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      {recommendation.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted">
+                      {recommendation.description}
+                    </p>
+                  </div>
+                  <ArrowRight
+                    className="size-4 shrink-0 text-pgm-yellow"
+                    aria-hidden="true"
+                  />
+                </div>
+              </Link>
+            ))
+          )}
         </div>
       </section>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-white">
-              Trilha de aprovação
-            </p>
-            <p className="mt-2 text-sm leading-6 text-muted">
-              As etapas do processo seletivo ficam organizadas para orientar a
-              preparação do aluno.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-5 grid gap-3">
-          {[
-            "Verificação dos requisitos",
-            "Prova objetiva",
-            "Prova subjetiva",
-            "Entrevista psicossocial",
-          ].map((step, index) => (
-            <div
-              key={step}
-              className="flex items-center justify-between rounded-md border border-border-soft bg-background px-4 py-3"
-            >
-              <div className="flex items-center gap-3">
-                <span className="flex size-8 items-center justify-center rounded-md bg-white text-sm font-semibold text-background">
-                  {index + 1}
-                </span>
-                <span className="text-sm font-medium text-white">{step}</span>
-              </div>
-              <span className="size-2 rounded-full bg-white/25" />
-            </div>
-          ))}
-        </div>
+      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <MetricCard
+          title="Materiais"
+          value={data.stats.completedMaterials}
+          description="Aulas concluídas no progresso geral."
+          Icon={BookOpenCheck}
+        />
+        <MetricCard
+          title="Trilhas concluídas"
+          value={data.stats.completedPaths}
+          description="Sequências completas finalizadas."
+          Icon={Route}
+        />
+        <MetricCard
+          title="Preparação"
+          value={`${data.preparation.percentage}%`}
+          description="Cálculo com dados reais da plataforma."
+          Icon={GraduationCap}
+        />
+        <MetricCard
+          title="Acesso"
+          value={accessLabel[data.accessStatus]}
+          description="Controle central em profiles.access_status."
+          Icon={LockKeyhole}
+        />
       </section>
     </main>
   );

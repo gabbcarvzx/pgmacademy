@@ -18,7 +18,7 @@ type PageProps = {
 
 const typeLabel = {
   quick: "Rápido",
-  full: "Completo",
+  full: "Oficial PGM",
 } as const;
 
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
@@ -112,7 +112,12 @@ export default async function SimulationAttemptPage({ params }: PageProps) {
       </section>
 
       <div className="mt-6">
-        <SimulationRunner attemptId={data.attemptId} questions={data.questions} />
+        <SimulationRunner
+          attemptId={data.attemptId}
+          startedAt={data.startedAt}
+          durationMinutes={data.template.durationMinutes}
+          questions={data.questions}
+        />
       </div>
     </main>
   );

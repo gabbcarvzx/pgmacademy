@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, FileCheck2 } from "lucide-react";
 
 import { EligibilityForm } from "@/components/eligibility/eligibility-form";
+import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 import { siteConfig } from "@/lib/site-config";
 
@@ -49,7 +50,7 @@ export default async function DiagnosticoPage() {
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-muted sm:text-lg">
             Informe os dados escolares do estudante para receber uma análise
-            clara baseada nos requisitos do edital 01/2026.
+            clara baseada nos requisitos do {pgm2026OfficialSnapshot.editalTitle}.
           </p>
         </section>
 

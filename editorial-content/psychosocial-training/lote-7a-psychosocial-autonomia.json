@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PSY-AU-0001",
+      "title": "Autonomia 1",
+      "statement": "Leia a situação:\n\n\"Um intercambista precisa decidir como organizar sua rotina sem depender constantemente de outras pessoas.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0002",
+      "title": "Autonomia 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante enfrenta uma dificuldade simples e precisa escolher entre agir ou esperar que alguém resolva.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0003",
+      "title": "Autonomia 3",
+      "statement": "Leia a situação:\n\n\"Um aluno precisa cumprir compromissos acadêmicos sem supervisão constante.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0004",
+      "title": "Autonomia 4",
+      "statement": "Leia a situação:\n\n\"Uma intercambista percebe que esqueceu um material importante para a aula.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0005",
+      "title": "Autonomia 5",
+      "statement": "Leia a situação:\n\n\"Um estudante precisa administrar seu tempo entre estudos e atividades pessoais.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0006",
+      "title": "Autonomia 6",
+      "statement": "Leia a situação:\n\n\"Uma aluna está em um ambiente novo e precisa adaptar-se a responsabilidades diárias.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0007",
+      "title": "Autonomia 7",
+      "statement": "Leia a situação:\n\n\"Um intercambista encontra um pequeno problema de transporte durante sua rotina.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0008",
+      "title": "Autonomia 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa buscar informações para resolver uma dúvida prática.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0009",
+      "title": "Autonomia 9",
+      "statement": "Leia a situação:\n\n\"Um aluno quer demonstrar maturidade ao lidar com tarefas cotidianas.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-AU-0010",
+      "title": "Autonomia 10",
+      "statement": "Leia a situação:\n\n\"Uma intercambista busca desenvolver independência durante a experiência internacional.\"\n\nQual atitude demonstra maior autonomia?",
+      "language": "portuguese",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Assumir responsabilidade, buscar soluções e agir de forma independente."
+        },
+        {
+          "label": "B",
+          "text": "Esperar sempre que outras pessoas resolvam tudo."
+        },
+        {
+          "label": "C",
+          "text": "Ignorar a situação e evitar decisões."
+        },
+        {
+          "label": "D",
+          "text": "Transferir toda responsabilidade para terceiros."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A demonstra autonomia porque envolve responsabilidade, iniciativa e capacidade de resolver situações do cotidiano. As demais alternativas indicam dependência excessiva ou falta de ação.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "autonomia"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

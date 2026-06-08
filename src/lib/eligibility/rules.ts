@@ -1,3 +1,5 @@
+import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
+
 export type SchoolYear = "first" | "second" | "other";
 
 export type RequirementStatus = "passed" | "warning" | "failed";
@@ -39,13 +41,13 @@ export type EligibilityResult = {
 };
 
 export const pgm2026Rules = {
-  edital: "Edital de Abertura nº 01/2026",
-  sourceUrl:
-    "https://portal.educacao.pe.gov.br/wp-content/uploads/2026/05/0d68cd50-48a7-492c-88f7-0c7b9af530c0.pdf",
-  birthDateStart: "2009-05-01",
-  birthDateEnd: "2012-10-01",
-  minimumAttendancePercent: 85,
-  minimumAverage: 7,
+  edital: pgm2026OfficialSnapshot.editalTitle,
+  sourceUrl: pgm2026OfficialSnapshot.editalUrl,
+  birthDateStart: pgm2026OfficialSnapshot.requirements.birthDateStart,
+  birthDateEnd: pgm2026OfficialSnapshot.requirements.birthDateEnd,
+  minimumAttendancePercent:
+    pgm2026OfficialSnapshot.requirements.minimumAttendancePercent,
+  minimumAverage: pgm2026OfficialSnapshot.requirements.minimumAverage,
 };
 
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", {

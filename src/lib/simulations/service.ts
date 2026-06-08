@@ -15,7 +15,13 @@ import {
   summarizeAttemptHistory,
   type CategoryPerformance,
   type ObjectiveAnswerInput,
+  type ObjectiveScoreResult,
 } from "@/lib/simulations/scoring";
+import {
+  officialObjectiveSimulation,
+  simulationDurationMinutes,
+  simulationPointsPerQuestion,
+} from "@/lib/simulations/official-pgm";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -67,6 +73,10 @@ type AttemptAnswerRow = Pick<
   | "selected_option_id"
   | "is_correct"
   | "points"
+>;
+type LearningPathRow = Pick<
+  Database["public"]["Tables"]["learning_paths"]["Row"],
+  "id" | "tenant_id" | "title" | "slug" | "language" | "is_premium" | "is_active"
 >;
 
 export type SimulationHistoryItem = Pick<
@@ -145,6 +155,7 @@ export type SimulationRunnerView = {
     type: SimulationTemplateCatalogItem["type"];
     language: SimulationTemplateCatalogItem["language"];
     totalQuestions: number;
+    durationMinutes: number;
   };
   answeredCount: number;
   questions: SimulationRunnerQuestion[];
@@ -172,13 +183,26 @@ export type SimulationResultView = {
   templateTitle: string;
   startedAt: string;
   completedAt: string;
+  elapsedMinutes: number;
   score: number;
+  maxScore: number;
   percentage: number;
   totalQuestions: number;
   answeredQuestions: number;
   correctAnswers: number;
   incorrectAnswers: number;
   byCategory: CategoryPerformance[];
+  strongCategories: CategoryPerformance[];
+  weakCategories: CategoryPerformance[];
+  nextSteps: string[];
+  recommendedPaths: Array<{
+    id: string;
+    title: string;
+    href: string;
+    reason: string;
+    isPremium: boolean;
+    canAccess: boolean;
+  }>;
   questions: SimulationQuestionResult[];
 };
 
@@ -214,8 +238,46 @@ function assertDatabaseResult<T>(
   return data;
 }
 
-function estimatedMinutes(totalQuestions: number) {
-  return Math.max(Math.ceil(totalQuestions * 1.5), 10);
+function normalizeTemplateForOfficialPgm(
+  template: SimulationTemplateCatalogItem,
+): SimulationTemplateCatalogItem {
+  if (template.type !== "full") {
+    return template;
+  }
+
+  return {
+    ...template,
+    title: officialObjectiveSimulation.title,
+    description: officialObjectiveSimulation.description,
+    total_questions: officialObjectiveSimulation.questionCount,
+    is_premium: true,
+  };
+}
+
+function minutesBetween(startedAt: string, completedAt: string | null) {
+  if (!completedAt) {
+    return 0;
+  }
+
+  const started = new Date(startedAt).getTime();
+  const completed = new Date(completedAt).getTime();
+
+  if (!Number.isFinite(started) || !Number.isFinite(completed)) {
+    return 0;
+  }
+
+  return Math.max(Math.round((completed - started) / 60000), 0);
+}
+
+function searchText(value: string) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function includesAny(value: string, terms: string[]) {
+  return terms.some((term) => value.includes(term));
 }
 
 async function getProfile(userId: string) {
@@ -301,9 +363,9 @@ async function getActiveTemplates(profile: ProfileRow) {
     );
   }
 
-  return ((data ?? []) as SimulationTemplateCatalogItem[]).filter((template) =>
-    isTenantVisible(template.tenant_id ?? null, profile),
-  );
+  return ((data ?? []) as SimulationTemplateCatalogItem[])
+    .filter((template) => isTenantVisible(template.tenant_id ?? null, profile))
+    .map(normalizeTemplateForOfficialPgm);
 }
 
 async function getCategoriesById(categoryIds: string[]) {
@@ -522,7 +584,7 @@ export async function getSimulationStartView(
     hasPaidAccess: hasPremiumAccess(profile),
     template,
     activeAttemptId: activeAttempt?.id ?? null,
-    estimatedMinutes: template ? estimatedMinutes(template.total_questions) : 0,
+    estimatedMinutes: template ? simulationDurationMinutes(template) : 0,
   };
 }
 
@@ -711,7 +773,9 @@ async function getTemplateById(templateId: string | null) {
     );
   }
 
-  return data as SimulationTemplateCatalogItem | null;
+  return data
+    ? normalizeTemplateForOfficialPgm(data as SimulationTemplateCatalogItem)
+    : null;
 }
 
 async function getAttemptAnswers(attemptId: string) {
@@ -829,6 +893,102 @@ async function getOptionsByQuestionId(questionIds: string[], includeCorrect: boo
   return optionsByQuestion;
 }
 
+async function getRecommendedPaths(
+  profile: ProfileRow,
+  weakCategories: CategoryPerformance[],
+) {
+  const admin = getSupabaseAdminClient();
+  const { data, error } = await admin
+    .from("learning_paths")
+    .select("id, tenant_id, title, slug, language, is_premium, is_active")
+    .eq("is_active", true)
+    .order("title", { ascending: true });
+
+  if (error) {
+    throw new SimulationServiceError(
+      "Não foi possível consultar trilhas recomendadas.",
+      500,
+    );
+  }
+
+  const visiblePaths = ((data ?? []) as LearningPathRow[]).filter(
+    (path): path is LearningPathRow & { slug: string } =>
+      isTenantVisible(path.tenant_id, profile) && Boolean(path.slug),
+  );
+  const weakText = weakCategories
+    .map((category) => searchText(category.categoryName))
+    .join(" ");
+  const ranked = visiblePaths
+    .map((path) => {
+      const title = searchText(path.title);
+      let score = 0;
+
+      if (includesAny(weakText, ["english", "ingl"])) {
+        score += path.language === "english" || title.includes("ingles") ? 3 : 0;
+      }
+      if (includesAny(weakText, ["spanish", "espan"])) {
+        score += path.language === "spanish" || title.includes("espanhol") ? 3 : 0;
+      }
+      if (includesAny(weakText, ["escrita", "subjet"])) {
+        score += title.includes("escrita") || title.includes("subjetiva") ? 4 : 0;
+      }
+      if (includesAny(weakText, ["programa", "edital"])) {
+        score += includesAny(title, ["edital", "preparacao segura"]) ? 4 : 0;
+      }
+      if (includesAny(weakText, ["psicossocial", "entrevista"])) {
+        score += includesAny(title, ["entrevista", "psicossocial"]) ? 4 : 0;
+      }
+
+      return { path, score };
+    })
+    .sort((a, b) => b.score - a.score || a.path.title.localeCompare(b.path.title));
+
+  const selected = (ranked.some((item) => item.score > 0)
+    ? ranked.filter((item) => item.score > 0)
+    : ranked
+  ).slice(0, 3);
+
+  return selected.map(({ path }) => ({
+    id: path.id,
+    title: path.title,
+    href: `/trilhas/${path.slug}`,
+    reason:
+      weakCategories.length > 0
+        ? "Reforça categorias com margem de melhoria no simulado."
+        : "Mantém ritmo de estudo após o bom desempenho.",
+    isPremium: path.is_premium,
+    canAccess: canAccessPremium(path.is_premium, profile),
+  }));
+}
+
+function buildNextSteps(score: ObjectiveScoreResult) {
+  if (score.totalQuestions === 0) {
+    return ["Inicie um simulado oficial para gerar recomendações reais."];
+  }
+
+  if (score.percentage >= 80) {
+    return [
+      "Revise os erros pontuais antes de iniciar outro simulado oficial.",
+      "Treine a subjetiva oficial para equilibrar desempenho objetivo e escrito.",
+      "Use as trilhas recomendadas para manter consistência até a prova.",
+    ];
+  }
+
+  if (score.percentage >= 60) {
+    return [
+      "Priorize as categorias abaixo de 60% antes de refazer um simulado completo.",
+      "Revise flashcards e materiais relacionados às categorias fracas.",
+      "Faça um simulado rápido por idioma antes do próximo oficial.",
+    ];
+  }
+
+  return [
+    "Volte para as trilhas básicas das categorias fracas.",
+    "Revise vocabulário, gramática e interpretação antes de tentar outro oficial.",
+    "Faça uma rotina curta diária com material, flashcards e 10 questões.",
+  ];
+}
+
 export async function getSimulationRunner(
   userId: string,
   attemptId: string,
@@ -864,6 +1024,7 @@ export async function getSimulationRunner(
       type: template.type,
       language: template.language,
       totalQuestions: answers.length,
+      durationMinutes: simulationDurationMinutes(template),
     },
     answeredCount: answers.filter((answer) => answer.selected_option_id).length,
     questions: answers.map((answer) => {
@@ -1030,14 +1191,16 @@ export async function submitSimulationAttempt(
   }
 
   const questionIds = answers.map((answer) => answer.question_id);
-  const [questions, optionsByQuestion] = await Promise.all([
+  const [questions, optionsByQuestion, template] = await Promise.all([
     getQuestionsById(questionIds),
     getOptionsByQuestionId(questionIds, true),
+    getTemplateById(attempt.template_id),
   ]);
   const questionById = new Map(questions.map((question) => [question.id, question]));
   const categories = await getCategoriesById(
     questions.map((question) => question.category_id).filter((id): id is string => Boolean(id)),
   );
+  const pointsPerQuestion = template ? simulationPointsPerQuestion(template) : 1;
 
   const scoreInput: ObjectiveAnswerInput[] = answers.map((answer) => {
     const question = questionById.get(answer.question_id);
@@ -1057,7 +1220,7 @@ export async function submitSimulationAttempt(
         "Sem categoria",
       selectedOptionId: answer.selected_option_id,
       correctOptionId: correctOption?.id ?? null,
-      points: 1,
+      points: pointsPerQuestion,
     };
   });
   const score = calculateObjectiveScore(scoreInput);
@@ -1072,7 +1235,7 @@ export async function submitSimulationAttempt(
     points:
       Boolean(answer.selectedOptionId) &&
       answer.selectedOptionId === answer.correctOptionId
-        ? 1
+        ? pointsPerQuestion
         : 0,
   }));
 
@@ -1128,7 +1291,7 @@ export async function getSimulationResult(
   userId: string,
   attemptId: string,
 ): Promise<SimulationResultView> {
-  const { attempt } = await getAttemptForUser(userId, attemptId);
+  const { profile, attempt } = await getAttemptForUser(userId, attemptId);
 
   if (attempt.status !== "completed") {
     throw new SimulationServiceError("Tentativa ainda não finalizada.", 409);
@@ -1145,6 +1308,7 @@ export async function getSimulationResult(
   const categories = await getCategoriesById(
     questions.map((question) => question.category_id).filter((id): id is string => Boolean(id)),
   );
+  const pointsPerQuestion = template ? simulationPointsPerQuestion(template) : 1;
   const scoreInput: ObjectiveAnswerInput[] = [];
   const questionResults: SimulationQuestionResult[] = [];
 
@@ -1166,7 +1330,7 @@ export async function getSimulationResult(
       categoryName,
       selectedOptionId: answer.selected_option_id,
       correctOptionId: correctOption?.id ?? null,
-      points: 1,
+      points: pointsPerQuestion,
     });
     questionResults.push({
       id: question.id,
@@ -1187,19 +1351,27 @@ export async function getSimulationResult(
   }
 
   const score = calculateObjectiveScore(scoreInput);
+  const completedAt = attempt.completed_at ?? new Date().toISOString();
+  const recommendedPaths = await getRecommendedPaths(profile, score.weakCategories);
 
   return {
     attemptId: attempt.id,
     templateTitle: template?.title ?? "Simulado removido",
     startedAt: attempt.started_at,
-    completedAt: attempt.completed_at ?? new Date().toISOString(),
+    completedAt,
+    elapsedMinutes: minutesBetween(attempt.started_at, completedAt),
     score: attempt.score ?? score.score,
+    maxScore: score.maxScore,
     percentage: attempt.percentage ?? score.percentage,
     totalQuestions: score.totalQuestions,
     answeredQuestions: score.answeredQuestions,
     correctAnswers: score.correctAnswers,
     incorrectAnswers: score.incorrectAnswers,
     byCategory: score.byCategory,
+    strongCategories: score.strongCategories,
+    weakCategories: score.weakCategories,
+    nextSteps: buildNextSteps(score),
+    recommendedPaths,
     questions: questionResults,
   };
 }

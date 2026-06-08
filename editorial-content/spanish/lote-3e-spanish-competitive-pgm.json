@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ESP-RC-0041",
+      "title": "Spanish Competitive PGM 1",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0042",
+      "title": "Spanish Competitive PGM 2",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0043",
+      "title": "Spanish Competitive PGM 3",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0044",
+      "title": "Spanish Competitive PGM 4",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0045",
+      "title": "Spanish Competitive PGM 5",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0046",
+      "title": "Spanish Competitive PGM 6",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0047",
+      "title": "Spanish Competitive PGM 7",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0048",
+      "title": "Spanish Competitive PGM 8",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0049",
+      "title": "Spanish Competitive PGM 9",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0050",
+      "title": "Spanish Competitive PGM 10",
+      "statement": "Lee el texto:\n\n\"Un estudiante de intercambio debe adaptarse a nuevas reglas, comunicarse con personas de diferentes culturas, organizar responsabilidades académicas y resolver situaciones cotidianas con autonomía. Estas experiencias contribuyen a su desarrollo personal y académico.\"\n\n¿Cuál es la conclusión más adecuada?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "La experiencia internacional exige adaptación, responsabilidad y comunicación efectiva."
+        },
+        {
+          "label": "B",
+          "text": "Los estudiantes deben evitar participar en actividades escolares."
+        },
+        {
+          "label": "C",
+          "text": "La convivencia internacional no influye en el crecimiento personal."
+        },
+        {
+          "label": "D",
+          "text": "La responsabilidad académica no forma parte del intercambio."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque sintetiza las principales ideas del texto: adaptación, responsabilidad, comunicación y crecimiento personal. Las demás opciones contradicen directamente la información presentada o ignoran elementos fundamentales de la experiencia de intercambio.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "competitive",
+        "advanced"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

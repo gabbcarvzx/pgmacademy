@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PSY-SM-0001",
+      "title": "Simulado Psicossocial 1",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0002",
+      "title": "Simulado Psicossocial 2",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0003",
+      "title": "Simulado Psicossocial 3",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0004",
+      "title": "Simulado Psicossocial 4",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0005",
+      "title": "Simulado Psicossocial 5",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0006",
+      "title": "Simulado Psicossocial 6",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "autonomia",
+      "competence": "psy-demonstrate-autonomy",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0007",
+      "title": "Simulado Psicossocial 7",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0008",
+      "title": "Simulado Psicossocial 8",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "resolucao-de-conflitos",
+      "competence": "psy-resolve-conflicts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0009",
+      "title": "Simulado Psicossocial 9",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-SM-0010",
+      "title": "Simulado Psicossocial 10",
+      "statement": "Em uma situação de convivência internacional, qual atitude demonstra melhor preparo psicossocial?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "diversidade-cultural",
+      "competence": "psy-respect-cultural-diversity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com respeito, responsabilidade, diálogo e maturidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar as consequências das próprias ações."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer comunicação ou cooperação."
+        },
+        {
+          "label": "D",
+          "text": "Reagir de forma impulsiva e desrespeitosa."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A reúne competências psicossociais importantes para intercâmbio: autonomia, maturidade, comunicação adequada, resolução de conflitos e respeito à diversidade cultural.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "simulado"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

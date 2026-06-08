@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "PSY-MT-0001",
+      "title": "Maturidade e responsabilidade 1",
+      "statement": "Leia a situação:\n\n\"Um intercambista recebe uma crítica construtiva sobre sua postura em sala de aula.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0002",
+      "title": "Maturidade e responsabilidade 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante fica frustrada porque não consegue se comunicar perfeitamente em outro idioma.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0003",
+      "title": "Maturidade e responsabilidade 3",
+      "statement": "Leia a situação:\n\n\"Um aluno precisa respeitar uma regra mesmo discordando dela inicialmente.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0004",
+      "title": "Maturidade e responsabilidade 4",
+      "statement": "Leia a situação:\n\n\"Uma intercambista sente saudade de casa, mas precisa manter sua rotina escolar.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0005",
+      "title": "Maturidade e responsabilidade 5",
+      "statement": "Leia a situação:\n\n\"Um estudante comete um erro e precisa reconhecer sua responsabilidade.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0006",
+      "title": "Maturidade e responsabilidade 6",
+      "statement": "Leia a situação:\n\n\"Uma aluna precisa lidar com uma mudança inesperada sem agir impulsivamente.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0007",
+      "title": "Maturidade e responsabilidade 7",
+      "statement": "Leia a situação:\n\n\"Um intercambista discorda de um colega, mas deve manter respeito na conversa.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0008",
+      "title": "Maturidade e responsabilidade 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa tomar uma decisão pensando nas consequências.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0009",
+      "title": "Maturidade e responsabilidade 9",
+      "statement": "Leia a situação:\n\n\"Um aluno quer demonstrar equilíbrio diante de uma situação desconfortável.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-MT-0010",
+      "title": "Maturidade e responsabilidade 10",
+      "statement": "Leia a situação:\n\n\"Uma intercambista precisa mostrar responsabilidade durante a convivência internacional.\"\n\nQual atitude demonstra maior maturidade?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "responsabilidade",
+      "competence": "psy-demonstrate-maturity",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Agir com equilíbrio, responsabilidade e consciência das consequências."
+        },
+        {
+          "label": "B",
+          "text": "Reagir impulsivamente sem refletir."
+        },
+        {
+          "label": "C",
+          "text": "Culpar outras pessoas por toda dificuldade."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar regras, orientações e responsabilidades."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque demonstra maturidade psicossocial: equilíbrio emocional, responsabilidade e consciência das consequências. As demais alternativas indicam impulsividade, transferência de responsabilidade ou desrespeito às regras.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "responsabilidade",
+        "maturidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ENG-RC-0011",
+      "title": "Inference about first-day anxiety",
+      "statement": "Read the text:\n\n\"On her first day at the international school, Ana arrived early and sat quietly near the window. She understood most of the teacher's instructions, but she hesitated before speaking to her classmates. At lunch, a student invited her to join a group table. Ana smiled, took a deep breath, and walked toward them.\"\n\nWhat can be inferred about Ana?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "She was confident from the beginning and had no difficulty adapting."
+        },
+        {
+          "label": "B",
+          "text": "She felt nervous, but she was willing to try to interact with others."
+        },
+        {
+          "label": "C",
+          "text": "She did not understand anything the teacher said."
+        },
+        {
+          "label": "D",
+          "text": "She refused to communicate with her classmates."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Ana hesitates and sits quietly, which suggests nervousness. However, when invited, she smiles and joins the group, showing willingness to interact despite anxiety.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "school-adaptation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0012",
+      "title": "Inference about host family support",
+      "statement": "Read the text:\n\n\"Lucas forgot how to ask for a bus schedule in English. Instead of laughing, his host father repeated the question slowly and showed him how to say it. Later that week, Lucas used the same phrase at the bus station without help.\"\n\nWhat can be inferred from the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Lucas learned from correction and became more independent."
+        },
+        {
+          "label": "B",
+          "text": "Lucas decided not to use public transportation anymore."
+        },
+        {
+          "label": "C",
+          "text": "The host father was impatient with Lucas."
+        },
+        {
+          "label": "D",
+          "text": "Lucas already knew every expression before traveling."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The host father helps Lucas practice the phrase, and later Lucas uses it without help. This implies learning, progress, and growing independence.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0013",
+      "title": "Inference about cultural differences",
+      "statement": "Read the text:\n\n\"During dinner, Emily noticed that her host family ate earlier than her family in Brazil. At first, she thought the schedule was strange. After a few days, she began helping set the table and realized that dinner was a moment for everyone to talk about their day.\"\n\nWhat can be inferred about Emily?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "She refused to accept the host family's routine."
+        },
+        {
+          "label": "B",
+          "text": "She gradually understood the meaning of a different family habit."
+        },
+        {
+          "label": "C",
+          "text": "She believed dinner was not important in any culture."
+        },
+        {
+          "label": "D",
+          "text": "She avoided spending time with the host family."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Emily first finds the schedule strange, but later understands that dinner has a social purpose in the host family. This shows gradual cultural understanding.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "culture"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0014",
+      "title": "Inference about responsible behavior",
+      "statement": "Read the text:\n\n\"Before leaving for a school trip, the coordinator reminded students to keep their phones charged and stay with the group. Rafael checked his phone battery, saved the coordinator's number, and stayed close to his classmates during the visit.\"\n\nWhat can be inferred about Rafael?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "He ignored the coordinator's instructions."
+        },
+        {
+          "label": "B",
+          "text": "He acted responsibly during the school trip."
+        },
+        {
+          "label": "C",
+          "text": "He did not want to participate in the visit."
+        },
+        {
+          "label": "D",
+          "text": "He lost contact with his group."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Rafael follows the coordinator's instructions by checking his phone, saving the number, and staying with the group. This indicates responsible behavior.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "responsibility"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0015",
+      "title": "Inference about asking for help",
+      "statement": "Read the text:\n\n\"Marina did not understand a homework instruction. In Brazil, she often felt embarrassed to ask questions in class. During the exchange, she decided to talk to the teacher after the lesson. The teacher explained the task again and praised her for asking for help.\"\n\nWhat can be inferred from Marina's decision?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "She was learning to communicate her needs more confidently."
+        },
+        {
+          "label": "B",
+          "text": "She avoided completing the homework."
+        },
+        {
+          "label": "C",
+          "text": "She believed teachers should not answer questions."
+        },
+        {
+          "label": "D",
+          "text": "She understood the task perfectly from the beginning."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Marina had felt embarrassed before, but she chose to ask the teacher for help. This suggests growth in confidence and communication.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "communication"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0016",
+      "title": "Inference about time management",
+      "statement": "Read the text:\n\n\"Pedro wanted to join an after-school club, but he also had weekly assignments and language practice. Instead of choosing only one activity, he created a simple weekly schedule. By the end of the month, he had completed his assignments and attended most club meetings.\"\n\nWhat can be inferred about Pedro?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "He managed his time to balance school and social activities."
+        },
+        {
+          "label": "B",
+          "text": "He stopped doing school assignments."
+        },
+        {
+          "label": "C",
+          "text": "He decided that clubs were not useful."
+        },
+        {
+          "label": "D",
+          "text": "He had no responsibilities during the exchange."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Pedro creates a schedule and successfully handles assignments and club meetings. This implies effective time management and balance.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "time-management"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0017",
+      "title": "Inference about emotional adaptation",
+      "statement": "Read the text:\n\n\"In the second week abroad, Sofia missed her family and felt quieter than usual. She wrote in her journal, sent a message to her parents during the scheduled time, and joined her host sister for a walk. The next day, she felt more prepared to participate in class.\"\n\nWhat can be inferred about Sofia?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "She found healthy ways to deal with homesickness."
+        },
+        {
+          "label": "B",
+          "text": "She decided to abandon the exchange program."
+        },
+        {
+          "label": "C",
+          "text": "She avoided all contact with her host family."
+        },
+        {
+          "label": "D",
+          "text": "She never experienced emotional difficulty abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Sofia misses her family, but she writes, contacts her parents appropriately, and spends time with her host sister. These actions suggest healthy coping strategies.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "emotional-adaptation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0018",
+      "title": "Inference about respecting rules",
+      "statement": "Read the text:\n\n\"The exchange coordinator explained that students should inform their host family before making plans after school. Nina wanted to visit a bookstore with classmates, so she sent a message explaining where she was going and when she would return. Her host mother thanked her for being clear.\"\n\nWhat can be inferred about Nina?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "She understood the importance of communication and safety rules."
+        },
+        {
+          "label": "B",
+          "text": "She ignored the coordinator's orientation."
+        },
+        {
+          "label": "C",
+          "text": "She avoided making plans with classmates."
+        },
+        {
+          "label": "D",
+          "text": "She believed host families should not know student plans."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Nina follows the rule by informing her host family about her plan. This implies that she understands responsible communication and safety.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "rules"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0019",
+      "title": "Inference about learning from mistakes",
+      "statement": "Read the text:\n\n\"During a presentation, João pronounced several words incorrectly. He felt embarrassed, but after class, two classmates helped him practice. In the next presentation, he spoke more slowly and checked difficult words before speaking. His teacher noticed his improvement.\"\n\nWhat can be inferred about João?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "He used feedback and practice to improve his speaking."
+        },
+        {
+          "label": "B",
+          "text": "He refused help from his classmates."
+        },
+        {
+          "label": "C",
+          "text": "He stopped participating in presentations."
+        },
+        {
+          "label": "D",
+          "text": "He did not care about improving his pronunciation."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "João is embarrassed at first, but he accepts help, practices, and changes his strategy. His teacher notices improvement, so the inference is that feedback helped him improve.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "learning-from-mistakes"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0020",
+      "title": "Inference about international growth",
+      "statement": "Read the text:\n\n\"When Clara returned from her exchange, her teachers noticed that she participated more in class discussions. She also helped younger students prepare for interviews and shared practical advice about living with a host family. Clara said the experience made her understand that learning continues after the trip ends.\"\n\nWhat can be inferred from the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "The exchange had a lasting positive effect on Clara's confidence and sense of responsibility."
+        },
+        {
+          "label": "B",
+          "text": "Clara forgot everything she learned during the exchange."
+        },
+        {
+          "label": "C",
+          "text": "Clara avoided talking about her experience after returning."
+        },
+        {
+          "label": "D",
+          "text": "The exchange only helped Clara with tourism vocabulary."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Clara participates more, helps younger students, and reflects on continued learning. These details imply long-term growth in confidence and responsibility.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "inference",
+        "growth"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

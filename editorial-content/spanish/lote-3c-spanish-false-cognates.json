@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ESP-RC-0021",
+      "title": "Falsos cognatos 1",
+      "statement": "Lee la frase:\n\n\"La palabra 'embarazada' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'embarazada' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "grávida"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0022",
+      "title": "Falsos cognatos 2",
+      "statement": "Lee la frase:\n\n\"La palabra 'exquisito' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'exquisito' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "delicioso"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0023",
+      "title": "Falsos cognatos 3",
+      "statement": "Lee la frase:\n\n\"La palabra 'oficina' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'oficina' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "escritório"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0024",
+      "title": "Falsos cognatos 4",
+      "statement": "Lee la frase:\n\n\"La palabra 'apellido' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'apellido' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "sobrenome"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0025",
+      "title": "Falsos cognatos 5",
+      "statement": "Lee la frase:\n\n\"La palabra 'vaso' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'vaso' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "copo"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0026",
+      "title": "Falsos cognatos 6",
+      "statement": "Lee la frase:\n\n\"La palabra 'rato' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'rato' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "momento curto"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0027",
+      "title": "Falsos cognatos 7",
+      "statement": "Lee la frase:\n\n\"La palabra 'largo' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'largo' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "comprido"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0028",
+      "title": "Falsos cognatos 8",
+      "statement": "Lee la frase:\n\n\"La palabra 'asistir' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'asistir' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "comparecer"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0029",
+      "title": "Falsos cognatos 9",
+      "statement": "Lee la frase:\n\n\"La palabra 'éxito' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'éxito' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "sucesso"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0030",
+      "title": "Falsos cognatos 10",
+      "statement": "Lee la frase:\n\n\"La palabra 'taller' aparece en una conversación cotidiana en español.\"\n\n¿Cuál es el significado correcto de 'taller' en este contexto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "vocabulario",
+      "competence": "spa-recognize-false-cognates",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "oficina/workshop"
+        },
+        {
+          "label": "B",
+          "text": "significado semelhante ao português mas incorreto"
+        },
+        {
+          "label": "C",
+          "text": "documento oficial"
+        },
+        {
+          "label": "D",
+          "text": "objeto tecnológico"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque representa o significado real da palavra em espanhol. A questão avalia o reconhecimento de falsos cognatos, evitando interpretações baseadas apenas na semelhança com o português.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "false-cognates",
+        "vocabulario"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

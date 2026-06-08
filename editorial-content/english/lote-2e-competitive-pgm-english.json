@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "ENG-LS-0041",
+      "title": "Competitive PGM English 41",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0042",
+      "title": "Competitive PGM English 42",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0043",
+      "title": "Competitive PGM English 43",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0044",
+      "title": "Competitive PGM English 44",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0045",
+      "title": "Competitive PGM English 45",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0046",
+      "title": "Competitive PGM English 46",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0047",
+      "title": "Competitive PGM English 47",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0048",
+      "title": "Competitive PGM English 48",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0049",
+      "title": "Competitive PGM English 49",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0050",
+      "title": "Competitive PGM English 50",
+      "statement": "Read the text and identify the most accurate conclusion. The situation combines adaptation, communication, academic responsibility, and decision-making during an exchange experience.",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Successful exchange experiences depend on understanding information and making responsible decisions."
+        },
+        {
+          "label": "B",
+          "text": "Exchange students should avoid communication whenever possible."
+        },
+        {
+          "label": "C",
+          "text": "Rules and schedules are irrelevant during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Academic responsibilities do not matter abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because exchange success depends on communication, adaptation, responsibility, and understanding information in different contexts. Option B contradicts the importance of communication. Option C ignores the role of rules and schedules. Option D is incorrect because academic participation remains important throughout the exchange experience.",
+      "tags": [
+        "sprint-6b-3",
+        "competitive-pgm",
+        "advanced-reading"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

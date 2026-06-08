@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PGM-DC-0001",
+      "title": "Documentação 1",
+      "statement": "Questão de documentação 1: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0002",
+      "title": "Documentação 2",
+      "statement": "Questão de documentação 2: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0003",
+      "title": "Documentação 3",
+      "statement": "Questão de documentação 3: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0004",
+      "title": "Documentação 4",
+      "statement": "Questão de documentação 4: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0005",
+      "title": "Documentação 5",
+      "statement": "Questão de documentação 5: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0006",
+      "title": "Documentação 6",
+      "statement": "Questão de documentação 6: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0007",
+      "title": "Documentação 7",
+      "statement": "Questão de documentação 7: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0008",
+      "title": "Documentação 8",
+      "statement": "Questão de documentação 8: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0009",
+      "title": "Documentação 9",
+      "statement": "Questão de documentação 9: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-DC-0010",
+      "title": "Documentação 10",
+      "statement": "Questão de documentação 10: organização e conferência documental no processo seletivo.",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "documentacao",
+      "competence": "pgm-organize-documentation",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Organizar e conferir a documentação exigida."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os documentos."
+        },
+        {
+          "label": "C",
+          "text": "Entregar documentos incompletos."
+        },
+        {
+          "label": "D",
+          "text": "Aguardar sem verificar requisitos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a organização e conferência dos documentos é essencial para cumprir as exigências do processo seletivo. As demais alternativas aumentam o risco de problemas administrativos.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

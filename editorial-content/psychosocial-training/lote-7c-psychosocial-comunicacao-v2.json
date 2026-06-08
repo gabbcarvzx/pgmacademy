@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "PSY-CM-0001",
+      "title": "Comunicação adequada 1",
+      "statement": "Leia a situação:\n\n\"Um intercambista precisa explicar à host family que não entendeu uma regra da casa.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0002",
+      "title": "Comunicação adequada 2",
+      "statement": "Leia a situação:\n\n\"Uma estudante discorda de um colega durante uma atividade, mas precisa manter respeito.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0003",
+      "title": "Comunicação adequada 3",
+      "statement": "Leia a situação:\n\n\"Um aluno sente dificuldade em expressar uma necessidade para o coordenador.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0004",
+      "title": "Comunicação adequada 4",
+      "statement": "Leia a situação:\n\n\"Uma intercambista quer pedir ajuda ao professor sem parecer desinteressada.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0005",
+      "title": "Comunicação adequada 5",
+      "statement": "Leia a situação:\n\n\"Um estudante percebe que houve um mal-entendido em uma conversa.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0006",
+      "title": "Comunicação adequada 6",
+      "statement": "Leia a situação:\n\n\"Uma aluna precisa falar sobre um desconforto de forma educada.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0007",
+      "title": "Comunicação adequada 7",
+      "statement": "Leia a situação:\n\n\"Um intercambista precisa ouvir uma orientação antes de responder impulsivamente.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0008",
+      "title": "Comunicação adequada 8",
+      "statement": "Leia a situação:\n\n\"Uma estudante quer explicar seus limites sem ofender outra pessoa.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0009",
+      "title": "Comunicação adequada 9",
+      "statement": "Leia a situação:\n\n\"Um aluno precisa participar de uma conversa com pessoas de culturas diferentes.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PSY-CM-0010",
+      "title": "Comunicação adequada 10",
+      "statement": "Leia a situação:\n\n\"Uma intercambista quer resolver uma situação por meio do diálogo.\"\n\nQual atitude demonstra comunicação adequada?",
+      "language": "psychosocial",
+      "category": "psychosocial-training",
+      "subcategory": "comunicacao",
+      "competence": "psy-communicate-adequately",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressar-se com clareza, respeito e disposição para ouvir."
+        },
+        {
+          "label": "B",
+          "text": "Interromper as pessoas e impor sua opinião."
+        },
+        {
+          "label": "C",
+          "text": "Evitar qualquer diálogo, mesmo quando há dúvida."
+        },
+        {
+          "label": "D",
+          "text": "Responder de forma agressiva para encerrar a situação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque comunicação adequada envolve clareza, respeito, escuta e capacidade de expressar dúvidas, limites ou necessidades sem agressividade. A alternativa B prejudica o diálogo. A alternativa C impede a resolução de problemas. A alternativa D tende a ampliar conflitos e demonstra baixa maturidade comunicativa.",
+      "tags": [
+        "sprint-6b-7",
+        "psychosocial",
+        "comunicacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.7",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ Origem editorial: autoral PGM Academy
 
 Este lote amplia o pacote aprovado em `docs/CONTENT_REVIEW.md`.
 
-Os editais PGM 2024 e 2026 foram usados apenas como referencia de estrutura, habilidades cobradas, etapas do processo seletivo, responsabilidades gerais e linguagem de preparacao. Nenhum item abaixo copia questao oficial, apostila paga, material protegido ou conteudo de terceiros.
+O Edital de Abertura PGM 2026 e a noticia oficial da SEE foram usados como referencia principal de estrutura, habilidades cobradas, etapas do processo seletivo, responsabilidades gerais e linguagem de preparacao. Nenhum item abaixo copia questao oficial, apostila paga, material protegido ou conteudo de terceiros.
 
 Regras:
 

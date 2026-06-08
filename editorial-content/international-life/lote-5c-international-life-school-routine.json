@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "LIFE-SC-0001",
+      "title": "Rotina Escolar Internacional 1",
+      "statement": "Leia a situação:\n\n\"Um estudante chega a uma escola estrangeira e precisa entender horários, disciplinas e regras locais.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0002",
+      "title": "Rotina Escolar Internacional 2",
+      "statement": "Leia a situação:\n\n\"Uma aluna recebe um trabalho em grupo com colegas de diferentes nacionalidades.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0003",
+      "title": "Rotina Escolar Internacional 3",
+      "statement": "Leia a situação:\n\n\"Um intercambista tem dificuldade inicial para acompanhar o ritmo das aulas.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0004",
+      "title": "Rotina Escolar Internacional 4",
+      "statement": "Leia a situação:\n\n\"Uma estudante precisa conversar com um professor sobre uma dúvida acadêmica.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0005",
+      "title": "Rotina Escolar Internacional 5",
+      "statement": "Leia a situação:\n\n\"Um aluno recebe feedback sobre seu desempenho em sala.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0006",
+      "title": "Rotina Escolar Internacional 6",
+      "statement": "Leia a situação:\n\n\"Uma intercambista precisa organizar estudos, atividades e compromissos escolares.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0007",
+      "title": "Rotina Escolar Internacional 7",
+      "statement": "Leia a situação:\n\n\"Um estudante observa métodos de ensino diferentes dos utilizados em sua escola de origem.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0008",
+      "title": "Rotina Escolar Internacional 8",
+      "statement": "Leia a situação:\n\n\"Uma aluna participa pela primeira vez de uma atividade extracurricular internacional.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0009",
+      "title": "Rotina Escolar Internacional 9",
+      "statement": "Leia a situação:\n\n\"Um intercambista precisa lidar com avaliações em outro idioma.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-SC-0010",
+      "title": "Rotina Escolar Internacional 10",
+      "statement": "Leia a situação:\n\n\"Um estudante busca adaptar-se melhor à rotina escolar do país anfitrião.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se à rotina, comunicar dúvidas e participar ativamente da vida escolar."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar orientações da escola."
+        },
+        {
+          "label": "C",
+          "text": "Evitar contato com professores e colegas."
+        },
+        {
+          "label": "D",
+          "text": "Recusar-se a participar das atividades acadêmicas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque a adaptação à escola internacional exige participação, comunicação e disposição para aprender com novas experiências acadêmicas. As demais alternativas dificultam a integração e o aprendizado.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "school-routine"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

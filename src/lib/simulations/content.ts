@@ -27,14 +27,14 @@ export const simulationModes: SimulationMode[] = [
   {
     title: "Simulado Rápido",
     description:
-      "Entrada limitada para treinos curtos quando o banco de questões for alimentado.",
+      "Treinos curtos para aquecimento antes do modelo oficial de 30 questões.",
     access: "free",
     Icon: Timer,
   },
   {
-    title: "Simulado Completo",
+    title: "Simulado Objetivo PGM",
     description:
-      "Experiência premium para prova objetiva com histórico e correção completa.",
+      "Experiência premium alinhada à prova objetiva do edital 2026, com histórico e correção completa.",
     access: "premium",
     Icon: ClipboardList,
   },
@@ -46,9 +46,9 @@ export const simulationModes: SimulationMode[] = [
     Icon: History,
   },
   {
-    title: "Estatisticas",
+    title: "Estatísticas",
     description:
-      "Base para taxa de acerto, evolução e categorias fortes ou fracas.",
+      "Base para taxa de acerto, evolução e categorias fortes ou fracas antes da prova.",
     access: "premium",
     Icon: BarChart3,
   },

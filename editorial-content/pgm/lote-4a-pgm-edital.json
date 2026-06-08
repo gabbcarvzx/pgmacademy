@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "PGM-ED-0001",
+      "title": "Interpretação do edital: natureza do processo seletivo",
+      "statement": "Leia a situação:\n\n\"Um estudante afirma que participar da PGM Academy substitui a leitura do edital oficial do Programa Ganhe o Mundo. Outro estudante responde que a plataforma pode ajudar na preparação, mas as regras oficiais devem sempre ser conferidas no edital e nos canais oficiais.\"\n\nDe acordo com uma interpretação segura do processo seletivo, qual estudante está correto?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "O segundo estudante, pois a preparação pode auxiliar, mas não substitui o edital oficial."
+        },
+        {
+          "label": "B",
+          "text": "O primeiro estudante, pois uma plataforma de estudos sempre substitui documentos oficiais."
+        },
+        {
+          "label": "C",
+          "text": "Nenhum dos dois, pois o edital não possui relevância no processo seletivo."
+        },
+        {
+          "label": "D",
+          "text": "O primeiro estudante, desde que ele tenha feito simulados suficientes."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque materiais de preparação podem orientar os estudos, mas as regras oficiais do processo seletivo devem ser consultadas no edital e nos canais oficiais. As alternativas B e D atribuem à plataforma um papel que ela não possui. A alternativa C é incorreta porque o edital é a referência normativa do processo.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "regras-oficiais"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0002",
+      "title": "Interpretação do edital: etapas do processo",
+      "statement": "Leia a situação:\n\n\"Uma candidata acredita que basta estudar apenas para a prova objetiva. No entanto, o processo seletivo também pode envolver outras etapas previstas no edital, como produção textual, análise de critérios e avaliação psicossocial.\"\n\nQual é a conclusão mais adequada?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "A candidata deve preparar-se para todas as etapas previstas no edital, não apenas para a objetiva."
+        },
+        {
+          "label": "B",
+          "text": "A prova objetiva elimina automaticamente todas as demais etapas."
+        },
+        {
+          "label": "C",
+          "text": "A preparação psicossocial não pode fazer parte de um processo seletivo."
+        },
+        {
+          "label": "D",
+          "text": "Produção textual e critérios oficiais não precisam ser observados."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o estudante deve observar o conjunto de etapas previsto no edital. A alternativa B ignora etapas complementares. A alternativa C é falsa, pois avaliações comportamentais podem fazer parte de seleções. A alternativa D desconsidera critérios oficiais importantes.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "etapas"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0003",
+      "title": "Interpretação do edital: elegibilidade",
+      "statement": "Leia a situação:\n\n\"Um estudante quer se inscrever no processo seletivo, mas não verificou se atende aos critérios de elegibilidade, como vínculo escolar, ano/série, desempenho, frequência e demais exigências do edital.\"\n\nQual deve ser a primeira atitude responsável?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conferir cuidadosamente os critérios de elegibilidade no edital oficial."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar os critérios e estudar apenas conteúdos de idioma."
+        },
+        {
+          "label": "C",
+          "text": "Inscrever-se sem consultar nenhuma regra."
+        },
+        {
+          "label": "D",
+          "text": "Basear-se apenas em mensagens informais de grupos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a elegibilidade define se o estudante pode participar do processo. As alternativas B e C ignoram exigências formais. A alternativa D é inadequada porque mensagens informais podem conter erros ou informações incompletas.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "elegibilidade"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0004",
+      "title": "Interpretação do edital: cronograma",
+      "statement": "Leia a situação:\n\n\"Uma estudante perdeu uma data importante porque acompanhou apenas comentários em redes sociais e não consultou o cronograma oficial do processo seletivo.\"\n\nQue orientação evita esse tipo de problema?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Acompanhar o cronograma oficial e conferir atualizações nos canais oficiais."
+        },
+        {
+          "label": "B",
+          "text": "Confiar somente em grupos informais de mensagens."
+        },
+        {
+          "label": "C",
+          "text": "Consultar o cronograma apenas depois da prova."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar prazos, pois eles não afetam a participação."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque prazos e etapas dependem do cronograma oficial. A alternativa B é arriscada, pois grupos podem divulgar informações incorretas. A alternativa C é tardia. A alternativa D é falsa, pois prazos podem impactar inscrição, prova e demais etapas.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "cronograma"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0005",
+      "title": "Interpretação do edital: documentação",
+      "statement": "Leia a situação:\n\n\"Após ser convocado para uma etapa, um estudante percebe que não organizou documentos solicitados no edital. Ele acreditava que a documentação só seria importante depois da viagem.\"\n\nQual é a interpretação correta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "A documentação deve ser acompanhada desde o processo seletivo, conforme o edital."
+        },
+        {
+          "label": "B",
+          "text": "Documentos só importam após o estudante chegar ao exterior."
+        },
+        {
+          "label": "C",
+          "text": "Nenhuma etapa seletiva exige organização documental."
+        },
+        {
+          "label": "D",
+          "text": "A documentação pode ser ignorada se o estudante tiver bom desempenho."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o edital pode exigir documentos em diferentes momentos do processo. A alternativa B restringe indevidamente a importância da documentação. A alternativa C é falsa. A alternativa D é incorreta porque desempenho não elimina exigências formais.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "documentacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0006",
+      "title": "Interpretação do edital: pontuação",
+      "statement": "Leia a situação:\n\n\"Um candidato quer entender como será avaliado, mas observa apenas o número total de questões e ignora critérios de pontuação, etapas complementares e regras de classificação.\"\n\nQual é a melhor conduta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ler os critérios de avaliação e classificação previstos no edital."
+        },
+        {
+          "label": "B",
+          "text": "Considerar somente a quantidade de questões da prova objetiva."
+        },
+        {
+          "label": "C",
+          "text": "Desconsiderar etapas que não sejam de múltipla escolha."
+        },
+        {
+          "label": "D",
+          "text": "Estudar sem compreender como a classificação ocorre."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque entender a avaliação exige observar critérios de pontuação, classificação e etapas do edital. A alternativa B é limitada. A alternativa C ignora possíveis etapas complementares. A alternativa D prejudica a estratégia de preparação.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "pontuacao"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0007",
+      "title": "Interpretação do edital: independência institucional",
+      "statement": "Leia a situação:\n\n\"Uma plataforma de estudos afirma ajudar candidatos a se prepararem para o Programa Ganhe o Mundo, mas informa claramente que não é um canal oficial do Governo e que o estudante deve consultar o edital oficial.\"\n\nQual é a interpretação mais adequada dessa postura?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "É uma postura responsável, pois diferencia preparação independente de informação oficial."
+        },
+        {
+          "label": "B",
+          "text": "É incorreta, pois plataformas privadas sempre substituem o edital."
+        },
+        {
+          "label": "C",
+          "text": "É desnecessária, pois candidatos não precisam saber a fonte das informações."
+        },
+        {
+          "label": "D",
+          "text": "É uma garantia de aprovação no processo seletivo."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque plataformas independentes podem oferecer preparação, mas devem deixar claro que não substituem fontes oficiais. A alternativa B é falsa. A alternativa C ignora transparência institucional. A alternativa D é incorreta porque nenhuma plataforma pode garantir aprovação.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "independencia-institucional"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0008",
+      "title": "Interpretação do edital: mudanças e atualizações",
+      "statement": "Leia a situação:\n\n\"Um estudante salvou uma imagem antiga com informações do processo seletivo e decidiu não verificar se houve atualização em comunicado posterior.\"\n\nQual risco essa atitude apresenta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ele pode seguir informações desatualizadas e perder orientações importantes."
+        },
+        {
+          "label": "B",
+          "text": "Ele garante que todas as informações antigas continuam corretas."
+        },
+        {
+          "label": "C",
+          "text": "Ele elimina a necessidade de acompanhar canais oficiais."
+        },
+        {
+          "label": "D",
+          "text": "Ele passa automaticamente para as próximas etapas."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque processos seletivos podem ter comunicados, retificações ou atualizações. A alternativa B assume estabilidade sem confirmação. A alternativa C é inadequada porque canais oficiais devem ser acompanhados. A alternativa D não tem relação com a situação.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "atualizacoes"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0009",
+      "title": "Interpretação do edital: leitura completa",
+      "statement": "Leia a situação:\n\n\"Uma candidata leu apenas a parte do edital que fala sobre a prova objetiva e ignorou seções sobre inscrição, critérios, documentos, recursos e responsabilidades do participante.\"\n\nQual é o problema dessa estratégia?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Ela pode deixar de compreender exigências importantes do processo seletivo."
+        },
+        {
+          "label": "B",
+          "text": "Ela terá vantagem por estudar menos informações."
+        },
+        {
+          "label": "C",
+          "text": "As demais seções do edital não possuem utilidade."
+        },
+        {
+          "label": "D",
+          "text": "A prova objetiva é sempre a única etapa relevante."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque o edital deve ser compreendido como um documento completo. Inscrição, critérios, documentos, recursos e responsabilidades podem impactar a participação. As alternativas B, C e D reduzem indevidamente a importância do edital.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "leitura-completa"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "PGM-ED-0010",
+      "title": "Interpretação do edital: responsabilidade do candidato",
+      "statement": "Leia a situação:\n\n\"Um candidato afirma que não precisa acompanhar comunicados oficiais porque outros colegas sempre avisam quando surge uma novidade.\"\n\nQual é a interpretação correta?",
+      "language": "portuguese",
+      "category": "pgm-selection-process",
+      "subcategory": "edital",
+      "competence": "pgm-understand-edital",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "O candidato deve acompanhar as informações oficiais por responsabilidade própria."
+        },
+        {
+          "label": "B",
+          "text": "Colegas substituem integralmente o edital e os comunicados oficiais."
+        },
+        {
+          "label": "C",
+          "text": "A responsabilidade de acompanhar o processo é apenas da escola."
+        },
+        {
+          "label": "D",
+          "text": "Novidades oficiais não podem afetar candidatos inscritos."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque acompanhar o processo seletivo é responsabilidade do candidato. A alternativa B é arriscada e incorreta, pois colegas podem se enganar. A alternativa C transfere uma responsabilidade que também é do estudante. A alternativa D é falsa porque comunicados podem alterar ou esclarecer etapas.",
+      "tags": [
+        "sprint-6b-5",
+        "pgm",
+        "edital",
+        "responsabilidade-do-candidato"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "LIFE-CUL-0001",
+      "title": "Diferenças culturais 1",
+      "statement": "Leia a situação:\n\n\"Durante um intercâmbio, um estudante percebe que hábitos alimentares locais são diferentes dos que conhece.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0002",
+      "title": "Diferenças culturais 2",
+      "statement": "Leia a situação:\n\n\"Uma aluna observa que as formas de cumprimento em outro país são diferentes das praticadas em sua cidade.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0003",
+      "title": "Diferenças culturais 3",
+      "statement": "Leia a situação:\n\n\"Um estudante participa de uma celebração cultural desconhecida e quer agir com respeito.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0004",
+      "title": "Diferenças culturais 4",
+      "statement": "Leia a situação:\n\n\"Uma família anfitriã possui costumes domésticos diferentes dos vividos pelo intercambista.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0005",
+      "title": "Diferenças culturais 5",
+      "statement": "Leia a situação:\n\n\"Uma estudante escuta opiniões diferentes das que costuma ouvir em seu ambiente social.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0006",
+      "title": "Diferenças culturais 6",
+      "statement": "Leia a situação:\n\n\"Um aluno encontra colegas de diferentes nacionalidades em um projeto escolar.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0007",
+      "title": "Diferenças culturais 7",
+      "statement": "Leia a situação:\n\n\"Uma intercambista percebe diferenças nos horários e rotinas diárias do país anfitrião.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0008",
+      "title": "Diferenças culturais 8",
+      "statement": "Leia a situação:\n\n\"Um estudante não compreende inicialmente uma tradição cultural observada na escola.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0009",
+      "title": "Diferenças culturais 9",
+      "statement": "Leia a situação:\n\n\"Uma aluna precisa conviver com pessoas que possuem hábitos religiosos distintos.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-CUL-0010",
+      "title": "Diferenças culturais 10",
+      "statement": "Leia a situação:\n\n\"Um candidato reflete sobre como aprender com culturas diferentes durante o intercâmbio.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Demonstrar respeito, observar o contexto e buscar compreender as diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Julgar imediatamente os costumes como errados."
+        },
+        {
+          "label": "C",
+          "text": "Recusar qualquer contato com pessoas de outra cultura."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que apenas sua própria cultura é válida."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A resposta correta é A porque a convivência internacional exige respeito, observação e disposição para compreender diferentes costumes e perspectivas. As demais alternativas demonstram fechamento cultural e dificultam a adaptação.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

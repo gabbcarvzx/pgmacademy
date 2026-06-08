@@ -3,7 +3,8 @@
 ## Fontes analisadas
 
 - `0d68cd50-48a7-492c-88f7-0c7b9af530c0.pdf`: Edital de Abertura PGM 2026.
-- `72037d78-c325-4fea-95eb-3e09ff9a7aea.pdf`: Edital de Abertura PGM 2024.
+- Noticia SEE de 12/05/2026 sobre 2.000 vagas: https://portal.educacao.pe.gov.br/governo-de-pernambuco-oferta-duas-mil-vagas-para-o-programa-ganhe-o-mundo/
+- Pagina do Instituto IGEDUC informada no edital: https://igeduc.selecao.net.br/informacoes/156/
 
 Os textos publicados em `src/lib/premium/content.ts` sao uma sintese editorial inicial, escrita em linguagem propria da PGM Academy.
 Eles nao substituem o edital vigente, comunicados oficiais ou orientacoes dos orgaos responsaveis.
@@ -12,7 +13,7 @@ Eles nao substituem o edital vigente, comunicados oficiais ou orientacoes dos or
 
 Cada modulo premium foi organizado em tres blocos:
 
-- `Base oficial extraida`: pontos que aparecem nos editais analisados ou nos termos anexos.
+- `Base oficial extraida`: pontos que aparecem no Edital de Abertura PGM 2026, noticia oficial da SEE ou termos anexos.
 - `Orientacao reaproveitavel`: recomendacoes praticas derivadas das regras, uteis para preparacao do aluno.
 - `Confirmar nos canais oficiais`: itens que mudam por edital, pais, empresa, cronograma ou decisao operacional.
 

@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ENG-RC-0001",
+      "title": "Main idea in an exchange student message",
+      "statement": "Read the text:\n\n\"When I arrived in my host country, I was nervous about speaking English every day. After a few weeks, I realized that making mistakes was part of learning. My host family helped me feel comfortable, and school became easier with time. The exchange experience taught me confidence, responsibility, and independence.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student learned only about grammar during the exchange."
+        },
+        {
+          "label": "B",
+          "text": "The student became more confident and independent through the exchange experience."
+        },
+        {
+          "label": "C",
+          "text": "The student disliked living with a host family."
+        },
+        {
+          "label": "D",
+          "text": "The student wanted to return home immediately."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text focuses on how the exchange helped the student develop confidence, responsibility, and independence. The other alternatives mention details that are not the central idea or contradict the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "exchange"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0002",
+      "title": "Main idea in a school notice",
+      "statement": "Read the notice:\n\n\"Students participating in the international exchange program must attend the orientation meeting next Friday. During the meeting, coordinators will explain travel rules, school expectations, host family responsibilities, and important documents. Attendance is highly recommended for all selected students.\"\n\nWhat is the main idea of the notice?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students must attend a meeting to receive important exchange information."
+        },
+        {
+          "label": "B",
+          "text": "Students will take an English grammar test on Friday."
+        },
+        {
+          "label": "C",
+          "text": "Host families will choose the students during the meeting."
+        },
+        {
+          "label": "D",
+          "text": "Travel documents are no longer necessary."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The notice is mainly about an orientation meeting where students will receive important information about the exchange. The other options add information that is not stated in the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "school-notice"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0003",
+      "title": "Main idea in host family communication",
+      "statement": "Read the text:\n\n\"Many exchange students worry about making mistakes when speaking English. However, host families usually understand that students are still learning. They encourage communication and create a comfortable environment where students can practice every day. As a result, students gradually become more confident and fluent.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 1,
+      "options": [
+        {
+          "label": "A",
+          "text": "Host families expect perfect English from students."
+        },
+        {
+          "label": "B",
+          "text": "Daily communication with host families helps students improve confidence and language skills."
+        },
+        {
+          "label": "C",
+          "text": "Students should avoid speaking English at home."
+        },
+        {
+          "label": "D",
+          "text": "Exchange students learn English only at school."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The passage explains that host families often encourage communication and that daily practice helps students become more confident and fluent. This is the central message of the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0004",
+      "title": "Main idea in cultural adaptation",
+      "statement": "Read the text:\n\n\"Living in another country often means adapting to new customs, schedules, and social rules. Although this process can be challenging at first, it allows students to become more flexible and open-minded. Many participants say that adapting to a different culture was one of the most valuable parts of their exchange experience.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should avoid cultural differences."
+        },
+        {
+          "label": "B",
+          "text": "Cultural adaptation is a valuable learning experience."
+        },
+        {
+          "label": "C",
+          "text": "Exchange students never face challenges abroad."
+        },
+        {
+          "label": "D",
+          "text": "Schedules are the most important part of an exchange."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text presents cultural adaptation as challenging but valuable because it helps students become more flexible and open-minded. The correct answer summarizes that central idea.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "culture"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0005",
+      "title": "Main idea in exchange responsibilities",
+      "statement": "Read the text:\n\n\"Participating in an international exchange program involves more than traveling. Students must follow school rules, respect cultural differences, communicate responsibly, and represent their communities positively. These responsibilities help create a successful experience for everyone involved.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Exchange students have important responsibilities during the program."
+        },
+        {
+          "label": "B",
+          "text": "Traveling is the only purpose of an exchange."
+        },
+        {
+          "label": "C",
+          "text": "School rules are not important abroad."
+        },
+        {
+          "label": "D",
+          "text": "Students should focus only on tourism."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The passage focuses on the responsibilities exchange students have, such as following rules, respecting differences, and representing their communities positively. The other options contradict the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "responsibility"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0006",
+      "title": "Main idea in a preparation routine",
+      "statement": "Read the text:\n\n\"Preparing for an exchange selection process is not only about studying vocabulary lists. Students also need to read different types of texts, understand instructions, organize their time, and practice writing clearly. A balanced study routine helps candidates feel more prepared for each stage of the process.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Vocabulary memorization is enough for the entire selection process."
+        },
+        {
+          "label": "B",
+          "text": "A balanced preparation routine helps students face different stages of the selection process."
+        },
+        {
+          "label": "C",
+          "text": "Students should avoid writing practice before the selection process."
+        },
+        {
+          "label": "D",
+          "text": "Reading different texts is unnecessary for exchange candidates."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text lists several preparation activities and explains that a balanced routine helps students prepare for multiple stages. That overall message is best represented by option B.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "preparation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0007",
+      "title": "Main idea in school integration abroad",
+      "statement": "Read the text:\n\n\"At first, attending classes in another country may feel intimidating. Students may need time to understand classroom routines, teacher expectations, and group activities. However, by asking questions, participating respectfully, and observing classmates, exchange students can gradually feel part of the school community.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Exchange students can adapt to school abroad through participation and observation."
+        },
+        {
+          "label": "B",
+          "text": "Students should avoid asking questions in international classrooms."
+        },
+        {
+          "label": "C",
+          "text": "Classes abroad are always impossible for exchange students."
+        },
+        {
+          "label": "D",
+          "text": "Teacher expectations are the only challenge at school."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The text explains that school abroad can be intimidating at first, but students can adapt by asking questions, participating, and observing. Option A captures the central idea.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "school"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0008",
+      "title": "Main idea in emotional preparation",
+      "statement": "Read the text:\n\n\"Academic preparation is important, but emotional preparation also matters. During an exchange, students may miss their families, feel nervous in unfamiliar situations, or struggle with sudden changes. Recognizing these feelings and seeking support can help them deal with challenges in a healthier way.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should ignore emotional difficulties during an exchange."
+        },
+        {
+          "label": "B",
+          "text": "Emotional preparation and support are important for dealing with exchange challenges."
+        },
+        {
+          "label": "C",
+          "text": "Academic preparation is unnecessary for exchange students."
+        },
+        {
+          "label": "D",
+          "text": "Missing family means the student cannot complete the program."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The central idea is that students need emotional preparation and support, not only academic preparation, to handle challenges during an exchange.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "emotional-preparation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0009",
+      "title": "Main idea in responsible communication",
+      "statement": "Read the text:\n\n\"Clear communication is essential during an exchange program. Students should tell their host families about important needs, ask for help when they do not understand something, and inform coordinators about serious problems. Communicating responsibly prevents misunderstandings and makes the experience safer and more positive.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should solve every problem alone during an exchange."
+        },
+        {
+          "label": "B",
+          "text": "Responsible communication helps prevent problems and improves the exchange experience."
+        },
+        {
+          "label": "C",
+          "text": "Host families should never be informed about student needs."
+        },
+        {
+          "label": "D",
+          "text": "Coordinators are not important during an exchange program."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text focuses on the importance of clear and responsible communication with host families and coordinators. This helps avoid misunderstandings and supports a safer experience.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "communication"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0010",
+      "title": "Main idea in learning beyond the classroom",
+      "statement": "Read the text:\n\n\"An exchange program teaches lessons that go beyond the classroom. Students improve their language skills, but they also learn how to manage time, respect different opinions, solve everyday problems, and become more independent. These experiences can influence their personal and academic lives long after they return home.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Exchange programs only help students improve grammar."
+        },
+        {
+          "label": "B",
+          "text": "Exchange programs can develop language skills and important life skills."
+        },
+        {
+          "label": "C",
+          "text": "Students stop learning after they return home."
+        },
+        {
+          "label": "D",
+          "text": "Classroom activities are the only valuable part of an exchange."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text explains that exchange programs teach both language and broader life skills, such as independence, problem-solving, and respect for different opinions. Option B summarizes the main idea.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "main-idea",
+        "life-skills"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

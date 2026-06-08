@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "ENG-LS-0031",
+      "title": "Everyday situation 31",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0032",
+      "title": "Everyday situation 32",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0033",
+      "title": "Everyday situation 33",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0034",
+      "title": "Everyday situation 34",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0035",
+      "title": "Everyday situation 35",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0036",
+      "title": "Everyday situation 36",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0037",
+      "title": "Everyday situation 37",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0038",
+      "title": "Everyday situation 38",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0039",
+      "title": "Everyday situation 39",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-LS-0040",
+      "title": "Everyday situation 40",
+      "statement": "Read the situation: An exchange student is dealing with an everyday situation such as shopping, asking for information, making an appointment, ordering food, or solving a routine problem. What is the most reasonable interpretation?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "The student should use the available information to complete the task appropriately."
+        },
+        {
+          "label": "B",
+          "text": "The student should ignore the situation completely."
+        },
+        {
+          "label": "C",
+          "text": "The student must immediately leave the location."
+        },
+        {
+          "label": "D",
+          "text": "The situation has no practical purpose."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The correct answer is A because the situation describes a normal daily-life task that requires understanding information and responding appropriately. Option B ignores the purpose of the interaction. Option C is unsupported by the scenario. Option D is incorrect because the situation clearly has a practical objective related to everyday communication.",
+      "tags": [
+        "sprint-6b-3",
+        "everyday-situations",
+        "practical-english"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.3",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

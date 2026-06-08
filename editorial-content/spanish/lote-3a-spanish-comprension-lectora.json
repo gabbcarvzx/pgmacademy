@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "ESP-RC-0001",
+      "title": "Comprensión lectora 1",
+      "statement": "Lee el texto:\n\n\"Muchos estudiantes participan en programas de intercambio porque desean aprender un nuevo idioma, conocer otra cultura y desarrollar independencia personal. La experiencia también ayuda a mejorar habilidades de comunicación y adaptación.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Los programas de intercambio ofrecen beneficios académicos y personales."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0002",
+      "title": "Comprensión lectora 2",
+      "statement": "Lee el texto:\n\n\"Antes de viajar, los estudiantes deben organizar documentos, revisar orientaciones oficiales y prepararse emocionalmente para vivir con una familia anfitriona. La preparación reduce inseguridades durante los primeros días.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Una buena preparación ayuda al estudiante antes del intercambio."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0003",
+      "title": "Comprensión lectora 3",
+      "statement": "Lee el texto:\n\n\"Vivir con una familia anfitriona permite practicar el idioma en situaciones reales. Las conversaciones durante las comidas, las tareas de casa y las actividades familiares ayudan al estudiante a ganar confianza.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "La convivencia con una familia anfitriona favorece la práctica del idioma y la confianza."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0004",
+      "title": "Comprensión lectora 4",
+      "statement": "Lee el texto:\n\n\"Adaptarse a una nueva escuela puede ser difícil al principio. Sin embargo, participar en clase, pedir ayuda y observar las rutinas de los compañeros ayuda al estudiante a integrarse mejor.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "La participación y la observación ayudan en la adaptación escolar."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0005",
+      "title": "Comprensión lectora 5",
+      "statement": "Lee el texto:\n\n\"El intercambio no es solamente un viaje. El estudiante debe respetar reglas, comunicarse con responsabilidad y representar positivamente a su comunidad durante toda la experiencia.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "El intercambio exige responsabilidad y respeto."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0006",
+      "title": "Comprensión lectora 6",
+      "statement": "Lee el texto:\n\n\"Algunos estudiantes sienten nostalgia en las primeras semanas. Crear una rutina, hablar con personas de confianza y participar en actividades escolares puede ayudar a enfrentar ese sentimiento.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "La rutina y el apoyo ayudan a enfrentar la nostalgia."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0007",
+      "title": "Comprensión lectora 7",
+      "statement": "Lee el texto:\n\n\"Aprender un idioma en otro país no significa hablar perfectamente desde el primer día. Los errores forman parte del proceso y pueden convertirse en oportunidades de aprendizaje.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Los errores pueden ayudar en el aprendizaje del idioma."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0008",
+      "title": "Comprensión lectora 8",
+      "statement": "Lee el texto:\n\n\"Las actividades extracurriculares permiten que los estudiantes conozcan compañeros, practiquen el idioma y participen más activamente en la vida escolar.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Las actividades extracurriculares favorecen la integración del estudiante."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0009",
+      "title": "Comprensión lectora 9",
+      "statement": "Lee el texto:\n\n\"Durante el intercambio, resolver pequeños problemas cotidianos ayuda al estudiante a desarrollar autonomía. Pedir información, organizar horarios y cumplir responsabilidades son parte del aprendizaje.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Los desafíos cotidianos fortalecen la autonomía."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ESP-RC-0010",
+      "title": "Comprensión lectora 10",
+      "statement": "Lee el texto:\n\n\"Al regresar, muchos estudiantes perciben cambios en su forma de estudiar, comunicarse y tomar decisiones. La experiencia internacional puede influir en su vida académica y personal.\"\n\n¿Cuál es la idea principal del texto?",
+      "language": "spanish",
+      "category": "spanish",
+      "subcategory": "comprension-lectora",
+      "competence": "spa-interpret-texts",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "El intercambio puede generar cambios duraderos en el estudiante."
+        },
+        {
+          "label": "B",
+          "text": "El texto afirma que el intercambio no requiere preparación ni responsabilidad."
+        },
+        {
+          "label": "C",
+          "text": "El texto defiende que los estudiantes deben evitar comunicarse durante la experiencia."
+        },
+        {
+          "label": "D",
+          "text": "El texto presenta el intercambio únicamente como turismo, sin aprendizaje personal."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "La respuesta correcta es A porque resume la idea central del texto de manera completa. La opción B es incorrecta porque contradice la importancia de la preparación, la responsabilidad o el aprendizaje. La opción C no corresponde al texto, ya que la comunicación aparece como parte importante de la experiencia. La opción D reduce el intercambio a turismo, mientras el texto presenta formación, adaptación, autonomía o crecimiento personal.",
+      "tags": [
+        "sprint-6b-4",
+        "spanish",
+        "comprension-lectora",
+        "interpretacion"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.4",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

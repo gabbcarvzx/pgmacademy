@@ -1,0 +1,394 @@
+{
+  "questions": [
+    {
+      "id": "WR-ST-0001",
+      "title": "Estrutura de Resposta 1",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0002",
+      "title": "Estrutura de Resposta 2",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0003",
+      "title": "Estrutura de Resposta 3",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0004",
+      "title": "Estrutura de Resposta 4",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0005",
+      "title": "Estrutura de Resposta 5",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0006",
+      "title": "Estrutura de Resposta 6",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0007",
+      "title": "Estrutura de Resposta 7",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0008",
+      "title": "Estrutura de Resposta 8",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0009",
+      "title": "Estrutura de Resposta 9",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "WR-ST-0010",
+      "title": "Estrutura de Resposta 10",
+      "statement": "Ao responder uma questão subjetiva de intercâmbio, qual característica torna a resposta mais clara e organizada?",
+      "language": "portuguese",
+      "category": "international-writing",
+      "subcategory": "estrutura",
+      "competence": "writing-structure-answer",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Apresentar ideias organizadas, coerentes e bem desenvolvidas."
+        },
+        {
+          "label": "B",
+          "text": "Escrever frases sem conexão entre si."
+        },
+        {
+          "label": "C",
+          "text": "Responder apenas com palavras soltas."
+        },
+        {
+          "label": "D",
+          "text": "Ignorar completamente o tema proposto."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Uma boa resposta subjetiva apresenta organização, coerência e desenvolvimento das ideias, facilitando a compreensão do avaliador.",
+      "tags": [
+        "sprint-6b-6",
+        "international-writing",
+        "estrutura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.6",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

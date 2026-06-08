@@ -173,7 +173,7 @@ Decisoes editoriais:
 
 Atualizacao da Etapa 7B:
 
-1. Os editais PGM 2024 e 2026 foram analisados para gerar conteudo premium inicial
+1. O Edital de Abertura PGM 2026 e a noticia oficial da SEE sao a base principal do conteudo premium inicial
 2. Cada modulo separa `Base oficial extraida`, `Orientacao reaproveitavel` e `Confirmar nos canais oficiais`
 3. Regras oficiais sensiveis continuam dependentes do edital vigente e dos comunicados oficiais
 4. A area `/premium` permanece liberada apenas para usuarios com `profiles.access_status = paid`

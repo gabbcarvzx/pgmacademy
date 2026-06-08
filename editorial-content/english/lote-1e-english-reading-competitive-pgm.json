@@ -1,0 +1,414 @@
+{
+  "questions": [
+    {
+      "id": "ENG-RC-0041",
+      "title": "Competitive reading: exchange expectations",
+      "statement": "Read the text:\n\n\"Some candidates imagine that an exchange program is mainly a reward for good grades. Former participants often describe it differently. They say the experience requires discipline, emotional balance, respect for rules, and the ability to learn from uncomfortable situations. In this sense, academic performance may open the door, but maturity helps students remain prepared after they arrive.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Good grades are the only factor that matters during an exchange program."
+        },
+        {
+          "label": "B",
+          "text": "Exchange programs require maturity and responsibility beyond academic performance."
+        },
+        {
+          "label": "C",
+          "text": "Former participants usually discourage students from applying to exchange programs."
+        },
+        {
+          "label": "D",
+          "text": "Students should focus only on emotional balance and ignore school results."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text contrasts the idea of exchange as a simple reward with the broader demands of the experience. It states that grades may help students enter, but maturity is necessary to handle the program. Option B captures this central argument, while the other options exaggerate or contradict the passage.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "main-idea",
+        "maturity"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0042",
+      "title": "Competitive reading: implicit responsibility",
+      "statement": "Read the text:\n\n\"During the first month abroad, the coordinator noticed that Ana always arrived early, kept her host family informed about school activities, and asked questions when she was unsure about a rule. She was not the most fluent student in the group, but teachers described her as one of the most reliable participants.\"\n\nWhat can be inferred about Ana?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Her responsible behavior was valued even though her English was not perfect."
+        },
+        {
+          "label": "B",
+          "text": "Her teachers valued only fluency and ignored her behavior."
+        },
+        {
+          "label": "C",
+          "text": "She avoided asking questions because she wanted to appear independent."
+        },
+        {
+          "label": "D",
+          "text": "She was considered unreliable because she informed her host family too often."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Ana is described as punctual, communicative, and careful with rules. Although she is not the most fluent student, teachers still consider her reliable. This supports the inference that responsible conduct matters alongside language ability.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "inference",
+        "responsibility"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0043",
+      "title": "Competitive reading: purpose of orientation",
+      "statement": "Read the text:\n\n\"The pre-departure session included information about airports, documents, and luggage, but the longest part of the meeting focused on behavior. Students discussed how to respond to misunderstandings, how to ask adults for help, and how to respect family routines that were different from their own. The organizers wanted students to understand that preparation was not limited to travel procedures.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "The session focused only on practical travel documents."
+        },
+        {
+          "label": "B",
+          "text": "The session emphasized behavioral and cultural preparation as much as travel logistics."
+        },
+        {
+          "label": "C",
+          "text": "The organizers believed students already knew how to deal with misunderstandings."
+        },
+        {
+          "label": "D",
+          "text": "Family routines were presented as unimportant for exchange students."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text mentions travel procedures but emphasizes that the longest part of the session was about behavior, help-seeking, misunderstandings, and family routines. Option B best summarizes the contrast between logistics and deeper preparation.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "main-idea",
+        "orientation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0044",
+      "title": "Competitive reading: indirect adaptation",
+      "statement": "Read the text:\n\n\"When Pedro first heard classmates use jokes during group work, he thought they were not taking the project seriously. After observing several classes, he realized that humor was part of their way of building cooperation. He still preferred a quieter style, but he became less judgmental and participated more comfortably.\"\n\nWhat can be inferred about Pedro?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "He learned to interpret classroom behavior within its cultural context."
+        },
+        {
+          "label": "B",
+          "text": "He concluded that his classmates were irresponsible and stopped working with them."
+        },
+        {
+          "label": "C",
+          "text": "He changed his personality completely to imitate his classmates."
+        },
+        {
+          "label": "D",
+          "text": "He refused to observe how group work happened in the new school."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Pedro initially misinterprets the humor but later understands its role in cooperation. He does not fully change his preference, but he becomes less judgmental. This indicates cultural interpretation and adaptation, not rejection or imitation.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "inference",
+        "cultural-context"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0045",
+      "title": "Competitive reading: support and autonomy",
+      "statement": "Read the text:\n\n\"Host families are expected to support students, but support does not mean doing everything for them. A host parent may explain how the laundry machine works, show the safest route to school, or help students understand house rules. The goal is to guide students until they can handle daily responsibilities with more independence.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Host families should complete all daily tasks for exchange students."
+        },
+        {
+          "label": "B",
+          "text": "Host family support should help students become more independent."
+        },
+        {
+          "label": "C",
+          "text": "Exchange students should avoid asking host families for guidance."
+        },
+        {
+          "label": "D",
+          "text": "House rules are less important than school activities."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text explains that host families support students by guiding them, not by doing everything for them. The final sentence states that the goal is independence, making option B the best summary.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "main-idea",
+        "autonomy"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0046",
+      "title": "Competitive reading: language and confidence",
+      "statement": "Read the text:\n\n\"Marta was disappointed after receiving corrections on her written assignment. She had expected that studying English for years would make writing abroad easy. Her teacher explained that academic writing improves through feedback, revision, and exposure to new examples. Marta rewrote the assignment and later said that the correction helped her understand writing as a process.\"\n\nWhat can be inferred about Marta?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "She began to see correction as part of learning rather than as failure."
+        },
+        {
+          "label": "B",
+          "text": "She decided that feedback was useless for improving writing."
+        },
+        {
+          "label": "C",
+          "text": "She refused to rewrite the assignment after being corrected."
+        },
+        {
+          "label": "D",
+          "text": "She believed academic writing required no practice."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Marta is disappointed at first, but after her teacher's explanation and revision, she recognizes writing as a process. This implies a shift from seeing correction negatively to seeing it as part of learning.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "inference",
+        "feedback"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0047",
+      "title": "Competitive reading: balancing connection home",
+      "statement": "Read the text:\n\n\"Calling family every day may comfort some exchange students, but coordinators often recommend a balanced routine. Staying connected is important, yet students also need time to build relationships in the host country, participate in school life, and solve small problems independently. Balance can make adaptation healthier.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should completely stop communicating with their families."
+        },
+        {
+          "label": "B",
+          "text": "A balanced routine helps students stay connected while adapting to the host country."
+        },
+        {
+          "label": "C",
+          "text": "Calling family every day is always harmful and should be prohibited."
+        },
+        {
+          "label": "D",
+          "text": "Students should avoid school life to focus on family communication."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The passage does not reject family contact; it argues for balance between staying connected and engaging with the host country. Option B captures this nuanced central idea.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "main-idea",
+        "adaptation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0048",
+      "title": "Competitive reading: interpreting silence",
+      "statement": "Read the text:\n\n\"In group discussions, Clara noticed that one classmate rarely spoke but always submitted careful notes afterward. At first, Clara thought he was uninterested. Later, the teacher explained that some students prefer to listen before contributing in writing. Clara then invited him to share his notes with the group.\"\n\nWhat can be inferred about Clara?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "She learned not to judge participation only by how much a person speaks."
+        },
+        {
+          "label": "B",
+          "text": "She continued believing that quiet classmates never contribute."
+        },
+        {
+          "label": "C",
+          "text": "She refused to include the classmate in the group discussion."
+        },
+        {
+          "label": "D",
+          "text": "She believed written notes were not useful for group work."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Clara first misinterprets silence as disinterest, but after learning another explanation, she includes the classmate through his notes. The inference is that she adjusted her understanding of participation.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "inference",
+        "participation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0049",
+      "title": "Competitive reading: problem reporting",
+      "statement": "Read the text:\n\n\"A student may feel embarrassed to report a small problem, such as repeated confusion about house rules or difficulty understanding a teacher. However, coordinators explain that early communication often prevents small issues from becoming larger ones. Reporting a concern is not a sign of weakness; it is part of responsible participation.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Students should hide small problems to prove they are independent."
+        },
+        {
+          "label": "B",
+          "text": "Early communication about concerns is a responsible part of exchange participation."
+        },
+        {
+          "label": "C",
+          "text": "Only serious emergencies should ever be reported to coordinators."
+        },
+        {
+          "label": "D",
+          "text": "Feeling embarrassed means the student is not prepared for an exchange."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The text argues that students should report concerns early because communication prevents problems from growing. It explicitly states that reporting is responsible, not weak. Option B reflects the main idea.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "main-idea",
+        "problem-reporting"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0050",
+      "title": "Competitive reading: long-term impact",
+      "statement": "Read the text:\n\n\"The effects of an exchange program are not limited to the months spent abroad. Many students return with stronger study habits, clearer academic goals, and a better understanding of cultural differences. Some become more active in school projects because they realize that international experiences can also create responsibilities at home.\"\n\nWhat can be inferred from the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "The exchange experience can influence students' behavior and goals after they return."
+        },
+        {
+          "label": "B",
+          "text": "Students usually forget the exchange immediately after returning home."
+        },
+        {
+          "label": "C",
+          "text": "International experiences have no connection with school life in Brazil."
+        },
+        {
+          "label": "D",
+          "text": "Exchange programs only affect students while they are traveling."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The passage says students return with stronger habits, clearer goals, cultural understanding, and greater participation in school projects. These details imply a lasting impact beyond the travel period.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "competitive-pgm",
+        "inference",
+        "long-term-impact"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

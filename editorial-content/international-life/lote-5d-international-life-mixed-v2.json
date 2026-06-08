@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "LIFE-MX-0001",
+      "title": "Vida Internacional Mista 1: Adaptação cultural",
+      "statement": "Leia a situação:\n\n\"Um intercambista não entende um costume local durante uma atividade escolar.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Buscar compreender o contexto cultural antes de julgar a situação."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0002",
+      "title": "Vida Internacional Mista 2: Regra da host family",
+      "statement": "Leia a situação:\n\n\"Uma família anfitriã pede que o estudante avise sempre que for chegar mais tarde.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Respeitar a regra e comunicar mudanças de horário com antecedência."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0003",
+      "title": "Vida Internacional Mista 3: Rotina escolar",
+      "statement": "Leia a situação:\n\n\"Um estudante tem dificuldade para acompanhar uma aula em outro idioma.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Pedir orientação ao professor, observar colegas e participar com responsabilidade."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "escola"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0004",
+      "title": "Vida Internacional Mista 4: Diferenças de rotina",
+      "statement": "Leia a situação:\n\n\"Uma estudante percebe que os horários das refeições são diferentes dos que tinha no Brasil.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Adaptar-se com respeito e procurar entender a rotina local."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0005",
+      "title": "Vida Internacional Mista 5: Convivência doméstica",
+      "statement": "Leia a situação:\n\n\"Um aluno não sabe se pode receber colegas na casa da host family.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Perguntar à família anfitriã e respeitar as regras da casa."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0006",
+      "title": "Vida Internacional Mista 6: Participação em sala",
+      "statement": "Leia a situação:\n\n\"Uma estudante percebe que os professores esperam participação ativa nas discussões.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Participar de forma respeitosa e adaptar-se às expectativas escolares."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "escola"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0007",
+      "title": "Vida Internacional Mista 7: Choque cultural",
+      "statement": "Leia a situação:\n\n\"Um intercambista estranha uma tradição local e pensa em criticar publicamente.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Evitar julgamentos precipitados e demonstrar abertura ao aprendizado cultural."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0008",
+      "title": "Vida Internacional Mista 8: Comunicação com a família",
+      "statement": "Leia a situação:\n\n\"Uma estudante ficou desconfortável com uma regra da casa, mas não sabe como falar sobre isso.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "host-family",
+      "competence": "life-host-family-rules",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Conversar com respeito, explicar a dúvida e buscar alinhamento com a host family."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0009",
+      "title": "Vida Internacional Mista 9: Organização escolar",
+      "statement": "Leia a situação:\n\n\"Um aluno recebe prazos de tarefas em uma plataforma escolar que nunca usou.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "escola",
+      "competence": "life-school-routine",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Aprender a usar a plataforma e organizar os prazos de estudo."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "escola"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "LIFE-MX-0010",
+      "title": "Vida Internacional Mista 10: Integração internacional",
+      "statement": "Leia a situação:\n\n\"Uma candidata quer se preparar para conviver com pessoas de hábitos e opiniões diferentes.\"\n\nQual é a atitude mais adequada?",
+      "language": "mixed",
+      "category": "international-life",
+      "subcategory": "cultura",
+      "competence": "life-understand-cultural-differences",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Desenvolver respeito, escuta e flexibilidade diante de diferenças culturais."
+        },
+        {
+          "label": "B",
+          "text": "Ignorar a situação e evitar qualquer comunicação."
+        },
+        {
+          "label": "C",
+          "text": "Reagir impulsivamente sem considerar regras, cultura ou contexto."
+        },
+        {
+          "label": "D",
+          "text": "Assumir que a própria forma de agir é sempre a única correta."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "A alternativa A é correta porque apresenta uma atitude alinhada à convivência internacional: respeito, adaptação, comunicação e responsabilidade. A alternativa B evita o diálogo. A alternativa C representa uma reação impulsiva. A alternativa D demonstra falta de abertura cultural e prejudica a experiência de intercâmbio.",
+      "tags": [
+        "sprint-6b-5",
+        "international-life",
+        "mixed",
+        "cultura"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.5",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "questions": [
+    {
+      "id": "ENG-RC-0031",
+      "title": "Mixed reading: school club adaptation",
+      "statement": "Read the text:\n\n\"When Rafael joined the photography club at his exchange school, he did not know many technical words in English. Instead of giving up, he observed how other students talked about pictures, asked short questions, and wrote new expressions in his notebook. After three meetings, he was able to explain why he liked a photo using simple but clear sentences.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Rafael improved his participation by observing, asking questions, and learning useful expressions."
+        },
+        {
+          "label": "B",
+          "text": "Rafael left the photography club because English was too difficult."
+        },
+        {
+          "label": "C",
+          "text": "Photography clubs do not help exchange students practice language."
+        },
+        {
+          "label": "D",
+          "text": "Rafael already knew all technical vocabulary before joining the club."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The text shows Rafael facing a language challenge but using observation, questions, and notes to improve. Option A summarizes the main idea. The other options contradict the text or ignore the progress described.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "main-idea",
+        "school-club"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0032",
+      "title": "Mixed reading: host family dinner",
+      "statement": "Read the text:\n\n\"At first, Júlia felt uncomfortable because her host family asked many questions during dinner. In her own home, meals were usually quieter. After a few days, she realized that the questions were not criticism; they were a way to include her in the family routine and learn about her day.\"\n\nWhat can be inferred about Júlia?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "She gradually understood the cultural meaning of the dinner conversations."
+        },
+        {
+          "label": "B",
+          "text": "She decided never to eat dinner with the host family again."
+        },
+        {
+          "label": "C",
+          "text": "She believed the host family wanted to criticize her every day."
+        },
+        {
+          "label": "D",
+          "text": "She already understood the routine before arriving."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Júlia first feels uncomfortable, but later realizes the questions are a form of inclusion. This supports the inference that she gradually understood the cultural meaning behind the routine.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "inference",
+        "host-family"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0033",
+      "title": "Mixed reading: orientation meeting",
+      "statement": "Read the text:\n\n\"The orientation meeting did not focus only on airports and luggage. Coordinators explained how students should communicate with host families, respect school rules, report problems, and manage homesickness. Many participants said the meeting helped them understand that an exchange is a serious responsibility, not just an international trip.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "Orientation meetings prepare students for responsibilities beyond travel logistics."
+        },
+        {
+          "label": "B",
+          "text": "Orientation meetings are only about luggage and airport procedures."
+        },
+        {
+          "label": "C",
+          "text": "Students should not report problems during an exchange."
+        },
+        {
+          "label": "D",
+          "text": "Homesickness is never discussed before exchange programs."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The text contrasts travel logistics with broader responsibilities such as communication, rules, problem reporting, and emotional preparation. Option A captures the central idea, while the other alternatives contradict details in the passage.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "main-idea",
+        "orientation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0034",
+      "title": "Mixed reading: asking for clarification",
+      "statement": "Read the text:\n\n\"During a group project, Mateus misunderstood part of the instructions. Instead of pretending he understood everything, he asked his classmates to repeat the task and showed them the part that confused him. The group changed the explanation, and Mateus completed his section correctly.\"\n\nWhat can be inferred from Mateus's behavior?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "He used communication to solve a misunderstanding."
+        },
+        {
+          "label": "B",
+          "text": "He avoided participating in the group project."
+        },
+        {
+          "label": "C",
+          "text": "He completed the task incorrectly because he refused help."
+        },
+        {
+          "label": "D",
+          "text": "He ignored the instructions completely."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Mateus identifies the confusing part and asks classmates to explain again. The group clarifies the task, and he completes his section correctly. This shows that communication helped solve the misunderstanding.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "inference",
+        "communication"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0035",
+      "title": "Mixed reading: public transportation confidence",
+      "statement": "Read the text:\n\n\"Before using public transportation alone, Aline practiced the route with her host mother twice. She saved the school address, checked the bus number, and learned how to ask the driver for confirmation. When she finally took the bus by herself, she arrived early and felt proud of her progress.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Preparation helped Aline become more independent and confident."
+        },
+        {
+          "label": "B",
+          "text": "Aline got lost because she refused to prepare."
+        },
+        {
+          "label": "C",
+          "text": "Public transportation is impossible for exchange students."
+        },
+        {
+          "label": "D",
+          "text": "Aline depended completely on her host mother throughout the entire exchange."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The passage describes Aline preparing for the route and then succeeding alone. The central idea is that preparation built independence and confidence.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "main-idea",
+        "transportation"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0036",
+      "title": "Mixed reading: cultural misunderstanding",
+      "statement": "Read the text:\n\n\"When Oliver's host sister said, 'See you later,' he expected her to return in a few minutes. She came back after several hours. Later, she explained that the expression was casual and did not mean a specific time. Oliver laughed and wrote the expression in his vocabulary notebook.\"\n\nWhat can be inferred about Oliver?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "He learned that some expressions cannot be understood only by translating them literally."
+        },
+        {
+          "label": "B",
+          "text": "He became angry and refused to learn informal expressions."
+        },
+        {
+          "label": "C",
+          "text": "He already understood every casual expression in English."
+        },
+        {
+          "label": "D",
+          "text": "He believed vocabulary notebooks were useless."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Oliver initially interprets the phrase literally, but later understands its casual use and records it. This implies he learned that expressions often depend on context rather than direct translation.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "inference",
+        "idiomatic-expression"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0037",
+      "title": "Mixed reading: volunteer activity",
+      "statement": "Read the text:\n\n\"The volunteer activity was optional, but Camila decided to participate because she wanted to meet local students outside regular classes. She helped organize books at a community center and talked with classmates while working. By the end of the afternoon, she had practiced English and learned more about the neighborhood.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 2,
+      "options": [
+        {
+          "label": "A",
+          "text": "Optional activities can help exchange students practice language and connect with the community."
+        },
+        {
+          "label": "B",
+          "text": "Camila participated because she was required to do so."
+        },
+        {
+          "label": "C",
+          "text": "Volunteer activities prevent students from learning English."
+        },
+        {
+          "label": "D",
+          "text": "The community center did not allow students to talk."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Camila joins an optional activity, interacts with local students, practices English, and learns about the neighborhood. Option A summarizes the overall message of the text.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "main-idea",
+        "volunteering"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0038",
+      "title": "Mixed reading: homesickness and routine",
+      "statement": "Read the text:\n\n\"After two weeks abroad, Henrique started missing the food, music, and conversations from home. His coordinator suggested creating a routine that included schoolwork, exercise, and short scheduled calls with his family. Henrique followed the advice and noticed that his days became more balanced.\"\n\nWhat can be inferred from the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "A structured routine helped Henrique manage homesickness."
+        },
+        {
+          "label": "B",
+          "text": "Henrique stopped attending school after missing home."
+        },
+        {
+          "label": "C",
+          "text": "The coordinator told Henrique to avoid his family completely."
+        },
+        {
+          "label": "D",
+          "text": "Homesickness disappeared because Henrique ignored his feelings."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Henrique misses home, receives advice, follows a routine, and feels more balanced. The reasonable inference is that structure helped him deal with homesickness in a healthier way.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "inference",
+        "homesickness"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0039",
+      "title": "Mixed reading: learning through observation",
+      "statement": "Read the text:\n\n\"During the first science lab, Beatriz did not understand every instruction. Instead of stopping, she watched how her classmates handled the materials, followed the safety signs, and asked her partner to confirm each step. By the end of the activity, she had completed the experiment safely.\"\n\nWhat can be inferred about Beatriz?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-infer-implicit-information",
+      "difficulty_level": 3,
+      "options": [
+        {
+          "label": "A",
+          "text": "She used observation and communication to overcome limited understanding."
+        },
+        {
+          "label": "B",
+          "text": "She ignored safety signs during the experiment."
+        },
+        {
+          "label": "C",
+          "text": "She refused to work with her partner."
+        },
+        {
+          "label": "D",
+          "text": "She understood all instructions perfectly from the start."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Beatriz does not understand every instruction, but she observes classmates, follows signs, and confirms steps with a partner. These details support the inference that she used strategies to overcome limited understanding.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "inference",
+        "classroom-strategy"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    },
+    {
+      "id": "ENG-RC-0040",
+      "title": "Mixed reading: exchange as personal development",
+      "statement": "Read the text:\n\n\"Many students apply for exchange programs because they want to improve a foreign language. However, former participants often say the most important changes were personal. They learned to solve problems, respect different routines, ask for help, and make decisions with more maturity. Language improvement was important, but it was only one part of a larger transformation.\"\n\nWhat is the main idea of the text?",
+      "language": "english",
+      "category": "english",
+      "subcategory": "reading-comprehension",
+      "competence": "eng-identify-main-idea",
+      "difficulty_level": 4,
+      "options": [
+        {
+          "label": "A",
+          "text": "Exchange programs can promote personal growth beyond language learning."
+        },
+        {
+          "label": "B",
+          "text": "Language improvement is the only benefit of an exchange program."
+        },
+        {
+          "label": "C",
+          "text": "Former participants usually regret joining exchange programs."
+        },
+        {
+          "label": "D",
+          "text": "Students become mature only by studying grammar abroad."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The passage contrasts the initial goal of language improvement with broader personal development. It emphasizes problem-solving, respect, help-seeking, and maturity. Option A captures this larger central idea, while the other options narrow or distort the message.",
+      "tags": [
+        "sprint-6b-2",
+        "reading",
+        "mixed-reading",
+        "main-idea",
+        "personal-development"
+      ],
+      "editorial_version": "pgm-2026-v1",
+      "source_reference": "Autoral PGM Academy - Sprint 6B.2",
+      "is_premium": true,
+      "status": "active"
+    }
+  ]
+}

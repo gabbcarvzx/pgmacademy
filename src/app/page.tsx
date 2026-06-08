@@ -17,6 +17,7 @@ import Link from "next/link";
 import { ModuleCard } from "@/components/marketing/module-card";
 import { SectionHeading } from "@/components/marketing/section-heading";
 import { SiteHeader } from "@/components/marketing/site-header";
+import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
 import { platformModules, siteConfig } from "@/lib/site-config";
 
 const heroImage =
@@ -57,6 +58,13 @@ const dreamSteps = [
   "Você se aproxima da experiência internacional.",
 ];
 
+const officialHighlights = [
+  `${pgm2026OfficialSnapshot.totalVacancies.toLocaleString("pt-BR")} vagas em 2026`,
+  "Prova objetiva com 30 questões",
+  "Subjetiva com 5 respostas",
+  "Entrevista psicossocial eliminatória",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -90,6 +98,17 @@ export default function Home() {
               seletivo.
             </p>
 
+            <div className="mt-6 grid max-w-4xl gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {officialHighlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="rounded-md border border-white/16 bg-background/45 px-3 py-2 text-sm font-semibold text-white backdrop-blur"
+                >
+                  {highlight}
+                </div>
+              ))}
+            </div>
+
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/cadastro"
@@ -108,8 +127,9 @@ export default function Home() {
             </div>
 
             <p className="mt-6 max-w-2xl text-sm leading-6 text-white/70">
-              Cada etapa do processo seletivo exige preparação. Quanto antes
-              você começar, mais preparado estará quando o edital abrir.
+              O edital 2026 já está publicado. Quanto antes você organizar a
+              rotina, melhor chega para a prova de 05/07/2026 e para as etapas
+              seguintes.
             </p>
           </div>
         </div>
@@ -147,7 +167,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Módulos"
             title="Uma plataforma completa para o aluno competir melhor."
-            description="O foco é preparação vendável e recorrente: conteúdo autoral, progresso, simulados, feedback manual e analytics sem expor dados entre usuários."
+            description="Conteúdo autoral, simulados, feedback manual, trilhas e desempenho por categoria para estudar com clareza, rotina e segurança institucional."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
