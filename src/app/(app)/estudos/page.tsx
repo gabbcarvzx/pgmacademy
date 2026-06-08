@@ -155,14 +155,14 @@ export default async function EstudosPage({ searchParams }: PageProps) {
           {data.materials.map((material) => (
             <article
               key={material.id}
-              className="rounded-md border border-border-soft bg-surface p-5"
+              className="flex min-h-[292px] flex-col rounded-md border border-border-soft bg-surface p-5"
             >
               <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase text-pgm-yellow">
+                <div className="min-w-0">
+                  <p className="break-words text-xs font-semibold uppercase text-pgm-yellow">
                     {material.categoryName}
                   </p>
-                  <h3 className="mt-3 text-lg font-semibold leading-7 text-white">
+                  <h3 className="mt-3 break-words text-lg font-semibold leading-7 text-white">
                     {material.title}
                   </h3>
                 </div>
@@ -190,13 +190,15 @@ export default async function EstudosPage({ searchParams }: PageProps) {
                 </span>
               </div>
 
-              <Link
-                href={`/estudos/${material.slug}`}
-                className="mt-5 inline-flex h-10 w-full items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
-              >
-                {material.canAccess ? "Abrir material" : "Ver detalhes"}
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
+              <div className="mt-auto pt-5">
+                <Link
+                  href={`/estudos/${material.slug}`}
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+                >
+                  {material.canAccess ? "Abrir material" : "Ver detalhes"}
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
+              </div>
             </article>
           ))}
         </div>

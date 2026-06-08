@@ -63,7 +63,7 @@ export function FlashcardDeck({
             {reviewedCount} revisados neste conjunto
           </p>
         </div>
-        <div className="h-2 rounded-full bg-background">
+        <div className="h-2 w-full rounded-full bg-background sm:max-w-xs">
           <div
             className="h-2 rounded-full bg-pgm-yellow"
             style={{ width: `${Math.round(((currentIndex + 1) / cards.length) * 100)}%` }}
@@ -76,7 +76,7 @@ export function FlashcardDeck({
         onClick={() => setShowBack((value) => !value)}
         className="mt-5 flex min-h-[260px] w-full items-center justify-center rounded-md border border-border-soft bg-background p-6 text-center transition hover:border-white/35"
       >
-        <span className="max-w-2xl text-xl font-semibold leading-8 text-white">
+        <span className="max-w-2xl whitespace-pre-line break-words text-xl font-semibold leading-8 text-white">
           {showBack ? currentCard.backContent : currentCard.frontContent}
         </span>
       </button>
@@ -109,7 +109,7 @@ export function FlashcardDeck({
           title="Marcar como revisado"
         >
           <CheckCircle2 className="size-4" aria-hidden="true" />
-          {reviewedIds.has(currentCard.id) ? "Revisado" : "Revisado"}
+          {reviewedIds.has(currentCard.id) ? "Revisado" : "Marcar revisado"}
         </button>
         <button
           type="button"

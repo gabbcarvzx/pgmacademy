@@ -45,6 +45,8 @@ type QuestionRow = Pick<
   Database["public"]["Tables"]["questions"]["Row"],
   | "id"
   | "editorial_id"
+  | "primary_competency_id"
+  | "editorial_difficulty_level"
   | "bank_id"
   | "category_id"
   | "language"
@@ -64,6 +66,10 @@ type QuestionBankRow = Pick<
 type QuestionCategoryRow = Pick<
   Database["public"]["Tables"]["question_categories"]["Row"],
   "id" | "name" | "slug"
+>;
+type EditorialCompetencyRow = Pick<
+  Database["public"]["Tables"]["editorial_competencies"]["Row"],
+  "id" | "code" | "title"
 >;
 type AttemptAnswerRow = Pick<
   Database["public"]["Tables"]["simulation_answers"]["Row"],
@@ -97,10 +103,20 @@ export type SimulationOverview = {
     categoriesCount: number;
     templatesCount: number;
     activeObjectiveQuestionsCount: number;
+    byCategory: SimulationBankBreakdownItem[];
+    byCompetency: SimulationBankBreakdownItem[];
+    byDifficulty: SimulationBankBreakdownItem[];
   };
   templates: SimulationTemplateAccess[];
   attempts: SimulationHistoryItem[];
   historySummary: ReturnType<typeof summarizeAttemptHistory>;
+};
+
+export type SimulationBankBreakdownItem = {
+  id: string;
+  label: string;
+  count: number;
+  detail: string | null;
 };
 
 export type SimulationStartView = {
@@ -328,7 +344,7 @@ async function getVisibleObjectiveQuestions(profile: ProfileRow) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, bank_id, category_id, language, type, difficulty, statement, explanation",
+      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
     )
     .eq("is_active", true)
     .eq("type", "objective")
@@ -392,6 +408,117 @@ async function getCategoriesById(categoryIds: string[]) {
       category,
     ]),
   );
+}
+
+async function getCompetenciesById(competencyIds: string[]) {
+  if (competencyIds.length === 0) {
+    return new Map<string, EditorialCompetencyRow>();
+  }
+
+  const admin = getSupabaseAdminClient();
+  const { data, error } = await admin
+    .from("editorial_competencies")
+    .select("id, code, title")
+    .in("id", [...new Set(competencyIds)]);
+
+  if (error) {
+    throw new SimulationServiceError(
+      "Não foi possível consultar competências editoriais.",
+      500,
+    );
+  }
+
+  return new Map(
+    ((data ?? []) as EditorialCompetencyRow[]).map((competency) => [
+      competency.id,
+      competency,
+    ]),
+  );
+}
+
+function incrementBreakdown(
+  map: Map<string, SimulationBankBreakdownItem>,
+  item: Omit<SimulationBankBreakdownItem, "count">,
+) {
+  const current = map.get(item.id);
+  map.set(item.id, {
+    ...item,
+    count: (current?.count ?? 0) + 1,
+  });
+}
+
+function sortBreakdown(items: SimulationBankBreakdownItem[]) {
+  return items.sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "pt-BR"));
+}
+
+function difficultyBreakdownLabel(question: Pick<QuestionRow, "difficulty" | "editorial_difficulty_level">) {
+  if (question.editorial_difficulty_level) {
+    return {
+      id: `level-${question.editorial_difficulty_level}`,
+      label: `Nível editorial ${question.editorial_difficulty_level}`,
+      detail:
+        question.editorial_difficulty_level >= 3
+          ? "Maior exigência de interpretação e decisão."
+          : "Base e aplicação guiada.",
+    };
+  }
+
+  const legacyLabel = {
+    beginner: "Iniciante",
+    intermediate: "Intermediário",
+    advanced: "Avançado",
+    mixed: "Misto",
+  } satisfies Record<QuestionRow["difficulty"], string>;
+
+  return {
+    id: `legacy-${question.difficulty}`,
+    label: legacyLabel[question.difficulty],
+    detail: "Classificação legada sem nível editorial vinculado.",
+  };
+}
+
+async function getQuestionBankBreakdown(questions: QuestionRow[]) {
+  const [categories, competencies] = await Promise.all([
+    getCategoriesById(
+      questions
+        .map((question) => question.category_id)
+        .filter((id): id is string => Boolean(id)),
+    ),
+    getCompetenciesById(
+      questions
+        .map((question) => question.primary_competency_id)
+        .filter((id): id is string => Boolean(id)),
+    ),
+  ]);
+  const byCategory = new Map<string, SimulationBankBreakdownItem>();
+  const byCompetency = new Map<string, SimulationBankBreakdownItem>();
+  const byDifficulty = new Map<string, SimulationBankBreakdownItem>();
+
+  for (const question of questions) {
+    const category = question.category_id ? categories.get(question.category_id) : null;
+    incrementBreakdown(byCategory, {
+      id: question.category_id ?? "uncategorized",
+      label: category?.name ?? "Sem categoria",
+      detail: category?.slug ?? null,
+    });
+
+    const competency = question.primary_competency_id
+      ? competencies.get(question.primary_competency_id)
+      : null;
+    incrementBreakdown(byCompetency, {
+      id: question.primary_competency_id ?? "unlinked",
+      label: competency?.title ?? "Competência não vinculada",
+      detail: competency?.code ?? "Aguardando vínculo editorial no acervo.",
+    });
+
+    incrementBreakdown(byDifficulty, difficultyBreakdownLabel(question));
+  }
+
+  return {
+    byCategory: sortBreakdown([...byCategory.values()]),
+    byCompetency: sortBreakdown([...byCompetency.values()]),
+    byDifficulty: sortBreakdown([...byDifficulty.values()]),
+  };
 }
 
 function questionMatchesTemplate(
@@ -528,6 +655,7 @@ export async function getSimulationOverview(
   const answerCounts = await getAnswerCountsByAttempt(
     attempts.map((attempt) => attempt.id),
   );
+  const bankBreakdown = await getQuestionBankBreakdown(questions);
   const templateById = new Map(templates.map((template) => [template.id, template]));
   const hasPaid = hasPremiumAccess(profile);
 
@@ -538,6 +666,7 @@ export async function getSimulationOverview(
       categoriesCount,
       templatesCount: templates.length,
       activeObjectiveQuestionsCount: questions.length,
+      ...bankBreakdown,
     },
     templates: buildTemplateAccessList(
       templates,
@@ -805,7 +934,7 @@ async function getQuestionsById(questionIds: string[]) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, bank_id, category_id, language, type, difficulty, statement, explanation",
+      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
     )
     .in("id", questionIds);
 
@@ -828,7 +957,7 @@ async function getRunnerQuestionsById(questionIds: string[]) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, bank_id, category_id, language, type, difficulty, statement",
+      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement",
     )
     .in("id", questionIds);
 

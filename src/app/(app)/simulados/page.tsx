@@ -19,7 +19,10 @@ import {
   officialSubjectiveSimulation,
   simulationDurationMinutes,
 } from "@/lib/simulations/official-pgm";
-import { getSimulationOverview } from "@/lib/simulations/service";
+import {
+  getSimulationOverview,
+  type SimulationBankBreakdownItem,
+} from "@/lib/simulations/service";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -56,6 +59,59 @@ function lockLabel(reason: string | null) {
   if (reason === "insufficient_questions") return "Banco insuficiente";
   if (reason === "no_questions") return "Sem questões";
   return null;
+}
+
+function BreakdownPanel({
+  title,
+  description,
+  items,
+}: {
+  title: string;
+  description: string;
+  items: SimulationBankBreakdownItem[];
+}) {
+  return (
+    <article className="rounded-md border border-border-soft bg-surface p-5">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-sm font-semibold text-white">{title}</h3>
+          <p className="mt-2 text-xs leading-5 text-muted">{description}</p>
+        </div>
+        <span className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 px-2 py-1 font-mono text-xs font-semibold text-pgm-yellow">
+          {items.reduce((total, item) => total + item.count, 0)}
+        </span>
+      </div>
+
+      <div className="mt-4 grid gap-2">
+        {items.length === 0 ? (
+          <p className="rounded-md border border-border-soft bg-background p-3 text-sm leading-6 text-muted">
+            Nenhum item visível para a conta atual.
+          </p>
+        ) : (
+          items.slice(0, 6).map((item) => (
+            <div
+              key={item.id}
+              className="grid gap-2 rounded-md border border-border-soft bg-background p-3 sm:grid-cols-[1fr_auto] sm:items-start"
+            >
+              <div className="min-w-0">
+                <p className="break-words text-sm font-semibold text-white">
+                  {item.label}
+                </p>
+                {item.detail ? (
+                  <p className="mt-1 break-words text-xs leading-5 text-muted">
+                    {item.detail}
+                  </p>
+                ) : null}
+              </div>
+              <span className="font-mono text-xs font-semibold text-pgm-yellow">
+                {item.count} {item.count === 1 ? "questão" : "questões"}
+              </span>
+            </div>
+          ))
+        )}
+      </div>
+    </article>
+  );
 }
 
 export default async function SimuladosPage() {
@@ -133,6 +189,45 @@ export default async function SimuladosPage() {
             </p>
           </article>
         ))}
+      </section>
+
+      <section className="mt-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-pgm-yellow">
+              Banco importado
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white">
+              Questões organizadas por categoria, competência e dificuldade
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+              A composição abaixo usa apenas questões objetivas visíveis para o
+              acesso atual. Ela ajuda a entender se o banco importado está
+              distribuído de forma pedagógica antes de iniciar uma tentativa.
+            </p>
+          </div>
+          <span className="inline-flex rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
+            {overview.schema.activeObjectiveQuestionsCount} objetivas
+          </span>
+        </div>
+
+        <div className="mt-5 grid gap-4 xl:grid-cols-3">
+          <BreakdownPanel
+            title="Categorias"
+            description="Áreas pedagógicas usadas nos simulados."
+            items={overview.schema.byCategory}
+          />
+          <BreakdownPanel
+            title="Competências"
+            description="Competências editoriais vinculadas pelo import."
+            items={overview.schema.byCompetency}
+          />
+          <BreakdownPanel
+            title="Dificuldade"
+            description="Nível editorial ou classificação legada."
+            items={overview.schema.byDifficulty}
+          />
+        </div>
       </section>
 
       <section className="mt-6">

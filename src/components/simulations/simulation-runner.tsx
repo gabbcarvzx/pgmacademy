@@ -16,6 +16,7 @@ import {
   finishSimulationAttemptAction,
   saveSimulationAnswerAction,
 } from "@/app/(app)/simulados/actions";
+import { difficultyLabel, languageLabel } from "@/lib/learning/labels";
 import type { SimulationRunnerView } from "@/lib/simulations/service";
 
 type SimulationRunnerProps = {
@@ -140,10 +141,10 @@ export function SimulationRunner({
                 {currentQuestion.categoryName}
               </span>
               <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
-                {currentQuestion.language}
+                {languageLabel[currentQuestion.language]}
               </span>
               <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
-                {currentQuestion.difficulty}
+                {difficultyLabel[currentQuestion.difficulty]}
               </span>
             </div>
           </div>
