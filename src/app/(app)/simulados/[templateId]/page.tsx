@@ -69,7 +69,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
   const canStart = data.template.lockedReason === null;
 
   return (
-    <main className="px-4 py-6 sm:px-6 lg:px-8">
+    <main className="px-4 py-6 max-sm:px-3 max-sm:py-4 sm:px-6 lg:px-8">
       <Link
         href="/simulados"
         className="inline-flex h-10 items-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
@@ -78,15 +78,15 @@ export default async function SimulationStartPage({ params }: PageProps) {
         Voltar
       </Link>
 
-      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_340px]">
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 grid gap-6 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_340px]">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase text-pgm-yellow">
                 {typeLabel[data.template.type]} ·{" "}
                 {languageLabel[data.template.language]}
               </p>
-              <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
+              <h1 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
                 {data.template.title}
               </h1>
               <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
@@ -107,11 +107,11 @@ export default async function SimulationStartPage({ params }: PageProps) {
             )}
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+          <div className="mt-6 grid gap-3 max-sm:mt-4 max-sm:gap-2 sm:grid-cols-3">
+            <span className="min-w-0 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
               {data.template.total_questions} questões
             </span>
-            <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+            <span className="inline-flex min-w-0 items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
               <Clock3 className="size-4" aria-hidden="true" />
               {data.estimatedMinutes} min
             </span>
@@ -120,7 +120,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
             </span>
           </div>
 
-          <div className="mt-6 rounded-md border border-border-soft bg-background p-5">
+          <div className="mt-6 rounded-md border border-border-soft bg-background p-5 max-sm:mt-4 max-sm:p-4">
             <p className="text-sm font-semibold text-white">Instruções</p>
             <ul className="mt-4 grid gap-3">
               {[
@@ -148,7 +148,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
               {data.template.lockedReason === "premium_required" ? (
                 <PremiumUpgradeCard description={message} />
               ) : (
-                <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5">
+                <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 max-sm:p-4">
                   <p className="text-sm font-semibold text-white">
                     Template indisponível
                   </p>
@@ -159,7 +159,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
           ) : data.activeAttemptId ? (
             <Link
               href={`/simulados/tentativas/${data.activeAttemptId}`}
-              className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
+              className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white max-sm:w-full"
             >
               Continuar tentativa ativa
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -169,7 +169,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
               <input type="hidden" name="templateId" value={data.template.id} />
               <button
                 type="submit"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white max-sm:w-full"
               >
                 Iniciar simulado
                 <ArrowRight className="size-4" aria-hidden="true" />
@@ -180,7 +180,7 @@ export default async function SimulationStartPage({ params }: PageProps) {
 
         <aside className="grid content-start gap-4">
           <InstitutionalNotice />
-          <div className="rounded-md border border-border-soft bg-surface p-5">
+          <div className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
             <p className="text-sm font-semibold text-white">
               Segurança da tentativa
             </p>

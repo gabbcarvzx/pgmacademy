@@ -24,6 +24,7 @@ export function UpgradeCard({
     <article
       className={cx(
         "relative overflow-hidden rounded-ds-24 border border-accent-gold/40 bg-surface-elevated p-6 shadow-premium",
+        "max-sm:p-5",
         className,
       )}
     >
@@ -32,7 +33,7 @@ export function UpgradeCard({
         <Sparkles className="size-5" aria-hidden="true" />
         <p className="text-caption font-semibold uppercase">{eyebrow}</p>
       </div>
-      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary">
+      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary max-sm:text-xl">
         {title}
       </h2>
       <p className="mt-3 text-sm leading-6 text-text-muted">{description}</p>

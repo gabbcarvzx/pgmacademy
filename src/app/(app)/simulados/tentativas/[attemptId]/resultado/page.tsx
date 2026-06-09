@@ -66,7 +66,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
   }
 
   return (
-    <main className="px-4 py-6 sm:px-6 lg:px-8">
+    <main className="px-4 py-6 max-sm:px-3 max-sm:py-4 sm:px-6 lg:px-8">
       <Link
         href="/simulados"
         className="inline-flex h-10 items-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
@@ -75,12 +75,12 @@ export default async function SimulationResultPage({ params }: PageProps) {
         Simulados
       </Link>
 
-      <section className="mt-6 grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
+      <section className="mt-6 grid gap-5 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
           <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Resultado
           </p>
-          <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
+          <h1 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
             {result.templateTitle}
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
@@ -92,7 +92,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
         <InstitutionalNotice />
       </section>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {[
           {
             title: "Nota",
@@ -130,8 +130,8 @@ export default async function SimulationResultPage({ params }: PageProps) {
         ))}
       </section>
 
-      <section className="mt-6 grid gap-4 xl:grid-cols-3">
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 xl:grid-cols-3">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
           <CheckCircle2 className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="mt-4 text-xl font-semibold text-white">
             Competências fortes
@@ -160,7 +160,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           </div>
         </article>
 
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
           <Target className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="mt-4 text-xl font-semibold text-white">
             Competências fracas
@@ -189,7 +189,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           </div>
         </article>
 
-        <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+        <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 max-sm:p-4 sm:p-6">
           <Trophy className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="mt-4 text-xl font-semibold text-white">
             Próximos passos
@@ -215,7 +215,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
         </article>
       </section>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 max-sm:mt-4 max-sm:p-4 sm:p-6">
         <div className="flex items-center gap-3">
           <BookOpen className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="text-xl font-semibold text-white">
@@ -264,7 +264,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 max-sm:mt-4 max-sm:p-4 sm:p-6">
         <div className="flex items-center gap-3">
           <BarChart3 className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="text-xl font-semibold text-white">
@@ -276,7 +276,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
           {result.byCategory.map((category) => (
             <div
               key={category.categoryId}
-              className="rounded-md border border-border-soft bg-background p-4"
+              className="rounded-md border border-border-soft bg-background p-4 max-sm:p-3"
             >
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
@@ -303,7 +303,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <div className="flex items-center gap-3">
           <ListChecks className="size-5 text-pgm-yellow" aria-hidden="true" />
           <h2 className="text-xl font-semibold text-white">
@@ -323,14 +323,14 @@ export default async function SimulationResultPage({ params }: PageProps) {
             return (
               <article
                 key={question.id}
-                className="rounded-md border border-border-soft bg-surface p-5 sm:p-6"
+                className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6"
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <p className="text-sm font-semibold uppercase text-pgm-yellow">
                       Questão {index + 1} · {question.categoryName}
                     </p>
-                    <p className="mt-4 whitespace-pre-line text-base leading-7 text-white">
+                    <p className="mt-4 whitespace-pre-line break-words text-base leading-7 text-white">
                       {question.statement}
                     </p>
                   </div>
@@ -349,7 +349,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
                   {question.options.map((option) => (
                     <div
                       key={option.id}
-                      className={`grid grid-cols-[40px_1fr] gap-3 rounded-md border p-4 ${
+                      className={`grid grid-cols-[36px_minmax(0,1fr)] gap-3 rounded-md border p-4 max-sm:p-3 sm:grid-cols-[40px_1fr] ${
                         option.isCorrect
                           ? "border-pgm-green/45 bg-pgm-green/10"
                           : option.isSelected
@@ -360,14 +360,14 @@ export default async function SimulationResultPage({ params }: PageProps) {
                       <span className="flex size-9 items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-white">
                         {option.label}
                       </span>
-                      <span className="text-sm leading-6 text-muted">
+                      <span className="break-words text-sm leading-6 text-muted">
                         {option.text}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-5 grid gap-3 rounded-md border border-border-soft bg-background p-4 sm:grid-cols-2">
+                <div className="mt-5 grid gap-3 rounded-md border border-border-soft bg-background p-4 max-sm:p-3 sm:grid-cols-2">
                   <div>
                     <p className="text-xs font-semibold uppercase text-muted">
                       Sua resposta
@@ -391,7 +391,7 @@ export default async function SimulationResultPage({ params }: PageProps) {
                 </div>
 
                 {question.explanation ? (
-                  <div className="mt-4 rounded-md border border-border-soft bg-background p-4">
+                  <div className="mt-4 rounded-md border border-border-soft bg-background p-4 max-sm:p-3">
                     <p className="text-xs font-semibold uppercase text-muted">
                       Explicação
                     </p>

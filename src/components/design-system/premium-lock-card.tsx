@@ -22,13 +22,14 @@ export function PremiumLockCard({
     <article
       className={cx(
         "rounded-ds-20 border border-accent-gold/40 bg-accent-gold-soft p-5 shadow-premium sm:p-6",
+        "max-sm:p-4",
         className,
       )}
     >
       <div className="flex size-11 items-center justify-center rounded-ds-16 border border-accent-gold/35 bg-background-primary text-accent-gold">
         <LockKeyhole className="size-5" aria-hidden="true" />
       </div>
-      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary">
+      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary max-sm:text-xl">
         {title}
       </h2>
       <p className="mt-3 max-w-3xl text-sm leading-6 text-text-muted">

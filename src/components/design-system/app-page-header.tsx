@@ -24,7 +24,7 @@ export function AppPageHeader({
     <section
       className={cx(
         "grid gap-6 rounded-ds-24 border border-border-soft bg-surface/70 shadow-card",
-        density === "compact" ? "p-5 sm:p-6" : "p-6 sm:p-8",
+        density === "compact" ? "p-5 max-sm:p-4 sm:p-6" : "p-6 max-sm:p-4 sm:p-8",
         aside ? "lg:grid-cols-[1fr_320px] lg:items-end" : "",
         className,
       )}
@@ -38,7 +38,9 @@ export function AppPageHeader({
         <h1
           className={cx(
             "max-w-4xl font-semibold text-text-primary text-balance",
-            density === "compact" ? "mt-3 text-heading-2" : "mt-4 text-heading-1",
+            density === "compact"
+              ? "mt-3 text-heading-2 max-sm:text-heading-3"
+              : "mt-4 text-heading-1 max-sm:text-heading-2",
           )}
         >
           {title}
@@ -53,7 +55,11 @@ export function AppPageHeader({
             {description}
           </p>
         ) : null}
-        {actions ? <div className="mt-6 flex flex-wrap gap-3">{actions}</div> : null}
+        {actions ? (
+          <div className="mt-6 flex flex-wrap gap-3 max-md:grid max-md:grid-cols-1 max-md:[&>*]:w-full">
+            {actions}
+          </div>
+        ) : null}
       </div>
       {aside ? <div>{aside}</div> : null}
     </section>

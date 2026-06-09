@@ -51,7 +51,7 @@ export function FlashcardDeck({
   }
 
   return (
-    <section className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+    <section className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-sm font-semibold text-white">
@@ -71,19 +71,19 @@ export function FlashcardDeck({
       <button
         type="button"
         onClick={() => setShowBack((value) => !value)}
-        className="mt-5 flex min-h-[260px] w-full items-center justify-center rounded-md border border-border-soft bg-background p-6 text-center transition hover:border-white/35"
+        className="mt-5 flex min-h-[220px] w-full items-center justify-center rounded-md border border-border-soft bg-background p-6 text-center transition hover:border-white/35 max-sm:p-4 sm:min-h-[260px]"
       >
-        <span className="max-w-2xl whitespace-pre-line break-words text-xl font-semibold leading-8 text-white">
+        <span className="max-w-2xl whitespace-pre-line break-words text-lg font-semibold leading-7 text-white sm:text-xl sm:leading-8">
           {showBack ? currentCard.backContent : currentCard.frontContent}
         </span>
       </button>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-4">
+      <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
         <button
           type="button"
           onClick={() => goTo(currentIndex - 1)}
           disabled={currentIndex === 0}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft px-2 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45 max-sm:text-xs"
           title="Card anterior"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
@@ -92,7 +92,7 @@ export function FlashcardDeck({
         <button
           type="button"
           onClick={() => setShowBack((value) => !value)}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft px-2 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white max-sm:text-xs"
           title="Virar card"
         >
           <RotateCcw className="size-4" aria-hidden="true" />
@@ -102,7 +102,7 @@ export function FlashcardDeck({
           type="button"
           onClick={markReviewed}
           disabled={isPending || reviewedIds.has(currentCard.id)}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60 max-sm:px-2 max-sm:text-xs"
           title="Marcar como revisado"
         >
           <CheckCircle2 className="size-4" aria-hidden="true" />
@@ -112,7 +112,7 @@ export function FlashcardDeck({
           type="button"
           onClick={() => goTo(currentIndex + 1)}
           disabled={currentIndex === cards.length - 1}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border-soft px-2 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white disabled:cursor-not-allowed disabled:opacity-45 max-sm:text-xs"
           title="Próximo card"
         >
           Próximo

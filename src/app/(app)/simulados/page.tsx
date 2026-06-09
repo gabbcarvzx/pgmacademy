@@ -71,13 +71,13 @@ function BreakdownPanel({
   items: SimulationBankBreakdownItem[];
 }) {
   return (
-    <article className="rounded-md border border-border-soft bg-surface p-5">
-      <div className="flex items-start justify-between gap-4">
+    <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
+      <div className="flex items-start justify-between gap-4 max-sm:gap-3">
         <div>
           <h3 className="text-sm font-semibold text-white">{title}</h3>
           <p className="mt-2 text-xs leading-5 text-muted">{description}</p>
         </div>
-        <span className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 px-2 py-1 font-mono text-xs font-semibold text-pgm-yellow">
+        <span className="shrink-0 rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 px-2 py-1 font-mono text-xs font-semibold text-pgm-yellow">
           {items.reduce((total, item) => total + item.count, 0)}
         </span>
       </div>
@@ -91,7 +91,7 @@ function BreakdownPanel({
           items.slice(0, 6).map((item) => (
             <div
               key={item.id}
-              className="grid gap-2 rounded-md border border-border-soft bg-background p-3 sm:grid-cols-[1fr_auto] sm:items-start"
+              className="grid min-w-0 gap-2 rounded-md border border-border-soft bg-background p-3 sm:grid-cols-[1fr_auto] sm:items-start"
             >
               <div className="min-w-0">
                 <p className="break-words text-sm font-semibold text-white">
@@ -103,7 +103,7 @@ function BreakdownPanel({
                   </p>
                 ) : null}
               </div>
-              <span className="font-mono text-xs font-semibold text-pgm-yellow">
+              <span className="font-mono text-xs font-semibold text-pgm-yellow max-sm:justify-self-start">
                 {item.count} {item.count === 1 ? "questão" : "questões"}
               </span>
             </div>
@@ -127,13 +127,13 @@ export default async function SimuladosPage() {
   const overview = await getSimulationOverview(user.id);
 
   return (
-    <main className="px-4 py-6 sm:px-6 lg:px-8">
-      <section className="grid gap-5 xl:grid-cols-[1fr_340px] xl:items-end">
+    <main className="px-4 py-6 max-sm:px-3 max-sm:py-4 sm:px-6 lg:px-8">
+      <section className="grid gap-5 max-sm:gap-4 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
           <p className="text-sm font-semibold uppercase text-pgm-yellow">
             Simulados reais
           </p>
-          <h1 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
+          <h1 className="mt-4 max-w-3xl text-2xl font-semibold text-white sm:text-4xl">
             Treine com as questões objetivas autorais já aprovadas
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
@@ -148,7 +148,7 @@ export default async function SimuladosPage() {
         )}
       </section>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {[
           {
             title: "Acesso",
@@ -177,7 +177,7 @@ export default async function SimuladosPage() {
         ].map((item) => (
           <article
             key={item.title}
-            className="rounded-md border border-border-soft bg-surface p-5"
+            className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4"
           >
             <item.Icon className="size-5 text-pgm-yellow" aria-hidden="true" />
             <p className="mt-5 text-sm font-medium text-muted">{item.title}</p>
@@ -191,7 +191,7 @@ export default async function SimuladosPage() {
         ))}
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -211,7 +211,7 @@ export default async function SimuladosPage() {
           </span>
         </div>
 
-        <div className="mt-5 grid gap-4 xl:grid-cols-3">
+        <div className="mt-5 grid gap-4 max-sm:gap-3 xl:grid-cols-3">
           <BreakdownPanel
             title="Categorias"
             description="Áreas pedagógicas usadas nos simulados."
@@ -230,8 +230,8 @@ export default async function SimuladosPage() {
         </div>
       </section>
 
-      <section className="mt-6">
-        <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+      <section className="mt-6 max-sm:mt-4">
+        <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 max-sm:p-4 sm:p-6">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -246,7 +246,7 @@ export default async function SimuladosPage() {
                 avaliação por rubrica.
               </p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[430px]">
+            <div className="grid gap-3 max-sm:gap-2 sm:grid-cols-3 lg:min-w-[430px]">
               <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                 {officialSubjectiveSimulation.questionCount} questões
               </span>
@@ -262,7 +262,7 @@ export default async function SimuladosPage() {
 
           <Link
             href="/simulados/subjetivo-oficial"
-            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
+            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white max-sm:w-full"
           >
             Abrir subjetivo oficial
             <PencilLine className="size-4" aria-hidden="true" />
@@ -270,7 +270,7 @@ export default async function SimuladosPage() {
         </div>
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -285,7 +285,7 @@ export default async function SimuladosPage() {
           </span>
         </div>
 
-        <div className="mt-5 grid gap-4 xl:grid-cols-2">
+        <div className="mt-5 grid gap-4 max-sm:gap-3 xl:grid-cols-2">
           {overview.templates.map((template) => {
             const lockedMessage = lockLabel(template.lockedReason);
             const isLocked = Boolean(template.lockedReason);
@@ -293,13 +293,13 @@ export default async function SimuladosPage() {
             return (
               <article
                 key={template.id}
-                className={`rounded-md border p-5 sm:p-6 ${
+                className={`rounded-md border p-5 max-sm:p-4 sm:p-6 ${
                   isLocked
                     ? "border-pgm-yellow/25 bg-pgm-yellow/5"
                     : "border-border-soft bg-surface"
                 }`}
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start justify-between gap-4 max-sm:gap-3">
                   <div>
                     <div className="flex flex-wrap gap-2">
                       <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
@@ -312,7 +312,7 @@ export default async function SimuladosPage() {
                         {template.is_premium ? "Premium" : "Gratuito"}
                       </span>
                     </div>
-                    <h3 className="mt-4 text-xl font-semibold text-white">
+                    <h3 className="mt-4 break-words text-xl font-semibold text-white">
                       {template.title}
                     </h3>
                   </div>
@@ -334,15 +334,15 @@ export default async function SimuladosPage() {
                     "Simulado objetivo com correção automática."}
                 </p>
 
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                <div className="mt-5 grid gap-3 max-sm:gap-2 sm:grid-cols-3">
+                  <span className="min-w-0 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     {template.total_questions} questões
                   </span>
-                  <span className="inline-flex items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                  <span className="inline-flex min-w-0 items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     <Clock3 className="size-4" aria-hidden="true" />
                     {simulationDurationMinutes(template)} min
                   </span>
-                  <span className="rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+                  <span className="min-w-0 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
                     {template.availableQuestionCount} no banco
                   </span>
                 </div>
@@ -378,7 +378,7 @@ export default async function SimuladosPage() {
         </div>
       </section>
 
-      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 max-sm:mt-4 max-sm:p-4 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -395,7 +395,7 @@ export default async function SimuladosPage() {
 
         <div className="mt-5 grid gap-3">
           {overview.attempts.length === 0 ? (
-            <div className="rounded-md border border-border-soft bg-background p-4">
+            <div className="rounded-md border border-border-soft bg-background p-4 max-sm:p-3">
               <p className="text-sm font-semibold text-white">
                 Nenhuma tentativa registrada
               </p>
@@ -408,10 +408,10 @@ export default async function SimuladosPage() {
             overview.attempts.map((attempt) => (
               <div
                 key={attempt.id}
-                className="grid gap-4 rounded-md border border-border-soft bg-background p-4 lg:grid-cols-[1fr_180px_160px]"
+                className="grid gap-4 rounded-md border border-border-soft bg-background p-4 max-sm:p-3 lg:grid-cols-[1fr_180px_160px]"
               >
-                <div>
-                  <p className="text-sm font-semibold text-white">
+                <div className="min-w-0">
+                  <p className="break-words text-sm font-semibold text-white">
                     {attempt.templateTitle}
                   </p>
                   <p className="mt-1 text-xs text-muted">

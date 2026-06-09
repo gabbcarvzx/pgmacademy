@@ -22,6 +22,7 @@ export function EmptyState({
     <section
       className={cx(
         "rounded-ds-20 border border-border-soft bg-surface p-6 text-center shadow-card",
+        "max-sm:p-5",
         compact ? "sm:p-6" : "sm:p-10",
         className,
       )}
@@ -31,7 +32,7 @@ export function EmptyState({
           <Icon className="size-5" aria-hidden="true" />
         </div>
       ) : null}
-      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary">
+      <h2 className="mt-5 text-heading-3 font-semibold text-text-primary max-sm:text-xl">
         {title}
       </h2>
       {description ? (

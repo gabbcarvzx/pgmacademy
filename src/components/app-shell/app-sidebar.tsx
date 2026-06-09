@@ -237,6 +237,8 @@ export function AppSidebar({
           type="button"
           className="inline-flex h-10 items-center justify-center gap-2 rounded-ds-12 border border-border-soft px-3 text-sm font-semibold text-text-muted transition hover:border-border-strong hover:text-text-primary lg:hidden"
           aria-label="Abrir navegação"
+          aria-controls="app-mobile-navigation"
+          aria-expanded={drawerOpen}
           onClick={() => setDrawerOpen(true)}
         >
           <Menu className="size-4" aria-hidden="true" />

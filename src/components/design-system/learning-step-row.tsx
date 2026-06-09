@@ -55,20 +55,20 @@ export function LearningStepRow({
 }) {
   const StateIcon = Icon ?? stepState[state].Icon;
   const classNames = cx(
-    "rounded-ds-16 border border-border-soft bg-surface p-4 shadow-card transition",
+    "rounded-ds-16 border border-border-soft bg-surface p-4 shadow-card transition max-sm:p-3",
     href ? "hover:border-border-strong hover:bg-surface-elevated" : "",
     className,
   );
 
   return (
     <article className={classNames}>
-      <div className="flex gap-4">
+      <div className="flex min-w-0 gap-4 max-sm:gap-3">
         <div className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-ds-16 border border-border-soft bg-background-primary text-accent-gold">
           <StateIcon className="size-5" aria-hidden="true" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <h3 className="text-base font-semibold text-text-primary">
+            <h3 className="min-w-0 break-words text-base font-semibold text-text-primary">
               {href ? (
                 <Link className="transition hover:text-accent-gold" href={href}>
                   {title}

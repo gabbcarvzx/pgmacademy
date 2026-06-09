@@ -88,7 +88,7 @@ function MissionTaskList({ data }: { data: MissionDashboardData }) {
   )?.id;
 
   return (
-    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6">
       <SectionHeader
         eyebrow="Missão de hoje"
         title="Estudo guiado para hoje"
@@ -137,7 +137,7 @@ function MissionTaskList({ data }: { data: MissionDashboardData }) {
 
 function PreparationPanel({ data }: { data: MissionDashboardData }) {
   return (
-    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6">
       <SectionHeader
         eyebrow="Preparação PGM"
         title={`${data.preparation.percentage}% concluído`}
@@ -177,7 +177,7 @@ function PreparationPanel({ data }: { data: MissionDashboardData }) {
 
 function ApprovalPlanPanel({ data }: { data: MissionDashboardData }) {
   return (
-    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+    <article className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6">
       <SectionHeader
         eyebrow="Plano de Aprovação PGM"
         title="Próximas semanas"
@@ -276,7 +276,7 @@ function StudentContextPanel({ data }: { data: MissionDashboardData }) {
 
 function RecommendationsPanel({ data }: { data: MissionDashboardData }) {
   return (
-    <section className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+    <section className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6">
       <SectionHeader
         eyebrow="Recomendações personalizadas"
         title="O que reforçar agora"
@@ -343,7 +343,7 @@ export default async function DashboardPage() {
   const latestAssessment = data.latestAssessment;
 
   return (
-    <main className="px-4 pb-28 pt-5 sm:px-6 lg:px-8 lg:pb-8">
+    <main className="px-4 pb-28 pt-5 max-sm:px-3 max-sm:pb-36 max-sm:pt-3 sm:px-6 lg:px-8 lg:pb-8">
       <AppPageHeader
         eyebrow="Painel de Missão"
         title="Seu cockpit diário de preparação"
@@ -370,7 +370,7 @@ export default async function DashboardPage() {
         }
       />
 
-      <section className="mt-5 grid gap-5 xl:grid-cols-[1fr_360px]">
+      <section className="mt-5 grid gap-5 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_360px]">
         <PrimaryActionPanel
           eyebrow="Faça agora"
           title={data.nextAction.title}
@@ -395,7 +395,7 @@ export default async function DashboardPage() {
             </Link>
           }
           metadata={
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 max-sm:gap-1.5">
               <StatusBadge tone="premium">
                 Missão {data.dailyMission.percentage}%
               </StatusBadge>
@@ -428,7 +428,7 @@ export default async function DashboardPage() {
         )}
       </section>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           title="Diagnóstico"
           value={
@@ -462,21 +462,21 @@ export default async function DashboardPage() {
         />
       </section>
 
-      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_380px]">
+      <section className="mt-6 grid gap-6 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_380px]">
         <MissionTaskList data={data} />
         <PreparationPanel data={data} />
       </section>
 
-      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_380px]">
+      <section className="mt-6 grid gap-6 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_380px]">
         <ApprovalPlanPanel data={data} />
         <StudentContextPanel data={data} />
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <RecommendationsPanel data={data} />
       </section>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           title="Materiais"
           value={data.stats.completedMaterials}
@@ -515,7 +515,7 @@ export default async function DashboardPage() {
       <MobileActionBar label="Próxima ação do Painel de Missão">
         <Link
           href={data.nextAction.href}
-          className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white"
+          className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white max-sm:w-full max-sm:px-3"
         >
           {data.nextAction.cta}
           <ArrowRight className="size-4" aria-hidden="true" />

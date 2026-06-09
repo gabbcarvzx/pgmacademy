@@ -46,6 +46,7 @@ export function PrimaryActionPanel({
     <article
       className={cx(
         "rounded-ds-24 border p-5 sm:p-6",
+        "max-sm:p-4",
         toneClassName[tone],
         className,
       )}
@@ -76,7 +77,7 @@ export function PrimaryActionPanel({
           {metadata ? <div className="mt-5">{metadata}</div> : null}
         </div>
         {(primaryAction || secondaryAction) && (
-          <div className="flex flex-wrap gap-3 lg:justify-end">
+          <div className="flex flex-wrap gap-3 max-md:grid max-md:grid-cols-1 max-md:[&>*]:w-full lg:justify-end">
             {primaryAction}
             {secondaryAction}
           </div>

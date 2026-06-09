@@ -46,7 +46,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
   }
 
   return (
-    <main className="px-4 py-6 sm:px-6 lg:px-8">
+    <main className="px-4 py-6 max-sm:px-3 max-sm:py-4 sm:px-6 lg:px-8">
       <Link
         href="/trilhas"
         className="inline-flex h-10 items-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
@@ -55,14 +55,14 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
         Voltar
       </Link>
 
-      <section className="mt-6 grid gap-6 xl:grid-cols-[1fr_340px]">
-        <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+      <section className="mt-6 grid gap-6 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_340px]">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase text-pgm-yellow">
                 {languageLabel[path.language]}
               </p>
-              <h1 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
+              <h1 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
                 {path.title}
               </h1>
               <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
@@ -97,7 +97,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
 
         <aside className="grid content-start gap-4">
           <InstitutionalNotice />
-          <div className="rounded-md border border-border-soft bg-surface p-5">
+          <div className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
             <Layers3 className="size-5 text-pgm-yellow" aria-hidden="true" />
             <p className="mt-4 text-sm font-semibold text-white">
               Sequência pedagógica
@@ -109,27 +109,27 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
         </aside>
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <div className="grid gap-3">
           {path.groups.map((group, index) => {
             const completed = group.completedItems === group.totalItems;
             return (
               <article
                 key={group.groupId}
-                className="grid gap-4 rounded-md border border-border-soft bg-surface p-4 sm:grid-cols-[auto_1fr_auto] sm:items-center"
+                className="grid gap-4 rounded-md border border-border-soft bg-surface p-4 max-sm:gap-3 max-sm:p-3 sm:grid-cols-[auto_1fr_auto] sm:items-center"
               >
                 <span className="flex size-10 items-center justify-center rounded-md bg-background text-sm font-semibold text-white">
                   {index + 1}
                 </span>
 
-                <div>
+                <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
                     {completed ? (
                       <CheckCircle2 className="size-4 text-pgm-green" aria-hidden="true" />
                     ) : (
                       <Circle className="size-4 text-muted" aria-hidden="true" />
                     )}
-                    <p className="text-sm font-semibold text-white">
+                    <p className="break-words text-sm font-semibold text-white">
                       {group.title}
                     </p>
                     <StatusBadge tone="premium">
@@ -141,7 +141,7 @@ export default async function TrilhaDetailPage({ params }: PageProps) {
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-2 sm:w-48">
+                <div className="flex flex-col gap-2 max-sm:w-full sm:w-48">
                   {group.href ? (
                     <Link
                       href={group.href}

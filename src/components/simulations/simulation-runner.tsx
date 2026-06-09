@@ -117,7 +117,7 @@ export function SimulationRunner({
 
   if (!currentQuestion) {
     return (
-      <section className="rounded-md border border-border-soft bg-surface p-5">
+      <section className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
         <p className="text-sm font-semibold text-white">
           Nenhuma questão vinculada
         </p>
@@ -129,8 +129,8 @@ export function SimulationRunner({
   }
 
   return (
-    <section className="grid gap-5 xl:grid-cols-[1fr_320px]">
-      <article className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
+    <section className="grid gap-5 max-sm:gap-4 xl:grid-cols-[1fr_320px]">
+      <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
@@ -148,7 +148,7 @@ export function SimulationRunner({
               </span>
             </div>
           </div>
-          <div className="min-w-[140px]">
+          <div className="min-w-[140px] max-sm:w-full">
             <div className="flex items-center justify-between text-xs font-semibold text-muted">
               <span>Progresso</span>
               <span>{progressPercent}%</span>
@@ -162,7 +162,7 @@ export function SimulationRunner({
           </div>
         </div>
 
-        <p className="mt-6 whitespace-pre-line text-lg leading-8 text-white">
+        <p className="mt-6 whitespace-pre-line break-words text-base leading-7 text-white sm:text-lg sm:leading-8">
           {currentQuestion.statement}
         </p>
 
@@ -176,7 +176,7 @@ export function SimulationRunner({
                 key={option.id}
                 type="button"
                 onClick={() => selectOption(currentQuestion.id, option.id)}
-                className={`grid grid-cols-[40px_1fr] items-start gap-3 rounded-md border p-4 text-left transition ${
+                className={`grid grid-cols-[36px_minmax(0,1fr)] items-start gap-3 rounded-md border p-4 text-left transition max-sm:p-3 sm:grid-cols-[40px_1fr] ${
                   isSelected
                     ? "border-pgm-yellow bg-pgm-yellow/10"
                     : "border-border-soft bg-background hover:border-white/35"
@@ -191,7 +191,7 @@ export function SimulationRunner({
                 >
                   {option.label}
                 </span>
-                <span className="text-sm leading-6 text-white">
+                  <span className="break-words text-sm leading-6 text-white">
                   {option.text}
                 </span>
               </button>
@@ -237,8 +237,8 @@ export function SimulationRunner({
         </div>
       </article>
 
-      <aside className="grid gap-4 self-start">
-        <article className="rounded-md border border-border-soft bg-surface p-5">
+      <aside className="grid gap-4 self-start max-sm:gap-3">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
           <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-4">
             <div className="flex items-center justify-between gap-3">
               <div>
@@ -268,14 +268,14 @@ export function SimulationRunner({
           </div>
         </article>
 
-        <article className="rounded-md border border-border-soft bg-surface p-5">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
           <p className="text-sm font-semibold text-white">Revisão</p>
           <p className="mt-2 text-sm leading-6 text-muted">
             {answeredCount} de {questions.length} respondidas. Você pode voltar
             para qualquer questão antes de finalizar.
           </p>
 
-          <div className="mt-4 grid grid-cols-5 gap-2 sm:grid-cols-6 xl:grid-cols-5">
+          <div className="mt-4 grid grid-cols-5 gap-2 max-sm:gap-1.5 sm:grid-cols-6 xl:grid-cols-5">
             {questions.map((question, index) => {
               const isAnswered = Boolean(selectedOptionIds.get(question.id));
               const isCurrent = index === currentIndex;
@@ -301,7 +301,7 @@ export function SimulationRunner({
           </div>
         </article>
 
-        <article className="rounded-md border border-border-soft bg-surface p-5">
+        <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
           <p className="text-sm font-semibold text-white">Antes de finalizar</p>
           <ul className="mt-4 grid gap-3">
             {[

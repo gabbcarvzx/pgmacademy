@@ -79,7 +79,7 @@ const contentTypeLabel = {
 
 function JourneyRail({ modules }: { modules: AcademyModuleView[] }) {
   return (
-    <section className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+    <section className="rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6">
       <SectionHeader
         eyebrow="Jornada oficial de estudo"
         title="Da estratégia ao embarque"
@@ -88,7 +88,7 @@ function JourneyRail({ modules }: { modules: AcademyModuleView[] }) {
         action={<Route className="size-6 text-accent-gold" aria-hidden="true" />}
       />
 
-      <ol className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-7">
+      <ol className="mt-6 grid gap-3 max-sm:mt-4 sm:grid-cols-2 xl:grid-cols-7">
         {modules.map((module) => {
           const Icon = module.icon;
 
@@ -192,7 +192,7 @@ function AcademyModuleCard({ module }: { module: AcademyModuleView }) {
   return (
     <article
       id={module.id}
-      className="scroll-mt-6 rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6"
+      className="scroll-mt-6 rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4 sm:p-6"
     >
       <SectionHeader
         eyebrow={`Módulo ${module.order}`}
@@ -211,7 +211,7 @@ function AcademyModuleCard({ module }: { module: AcademyModuleView }) {
         }
       />
 
-      <div className="mt-5 grid gap-4 border-y border-border-soft py-5 lg:grid-cols-2">
+      <div className="mt-5 grid gap-4 border-y border-border-soft py-5 max-sm:gap-3 max-sm:py-4 lg:grid-cols-2">
         <ContentCard
           title="Por que este módulo existe"
           description={module.whyItExists}
@@ -278,7 +278,7 @@ function CompletionPanel({ data }: { data: AcademyDashboardData }) {
   }
 
   return (
-    <section className="mt-6 rounded-ds-20 border border-success/35 bg-success/10 p-5 shadow-card sm:p-6">
+    <section className="mt-6 rounded-ds-20 border border-success/35 bg-success/10 p-5 shadow-card max-sm:mt-4 max-sm:p-4 sm:p-6">
       <Trophy className="size-6 text-success" aria-hidden="true" />
       <p className="mt-4 text-caption font-semibold uppercase text-success">
         Academia concluída
@@ -341,7 +341,7 @@ export default async function PremiumPage() {
   const mobileLabel = data.hasPaidAccess ? data.nextActivity.cta : "Assinar Premium";
 
   return (
-    <main className="px-4 pb-28 pt-5 sm:px-6 lg:px-8 lg:pb-8">
+    <main className="px-4 pb-28 pt-5 max-sm:px-3 max-sm:pb-36 max-sm:pt-3 sm:px-6 lg:px-8 lg:pb-8">
       <AppPageHeader
         eyebrow="Academia PGM"
         title="A jornada premium para transformar estudo solto em preparação guiada"
@@ -371,11 +371,11 @@ export default async function PremiumPage() {
         }
       />
 
-      <section className="mt-5">
+      <section className="mt-5 max-sm:mt-4">
         <NextActivityPanel data={data} />
       </section>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           title="Acesso"
           value={accessLabel[data.accessStatus]}
@@ -403,7 +403,7 @@ export default async function PremiumPage() {
         />
       </section>
 
-      <section className="mt-6 rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card sm:p-6">
+      <section className="mt-6 rounded-ds-20 border border-border-soft bg-surface p-5 shadow-card max-sm:mt-4 max-sm:p-4 sm:p-6">
         <SectionHeader
           eyebrow="Progresso geral"
           title={`${data.overall.progressPercent}% da Academia concluída`}
@@ -425,13 +425,13 @@ export default async function PremiumPage() {
 
       <CompletionPanel data={data} />
 
-      <section className="mt-6">
+      <section className="mt-6 max-sm:mt-4">
         <JourneyRail modules={data.modules} />
       </section>
 
       {!data.hasPaidAccess ? (
         <>
-          <section className="mt-6">
+          <section className="mt-6 max-sm:mt-4">
             <UpgradeCard
               title="Desbloqueie a execução guiada da Academia"
               description="Alunos gratuitos conseguem entender a jornada. O acesso aos conteúdos completos, progresso por atividade e recomendações de continuidade permanece exclusivo do Premium."
@@ -447,14 +447,14 @@ export default async function PremiumPage() {
           <FreeAcademyPreview modules={data.modules} />
         </>
       ) : (
-        <section className="mt-6 grid gap-6">
+        <section className="mt-6 grid gap-6 max-sm:mt-4 max-sm:gap-4">
           {data.modules.map((module) => (
             <AcademyModuleCard key={module.id} module={module} />
           ))}
         </section>
       )}
 
-      <section className="mt-6 grid gap-4 lg:grid-cols-3">
+      <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 lg:grid-cols-3">
         <ContentCard
           href="/dashboard"
           title="Painel de Missão"
@@ -481,7 +481,7 @@ export default async function PremiumPage() {
       <MobileActionBar label="Próxima ação da Academia PGM">
         <Link
           href={mobileHref}
-          className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white"
+          className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-5 text-sm font-semibold text-background-primary transition hover:bg-white max-sm:w-full max-sm:px-3"
         >
           {mobileLabel}
           <ArrowRight className="size-4" aria-hidden="true" />

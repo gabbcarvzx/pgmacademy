@@ -34,7 +34,7 @@ export function MetricCard({
   return (
     <article
       className={cx(
-        "rounded-ds-16 border border-border-soft bg-surface p-5 shadow-card",
+        "rounded-ds-16 border border-border-soft bg-surface p-5 shadow-card max-sm:p-4",
         className,
       )}
     >
@@ -47,7 +47,9 @@ export function MetricCard({
       <p className="mt-5 text-caption font-semibold uppercase text-text-muted">
         {title}
       </p>
-      <p className="mt-2 text-3xl font-semibold text-text-primary">{value}</p>
+      <p className="mt-2 break-words text-3xl font-semibold text-text-primary max-sm:text-2xl">
+        {value}
+      </p>
       {description ? (
         <p className="mt-3 text-sm leading-6 text-text-muted">{description}</p>
       ) : null}

@@ -40,7 +40,7 @@ export function ContentCard({
   className?: string;
 }) {
   const classNames = cx(
-    "rounded-ds-16 border border-border-soft bg-surface p-5 shadow-card transition",
+    "rounded-ds-16 border border-border-soft bg-surface p-5 shadow-card transition max-sm:p-4",
     href ? "hover:border-border-strong hover:bg-surface-elevated" : "",
     className,
   );
@@ -69,7 +69,7 @@ export function ContentCard({
           )
         ) : null}
       </div>
-      <h3 className="mt-5 text-xl font-semibold text-text-primary">
+      <h3 className="mt-5 min-w-0 break-words text-xl font-semibold text-text-primary max-sm:text-lg">
         {href ? (
           <Link className="transition hover:text-accent-gold" href={href}>
             {title}

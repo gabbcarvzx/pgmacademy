@@ -65,9 +65,9 @@ export function OfficialSubjectiveRunner({
   }
 
   return (
-    <form action={submitOfficialSubjectiveSimulationAction} className="grid gap-5">
+    <form action={submitOfficialSubjectiveSimulationAction} className="grid gap-5 max-sm:gap-4">
       {errorMessage ? (
-        <div className="rounded-md border border-red-300/40 bg-red-400/10 p-4">
+        <div className="rounded-md border border-red-300/40 bg-red-400/10 p-4 max-sm:p-3">
           <p className="flex items-start gap-2 text-sm font-semibold leading-6 text-red-200">
             <AlertTriangle
               className="mt-0.5 size-4 shrink-0"
@@ -79,7 +79,7 @@ export function OfficialSubjectiveRunner({
       ) : null}
 
       {view.blockingReason ? (
-        <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-4">
+        <div className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-4 max-sm:p-3">
           <p className="flex items-start gap-2 text-sm font-semibold leading-6 text-pgm-yellow">
             <AlertTriangle
               className="mt-0.5 size-4 shrink-0"
@@ -96,7 +96,7 @@ export function OfficialSubjectiveRunner({
         return (
           <article
             key={question.id}
-            className="rounded-md border border-border-soft bg-surface p-5 sm:p-6"
+            className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6"
           >
             <input type="hidden" name="question_id" value={question.id} />
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
@@ -111,7 +111,7 @@ export function OfficialSubjectiveRunner({
                   {question.prompt}
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2 lg:justify-end">
+              <div className="flex flex-wrap gap-2 max-sm:gap-1.5 lg:justify-end">
                 <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
                   {question.categoryName}
                 </span>
@@ -132,7 +132,7 @@ export function OfficialSubjectiveRunner({
               }
               disabled={!view.canSubmit}
               rows={9}
-              className="mt-5 min-h-[220px] w-full resize-y rounded-md border border-border-soft bg-background px-4 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-muted/70 focus:border-pgm-yellow disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-5 min-h-[180px] w-full resize-y rounded-md border border-border-soft bg-background px-4 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-muted/70 focus:border-pgm-yellow disabled:cursor-not-allowed disabled:opacity-60 max-sm:px-3 sm:min-h-[220px]"
               placeholder="Escreva sua resposta entre 90 e 150 palavras."
             />
 
@@ -161,7 +161,7 @@ export function OfficialSubjectiveRunner({
         );
       })}
 
-      <div className="rounded-md border border-border-soft bg-surface p-5">
+      <div className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4">
         <button
           type="submit"
           disabled={!allValid}
