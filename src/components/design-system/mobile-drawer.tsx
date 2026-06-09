@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 
 import { cx } from "@/lib/design-system/utils";
@@ -49,27 +50,27 @@ export function MobileDrawer({
     };
   }, [onClose, open]);
 
-  if (!open) {
+  if (!open || typeof document === "undefined") {
     return null;
   }
 
-  return (
+  return createPortal(
     <div
       id="app-mobile-navigation"
-      className="fixed inset-0 z-[90] isolate overscroll-contain lg:hidden"
+      className="fixed inset-0 z-[999] isolate overscroll-contain lg:hidden"
       role="dialog"
       aria-modal="true"
       aria-label={title}
     >
       <button
         type="button"
-        className="fixed inset-0 bg-background-primary/75 backdrop-blur-sm [animation:mobile-drawer-fade-in_160ms_ease-out]"
+        className="absolute inset-0 z-0 bg-black/70 backdrop-blur-sm [animation:mobile-drawer-fade-in_160ms_ease-out]"
         aria-label="Fechar menu"
         onClick={onClose}
       />
       <aside
         className={cx(
-          "fixed inset-y-0 left-0 flex max-h-[100dvh] w-[min(92vw,360px)] flex-col overflow-hidden border-r border-border-soft bg-surface-elevated shadow-modal [animation:mobile-drawer-slide-in_180ms_ease-out]",
+          "absolute inset-y-0 left-0 z-10 flex h-[100dvh] w-[min(86vw,360px)] max-w-full flex-col overflow-hidden border-r border-border-soft bg-surface-elevated pt-[env(safe-area-inset-top)] shadow-modal [animation:mobile-drawer-slide-in_180ms_ease-out]",
           className,
         )}
       >
@@ -94,6 +95,7 @@ export function MobileDrawer({
           </div>
         ) : null}
       </aside>
-    </div>
+    </div>,
+    document.body,
   );
 }
