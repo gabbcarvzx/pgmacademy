@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
+import { balancedCorrectLabelForObjectiveQuestion } from "../../src/lib/simulations/answer-key";
+
 export type Language =
   | "english"
   | "spanish"
@@ -339,8 +341,8 @@ function derivedSimulationTemplates(): TemplateSeed[] {
   return [
     {
       editorialId: "TEMPLATE-SCALE-FULL-MIXED",
-      title: "Simulado Objetivo Oficial PGM 2026",
-      description: "Simulado premium com 30 questões objetivas no formato oficial de treino PGM 2026.",
+      title: "Simulado Geral - Banco misto PGM",
+      description: "Treino de apoio com 30 questoes de idiomas, edital, escrita e psicossocial. Use os simulados por idioma para preparar a prova escolhida.",
       type: "full",
       language: "mixed",
       totalQuestions: 30,
@@ -349,8 +351,8 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-EN",
-      title: "Simulado Rápido - Inglês",
-      description: "Leitura, vocabulario, gramatica funcional e comunicacao em ingles.",
+      title: "Simulado Objetivo - Ingles",
+      description: "Treino objetivo por idioma com questoes de leitura, vocabulario, gramatica funcional e comunicacao em ingles.",
       type: "quick",
       language: "english",
       totalQuestions: 10,
@@ -359,8 +361,8 @@ function derivedSimulationTemplates(): TemplateSeed[] {
     },
     {
       editorialId: "TEMPLATE-SCALE-QUICK-ES",
-      title: "Simulado Rápido - Espanhol",
-      description: "Compreensao leitora, vocabulario e gramatica basica em espanhol.",
+      title: "Simulado Objetivo - Espanhol",
+      description: "Treino objetivo por idioma com questoes de compreensao leitora, vocabulario e gramatica basica em espanhol.",
       type: "quick",
       language: "spanish",
       totalQuestions: 10,
@@ -441,23 +443,30 @@ function parseObjectiveQuestions(markdown: string): QuestionSeed[] {
       const [editorialId, categorySlug, difficulty, statement, optionA, optionB, optionC, optionD, optionE, correct, explanation] =
         parseRow(line);
 
-      return {
+      const language = languageForObjective(editorialId);
+      const options = balanceObjectiveOptions(
         editorialId,
-        bankId: bankIdForObjective(editorialId),
-        categorySlug,
-        type: "objective",
-        difficulty: toDifficulty(difficulty, editorialId),
-        language: languageForObjective(editorialId),
-        statement,
-        explanation,
-        sourceReference: SOURCE_REFERENCE,
-        options: [
+        language,
+        [
           option("A", optionA, correct),
           option("B", optionB, correct),
           option("C", optionC, correct),
           option("D", optionD, correct),
           option("E", optionE, correct),
         ],
+      );
+
+      return {
+        editorialId,
+        bankId: bankIdForObjective(editorialId),
+        categorySlug,
+        type: "objective",
+        difficulty: toDifficulty(difficulty, editorialId),
+        language,
+        statement,
+        explanation,
+        sourceReference: SOURCE_REFERENCE,
+        options,
       };
     });
 }
@@ -611,6 +620,54 @@ function option(label: QuestionOptionSeed["label"], text: string, correct: strin
     text,
     isCorrect: correct === label,
   };
+}
+
+function balanceObjectiveOptions(
+  editorialId: string,
+  language: Language,
+  options: QuestionOptionSeed[],
+): QuestionOptionSeed[] {
+  const targetLabel = balancedCorrectLabelForObjectiveQuestion({
+    editorialId,
+    language,
+  });
+  const currentCorrect = options.find((item) => item.isCorrect);
+
+  if (!targetLabel || !currentCorrect || currentCorrect.label === targetLabel) {
+    return options.map((item) => ({
+      ...item,
+      isCorrect: item.label === currentCorrect?.label,
+    }));
+  }
+
+  const targetOption = options.find((item) => item.label === targetLabel);
+
+  if (!targetOption) {
+    return options;
+  }
+
+  return options.map((item) => {
+    if (item.label === targetLabel) {
+      return {
+        ...item,
+        text: currentCorrect.text,
+        isCorrect: true,
+      };
+    }
+
+    if (item.label === currentCorrect.label) {
+      return {
+        ...item,
+        text: targetOption.text,
+        isCorrect: false,
+      };
+    }
+
+    return {
+      ...item,
+      isCorrect: false,
+    };
+  });
 }
 
 function bankIdForObjective(editorialId: string): string {

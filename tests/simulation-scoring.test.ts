@@ -86,12 +86,23 @@ const templateAccess = buildTemplateAccessList(
     },
     {
       id: "full-template",
+      source_reference: null,
       title: "Fixture full",
       description: null,
       type: "full",
       language: "mixed",
       total_questions: 20,
       is_premium: true,
+    },
+    {
+      id: "source-template",
+      source_reference: "current-source",
+      title: "Fixture source",
+      description: null,
+      type: "quick",
+      language: "english",
+      total_questions: 1,
+      is_premium: false,
     },
     {
       id: "empty-template",
@@ -113,8 +124,18 @@ const templateAccess = buildTemplateAccessList(
     },
   ],
   [
-    { id: "q1", language: "english", type: "objective" },
-    { id: "q2", language: "english", type: "objective" },
+    {
+      id: "q1",
+      source_reference: "current-source",
+      language: "english",
+      type: "objective",
+    },
+    {
+      id: "q2",
+      source_reference: "legacy-source",
+      language: "english",
+      type: "objective",
+    },
     { id: "q3", language: "spanish", type: "subjective" },
   ],
   false,
@@ -136,6 +157,11 @@ assert.deepEqual(
       id: "full-template",
       availableQuestionCount: 2,
       lockedReason: "premium_required",
+    },
+    {
+      id: "source-template",
+      availableQuestionCount: 1,
+      lockedReason: null,
     },
     {
       id: "empty-template",

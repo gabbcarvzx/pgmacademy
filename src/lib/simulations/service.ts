@@ -7,6 +7,10 @@ import {
   type SimulationTemplateCatalogItem,
 } from "@/lib/simulations/catalog";
 import {
+  balancedCorrectLabelForObjectiveQuestion,
+  compareObjectiveOptionLabels,
+} from "@/lib/simulations/answer-key";
+import {
   canAccessPremiumContent,
   hasPremiumAccess,
 } from "@/lib/access/premium";
@@ -45,6 +49,7 @@ type QuestionRow = Pick<
   Database["public"]["Tables"]["questions"]["Row"],
   | "id"
   | "editorial_id"
+  | "source_reference"
   | "primary_competency_id"
   | "editorial_difficulty_level"
   | "bank_id"
@@ -257,17 +262,40 @@ function assertDatabaseResult<T>(
 function normalizeTemplateForOfficialPgm(
   template: SimulationTemplateCatalogItem,
 ): SimulationTemplateCatalogItem {
-  if (template.type !== "full") {
-    return template;
+  const templateCopy = { ...template };
+
+  if (templateCopy.editorial_id === "TEMPLATE-SCALE-QUICK-EN") {
+    return {
+      ...templateCopy,
+      title: "Simulado Objetivo - Ingles",
+      description:
+        "Treino objetivo por idioma com questoes de leitura, vocabulario, gramatica funcional e comunicacao em ingles.",
+      is_premium: true,
+    };
   }
 
-  return {
-    ...template,
-    title: officialObjectiveSimulation.title,
-    description: officialObjectiveSimulation.description,
-    total_questions: officialObjectiveSimulation.questionCount,
-    is_premium: true,
-  };
+  if (templateCopy.editorial_id === "TEMPLATE-SCALE-QUICK-ES") {
+    return {
+      ...templateCopy,
+      title: "Simulado Objetivo - Espanhol",
+      description:
+        "Treino objetivo por idioma com questoes de compreensao leitora, vocabulario e gramatica basica em espanhol.",
+      is_premium: true,
+    };
+  }
+
+  if (templateCopy.editorial_id === "TEMPLATE-SCALE-FULL-MIXED") {
+    return {
+      ...templateCopy,
+      title: "Simulado Geral - Banco misto PGM",
+      description:
+        "Treino de apoio com questoes de idiomas, edital, escrita e psicossocial. Use os simulados por idioma para preparar a prova escolhida.",
+      total_questions: officialObjectiveSimulation.questionCount,
+      is_premium: true,
+    };
+  }
+
+  return templateCopy;
 }
 
 function minutesBetween(startedAt: string, completedAt: string | null) {
@@ -344,7 +372,7 @@ async function getVisibleObjectiveQuestions(profile: ProfileRow) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
+      "id, editorial_id, source_reference, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
     )
     .eq("is_active", true)
     .eq("type", "objective")
@@ -367,7 +395,7 @@ async function getActiveTemplates(profile: ProfileRow) {
   const { data, error } = await admin
     .from("simulation_templates")
     .select(
-      "id, tenant_id, title, description, type, language, total_questions, is_premium",
+      "id, editorial_id, source_reference, tenant_id, title, description, type, language, total_questions, is_premium",
     )
     .eq("is_active", true)
     .order("created_at", { ascending: true });
@@ -522,17 +550,25 @@ async function getQuestionBankBreakdown(questions: QuestionRow[]) {
 }
 
 function questionMatchesTemplate(
-  template: Pick<SimulationTemplateCatalogItem, "language">,
-  question: Pick<QuestionRow, "language" | "type">,
+  template: Pick<SimulationTemplateCatalogItem, "language" | "source_reference">,
+  question: Pick<QuestionRow, "language" | "type" | "source_reference">,
 ) {
+  const sourceMatches =
+    !template.source_reference ||
+    question.source_reference === template.source_reference;
+
   return (
     question.type === "objective" &&
+    sourceMatches &&
     (template.language === "mixed" || question.language === template.language)
   );
 }
 
 function selectQuestionsForTemplate(
-  template: Pick<SimulationTemplateCatalogItem, "language" | "total_questions">,
+  template: Pick<
+    SimulationTemplateCatalogItem,
+    "language" | "source_reference" | "total_questions"
+  >,
   questions: QuestionRow[],
 ) {
   const eligibleQuestions = questions.filter((question) =>
@@ -890,7 +926,7 @@ async function getTemplateById(templateId: string | null) {
   const { data, error } = await admin
     .from("simulation_templates")
     .select(
-      "id, tenant_id, title, description, type, language, total_questions, is_premium",
+      "id, editorial_id, source_reference, tenant_id, title, description, type, language, total_questions, is_premium",
     )
     .eq("id", templateId)
     .maybeSingle();
@@ -934,7 +970,7 @@ async function getQuestionsById(questionIds: string[]) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
+      "id, editorial_id, source_reference, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement, explanation",
     )
     .in("id", questionIds);
 
@@ -957,7 +993,7 @@ async function getRunnerQuestionsById(questionIds: string[]) {
   const { data, error } = await admin
     .from("questions")
     .select(
-      "id, editorial_id, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement",
+      "id, editorial_id, source_reference, primary_competency_id, editorial_difficulty_level, bank_id, category_id, language, type, difficulty, statement",
     )
     .in("id", questionIds);
 
@@ -1020,6 +1056,52 @@ async function getOptionsByQuestionId(questionIds: string[], includeCorrect: boo
   }
 
   return optionsByQuestion;
+}
+
+function balancedDisplayOptionsForQuestion(
+  question: Pick<QuestionRow, "editorial_id" | "language">,
+  options: QuestionOptionRow[],
+) {
+  const targetLabel = balancedCorrectLabelForObjectiveQuestion({
+    editorialId: question.editorial_id,
+    language: question.language,
+  });
+  const sortedOptions = [...options].sort((a, b) =>
+    compareObjectiveOptionLabels(a.option_label, b.option_label),
+  );
+  const correctOption = sortedOptions.find((option) => option.is_correct);
+
+  if (!targetLabel || !correctOption || correctOption.option_label === targetLabel) {
+    return sortedOptions;
+  }
+
+  const targetOption = sortedOptions.find(
+    (option) => option.option_label === targetLabel,
+  );
+
+  if (!targetOption) {
+    return sortedOptions;
+  }
+
+  return sortedOptions
+    .map((option) => {
+      if (option.id === correctOption.id) {
+        return {
+          ...option,
+          option_label: targetLabel,
+        };
+      }
+
+      if (option.id === targetOption.id) {
+        return {
+          ...option,
+          option_label: correctOption.option_label,
+        };
+      }
+
+      return option;
+    })
+    .sort((a, b) => compareObjectiveOptionLabels(a.option_label, b.option_label));
 }
 
 async function getRecommendedPaths(
@@ -1137,7 +1219,7 @@ export async function getSimulationRunner(
   const questionIds = answers.map((answer) => answer.question_id);
   const [questions, optionsByQuestion] = await Promise.all([
     getRunnerQuestionsById(questionIds),
-    getOptionsByQuestionId(questionIds, false),
+    getOptionsByQuestionId(questionIds, true),
   ]);
   const questionById = new Map(questions.map((question) => [question.id, question]));
   const categories = await getCategoriesById(
@@ -1171,7 +1253,10 @@ export async function getSimulationRunner(
         language: question.language,
         statement: question.statement,
         selectedOptionId: answer.selected_option_id,
-        options: (optionsByQuestion.get(question.id) ?? []).map((option) => ({
+        options: balancedDisplayOptionsForQuestion(
+          question,
+          optionsByQuestion.get(question.id) ?? [],
+        ).map((option) => ({
           id: option.id,
           label: option.option_label,
           text: option.option_text,
@@ -1447,7 +1532,10 @@ export async function getSimulationResult(
       continue;
     }
 
-    const options = optionsByQuestion.get(question.id) ?? [];
+    const options = balancedDisplayOptionsForQuestion(
+      question,
+      optionsByQuestion.get(question.id) ?? [],
+    );
     const correctOption = options.find((option) => option.is_correct);
     const categoryName =
       (question.category_id && categories.get(question.category_id)?.name) ||

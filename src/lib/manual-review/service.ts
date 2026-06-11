@@ -18,6 +18,7 @@ export type ManualReviewStatus =
 type AccessStatus = Database["public"]["Tables"]["profiles"]["Row"]["access_status"];
 type LearningLanguage =
   Database["public"]["Tables"]["questions"]["Row"]["language"];
+type OfficialSubjectiveLanguage = Extract<LearningLanguage, "english" | "spanish">;
 type LearningDifficulty =
   Database["public"]["Tables"]["questions"]["Row"]["difficulty"];
 
@@ -140,6 +141,7 @@ export type OfficialSubjectiveSimulationView = {
   hasPaidAccess: boolean;
   canSubmit: boolean;
   blockingReason: string | null;
+  language: OfficialSubjectiveLanguage;
   questionCount: number;
   minWords: number;
   maxWords: number;
@@ -155,6 +157,12 @@ export type ManualReviewFilters = {
   category?: string;
   difficulty?: string;
 };
+
+export function parseOfficialSubjectiveLanguage(
+  value: string | null | undefined,
+): OfficialSubjectiveLanguage {
+  return value === "spanish" ? "spanish" : "english";
+}
 
 const statusLabels: Record<ManualReviewStatus, string> = {
   pending: "Pendente",
@@ -454,8 +462,10 @@ export async function getSubjectiveQuestionList(
 
 export async function getOfficialSubjectiveSimulation(
   userId: string,
+  languageInput: string | null | undefined = "english",
 ): Promise<OfficialSubjectiveSimulationView> {
-  const list = await getSubjectiveQuestionList(userId, {});
+  const language = parseOfficialSubjectiveLanguage(languageInput);
+  const list = await getSubjectiveQuestionList(userId, { language });
   const questions = list.questions
     .slice(0, officialSubjectiveSimulation.questionCount)
     .map((question) => ({
@@ -493,6 +503,7 @@ export async function getOfficialSubjectiveSimulation(
       !hasPendingAnswer &&
       allQuestionsAvailable,
     blockingReason,
+    language,
     questionCount: officialSubjectiveSimulation.questionCount,
     minWords: officialSubjectiveSimulation.minWords,
     maxWords: officialSubjectiveSimulation.maxWords,
@@ -506,6 +517,7 @@ export async function getOfficialSubjectiveSimulation(
 export async function submitOfficialSubjectiveSimulation(
   userId: string,
   answers: Array<{ questionId: string; answerText: string }>,
+  languageInput: string | null | undefined = "english",
 ) {
   const admin = getSupabaseAdminClient();
   const profile = await getProfile(userId);
@@ -514,7 +526,7 @@ export async function submitOfficialSubjectiveSimulation(
     throw new Error("Envio do simulado subjetivo oficial é um recurso premium.");
   }
 
-  const simulation = await getOfficialSubjectiveSimulation(userId);
+  const simulation = await getOfficialSubjectiveSimulation(userId, languageInput);
 
   if (!simulation.canSubmit) {
     throw new Error(

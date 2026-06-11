@@ -1,5 +1,7 @@
 export type SimulationTemplateCatalogItem = {
   id: string;
+  editorial_id?: string | null;
+  source_reference?: string | null;
   tenant_id?: string | null;
   title: string;
   description: string | null;
@@ -11,6 +13,7 @@ export type SimulationTemplateCatalogItem = {
 
 export type ObjectiveQuestionCatalogItem = {
   id: string;
+  source_reference?: string | null;
   language: "english" | "spanish" | "portuguese" | "mixed" | "psychosocial";
   type: "objective" | "subjective" | "psychosocial";
 };
@@ -40,7 +43,13 @@ export function countQuestionsForTemplate(
       return false;
     }
 
-    return template.language === "mixed" || question.language === template.language;
+    const languageMatches =
+      template.language === "mixed" || question.language === template.language;
+    const sourceMatches =
+      !template.source_reference ||
+      question.source_reference === template.source_reference;
+
+    return languageMatches && sourceMatches;
   }).length;
 }
 

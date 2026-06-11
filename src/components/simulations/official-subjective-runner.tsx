@@ -66,6 +66,8 @@ export function OfficialSubjectiveRunner({
 
   return (
     <form action={submitOfficialSubjectiveSimulationAction} className="grid gap-5 max-sm:gap-4">
+      <input type="hidden" name="language" value={view.language} />
+
       {errorMessage ? (
         <div className="rounded-md border border-red-300/40 bg-red-400/10 p-4 max-sm:p-3">
           <p className="flex items-start gap-2 text-sm font-semibold leading-6 text-red-200">

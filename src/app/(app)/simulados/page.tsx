@@ -125,6 +125,102 @@ export default async function SimuladosPage() {
   }
 
   const overview = await getSimulationOverview(user.id);
+  const officialObjectiveTemplates = overview.templates.filter((template) =>
+    template.language === "english" || template.language === "spanish",
+  );
+  const supportTemplates = overview.templates.filter(
+    (template) => template.language !== "english" && template.language !== "spanish",
+  );
+  const subjectiveLanguages = ["english", "spanish"] as const;
+
+  const renderTemplateCard = (template: (typeof overview.templates)[number]) => {
+    const lockedMessage = lockLabel(template.lockedReason);
+    const isLocked = Boolean(template.lockedReason);
+
+    return (
+      <article
+        key={template.id}
+        className={`rounded-md border p-5 max-sm:p-4 sm:p-6 ${
+          isLocked
+            ? "border-pgm-yellow/25 bg-pgm-yellow/5"
+            : "border-border-soft bg-surface"
+        }`}
+      >
+        <div className="flex items-start justify-between gap-4 max-sm:gap-3">
+          <div>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
+                {typeLabel[template.type]}
+              </span>
+              <span className="rounded-md border border-border-soft bg-background px-3 py-1 text-xs font-semibold text-muted">
+                {languageLabel[template.language]}
+              </span>
+              <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-1 text-xs font-semibold text-pgm-yellow">
+                {template.is_premium ? "Premium" : "Gratuito"}
+              </span>
+            </div>
+            <h3 className="mt-4 break-words text-xl font-semibold text-white">
+              {template.title}
+            </h3>
+          </div>
+          {isLocked ? (
+            <LockKeyhole
+              className="size-5 shrink-0 text-pgm-yellow"
+              aria-hidden="true"
+            />
+          ) : (
+            <ListChecks
+              className="size-5 shrink-0 text-pgm-yellow"
+              aria-hidden="true"
+            />
+          )}
+        </div>
+
+        <p className="mt-4 text-sm leading-6 text-muted">
+          {template.description ?? "Simulado objetivo com correcao automatica."}
+        </p>
+
+        <div className="mt-5 grid gap-3 max-sm:gap-2 sm:grid-cols-3">
+          <span className="min-w-0 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+            {template.total_questions} questoes
+          </span>
+          <span className="inline-flex min-w-0 items-center gap-2 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+            <Clock3 className="size-4" aria-hidden="true" />
+            {simulationDurationMinutes(template)} min
+          </span>
+          <span className="min-w-0 rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-semibold text-muted">
+            {template.availableQuestionCount} no banco
+          </span>
+        </div>
+
+        {template.lockedReason === "premium_required" ? (
+          <Link
+            href="/planos"
+            className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
+          >
+            Quero continuar evoluindo
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        ) : isLocked ? (
+          <button
+            type="button"
+            disabled
+            className="mt-5 inline-flex h-11 w-full cursor-not-allowed items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-muted/70"
+          >
+            {lockedMessage}
+          </button>
+        ) : (
+          <Link
+            href={`/simulados/${template.id}`}
+            className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md border border-border-soft text-sm font-semibold text-muted transition hover:border-white/35 hover:text-white"
+          >
+            Abrir instrucoes
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        )}
+      </article>
+    );
+  };
 
   return (
     <main className="px-4 py-6 max-sm:px-3 max-sm:py-4 sm:px-6 lg:px-8">
@@ -260,13 +356,18 @@ export default async function SimuladosPage() {
             </div>
           </div>
 
-          <Link
-            href="/simulados/subjetivo-oficial"
-            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white max-sm:w-full"
-          >
-            Abrir subjetivo oficial
-            <PencilLine className="size-4" aria-hidden="true" />
-          </Link>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:max-w-2xl">
+            {subjectiveLanguages.map((language) => (
+              <Link
+                key={language}
+                href={`/simulados/subjetivo-oficial?idioma=${language}`}
+                className="inline-flex min-h-11 items-center justify-between gap-3 rounded-md bg-pgm-yellow px-5 py-3 text-sm font-semibold text-background transition hover:bg-white max-sm:w-full"
+              >
+                <span>Subjetivo - {languageLabel[language]}</span>
+                <PencilLine className="size-4 shrink-0" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -274,19 +375,19 @@ export default async function SimuladosPage() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Templates
+              Simulados objetivos
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-white">
-              Simulados disponíveis
+              Escolha o idioma da prova objetiva
             </h2>
           </div>
           <span className="inline-flex rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
-            {overview.templates.length} modelos
+            {officialObjectiveTemplates.length} idiomas
           </span>
         </div>
 
         <div className="mt-5 grid gap-4 max-sm:gap-3 xl:grid-cols-2">
-          {overview.templates.map((template) => {
+          {officialObjectiveTemplates.map((template) => {
             const lockedMessage = lockLabel(template.lockedReason);
             const isLocked = Boolean(template.lockedReason);
 
@@ -377,6 +478,33 @@ export default async function SimuladosPage() {
           })}
         </div>
       </section>
+
+      {supportTemplates.length > 0 ? (
+        <section className="mt-6 max-sm:mt-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase text-pgm-yellow">
+                Treinos de apoio
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold text-white">
+                Modelos gerais separados dos oficiais por idioma
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+                Estes modelos continuam disponiveis como treino complementar,
+                sem confundir a prova objetiva por idioma nem o simulado
+                subjetivo oficial.
+              </p>
+            </div>
+            <span className="inline-flex rounded-md border border-border-soft px-3 py-2 font-mono text-sm font-semibold text-muted">
+              {supportTemplates.length} modelos
+            </span>
+          </div>
+
+          <div className="mt-5 grid gap-4 max-sm:gap-3 xl:grid-cols-3">
+            {supportTemplates.map(renderTemplateCard)}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-6 rounded-md border border-border-soft bg-surface p-5 max-sm:mt-4 max-sm:p-4 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">

@@ -87,7 +87,8 @@ export async function submitOfficialSubjectiveSimulationAction(
   formData: FormData,
 ) {
   const userId = await requireUserId();
-  const target = "/simulados/subjetivo-oficial";
+  const language = formString(formData, "language") || "english";
+  const target = `/simulados/subjetivo-oficial?idioma=${encodeURIComponent(language)}`;
   const questionIds = formData
     .getAll("question_id")
     .filter((value): value is string => typeof value === "string");
@@ -97,7 +98,7 @@ export async function submitOfficialSubjectiveSimulationAction(
   }));
 
   try {
-    await submitOfficialSubjectiveSimulation(userId, answers);
+    await submitOfficialSubjectiveSimulation(userId, answers, language);
   } catch (error) {
     redirectWithError(target, error);
   }
@@ -105,7 +106,7 @@ export async function submitOfficialSubjectiveSimulationAction(
   revalidatePath("/dashboard");
   revalidatePath("/analytics");
   revalidatePath("/simulados");
-  revalidatePath(target);
+  revalidatePath("/simulados/subjetivo-oficial");
   revalidatePath("/subjetivas");
   revalidatePath("/subjetivas/minhas-respostas");
   redirectWithSuccess(

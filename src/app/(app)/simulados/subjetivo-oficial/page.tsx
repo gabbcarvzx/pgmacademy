@@ -13,12 +13,16 @@ import {
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
 import { OfficialSubjectiveRunner } from "@/components/simulations/official-subjective-runner";
-import { getOfficialSubjectiveSimulation } from "@/lib/manual-review/service";
+import {
+  getOfficialSubjectiveSimulation,
+  parseOfficialSubjectiveLanguage,
+} from "@/lib/manual-review/service";
+import { languageLabel } from "@/lib/learning/labels";
 import { officialSubjectiveSimulation } from "@/lib/simulations/official-pgm";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 type PageProps = {
-  searchParams?: Promise<{ error?: string }>;
+  searchParams?: Promise<{ error?: string; idioma?: string }>;
 };
 
 export const metadata: Metadata = {
@@ -39,7 +43,8 @@ export default async function OfficialSubjectiveSimulationPage({
     redirect("/login");
   }
 
-  const view = await getOfficialSubjectiveSimulation(user.id);
+  const language = parseOfficialSubjectiveLanguage(params?.idioma);
+  const view = await getOfficialSubjectiveSimulation(user.id, language);
   const errorMessage =
     typeof params?.error === "string" ? params.error : null;
 
@@ -56,10 +61,10 @@ export default async function OfficialSubjectiveSimulationPage({
       <section className="mt-6 grid gap-5 max-sm:mt-4 max-sm:gap-4 xl:grid-cols-[1fr_340px] xl:items-end">
         <div>
           <p className="text-sm font-semibold uppercase text-pgm-yellow">
-            Simulado subjetivo oficial
+            Simulado subjetivo oficial - {languageLabel[view.language]}
           </p>
           <h1 className="mt-4 max-w-4xl text-2xl font-semibold text-white sm:text-4xl">
-            {officialSubjectiveSimulation.title}
+            {officialSubjectiveSimulation.title} - {languageLabel[view.language]}
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-muted">
             {officialSubjectiveSimulation.description} A correção fica na fila
