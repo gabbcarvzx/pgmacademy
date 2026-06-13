@@ -11,6 +11,8 @@
     "content:import": "tsx scripts/import-approved-content.ts",
     "content:validate-imported": "tsx scripts/validate-imported-content.ts",
     "editorial:import": "tsx scripts/editorial-import.ts",
+    "intensive:import": "tsx scripts/import-intensive-simulations.ts",
+    "content:validate-intensive-imported": "tsx scripts/validate-intensive-simulations-imported.ts",
     "test:eligibility": "tsx tests/eligibility-rules.test.ts",
     "test:mentor": "tsx tests/mentor-knowledge-base.test.ts",
     "test:mission": "tsx tests/mission-rules.test.ts",
@@ -18,6 +20,7 @@
     "test:editorial": "tsx tests/editorial-infrastructure.test.ts",
     "test:editorial-import": "tsx tests/editorial-import.test.ts",
     "test:official-simulations": "tsx tests/official-simulations.test.ts",
+    "test:intensive-simulations": "tsx tests/intensive-simulations.test.ts",
     "test:success-center": "tsx tests/success-center.test.ts",
     "test:simulations": "tsx tests/simulation-scoring.test.ts",
     "test:analytics": "tsx tests/analytics-rules.test.ts"

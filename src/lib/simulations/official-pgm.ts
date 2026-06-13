@@ -1,3 +1,5 @@
+import { isIntensiveSimulationTemplate } from "@/lib/simulations/intensive-pgm";
+
 export const officialObjectiveSimulation = {
   title: "Simulado Objetivo Oficial PGM 2026",
   questionCount: 30,
@@ -58,9 +60,14 @@ export function isOfficialObjectiveTemplate(template: {
 }
 
 export function simulationDurationMinutes(template: {
+  editorial_id?: string | null;
   type: "quick" | "full";
   total_questions: number;
 }) {
+  if (isIntensiveSimulationTemplate(template)) {
+    return 180;
+  }
+
   if (isOfficialObjectiveTemplate(template)) {
     return officialObjectiveSimulation.durationMinutes;
   }

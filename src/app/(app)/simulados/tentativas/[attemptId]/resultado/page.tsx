@@ -10,6 +10,7 @@ import {
   Clock3,
   CircleX,
   ListChecks,
+  RotateCcw,
   Target,
   Trophy,
 } from "lucide-react";
@@ -129,6 +130,66 @@ export default async function SimulationResultPage({ params }: PageProps) {
           />
         ))}
       </section>
+
+      {result.isIntensive && result.preparationAssessment ? (
+        <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 xl:grid-cols-[0.9fr_1.1fr]">
+          <article className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 max-sm:p-4 sm:p-6">
+            <StatusBadge
+              tone={
+                result.preparationAssessment.tone === "danger"
+                  ? "error"
+                  : result.preparationAssessment.tone
+              }
+              size="md"
+            >
+              Diagnostico de reta final
+            </StatusBadge>
+            <h2 className="mt-4 text-xl font-semibold text-white">
+              {result.preparationAssessment.title}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              {result.preparationAssessment.description}
+            </p>
+            <p className="mt-4 text-xs leading-5 text-muted">
+              Esta classificacao e uma orientacao de estudo independente. Ela
+              nao representa resultado, nota de corte ou decisao oficial do
+              Programa Ganhe o Mundo.
+            </p>
+          </article>
+
+          <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">
+            <div className="flex items-center gap-3">
+              <RotateCcw
+                className="size-5 text-pgm-yellow"
+                aria-hidden="true"
+              />
+              <h2 className="text-xl font-semibold text-white">
+                Plano de recuperacao
+              </h2>
+            </div>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {result.recoveryPlan.map((action) => (
+                <Link
+                  key={action.area}
+                  href={action.href}
+                  className="rounded-md border border-border-soft bg-background p-4 transition hover:border-white/35"
+                >
+                  <p className="text-sm font-semibold text-white">
+                    {action.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    {action.description}
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-pgm-yellow">
+                    Abrir area recomendada
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </article>
+        </section>
+      ) : null}
 
       <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 xl:grid-cols-3">
         <article className="rounded-md border border-border-soft bg-surface p-5 max-sm:p-4 sm:p-6">

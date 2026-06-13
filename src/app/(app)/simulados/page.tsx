@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import {
   ArrowRight,
   Clock3,
+  Flame,
+  Gauge,
   History,
   ListChecks,
   LockKeyhole,
@@ -19,6 +21,7 @@ import {
   officialSubjectiveSimulation,
   simulationDurationMinutes,
 } from "@/lib/simulations/official-pgm";
+import { isIntensiveSimulationTemplate } from "@/lib/simulations/intensive-pgm";
 import {
   getSimulationOverview,
   type SimulationBankBreakdownItem,
@@ -125,8 +128,13 @@ export default async function SimuladosPage() {
   }
 
   const overview = await getSimulationOverview(user.id);
-  const officialObjectiveTemplates = overview.templates.filter((template) =>
-    template.language === "english" || template.language === "spanish",
+  const intensiveTemplates = overview.templates.filter((template) =>
+    isIntensiveSimulationTemplate(template),
+  );
+  const officialObjectiveTemplates = overview.templates.filter(
+    (template) =>
+      !isIntensiveSimulationTemplate(template) &&
+      (template.language === "english" || template.language === "spanish"),
   );
   const supportTemplates = overview.templates.filter(
     (template) => template.language !== "english" && template.language !== "spanish",
@@ -285,6 +293,123 @@ export default async function SimuladosPage() {
             </p>
           </article>
         ))}
+      </section>
+
+      <section className="mt-6 overflow-hidden rounded-md border border-pgm-yellow/45 bg-surface max-sm:mt-4">
+        <div className="border-b border-border-soft bg-pgm-yellow/10 p-5 max-sm:p-4 sm:p-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <div className="flex items-center gap-2 text-pgm-yellow">
+                <Flame className="size-5" aria-hidden="true" />
+                <p className="text-sm font-semibold uppercase">
+                  Reta Final PGM 2026
+                </p>
+              </div>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
+                Simulados intensivos por idioma
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+                Faltam poucos dias para a prova. Treine com 30 questoes em 3
+                horas e descubra quais pontos revisar antes da selecao. Esta e
+                uma preparacao independente baseada em padroes observados em
+                provas anteriores.
+              </p>
+            </div>
+            <span className="inline-flex w-fit rounded-md border border-pgm-yellow/40 bg-background px-3 py-2 text-sm font-semibold text-pgm-yellow">
+              Exclusivo Premium
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-4 p-5 max-sm:p-4 sm:p-6 lg:grid-cols-2">
+          {intensiveTemplates.length === 0 ? (
+            <div className="rounded-md border border-border-soft bg-background p-4 lg:col-span-2">
+              <p className="text-sm font-semibold text-white">
+                Intensivos em preparacao
+              </p>
+              <p className="mt-2 text-sm leading-6 text-muted">
+                Os novos modelos aparecerao aqui assim que o lote editorial da
+                Sprint 6E for importado.
+              </p>
+            </div>
+          ) : (
+            intensiveTemplates.map((template) => {
+              const isLocked = Boolean(template.lockedReason);
+
+              return (
+                <article
+                  key={template.id}
+                  className="rounded-md border border-pgm-yellow/30 bg-background p-5 max-sm:p-4 sm:p-6"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="rounded-md border border-border-soft px-3 py-1 text-xs font-semibold text-muted">
+                          Objetivo
+                        </span>
+                        <span className="rounded-md border border-border-soft px-3 py-1 text-xs font-semibold text-muted">
+                          {languageLabel[template.language]}
+                        </span>
+                        <span className="rounded-md border border-pgm-yellow/40 bg-pgm-yellow/10 px-3 py-1 text-xs font-semibold text-pgm-yellow">
+                          Premium
+                        </span>
+                      </div>
+                      <h3 className="mt-4 text-xl font-semibold text-white">
+                        {template.title}
+                      </h3>
+                    </div>
+                    <Gauge
+                      className="size-5 shrink-0 text-pgm-yellow"
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <p className="mt-4 text-sm leading-6 text-muted">
+                    {template.description}
+                  </p>
+
+                  <div className="mt-5 grid gap-2 sm:grid-cols-3">
+                    <span className="rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted">
+                      30 questoes
+                    </span>
+                    <span className="rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted">
+                      3 horas
+                    </span>
+                    <span className="rounded-md border border-border-soft px-3 py-2 text-sm font-semibold text-muted">
+                      Diagnostico por assunto
+                    </span>
+                  </div>
+
+                  {template.lockedReason === "premium_required" ? (
+                    <Link
+                      href="/planos"
+                      className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
+                    >
+                      Desbloquear Intensivo
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </Link>
+                  ) : isLocked ? (
+                    <button
+                      type="button"
+                      disabled
+                      className="mt-5 inline-flex h-11 w-full cursor-not-allowed items-center justify-center rounded-md border border-border-soft text-sm font-semibold text-muted/70"
+                    >
+                      {lockLabel(template.lockedReason)}
+                    </button>
+                  ) : (
+                    <Link
+                      href={`/simulados/${template.id}`}
+                      className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-pgm-yellow px-4 text-sm font-semibold text-background transition hover:bg-white"
+                    >
+                      Iniciar Intensivo
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </Link>
+                  )}
+                </article>
+              );
+            })
+          )}
+        </div>
       </section>
 
       <section className="mt-6 max-sm:mt-4">

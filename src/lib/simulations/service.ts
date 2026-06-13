@@ -26,6 +26,13 @@ import {
   simulationDurationMinutes,
   simulationPointsPerQuestion,
 } from "@/lib/simulations/official-pgm";
+import {
+  buildIntensiveRecoveryPlan,
+  getIntensivePreparationAssessment,
+  isIntensiveSimulationTemplate,
+  type IntensivePreparationAssessment,
+  type IntensiveRecoveryAction,
+} from "@/lib/simulations/intensive-pgm";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -201,7 +208,11 @@ export type SimulationQuestionResult = {
 
 export type SimulationResultView = {
   attemptId: string;
+  templateEditorialId: string | null;
   templateTitle: string;
+  isIntensive: boolean;
+  preparationAssessment: IntensivePreparationAssessment | null;
+  recoveryPlan: IntensiveRecoveryAction[];
   startedAt: string;
   completedAt: string;
   elapsedMinutes: number;
@@ -1570,10 +1581,21 @@ export async function getSimulationResult(
   const score = calculateObjectiveScore(scoreInput);
   const completedAt = attempt.completed_at ?? new Date().toISOString();
   const recommendedPaths = await getRecommendedPaths(profile, score.weakCategories);
+  const isIntensive = template ? isIntensiveSimulationTemplate(template) : false;
 
   return {
     attemptId: attempt.id,
+    templateEditorialId: template?.editorial_id ?? null,
     templateTitle: template?.title ?? "Simulado removido",
+    isIntensive,
+    preparationAssessment: isIntensive
+      ? getIntensivePreparationAssessment(
+          attempt.percentage ?? score.percentage,
+        )
+      : null,
+    recoveryPlan: isIntensive
+      ? buildIntensiveRecoveryPlan(score.weakCategories)
+      : [],
     startedAt: attempt.started_at,
     completedAt,
     elapsedMinutes: minutesBetween(attempt.started_at, completedAt),
