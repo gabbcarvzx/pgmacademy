@@ -2,10 +2,15 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { countMaterialWords } from "./deep-materials-sprint-6f1";
+import {
+  DEEP_MATERIALS_EDITORIAL_VERSION,
+  DEEP_MATERIALS_SOURCE_REFERENCE,
+} from "./deep-materials-constants";
 
-export const DEEP_MATERIALS_6F3_EDITORIAL_VERSION = "pgm-2026-v2";
+export const DEEP_MATERIALS_6F3_EDITORIAL_VERSION =
+  DEEP_MATERIALS_EDITORIAL_VERSION;
 export const DEEP_MATERIALS_6F3_SOURCE_REFERENCE =
-  "Sprint 6F.3 Deep Materials";
+  DEEP_MATERIALS_SOURCE_REFERENCE;
 
 export type DeepMaterial6F3 = {
   editorialId: string;

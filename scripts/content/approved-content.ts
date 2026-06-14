@@ -2,6 +2,10 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { balancedCorrectLabelForObjectiveQuestion } from "../../src/lib/simulations/answer-key";
+import {
+  DEEP_MATERIALS_SOURCE_REFERENCE,
+  loadDeepMaterialSeeds,
+} from "./deep-materials";
 
 export type Language =
   | "english"
@@ -149,6 +153,17 @@ const baseCategories: CategorySeed[] = [
   category("BASE-CAT-RESPONSABILIDADE", "Responsabilidade", "responsabilidade", "psychosocial"),
 ];
 
+const deepMaterialCategories: CategorySeed[] = [
+  {
+    editorialId: "CAT-DEEP-SPA-VOCABULARIO",
+    name: "Vocabulario Espanhol",
+    slug: "vocabulario",
+    language: "spanish",
+    parentSlug: null,
+    sourceReference: DEEP_MATERIALS_SOURCE_REFERENCE,
+  },
+];
+
 function category(
   editorialId: string,
   name: string,
@@ -169,12 +184,18 @@ function category(
 export function loadApprovedContent(): ApprovedContent {
   const scaleReview = readFileSync(scaleReviewPath, "utf8");
   const contentReview = readFileSync(contentReviewPath, "utf8");
+  const legacyMaterials = parseMaterials(scaleReview);
+  const deepMaterials = loadDeepMaterialSeeds();
 
   return {
-    categories: [...baseCategories, ...parseRefinedCategories(contentReview)],
+    categories: [
+      ...baseCategories,
+      ...parseRefinedCategories(contentReview),
+      ...deepMaterialCategories,
+    ],
     banks: parseBanks(scaleReview),
     templates: derivedSimulationTemplates(),
-    materials: parseMaterials(scaleReview),
+    materials: [...legacyMaterials, ...deepMaterials],
     flashcards: parseFlashcards(scaleReview),
     objectiveQuestions: parseObjectiveQuestions(scaleReview),
     subjectiveQuestions: parseSubjectiveQuestions(scaleReview),
@@ -186,6 +207,12 @@ export function loadApprovedContent(): ApprovedContent {
 export function validateApprovedContent(content: ApprovedContent): string[] {
   const errors: string[] = [];
   const allQuestions = [...content.objectiveQuestions, ...content.subjectiveQuestions];
+  const legacyMaterials = content.materials.filter(
+    (item) => item.sourceReference === SOURCE_REFERENCE,
+  );
+  const deepMaterials = content.materials.filter(
+    (item) => item.sourceReference === DEEP_MATERIALS_SOURCE_REFERENCE,
+  );
   const categorySlugs = new Set(content.categories.map((item) => item.slug));
   const bankIds = new Set(content.banks.map((item) => item.editorialId));
   const materialIds = new Set(content.materials.map((item) => item.editorialId));
@@ -195,7 +222,9 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
 
   expectCount(errors, "bancos", content.banks, 5);
   expectCount(errors, "templates derivados", content.templates, 5);
-  expectCount(errors, "materiais", content.materials, 12);
+  expectCount(errors, "materiais totais", content.materials, 31);
+  expectCount(errors, "materiais da Etapa 8F", legacyMaterials, 12);
+  expectCount(errors, "materiais profundos da Sprint 6F", deepMaterials, 19);
   expectCount(errors, "flashcards", content.flashcards, 60);
   expectCount(errors, "questões objetivas", content.objectiveQuestions, 100);
   expectCount(errors, "questões subjetivas", content.subjectiveQuestions, 20);
@@ -260,9 +289,25 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
     }
   }
 
-  for (const item of [...content.banks, ...content.templates, ...content.materials, ...content.flashcards, ...content.learningPaths]) {
+  for (const item of [...content.banks, ...content.templates, ...content.flashcards, ...content.learningPaths]) {
     if (item.sourceReference !== SOURCE_REFERENCE) {
       errors.push(`${item.editorialId} está sem source_reference padrao`);
+    }
+  }
+
+  for (const item of content.materials) {
+    const expectedSourceReference = item.editorialId.startsWith("MAT-DEEP-")
+      ? DEEP_MATERIALS_SOURCE_REFERENCE
+      : SOURCE_REFERENCE;
+
+    if (item.sourceReference !== expectedSourceReference) {
+      errors.push(
+        `${item.editorialId} precisa usar source_reference ${expectedSourceReference}`,
+      );
+    }
+
+    if (item.editorialId.startsWith("MAT-DEEP-") && !item.isPremium) {
+      errors.push(`${item.editorialId} deveria permanecer premium na Sprint 6F`);
     }
   }
 
@@ -272,13 +317,16 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
     }
   }
 
-  const freeMaterials = content.materials.filter((item) => !item.isPremium).map((item) => item.editorialId);
+  const freeMaterials = legacyMaterials.filter((item) => !item.isPremium).map((item) => item.editorialId);
   if (freeMaterials.length !== 1 || freeMaterials[0] !== "MAT-SCALE-004") {
     errors.push(`Materiais gratuitos esperados: MAT-SCALE-004; encontrados: ${freeMaterials.join(", ") || "nenhum"}`);
   }
 
   for (const item of content.categories) {
-    if (item.sourceReference !== SOURCE_REFERENCE) {
+    const expectedSourceReference = item.editorialId.startsWith("CAT-DEEP-")
+      ? DEEP_MATERIALS_SOURCE_REFERENCE
+      : SOURCE_REFERENCE;
+    if (item.sourceReference !== expectedSourceReference) {
       errors.push(`${item.editorialId} está sem source_reference padrao`);
     }
   }
@@ -293,17 +341,25 @@ export function validateApprovedContent(content: ApprovedContent): string[] {
 }
 
 export function formatContentSummary(content: ApprovedContent): string {
+  const legacyMaterialCount = content.materials.filter(
+    (item) => item.sourceReference === SOURCE_REFERENCE,
+  ).length;
+  const deepMaterialCount = content.materials.filter(
+    (item) => item.sourceReference === DEEP_MATERIALS_SOURCE_REFERENCE,
+  ).length;
+
   return [
     `Categorias totais: ${content.categories.length}`,
     `Bancos: ${content.banks.length}`,
     `Templates derivados: ${content.templates.length}`,
-    `Materiais: ${content.materials.length}`,
+    `Materiais: ${content.materials.length} (${legacyMaterialCount} Etapa 8F + ${deepMaterialCount} Sprint 6F)`,
     `Flashcards: ${content.flashcards.length}`,
     `Questões objetivas: ${content.objectiveQuestions.length}`,
     `Questões subjetivas: ${content.subjectiveQuestions.length}`,
     `Perguntas psicossociais: ${content.psychosocialQuestions.length}`,
     `Trilhas: ${content.learningPaths.length}`,
-    `Source reference: ${SOURCE_REFERENCE}`,
+    `Source reference base: ${SOURCE_REFERENCE}`,
+    `Source reference Sprint 6F: ${DEEP_MATERIALS_SOURCE_REFERENCE}`,
   ].join("\n");
 }
 

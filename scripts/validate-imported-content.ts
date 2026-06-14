@@ -9,6 +9,7 @@ import {
   SOURCE_REFERENCE,
   validateApprovedContent,
 } from "./content/approved-content";
+import { DEEP_MATERIALS_SOURCE_REFERENCE } from "./content/deep-materials";
 
 type DbError = { message: string };
 type DbResult<T> = { data: T | null; error: DbError | null };
@@ -104,6 +105,9 @@ async function main(): Promise<void> {
 
   console.log("Conteúdo importado validado com sucesso.");
   console.log(formatSnapshot(snapshot.counts));
+  console.log(
+    `Materiais profundos Sprint 6F no banco: ${snapshot.deepMaterialCount}/19 (${snapshot.deepMaterialCount === 0 ? "dry-run preparado; importação ainda não executada" : "lote completo importado"})`,
+  );
 }
 
 async function validateServiceRoleSnapshot(
@@ -111,6 +115,7 @@ async function validateServiceRoleSnapshot(
   content: ReturnType<typeof loadApprovedContent>,
 ): Promise<{
   counts: ContentSnapshot;
+  deepMaterialCount: number;
   objectiveQuestionIds: string[];
   pathIds: string[];
 }> {
@@ -121,6 +126,18 @@ async function validateServiceRoleSnapshot(
     admin,
     "study_materials",
     "id, editorial_id, category_id, is_premium",
+  );
+  const deepMaterials = await selectBySourceReference<ContentRelationRow>(
+    admin,
+    "study_materials",
+    "id, editorial_id, category_id, is_premium",
+    DEEP_MATERIALS_SOURCE_REFERENCE,
+  );
+  const deepCategories = await selectBySourceReference<CategoryRow>(
+    admin,
+    "question_categories",
+    "id, editorial_id, slug",
+    DEEP_MATERIALS_SOURCE_REFERENCE,
   );
   const flashcards = await selectBySource<ContentRelationRow>(
     admin,
@@ -148,6 +165,18 @@ async function validateServiceRoleSnapshot(
   const learningPathItems = await selectLearningPathItems(admin, pathIds);
 
   const expectedPathItemCount = content.learningPaths.reduce((total, path) => total + path.items.length, 0);
+  const expectedLegacyCategories = content.categories.filter(
+    (category) => category.sourceReference === SOURCE_REFERENCE,
+  );
+  const expectedDeepCategories = content.categories.filter(
+    (category) => category.sourceReference === DEEP_MATERIALS_SOURCE_REFERENCE,
+  );
+  const expectedLegacyMaterials = content.materials.filter(
+    (material) => material.sourceReference === SOURCE_REFERENCE,
+  );
+  const expectedDeepMaterials = content.materials.filter(
+    (material) => material.sourceReference === DEEP_MATERIALS_SOURCE_REFERENCE,
+  );
   const optionKeys = questionOptions.map((option) => `${option.question_id}:${option.option_label}`);
   const snapshot: ContentSnapshot = {
     categories: categories.length,
@@ -166,10 +195,10 @@ async function validateServiceRoleSnapshot(
     learningPathItems: learningPathItems.length,
   };
 
-  expectEqual("categorias importadas", snapshot.categories, content.categories.length);
+  expectEqual("categorias importadas da Etapa 8F", snapshot.categories, expectedLegacyCategories.length);
   expectEqual("bancos importados", snapshot.banks, content.banks.length);
   expectEqual("templates importados", snapshot.templates, content.templates.length);
-  expectEqual("materiais importados", snapshot.materials, content.materials.length);
+  expectEqual("materiais importados da Etapa 8F", snapshot.materials, expectedLegacyMaterials.length);
   expectEqual("flashcards importados", snapshot.flashcards, content.flashcards.length);
   expectEqual("questões importadas", snapshot.questions, content.objectiveQuestions.length + content.subjectiveQuestions.length);
   expectEqual("questões objetivas", snapshot.objectiveQuestions, content.objectiveQuestions.length);
@@ -180,6 +209,55 @@ async function validateServiceRoleSnapshot(
   expectEqual("itens de trilha", snapshot.learningPathItems, expectedPathItemCount);
   expectEqual("editorial_id distintos em questões", snapshot.distinctQuestionEditorialIds, snapshot.questions);
   expectEqual("chaves distintas de alternativas", snapshot.distinctOptionKeys, snapshot.questionOptions);
+
+  expectPendingOrCompleteBatch(
+    "categorias da Sprint 6F",
+    deepCategories.length,
+    expectedDeepCategories.length,
+  );
+  expectPendingOrCompleteBatch(
+    "materiais profundos da Sprint 6F",
+    deepMaterials.length,
+    expectedDeepMaterials.length,
+  );
+
+  if ((deepCategories.length === 0) !== (deepMaterials.length === 0)) {
+    throw new Error(
+      "Lote Sprint 6F inconsistente: categorias e materiais precisam estar ambos pendentes ou completos",
+    );
+  }
+
+  if (deepCategories.length === expectedDeepCategories.length) {
+    const expectedCategoryIds = new Set(
+      expectedDeepCategories.map((category) => category.editorialId),
+    );
+    for (const category of deepCategories) {
+      if (!category.editorial_id || !expectedCategoryIds.has(category.editorial_id)) {
+        throw new Error(
+          `Categoria da Sprint 6F inválida no banco: ${category.editorial_id ?? category.id}`,
+        );
+      }
+    }
+  }
+
+  if (deepMaterials.length === expectedDeepMaterials.length) {
+    const expectedEditorialIds = new Set(
+      expectedDeepMaterials.map((material) => material.editorialId),
+    );
+
+    for (const material of deepMaterials) {
+      if (
+        !material.editorial_id ||
+        !expectedEditorialIds.has(material.editorial_id) ||
+        !material.category_id ||
+        !material.is_premium
+      ) {
+        throw new Error(
+          `Material profundo inválido no banco: ${material.editorial_id ?? material.id}`,
+        );
+      }
+    }
+  }
 
   for (const material of materials) {
     if (!material.category_id) {
@@ -209,6 +287,7 @@ async function validateServiceRoleSnapshot(
 
   return {
     counts: snapshot,
+    deepMaterialCount: deepMaterials.length,
     objectiveQuestionIds,
     pathIds,
   };
@@ -471,9 +550,18 @@ async function selectBySource<T extends Record<string, unknown>>(
   tableName: SourceTableName,
   columns: string,
 ): Promise<T[]> {
+  return selectBySourceReference(client, tableName, columns, SOURCE_REFERENCE);
+}
+
+async function selectBySourceReference<T extends Record<string, unknown>>(
+  client: SupabaseClient,
+  tableName: SourceTableName,
+  columns: string,
+  sourceReference: string,
+): Promise<T[]> {
   const result = await sourceTable<T>(client, tableName)
     .select(columns)
-    .eq("source_reference", SOURCE_REFERENCE);
+    .eq("source_reference", sourceReference);
   await assertNoError(`buscar ${String(tableName)}`, result);
   return result.data ?? [];
 }
@@ -526,6 +614,14 @@ async function assertNoError<T>(label: string, result: DbResult<T>): Promise<voi
 function expectEqual(label: string, actual: number, expected: number): void {
   if (actual !== expected) {
     throw new Error(`${label}: esperado ${expected}, encontrado ${actual}`);
+  }
+}
+
+function expectPendingOrCompleteBatch(label: string, actual: number, expected: number): void {
+  if (actual !== 0 && actual !== expected) {
+    throw new Error(
+      `${label}: lote parcial detectado; esperado 0 ou ${expected}, encontrado ${actual}`,
+    );
   }
 }
 
