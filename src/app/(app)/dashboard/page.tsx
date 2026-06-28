@@ -33,6 +33,7 @@ import {
   SectionHeader,
   StatusBadge,
 } from "@/components/design-system";
+import { ReviewFinalPromoBanner } from "@/components/premium/review-final-promo-banner";
 import type { DesignSystemTone } from "@/components/design-system";
 import type { MissionDashboardData } from "@/lib/mission/service";
 import { getMissionDashboard } from "@/lib/mission/service";
@@ -426,6 +427,13 @@ export default async function DashboardPage() {
             badge="Premium"
           />
         )}
+      </section>
+
+      <section className="mt-6 max-sm:mt-4">
+        <ReviewFinalPromoBanner
+          href="/premium/revisao-final"
+          premiumLocked={!data.hasPaidAccess}
+        />
       </section>
 
       <section className="mt-6 grid gap-4 max-sm:mt-4 max-sm:gap-3 sm:grid-cols-2 xl:grid-cols-4">

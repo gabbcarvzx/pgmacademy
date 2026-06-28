@@ -18,6 +18,7 @@ import {
   Menu,
   MessageSquareText,
   PenLine,
+  Rocket,
   ShieldCheck,
   Sparkles,
   type LucideIcon,
@@ -52,6 +53,7 @@ const navigationGroups = [
     label: "Estudar",
     items: [
       { label: "Estudos", href: "/estudos", Icon: BookText },
+      { label: "Revisao Final", href: "/premium/revisao-final", Icon: Rocket },
       { label: "Trilhas", href: "/trilhas", Icon: GraduationCap },
       { label: "Flashcards", href: "/flashcards", Icon: Brain },
     ],

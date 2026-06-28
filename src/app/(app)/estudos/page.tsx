@@ -18,6 +18,7 @@ import {
 } from "@/components/design-system";
 import { InstitutionalNotice } from "@/components/learning/institutional-notice";
 import { PremiumUpgradeCard } from "@/components/learning/premium-upgrade-card";
+import { ReviewFinalStudyAlert } from "@/components/premium/review-final-study-alert";
 import { difficultyLabel, languageLabel } from "@/lib/learning/labels";
 import { getMaterialPresentation } from "@/lib/learning/material-presentation";
 import { getStudyMaterialsPage } from "@/lib/learning/service";
@@ -143,6 +144,8 @@ export default async function EstudosPage({ searchParams }: PageProps) {
         </form>
       </section>
 
+      <ReviewFinalStudyAlert href="/premium/revisao-final" />
+
       {recommendedMaterial ? (
         <section className="mt-8">
           <SectionHeader
@@ -190,6 +193,33 @@ export default async function EstudosPage({ searchParams }: PageProps) {
             <span className="font-mono text-sm text-text-muted">
               {data.pagination.totalItems} resultados
             </span>
+          }
+        />
+
+        <ContentCard
+          className="mt-5 border-accent-gold/35 bg-accent-gold-soft"
+          eyebrow="Reta final"
+          title="Revisao Final PGM"
+          description="Central premium para organizar a preparacao final, revisar os assuntos prioritarios, alinhar entrevista e acessar simulados recomendados."
+          href="/premium/revisao-final"
+          Icon={Sparkles}
+          tone="premium"
+          badge="Premium"
+          metadata={
+            <div className="flex flex-wrap gap-2">
+              <StatusBadge tone="premium">Checklist final</StatusBadge>
+              <StatusBadge tone="info">Entrevista</StatusBadge>
+              <StatusBadge tone="success">Simulados</StatusBadge>
+            </div>
+          }
+          action={
+            <Link
+              href="/premium/revisao-final"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-ds-12 bg-accent-gold px-4 text-sm font-semibold text-background-primary transition hover:bg-white max-sm:w-full sm:w-auto"
+            >
+              Acessar Revisao Final
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
           }
         />
 
