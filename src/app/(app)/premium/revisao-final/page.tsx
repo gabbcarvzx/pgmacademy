@@ -4,22 +4,23 @@ import {
   ArrowRight,
   BookOpenCheck,
   CheckCircle2,
-  Compass,
   MessageSquareText,
   ShieldCheck,
-  Sparkles,
   Target,
 } from "lucide-react";
 
 import {
   AppPageHeader,
   ContentCard,
+  FeatureHighlight,
   MetricCard,
   MobileActionBar,
   SectionHeader,
   StatusBadge,
   UpgradeCard,
 } from "@/components/design-system";
+import { ReviewFinalModuleNav } from "@/components/premium/review-final-module-nav";
+import { ReviewFinalModuleSection } from "@/components/premium/review-final-module-section";
 import { requireUserId } from "@/lib/auth/require-user";
 import { getReviewFinalPageData } from "@/lib/review-final/service";
 
@@ -77,7 +78,7 @@ export default async function ReviewFinalPage() {
           title="Fase"
           value="Reta final"
           description="Material pensado para consolidacao, nao para dispersao."
-          Icon={Compass}
+          Icon={Target}
           tone="premium"
         />
         <MetricCard
@@ -101,15 +102,17 @@ export default async function ReviewFinalPage() {
         />
       </section>
 
+      <ReviewFinalModuleNav items={data.navigation} />
+
       {!data.hasPaidAccess ? (
         <section className="mt-6 max-sm:mt-4">
           <UpgradeCard
             title="Revisao Final PGM exclusiva para alunos premium"
             description="A descoberta da central permanece aberta dentro da plataforma, mas o conteudo completo, os blocos de revisao e a conexao priorizada com simulados fazem parte do acesso premium."
             benefits={[
-              "Central de reta final com hierarquia clara.",
-              "Revisao por assunto e orientacao para entrevista.",
-              "Atalho para simulados finais e checklist de fechamento.",
+              "Apostila digital com modulos guiados por assunto.",
+              "Questoes comentadas, alertas e resumos por unidade.",
+              "Conexao direta com simulados finais reais da plataforma.",
             ]}
             href="/planos"
             ctaLabel="Assinar Premium"
@@ -122,61 +125,42 @@ export default async function ReviewFinalPage() {
           <section className="mt-6 rounded-ds-20 border border-accent-gold/35 bg-[radial-gradient(circle_at_top_left,rgba(245,197,24,0.18),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5 shadow-card max-sm:mt-4 max-sm:p-4 sm:p-6">
             <SectionHeader
               eyebrow="Comece por aqui"
-              title="Organize sua preparacao final"
-              description="Use a central como guia de consolidacao: revise os pontos mais importantes, pratique com criterio e deixe o excesso de conteudo fora da reta final."
+              title="Revisao Inteligente para dominar os assuntos prioritarios"
+              description="A ideia aqui nao e apenas listar topicos. Cada modulo explica, exemplifica, aponta erros comuns, resume o essencial e fecha com questao comentada."
               density="compact"
-              action={<Sparkles className="size-6 text-accent-gold" aria-hidden="true" />}
+              action={<StatusBadge tone="premium">Apostila premium online</StatusBadge>}
             />
-            <div className="mt-5 grid gap-3 lg:grid-cols-3">
-              <ContentCard
+            <div className="mt-5 grid gap-4 lg:grid-cols-3">
+              <FeatureHighlight
                 title="Ultimo passo antes da prova"
-                description="Priorize consolidacao, controle emocional e estrategia de execucao. A meta agora e reduzir erro evitavel."
+                description="Organize sua preparacao final em um roteiro claro, sem excesso de conteudo novo e com foco no que merece mais atencao."
+                metric="Clareza"
                 tone="premium"
               />
-              <ContentCard
-                title="Revise com intencao"
-                description="Escolha o que realmente merece atencao: leitura, vocabulario, gramatica funcional, entrevista e simulados finais."
+              <FeatureHighlight
+                title="Revise com estrategia"
+                description="Passe por gramatica, vocabulario, interpretacao, espanhol, entrevista e checklist final sem sair da plataforma."
+                metric="Foco"
                 tone="success"
               />
-              <ContentCard
-                title="Conecte revisao e pratica"
-                description="Leia, registre pontos fracos e teste de novo. Essa combinacao tende a gerar mais clareza do que revisar de forma passiva."
+              <FeatureHighlight
+                title="Pratique com criterio"
+                description="Feche cada bloco entendendo o conteudo e depois conecte a revisao aos simulados recomendados."
+                metric="Aplicacao"
                 tone="info"
               />
             </div>
           </section>
 
-          {data.sections.slice(1).map((section) => (
-            <section key={section.id} className="mt-6 max-sm:mt-4">
-              <SectionHeader
-                eyebrow={section.eyebrow}
-                title={section.title}
-                description={section.description}
-                density="compact"
-              />
-              <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {section.cards.map((card) => (
-                  <ContentCard
-                    key={`${section.id}:${card.title}`}
-                    title={card.title}
-                    description={card.description}
-                    badge={card.badge}
-                    tone={
-                      section.id === "assuntos-prioritarios"
-                        ? "premium"
-                        : section.id === "entrevista"
-                          ? "info"
-                          : "success"
-                    }
-                  />
-                ))}
-              </div>
-            </section>
-          ))}
+          <section className="mt-6 grid gap-6 max-sm:mt-4">
+            {data.modules.map((module) => (
+              <ReviewFinalModuleSection key={module.id} module={module} />
+            ))}
+          </section>
         </>
       ) : null}
 
-      <section className="mt-6 max-sm:mt-4">
+      <section id="simulados" className="mt-6 max-sm:mt-4">
         <SectionHeader
           eyebrow="Simulados recomendados"
           title="Feche a revisao com pratica dirigida"

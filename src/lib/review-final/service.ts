@@ -6,8 +6,9 @@ import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
 import {
+  buildReviewFinalNavigation,
   buildReviewFinalSimulationLinks,
-  reviewFinalSections,
+  reviewFinalModules,
 } from "./content";
 
 type ProfileRow = Pick<
@@ -18,7 +19,8 @@ type ProfileRow = Pick<
 export type ReviewFinalPageData = {
   accessStatus: ProfileRow["access_status"];
   hasPaidAccess: boolean;
-  sections: typeof reviewFinalSections;
+  navigation: ReturnType<typeof buildReviewFinalNavigation>;
+  modules: typeof reviewFinalModules;
   simulationLinks: ReturnType<typeof buildReviewFinalSimulationLinks>;
 };
 
@@ -48,7 +50,8 @@ export async function getReviewFinalPageData(
   return {
     accessStatus: profile.access_status,
     hasPaidAccess: hasPremiumAccess(profile),
-    sections: reviewFinalSections,
+    navigation: buildReviewFinalNavigation(reviewFinalModules),
+    modules: reviewFinalModules,
     simulationLinks: buildReviewFinalSimulationLinks(overview.templates),
   };
 }
