@@ -14,10 +14,12 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
+import { FinalPromoBanner } from "@/components/marketing/final-promo-banner";
 import { ModuleCard } from "@/components/marketing/module-card";
 import { SectionHeading } from "@/components/marketing/section-heading";
 import { SiteHeader } from "@/components/marketing/site-header";
 import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
+import { getActiveOffer } from "@/lib/promo-config";
 import { platformModules, siteConfig } from "@/lib/site-config";
 
 const heroImage =
@@ -25,7 +27,7 @@ const heroImage =
 
 const benefitCards = [
   {
-    title: "Estude com direção",
+    title: "Estude com direcao",
     description:
       "Materiais, trilhas e flashcards ajudam o aluno a sair do improviso e estudar com foco.",
     Icon: BookOpenCheck,
@@ -33,47 +35,50 @@ const benefitCards = [
   {
     title: "Treine como prova real",
     description:
-      "Simulados autorais protegem o gabarito até a finalização e mostram desempenho por categoria.",
+      "Simulados autorais protegem o gabarito ate a finalizacao e mostram desempenho por categoria.",
     Icon: ListChecks,
   },
   {
     title: "Evolua com clareza",
     description:
-      "Analytics, metas e recomendações baseadas em regras mostram onde reforçar antes da seleção.",
+      "Analytics, metas e recomendacoes baseadas em regras mostram onde reforcar antes da selecao.",
     Icon: BarChart3,
   },
   {
     title: "Prepare sua postura",
     description:
-      "Subjetivas e entrevista psicossocial ajudam a treinar comunicação, maturidade e responsabilidade.",
+      "Subjetivas e entrevista psicossocial ajudam a treinar comunicacao, maturidade e responsabilidade.",
     Icon: MessageSquareText,
   },
 ];
 
 const dreamSteps = [
-  "Você decide participar do Ganhe o Mundo.",
-  "Você estuda com a PGM Academy.",
-  "Você domina os conteúdos essenciais.",
-  "Você chega mais preparado para a seleção.",
-  "Você se aproxima da experiência internacional.",
+  "Voce decide participar do Ganhe o Mundo.",
+  "Voce estuda com a PGM Academy.",
+  "Voce domina os conteudos essenciais.",
+  "Voce chega mais preparado para a selecao.",
+  "Voce se aproxima da experiencia internacional.",
 ];
 
 const officialHighlights = [
   `${pgm2026OfficialSnapshot.totalVacancies.toLocaleString("pt-BR")} vagas em 2026`,
-  "Prova objetiva com 30 questões",
+  "Prova objetiva com 30 questoes",
   "Subjetiva com 5 respostas",
-  "Entrevista psicossocial eliminatória",
+  "Entrevista psicossocial eliminatoria",
 ];
 
 export default function Home() {
+  const activeOffer = getActiveOffer();
+
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <SiteHeader />
+      <FinalPromoBanner />
 
       <section className="relative min-h-[82vh] overflow-hidden">
         <Image
           src={heroImage}
-          alt="Vista de cidade no Canadá representando o sonho de estudar fora."
+          alt="Vista de cidade no Canada representando o sonho de estudar fora."
           fill
           priority
           sizes="100vw"
@@ -86,16 +91,24 @@ export default function Home() {
           <div className="max-w-4xl py-12">
             <div className="inline-flex items-center gap-2 rounded-md border border-white/18 bg-background/45 px-3 py-2 text-sm font-medium text-white backdrop-blur">
               <ShieldCheck className="size-4 text-pgm-yellow" aria-hidden="true" />
-              Plataforma independente de preparação
+              Plataforma independente de preparacao
             </div>
 
+            {activeOffer.isPromotional ? (
+              <div className="mt-3 inline-flex items-center gap-2 rounded-md border border-pgm-yellow/30 bg-pgm-yellow/12 px-3 py-2 text-sm font-semibold text-pgm-yellow backdrop-blur">
+                <Sparkles className="size-4" aria-hidden="true" />
+                Oferta especial ate {activeOffer.deadlineLabel}
+              </div>
+            ) : null}
+
             <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold text-white sm:text-6xl lg:text-7xl">
-              Prepare-se para conquistar sua vaga no Programa Ganhe o Mundo.
+              Organize sua preparacao final para o Programa Ganhe o Mundo em uma
+              plataforma feita para candidatos que querem chegar prontos.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/82 sm:text-xl">
-              Materiais, simulados, trilhas de aprendizagem e preparação
-              completa para chegar com mais confiança em cada etapa do processo
-              seletivo.
+              Materiais autorais, simulados, trilhas, revisao final e treino
+              para subjetiva e entrevista em um fluxo unico para estudar com
+              mais clareza nos dias decisivos.
             </p>
 
             <div className="mt-6 grid max-w-4xl gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -111,10 +124,10 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/cadastro"
+                href={activeOffer.ctaHref}
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
               >
-                Começar gratuitamente
+                Quero garantir meu acesso
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link
@@ -127,20 +140,65 @@ export default function Home() {
             </div>
 
             <p className="mt-6 max-w-2xl text-sm leading-6 text-white/70">
-              O edital 2026 já está publicado. Quanto antes você organizar a
-              rotina, melhor chega para a prova de 05/07/2026 e para as etapas
-              seguintes.
+              {activeOffer.isPromotional
+                ? `Promocao de reta final com acesso por ${activeOffer.priceLabel} ate ${activeOffer.deadlineLabel}. Depois disso, o valor pode voltar para ${activeOffer.compareAtPriceLabel}.`
+                : "O edital 2026 ja esta publicado. Quanto antes voce organizar a rotina, melhor chega para a prova e para as etapas seguintes."}
             </p>
           </div>
         </div>
       </section>
 
-      <section id="plataforma" className="border-y border-border-soft bg-surface/60 py-16 sm:py-20">
+      {activeOffer.isPromotional && activeOffer.deadlineLabel ? (
+        <section className="border-y border-border-soft bg-surface/75 py-10">
+          <div className="mx-auto grid w-full max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
+            <div className="rounded-md border border-pgm-yellow/25 bg-pgm-yellow/10 p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                Reta final com valor promocional
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+                Acesso completo por {activeOffer.priceLabel} para quem quer
+                revisar com foco nos ultimos dias.
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
+                Oferta valida somente ate {activeOffer.deadlineLabel}. Depois
+                dessa data, o valor pode voltar para{" "}
+                {activeOffer.compareAtPriceLabel}. Sem contagem artificial, sem
+                promessas irreais.
+              </p>
+            </div>
+
+            <div className="rounded-md border border-border-soft bg-background p-5">
+              <p className="text-sm font-semibold text-white">
+                O que muda nesta reta final
+              </p>
+              <div className="mt-4 grid gap-3">
+                {[
+                  "Aproveite enquanto o valor promocional esta disponivel.",
+                  "Tenha acesso imediato aos modulos premium.",
+                  "Organize sua preparacao final com mais clareza.",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-md border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-6 text-muted"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section
+        id="plataforma"
+        className="border-y border-border-soft bg-surface/60 py-16 sm:py-20"
+      >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Produto educacional"
-            title="A PGM Academy organiza o caminho entre sonho e preparação."
-            description="O aluno não precisa estudar no escuro. A plataforma mostra conteúdo, treino, feedback e progresso com controle premium seguro."
+            title="A PGM Academy organiza o caminho entre sonho e preparacao."
+            description="O aluno nao precisa estudar no escuro. A plataforma mostra conteudo, treino, feedback e progresso com controle premium seguro."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -165,9 +223,9 @@ export default function Home() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Módulos"
+            eyebrow="Modulos"
             title="Uma plataforma completa para o aluno competir melhor."
-            description="Conteúdo autoral, simulados, feedback manual, trilhas e desempenho por categoria para estudar com clareza, rotina e segurança institucional."
+            description="Conteudo autoral, simulados, feedback manual, trilhas e desempenho por categoria para estudar com clareza, rotina e seguranca institucional."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -187,8 +245,8 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <SectionHeading
             eyebrow="Jornada do sonho"
-            title="Do primeiro interesse ao preparo para uma experiência internacional."
-            description="A comunicação é emocional, mas a plataforma continua responsável: prepara o aluno, não promete vaga, destino ou embarque."
+            title="Do primeiro interesse ao preparo para uma experiencia internacional."
+            description="A comunicacao e emocional, mas a plataforma continua responsavel: prepara o aluno, nao promete vaga, destino ou embarque."
           />
 
           <div className="grid gap-3">
@@ -204,8 +262,8 @@ export default function Home() {
                   <p className="text-sm font-semibold text-white">{step}</p>
                   <p className="mt-1 text-sm leading-6 text-muted">
                     {index === dreamSteps.length - 1
-                      ? "Sempre com confirmação no edital vigente e canais oficiais."
-                      : "Uma etapa por vez, com foco e consistência."}
+                      ? "Sempre com confirmacao no edital vigente e canais oficiais."
+                      : "Uma etapa por vez, com foco e consistencia."}
                   </p>
                 </div>
               </div>
@@ -221,13 +279,27 @@ export default function Home() {
               Plano premium
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-              Poucos se preparam da forma correta. Você pode começar agora.
+              Sua reta final fica mais simples quando treino, revisao e
+              acompanhamento estao no mesmo lugar.
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-muted">
               O premium desbloqueia simulados completos, trilhas completas,
               flashcards, subjetivas, entrevista psicossocial, feedback manual e
-              analytics avançado.
+              analytics avancado.
             </p>
+            {activeOffer.isPromotional ? (
+              <div className="mt-5 inline-flex flex-wrap items-center gap-3 rounded-md border border-pgm-yellow/20 bg-pgm-yellow/10 px-4 py-3 text-sm">
+                <span className="font-semibold text-white">
+                  {activeOffer.priceLabel}
+                </span>
+                <span className="text-muted line-through">
+                  {activeOffer.compareAtPriceLabel}
+                </span>
+                <span className="text-muted">
+                  Ultimos dias da promocao ate {activeOffer.deadlineLabel}.
+                </span>
+              </div>
+            ) : null}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/planos"
@@ -240,7 +312,7 @@ export default function Home() {
                 href="/avaliacoes"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-border-soft px-5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/8"
               >
-                Ver estrutura de avaliações
+                Ver estrutura de avaliacoes
                 <Globe2 className="size-4" aria-hidden="true" />
               </Link>
             </div>
@@ -271,11 +343,11 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <p className="text-sm font-semibold text-white">
-              Pronto para transformar vontade em rotina de preparação?
+              Pronto para transformar vontade em rotina de preparacao?
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              Crie sua conta, conheça o gratuito e desbloqueie o premium quando
-              quiser acessar a experiência completa.
+              Crie sua conta, conheca o gratuito e desbloqueie o premium quando
+              quiser acessar a experiencia completa.
             </p>
           </div>
           <Link

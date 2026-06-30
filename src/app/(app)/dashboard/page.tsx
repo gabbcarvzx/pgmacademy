@@ -37,6 +37,7 @@ import { ReviewFinalPromoBanner } from "@/components/premium/review-final-promo-
 import type { DesignSystemTone } from "@/components/design-system";
 import type { MissionDashboardData } from "@/lib/mission/service";
 import { getMissionDashboard } from "@/lib/mission/service";
+import { getActiveOffer } from "@/lib/promo-config";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -227,6 +228,8 @@ function ApprovalPlanPanel({ data }: { data: MissionDashboardData }) {
 }
 
 function StudentContextPanel({ data }: { data: MissionDashboardData }) {
+  const activeOffer = getActiveOffer();
+
   return (
     <aside className="grid content-start gap-4">
       <ContentCard
@@ -266,7 +269,16 @@ function StudentContextPanel({ data }: { data: MissionDashboardData }) {
           Icon={CircleDollarSign}
           tone="premium"
           metadata={
-            <p className="text-4xl font-semibold text-text-primary">R$ 29,90</p>
+            <div className="grid gap-1">
+              {activeOffer.isPromotional ? (
+                <p className="text-sm font-medium text-text-muted line-through">
+                  {activeOffer.compareAtPriceLabel}
+                </p>
+              ) : null}
+              <p className="text-4xl font-semibold text-text-primary">
+                {activeOffer.priceLabel}
+              </p>
+            </div>
           }
           action={<PaymentButton disabled={data.accessStatus === "blocked"} />}
         />

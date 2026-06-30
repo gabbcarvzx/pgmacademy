@@ -2,7 +2,6 @@ import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
 
 export const siteConfig = {
   name: "PGM Academy",
-  price: "R$ 29,90",
   paymentModel: "Pagamento único",
   disclaimer:
     "Plataforma independente de preparação. Consulte sempre o edital vigente e os canais oficiais do Programa Ganhe o Mundo.",

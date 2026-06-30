@@ -7,6 +7,7 @@ import {
   BookOpenCheck,
   Brain,
   CheckCircle2,
+  Clock3,
   FileText,
   GraduationCap,
   HelpCircle,
@@ -19,19 +20,21 @@ import {
 } from "lucide-react";
 
 import { PaymentButton } from "@/components/billing/payment-button";
+import { FinalPromoBanner } from "@/components/marketing/final-promo-banner";
 import { SiteHeader } from "@/components/marketing/site-header";
 import {
   hasPremiumAccess,
   type PremiumAccessProfile,
 } from "@/lib/access/premium";
 import { pgm2026OfficialSnapshot } from "@/lib/official/pgm-2026";
+import { getActiveOffer } from "@/lib/promo-config";
 import { siteConfig } from "@/lib/site-config";
 import { getServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Planos Premium",
   description:
-    "Planos da PGM Academy para preparação independente do Programa Ganhe o Mundo.",
+    "Planos da PGM Academy para preparacao independente do Programa Ganhe o Mundo.",
 };
 
 const heroImage =
@@ -40,37 +43,41 @@ const heroImage =
 const premiumBenefits = [
   {
     title: "Materiais exclusivos",
-    description: "Conteúdos autorais organizados por idioma, categoria e nível.",
+    description: "Conteudos autorais organizados por idioma, categoria e nivel.",
     Icon: BookOpenCheck,
   },
   {
     title: "Simulados realistas",
-    description: "Templates completos com correção automática e desempenho por categoria.",
+    description:
+      "Templates completos com correcao automatica e desempenho por categoria.",
     Icon: Target,
   },
   {
     title: "Flashcards inteligentes",
-    description: "Revisão rápida por frente e verso para fixar vocabulário e conceitos.",
+    description:
+      "Revisao rapida por frente e verso para fixar vocabulario e conceitos.",
     Icon: Brain,
   },
   {
-    title: "Questões subjetivas",
+    title: "Questoes subjetivas",
     description: "Treino de escrita com envio premium para feedback manual.",
     Icon: FileText,
   },
   {
     title: "Entrevista psicossocial",
-    description: "Perguntas autorais para maturidade, adaptação cultural e responsabilidade.",
+    description:
+      "Perguntas autorais para maturidade, adaptacao cultural e responsabilidade.",
     Icon: MessageSquareText,
   },
   {
-    title: "Analytics avançado",
-    description: "Metas, evolução, streak e recomendações baseadas em regras.",
+    title: "Analytics avancado",
+    description: "Metas, evolucao, streak e recomendacoes baseadas em regras.",
     Icon: BarChart3,
   },
   {
-    title: "Plano de evolução",
-    description: "Trilhas completas para conectar estudo, revisão, simulados e feedback.",
+    title: "Plano de evolucao",
+    description:
+      "Trilhas completas para conectar estudo, revisao, simulados e feedback.",
     Icon: Trophy,
   },
 ];
@@ -78,25 +85,17 @@ const premiumBenefits = [
 const comparisonRows = [
   ["Materiais de estudo", "Limitado", "Completo"],
   ["Flashcards", "Alguns conjuntos", "Ilimitado"],
-  ["Trilhas", "Visualização parcial", "Sequência completa"],
+  ["Trilhas", "Visualizacao parcial", "Sequencia completa"],
   ["Simulados", "Bloqueados ou limitados", "Completos"],
-  ["Correção detalhada", "Não disponível", "Disponível"],
+  ["Correcao detalhada", "Nao disponivel", "Disponivel"],
   ["Subjetivas", "Visualiza sem enviar", "Envio e feedback manual"],
   ["Entrevista psicossocial", "Visualiza sem enviar", "Treino com feedback"],
-  ["Analytics", "Resumo", "Diagnóstico completo"],
-];
-
-const journeySteps = [
-  "Você decide participar do Ganhe o Mundo.",
-  "Você estuda com a PGM Academy.",
-  "Você domina os conteúdos.",
-  "Você chega preparado para a seleção.",
-  "Você vive seu intercâmbio internacional, se for convocado oficialmente.",
+  ["Analytics", "Resumo", "Diagnostico completo"],
 ];
 
 const officialPlanHighlights = [
   `${pgm2026OfficialSnapshot.totalVacancies.toLocaleString("pt-BR")} vagas no edital 2026`,
-  "30 questões objetivas",
+  "30 questoes objetivas",
   "5 respostas subjetivas",
   "Entrevista psicossocial telepresencial",
 ];
@@ -105,32 +104,32 @@ const faqItems = [
   {
     question: "Como funciona a plataforma?",
     answer:
-      "Você cria uma conta, acessa conteúdos gratuitos e pode desbloquear o premium para estudar com materiais, flashcards, simulados, trilhas, subjetivas, entrevista e analytics.",
+      "Voce cria uma conta, acessa conteudos gratuitos e pode desbloquear o premium para estudar com materiais, flashcards, simulados, trilhas, subjetivas, entrevista e analytics.",
   },
   {
-    question: "A PGM Academy tem vínculo com o Governo?",
+    question: "A PGM Academy tem vinculo com o Governo?",
     answer:
-      "Não. A plataforma é independente de preparação e não substitui o Governo de Pernambuco, o Programa Ganhe o Mundo, editais ou canais oficiais.",
+      "Nao. A plataforma e independente de preparacao e nao substitui o Governo de Pernambuco, o Programa Ganhe o Mundo, editais ou canais oficiais.",
   },
   {
-    question: "O conteúdo segue os editais?",
+    question: "O conteudo segue os editais?",
     answer:
-      "O conteúdo autoral usa editais anteriores como referência de estrutura, habilidades e etapas, mas regras vigentes devem ser confirmadas sempre nos canais oficiais.",
+      "O conteudo autoral usa editais anteriores como referencia de estrutura, habilidades e etapas, mas regras vigentes devem ser confirmadas sempre nos canais oficiais.",
   },
   {
     question: "O Premium vale a pena?",
     answer:
-      "O premium concentra a experiência completa: simulados, trilhas, materiais, flashcards, feedback manual, entrevista e analytics. Ele foi pensado para quem quer estudar com rotina e clareza.",
+      "O premium concentra a experiencia completa: simulados, trilhas, materiais, flashcards, feedback manual, entrevista e analytics. Ele foi pensado para quem quer estudar com rotina e clareza.",
   },
   {
-    question: "Como funciona a assinatura?",
+    question: "Como funciona o pagamento?",
     answer:
-      "Nesta fase, o produto usa pagamento único processado pelo Asaas. A liberação premium acontece após confirmação de pagamento.",
+      "Nesta fase, o produto usa pagamento unico processado pelo Asaas. A liberacao premium acontece apos confirmacao do pagamento.",
   },
   {
     question: "Posso cancelar quando quiser?",
     answer:
-      "Políticas financeiras devem seguir os termos do checkout, do meio de pagamento e da PGM Academy. Em caso de dúvida, confira os canais de atendimento antes de comprar.",
+      "Politicas financeiras devem seguir os termos do checkout, do meio de pagamento e da PGM Academy. Em caso de duvida, confira os canais de atendimento antes de comprar.",
   },
 ];
 
@@ -154,6 +153,7 @@ export default async function PlansPage() {
     profile = data;
   }
 
+  const activeOffer = getActiveOffer();
   const accessStatus = (profile?.access_status ?? null) as AccessStatus | null;
   const isPaid = hasPremiumAccess(profile);
   const isBlocked = accessStatus === "blocked";
@@ -161,11 +161,12 @@ export default async function PlansPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
+      <FinalPromoBanner />
 
       <section className="relative min-h-[82vh] overflow-hidden">
         <Image
           src={heroImage}
-          alt="Escola no Canadá representando uma experiência internacional de estudo."
+          alt="Escola no Canada representando uma experiencia internacional de estudo."
           fill
           priority
           sizes="100vw"
@@ -176,19 +177,27 @@ export default async function PlansPage() {
 
         <div className="relative mx-auto flex min-h-[82vh] w-full max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-4xl py-12">
-            <div className="inline-flex items-center gap-2 rounded-md border border-white/18 bg-background/45 px-3 py-2 text-sm font-medium text-white backdrop-blur">
-              <Sparkles className="size-4 text-pgm-yellow" aria-hidden="true" />
-              Acesso premium PGM Academy
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-md border border-white/18 bg-background/45 px-3 py-2 text-sm font-medium text-white backdrop-blur">
+                <Sparkles className="size-4 text-pgm-yellow" aria-hidden="true" />
+                Acesso premium PGM Academy
+              </div>
+              {activeOffer.isPromotional ? (
+                <div className="inline-flex items-center gap-2 rounded-md border border-pgm-yellow/30 bg-pgm-yellow/12 px-3 py-2 text-sm font-semibold text-pgm-yellow backdrop-blur">
+                  <Clock3 className="size-4" aria-hidden="true" />
+                  Ultimos dias da promocao
+                </div>
+              ) : null}
             </div>
 
             <h1 className="mt-8 max-w-5xl text-balance text-4xl font-semibold text-white sm:text-6xl lg:text-7xl">
-              Seu sonho sempre foi estudar no exterior?
+              Plataforma premium para quem quer revisar, treinar e chegar mais
+              pronto nas etapas decisivas do Ganhe o Mundo.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/82 sm:text-xl">
-              Imagine embarcar para outro país, conhecer uma nova cultura,
-              desenvolver seu idioma e viver uma experiência que pode
-              transformar sua vida. A PGM Academy ajuda você a chegar preparado
-              para cada etapa da seleção.
+              Concentre simulados, materiais, flashcards, subjetivas,
+              entrevista e analytics em um unico ambiente para estudar com
+              consistencia na reta final.
             </p>
 
             <div className="mt-6 grid max-w-4xl gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -207,7 +216,7 @@ export default async function PlansPage() {
                 href="#checkout"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-pgm-yellow px-5 text-sm font-semibold text-background transition hover:bg-white"
               >
-                Quero me preparar agora
+                Quero garantir meu acesso
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>
               <a
@@ -220,8 +229,9 @@ export default async function PlansPage() {
             </div>
 
             <p className="mt-6 max-w-2xl text-sm leading-6 text-white/70">
-              Todos os anos milhares de estudantes sonham com uma vaga. Poucos
-              constroem uma rotina de preparação antes da pressão chegar.
+              {activeOffer.isPromotional
+                ? `Valor promocional de ${activeOffer.priceLabel} valido ate ${activeOffer.deadlineLabel}. Depois disso, o valor pode voltar para ${activeOffer.compareAtPriceLabel}.`
+                : "A plataforma continua focada em preparacao responsavel, sem promessas irreais nem urgencia enganosa."}
             </p>
           </div>
         </div>
@@ -231,51 +241,86 @@ export default async function PlansPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_390px] lg:px-8">
           <div>
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Preparação premium
+              Preparacao premium
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-              O Premium organiza sua rotina para objetiva, subjetiva e
+              O Premium organiza sua reta final para objetiva, subjetiva e
               entrevista.
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-muted">
-              Acesso aos recursos que aumentam clareza, consistência e
-              confiança: simulados, materiais, trilhas, revisão, feedback
-              manual e analytics de evolução.
+              Acesso aos recursos que aumentam clareza, consistencia e
+              confianca: simulados, materiais, trilhas, revisao, feedback
+              manual e analytics de evolucao.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {["Simulados completos", "Feedback manual", "Analytics premium"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="rounded-md border border-border-soft bg-surface p-4"
-                  >
-                    <CheckCircle2
-                      className="size-5 text-pgm-yellow"
-                      aria-hidden="true"
-                    />
-                    <p className="mt-3 text-sm font-semibold text-white">
-                      {item}
-                    </p>
-                  </div>
-                ),
-              )}
+              {[
+                "Simulados completos",
+                "Feedback manual",
+                "Analytics premium",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-md border border-border-soft bg-surface p-4"
+                >
+                  <CheckCircle2
+                    className="size-5 text-pgm-yellow"
+                    aria-hidden="true"
+                  />
+                  <p className="mt-3 text-sm font-semibold text-white">
+                    {item}
+                  </p>
+                </div>
+              ))}
             </div>
+
+            {activeOffer.isPromotional && activeOffer.deadlineLabel ? (
+              <div className="mt-6 rounded-md border border-pgm-yellow/25 bg-pgm-yellow/10 p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                  Promocao de reta final
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">
+                  Garanta o acesso completo por {activeOffer.priceLabel}.
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  De {activeOffer.compareAtPriceLabel}. Oferta valida somente
+                  ate {activeOffer.deadlineLabel}. Apos essa data, o valor pode
+                  voltar ao normal.
+                </p>
+              </div>
+            ) : null}
           </div>
 
-          <aside className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 sm:p-6">
+          <aside className="rounded-md border border-pgm-yellow/35 bg-pgm-yellow/10 p-5 shadow-premium sm:p-6">
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
               Plano Premium
             </p>
-            <div className="mt-4 flex items-end gap-3">
-              <span className="text-5xl font-semibold text-white">
-                {siteConfig.price}
-              </span>
-              <span className="pb-2 text-sm text-muted">pagamento único</span>
-            </div>
+            {activeOffer.isPromotional ? (
+              <div className="mt-4">
+                <p className="text-sm font-medium text-white/74 line-through">
+                  {activeOffer.compareAtPriceLabel}
+                </p>
+                <div className="mt-1 flex items-end gap-3">
+                  <span className="text-5xl font-semibold text-white">
+                    {activeOffer.priceLabel}
+                  </span>
+                  <span className="pb-2 text-sm text-muted">pagamento unico</span>
+                </div>
+                <p className="mt-4 rounded-md border border-white/10 bg-background/35 px-3 py-2 text-sm text-white/78">
+                  Oferta valida ate {activeOffer.deadlineLabel}.
+                </p>
+              </div>
+            ) : (
+              <div className="mt-4 flex items-end gap-3">
+                <span className="text-5xl font-semibold text-white">
+                  {activeOffer.priceLabel}
+                </span>
+                <span className="pb-2 text-sm text-muted">pagamento unico</span>
+              </div>
+            )}
             <p className="mt-4 text-sm leading-6 text-muted">
-              Processamento pelo Asaas. Liberação automática após confirmação
-              do pagamento quando a conta estiver autenticada.
+              Processamento pelo Asaas. Liberacao automatica apos confirmacao do
+              pagamento quando a conta estiver autenticada.
             </p>
 
             <div className="mt-6">
@@ -289,7 +334,7 @@ export default async function PlansPage() {
                     Premium ativo
                   </p>
                   <p className="mt-2 text-sm leading-6 text-muted">
-                    Seu acesso completo já está liberado.
+                    Seu acesso completo ja esta liberado.
                   </p>
                   <Link
                     href="/dashboard"
@@ -302,7 +347,7 @@ export default async function PlansPage() {
               ) : user ? (
                 <PaymentButton
                   disabled={isBlocked}
-                  label="Desbloquear acesso premium"
+                  label="Quero garantir meu acesso"
                   loadingLabel="Abrindo pagamento"
                 />
               ) : (
@@ -318,12 +363,12 @@ export default async function PlansPage() {
                     href="/login"
                     className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-border-soft px-5 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/8"
                   >
-                    Já tenho conta
+                    Ja tenho conta
                     <LockKeyhole className="size-4" aria-hidden="true" />
                   </Link>
                   <p className="text-xs leading-5 text-muted">
                     Crie ou entre na conta antes de iniciar o pagamento para que
-                    o premium seja vinculado ao seu usuário.
+                    o premium seja vinculado ao seu usuario.
                   </p>
                 </div>
               )}
@@ -332,7 +377,44 @@ export default async function PlansPage() {
         </div>
       </section>
 
-      <section id="comparacao" className="border-y border-border-soft bg-surface/60 py-16 sm:py-20">
+      {activeOffer.isPromotional && activeOffer.deadlineLabel ? (
+        <section className="border-y border-border-soft bg-surface/60 py-12">
+          <div className="mx-auto grid w-full max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+            <div className="rounded-md border border-border-soft bg-background p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-pgm-yellow">
+                Ultimos dias da oferta
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold text-white">
+                Aproveite o valor promocional enquanto ele estiver disponivel.
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-muted">
+                Promocao valida somente ate {activeOffer.deadlineLabel}. Apos
+                essa data, o preco pode voltar ao valor normal.
+              </p>
+            </div>
+
+            <div className="grid gap-3">
+              {[
+                "Tenha acesso imediato aos recursos premium apos confirmacao do pagamento.",
+                "Revise os assuntos prioritarios com mais clareza nesta reta final.",
+                "Mantenha seu checkout no fluxo atual, sem alterar autenticacao ou acesso.",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-md border border-border-soft bg-white/[0.03] px-4 py-3 text-sm leading-6 text-muted"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section
+        id="comparacao"
+        className="border-y border-border-soft bg-surface/60 py-16 sm:py-20"
+      >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
@@ -340,7 +422,7 @@ export default async function PlansPage() {
                 Free vs Premium
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-                Compare o acesso gratuito com a experiência completa.
+                Compare o acesso gratuito com a experiencia completa.
               </h2>
               <p className="mt-5 text-base leading-7 text-muted">
                 O gratuito ajuda a conhecer a plataforma. O premium foi criado
@@ -361,7 +443,9 @@ export default async function PlansPage() {
               <div className="grid grid-cols-[1.1fr_0.9fr_0.9fr] bg-background text-sm font-semibold text-white">
                 <div className="border-r border-border-soft p-4">Recurso</div>
                 <div className="border-r border-border-soft p-4">Gratuito</div>
-                <div className="bg-pgm-yellow/10 p-4 text-pgm-yellow">Premium</div>
+                <div className="bg-pgm-yellow/10 p-4 text-pgm-yellow">
+                  Premium
+                </div>
               </div>
               {comparisonRows.map(([feature, free, premium]) => (
                 <div
@@ -387,10 +471,10 @@ export default async function PlansPage() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase text-pgm-yellow">
-            O que você recebe
+            O que voce recebe
           </p>
           <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-white sm:text-4xl">
-            Tudo que sustenta uma preparação premium.
+            Tudo que sustenta uma preparacao premium.
           </h2>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -415,48 +499,15 @@ export default async function PlansPage() {
         </div>
       </section>
 
-      <section className="border-y border-border-soft bg-white/[0.03] py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase text-pgm-yellow">
-              Jornada do sonho
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              A preparação conecta o hoje ao intercâmbio que você deseja viver.
-            </h2>
-            <p className="mt-5 text-base leading-7 text-muted">
-              Não existe promessa de vaga. Existe uma rotina melhor para chegar
-              competitivo, consciente e pronto para cada fase.
-            </p>
-          </div>
-
-          <div className="grid gap-3">
-            {journeySteps.map((step, index) => (
-              <div
-                key={step}
-                className="grid grid-cols-[44px_1fr] gap-4 rounded-md border border-border-soft bg-background p-4"
-              >
-                <span className="flex size-11 items-center justify-center rounded-md bg-pgm-yellow text-sm font-semibold text-background">
-                  {index + 1}
-                </span>
-                <p className="self-center text-sm font-semibold text-white">
-                  {step}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_380px] lg:px-8">
           <div className="rounded-md border border-border-soft bg-surface p-5 sm:p-6">
             <GraduationCap className="size-6 text-pgm-yellow" aria-hidden="true" />
             <h2 className="mt-5 text-2xl font-semibold text-white">
-              Estrutura para futuras histórias reais
+              Estrutura para futuras historias reais
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              A área de avaliações está pronta para receber depoimentos
+              A area de avaliacoes esta pronta para receber depoimentos
               autorizados quando houver alunos reais. Nenhum depoimento foi
               inventado nesta etapa.
             </p>
@@ -464,7 +515,7 @@ export default async function PlansPage() {
               href="/avaliacoes"
               className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md border border-border-soft px-4 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/8"
             >
-              Ver avaliações
+              Ver avaliacoes
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </div>
@@ -481,14 +532,17 @@ export default async function PlansPage() {
         </div>
       </section>
 
-      <section id="faq" className="border-t border-border-soft bg-surface/60 py-16 sm:py-20">
+      <section
+        id="faq"
+        className="border-t border-border-soft bg-surface/60 py-16 sm:py-20"
+      >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-pgm-yellow">
               FAQ
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              Dúvidas antes de desbloquear o premium.
+              Duvidas antes de desbloquear o premium.
             </h2>
           </div>
 
@@ -515,10 +569,10 @@ export default async function PlansPage() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <p className="text-sm font-semibold text-white">
-              Comece antes da pressão.
+              Comece antes da pressao.
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              Preparação antecipada cria repertório, rotina e confiança sem
+              Preparacao antecipada cria repertorio, rotina e confianca sem
               depender de promessa falsa.
             </p>
           </div>

@@ -7,12 +7,11 @@ import {
   updateAsaasCustomer,
 } from "@/lib/asaas/client";
 import type { AsaasPayment, AsaasWebhookPayload } from "@/lib/asaas/types";
+import { getActiveOffer } from "@/lib/promo-config";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database, Json } from "@/types/database";
 
 const PRODUCT_NAME = "Acesso Premium Passaporte PGM";
-const PRODUCT_PRICE_CENTS = 2990;
-const PRODUCT_PRICE_REAIS = PRODUCT_PRICE_CENTS / 100;
 const PRODUCT_CURRENCY = "BRL";
 const DEFAULT_DUE_DAYS = 3;
 
@@ -138,6 +137,9 @@ export async function createPremiumCheckout(
   const admin = getSupabaseAdminClient();
   const dashboardUrl = getDashboardUrl();
   const cpfCnpj = normalizeCpfCnpj(input.cpfCnpj);
+  const activeOffer = getActiveOffer();
+  const productPriceCents = activeOffer.priceCents;
+  const productPriceReais = productPriceCents / 100;
 
   const { data: profile, error: profileError } = await admin
     .from("profiles")
@@ -231,13 +233,17 @@ export async function createPremiumCheckout(
       provider: "asaas",
       status: "pending",
       access_model: "one_time",
-      price_cents: PRODUCT_PRICE_CENTS,
+      price_cents: productPriceCents,
       currency: PRODUCT_CURRENCY,
       provider_customer_id: customer.id,
       metadata: {
         product_name: PRODUCT_NAME,
         checkout_status: "creating",
         checkout_started_at: new Date().toISOString(),
+        product_price_cents: productPriceCents,
+        compare_at_price_cents: activeOffer.compareAtPriceCents,
+        promo_deadline_label: activeOffer.deadlineLabel,
+        promo_is_active: activeOffer.isPromotional,
       },
     })
     .select("*")
@@ -250,7 +256,7 @@ export async function createPremiumCheckout(
   const payment = await createAsaasPayment({
     customer: customer.id,
     billingType: "UNDEFINED",
-    value: PRODUCT_PRICE_REAIS,
+    value: productPriceReais,
     dueDate: getPaymentDueDate(),
     description: PRODUCT_NAME,
     externalReference: subscription.id,
@@ -269,7 +275,10 @@ export async function createPremiumCheckout(
     checkout_created_at: new Date().toISOString(),
     product_currency: PRODUCT_CURRENCY,
     product_name: PRODUCT_NAME,
-    product_price_cents: PRODUCT_PRICE_CENTS,
+    product_price_cents: productPriceCents,
+    compare_at_price_cents: activeOffer.compareAtPriceCents,
+    promo_deadline_label: activeOffer.deadlineLabel,
+    promo_is_active: activeOffer.isPromotional,
   });
 
   await admin
